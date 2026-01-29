@@ -1,0 +1,31 @@
+---
+// src/layouts/BaseLayout.astro
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const { title, currentLang } = Astro.props;
+---
+
+<html lang={currentLang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="flex flex-col min-h-screen bg-gray-50 text-gray-900">
+    
+    {/* 导航栏，传入当前语言 */}
+    <Header currentLang={currentLang} />
+
+    {/* 主要内容区域 - slot 会被外部传入的内容替换 */}
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    {/* 底部栏 */}
+    <Footer />
+    
+  </body>
+</html>

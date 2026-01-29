@@ -1,0 +1,64 @@
+---
+// src/pages/[lang]/index.astro
+import { getCollection } from 'astro:content';
+import BlogCard from '../../components/BlogCard.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro'; // 引入布局
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('blog');
+  
+  const locales = [
+      'en', 'zh-cn', 'zh-tw', 'es', 'ar', 'pt', 'id', 'ms', 'fr', 'ru', 
+      'hi', 'ja', 'de', 'ko', 'tr', 'vi', 'th', 'it', 'fa', 'nl', 'pl', 
+      'sv', 'uk', 'ro'
+  ];
+
+  return locales.map(lang => {
+    const posts = allPosts.filter(post => post.data.lang === lang);
+    const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+    
+    return {
+      params: { lang },
+      props: { posts: sortedPosts, currentLang: lang },
+    };
+  });
+}
+
+const { posts, currentLang } = Astro.props;
+---
+
+{/* 使用 Layout 包裹内容 */}
+<BaseLayout title="LimaxAI Blog" currentLang={currentLang}>
+  
+  {/* 页面顶部的 Blog 标题区域 */}
+  <div class="bg-white py-12 border-b border-gray-100 mb-8">
+    <div class="max-w-7xl mx-auto px-4 text-center sm:px-6 lg:px-8">
+       <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl mb-3">
+        Blog
+       </h1>
+       <p class="text-xl text-gray-500 max-w-2xl mx-auto">
+        Discover AI art tutorials, best prompts, and creative inspiration.
+       </p>
+    </div>
+  </div>
+
+  {/* 博客文章网格 */}
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      {posts.length > 0 ? (
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {posts.map((post) => (
+            <BlogCard post={post} />
+          ))}
+        </div>
+      ) : (
+        <div class="text-center py-20 bg-white rounded-2xl border border-dashed border-gray-300">
+          <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+          </svg>
+          <h3 class="mt-2 text-sm font-medium text-gray-900">No posts found</h3>
+          <p class="mt-1 text-sm text-gray-500">Check back later for updates in this language.</p>
+        </div>
+      )}
+  </div>
+
+</BaseLayout>
