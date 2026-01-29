@@ -1,0 +1,101 @@
+---
+// src/pages/[lang]/[slug].astro
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// 1. 生成所有文章的静态路径
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blog');
+  
+  return blogEntries.map(entry => {
+    const [lang, ...slugParts] = entry.slug.split('/');
+    const slug = slugParts.join('/');
+
+    return {
+      params: { lang, slug },
+      props: { entry },
+    };
+  });
+}
+
+// 2. 获取文章内容
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+// 格式化日期
+const formattedDate = entry.data.pubDate.toLocaleDateString(entry.data.lang, {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout title={entry.data.title} currentLang={entry.data.lang}>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    
+    {/* 1. 面包屑导航 (Breadcrumbs) */}
+    <nav class="flex items-center text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+      <ol class="inline-flex items-center space-x-1 md:space-x-2">
+        {/* Home */}
+        <li class="inline-flex items-center">
+          <a href="https://www.limaxai.com" class="inline-flex items-center hover:text-blue-600 transition-colors">
+            <svg class="w-3 h-3 mr-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+            </svg>
+            Home
+          </a>
+        </li>
+        {/* Separator */}
+        <li>
+          <div class="flex items-center">
+            <svg class="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <a href={`/${entry.data.lang}/`} class="ml-1 hover:text-blue-600 transition-colors">Blog</a>
+          </div>
+        </li>
+        {/* Separator */}
+        <li>
+          <div class="flex items-center">
+            <svg class="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="ml-1 text-gray-900 font-medium truncate max-w-[150px] sm:max-w-xs">
+              {entry.data.title}
+            </span>
+          </div>
+        </li>
+      </ol>
+    </nav>
+
+    {/* 文章头部信息 (简约风格) */}
+    <header class="mb-10 border-b border-gray-100 pb-10">
+      {/* 标签 */}
+      <div class="mb-4">
+        <span class="text-blue-600 font-bold text-sm tracking-wide uppercase">
+          {entry.data.tags[0]}
+        </span>
+      </div>
+      
+      {/* 标题 */}
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-6 leading-tight">
+        {entry.data.title}
+      </h1>
+
+      {/* 2. 作者与日期 (小字展示，无头像) */}
+      <div class="flex items-center text-sm text-gray-500">
+        <span class="font-medium text-gray-900">{entry.data.author}</span>
+        <span class="mx-2 text-gray-300">•</span>
+        <time datetime={entry.data.pubDate.toISOString()}>{formattedDate}</time>
+        <span class="mx-2 text-gray-300">•</span>
+        <span>{Math.ceil(entry.body.length / 800)} min read</span> {/* 简单的阅读时间估算 */}
+      </div>
+    </header>
+
+    {/* 文章正文 */}
+    <div class="prose prose-lg prose-blue mx-auto text-gray-700 leading-relaxed">
+      <Content />
+    </div>
+
+  </article>
+</BaseLayout>

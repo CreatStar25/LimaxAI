@@ -5,5 +5,6 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography'), // 添加这一行
+],
 }

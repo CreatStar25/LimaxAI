@@ -14,27 +14,27 @@ const langMap: Record<string, string> = {
 };
 
 export const onRequest = defineMiddleware(async (context, next) => {
-  const { url, request, redirect } = context;
+  //const { url, request, redirect } = context;
 
   // 仅针对根路径 "/" 进行处理
-  if (url.pathname === "/") {
-    const acceptLanguage = request.headers.get("Accept-Language");
-    let targetLang = "en"; // 默认 fallback
+  //if (url.pathname === "/") {
+  //  const acceptLanguage = request.headers.get("Accept-Language");
+  //  let targetLang = "en"; // 默认 fallback
 
-    if (acceptLanguage) {
+  //  if (acceptLanguage) {
       // 获取首选语言 (例如 "zh-CN,zh;q=0.9")
-      const preferredLang = acceptLanguage.split(',')[0].trim(); 
+    //  const preferredLang = acceptLanguage.split(',')[0].trim(); 
       
       // 简单匹配逻辑
-      for (const [key, value] of Object.entries(langMap)) {
-         if (preferredLang.toLowerCase().startsWith(key.toLowerCase())) {
-            targetLang = value;
-            break;
-         }
-      }
-    }
-    return redirect(`/${targetLang}/`);
-  }
+    //  for (const [key, value] of Object.entries(langMap)) {
+      //   if (preferredLang.toLowerCase().startsWith(key.toLowerCase())) {
+        //    targetLang = value;
+         //   break;
+         //}
+      //}
+    //}
+    //return redirect(`/${targetLang}/`);
+  //}
 
   return next();
 });

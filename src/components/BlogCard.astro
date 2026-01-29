@@ -15,51 +15,48 @@ const formattedDate = data.pubDate.toLocaleDateString('en-US', {
 
 <article class="flex flex-col h-full overflow-hidden bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
   {/* 封面图链接区域 */}
-  <a href={`/${data.lang}/${slug.split('/').pop()}`} class="block aspect-[16/9] overflow-hidden">
+  <a href={`/${data.lang}/${slug.split('/').pop()}`} class="block aspect-[16/9] overflow-hidden bg-gray-100 group">
     <Image 
       src={data.image} 
       alt={data.title} 
       width={600} 
       height={340} 
-      class="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
+      format="webp"
+      inferSize={true} 
+      class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
     />
   </a>
 
   <div class="flex flex-col flex-1 p-6">
-    {/* 标签区 */}
-    <div class="flex flex-wrap gap-2 mb-3">
+    {/* 1. 标签区：限制一行 (flex-nowrap)，超出隐藏 */}
+    <div class="flex flex-nowrap gap-2 mb-3 overflow-hidden">
       {data.tags.map((tag) => (
-        <span class="px-2.5 py-1 text-xs font-medium text-blue-600 bg-blue-50 rounded-md">
+        <span class="flex-shrink-0 px-2.5 py-1 text-xs font-medium text-blue-600 bg-blue-50 rounded-md whitespace-nowrap">
           {tag}
         </span>
       ))}
     </div>
 
-    {/* 标题 */}
-    <h2 class="mb-3 text-xl font-bold leading-tight text-gray-900 group">
+    {/* 2. 标题：限制 2 行，超出省略号 */}
+    <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 group line-clamp-2 h-[3.25rem]">
       <a href={`/${data.lang}/${slug.split('/').pop()}`} class="hover:text-blue-600 transition-colors">
         {data.title}
       </a>
     </h2>
 
-    {/* 摘要 */}
-    <p class="flex-1 mb-4 text-sm leading-relaxed text-gray-600 line-clamp-3">
+    {/* 3. 摘要：限制 2 行，超出省略号 */}
+    <p class="mb-4 text-sm leading-relaxed text-gray-600 line-clamp-2">
       {data.description}
     </p>
 
     {/* 底部作者与时间 */}
     <div class="flex items-center pt-4 mt-auto border-t border-gray-100">
-      <div class="flex items-center justify-center w-8 h-8 mr-3 font-bold text-white bg-yellow-400 rounded-full">
-        {/* 这里模拟截图中的 B 图标 */}
-        {data.author.charAt(0)}
+      {/* 作者名字太长也可能需要截断，这里加了 truncate */}
+      <div class="flex items-center min-w-0">
+        <p class="text-xs font-semibold text-gray-900 truncate pr-2">{data.author}</p>
       </div>
-      <div>
-        <p class="text-xs font-semibold text-gray-900">{data.author}</p>
+      <div class="ml-auto flex-shrink-0">
         <p class="text-xs text-gray-500">{formattedDate}</p>
-      </div>
-      <div class="ml-auto text-xs text-gray-400">
-        {/* 预估阅读时间逻辑可后续添加 */}
-        5 min read
       </div>
     </div>
   </div>

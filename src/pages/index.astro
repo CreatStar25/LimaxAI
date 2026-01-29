@@ -1,11 +1,85 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// src/pages/index.astro
+// 这个页面不包含任何博客内容，只负责优雅的跳转
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LimaxAI - Loading...</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <script is:inline>
+      (function() {
+        // 1. 定义支持的语言映射 (保持和你 config 中一致)
+        const langMap = {
+          'zh-cn': 'zh-cn', 'zh': 'zh-cn',
+          'zh-tw': 'zh-tw', 'zh-hk': 'zh-tw',
+          'es': 'es', 'ar': 'ar', 'pt': 'pt', 'id': 'id',
+          'ms': 'ms', 'fr': 'fr', 'ru': 'ru', 'hi': 'hi',
+          'ja': 'ja', 'de': 'de', 'ko': 'ko', 'tr': 'tr',
+          'vi': 'vi', 'th': 'th', 'it': 'it', 'fa': 'fa',
+          'nl': 'nl', 'pl': 'pl', 'sv': 'sv', 'uk': 'uk',
+          'ro': 'ro'
+        };
+
+        // 2. 获取浏览器语言
+        const userLang = navigator.language || navigator.userLanguage; 
+        const preferredLang = userLang.toLowerCase();
+
+        // 3. 匹配逻辑
+        let targetLang = 'en'; // 默认 fallback
+        
+        // 先尝试完全匹配 (比如 zh-cn)
+        if (langMap[preferredLang]) {
+          targetLang = langMap[preferredLang];
+        } else {
+          // 再尝试前缀匹配 (比如 zh-CN 匹配 zh)
+          const prefix = preferredLang.split('-')[0];
+          for (const key in langMap) {
+             if (prefix === key) {
+                targetLang = langMap[key];
+                break;
+             }
+          }
+        }
+
+        // 4. 执行跳转 (使用 replace 避免用户按返回键时死循环)
+        window.location.replace(`/${targetLang}/`);
+      })();
+    </script>
+  </head>
+  <body class="bg-white flex flex-col items-center justify-center min-h-screen">
+    
+    <div class="flex flex-col items-center animate-fade-in">
+      
+      <div class="mb-8 relative">
+        <h1 class="text-4xl font-bold text-gray-900 tracking-tight">LimaxAI</h1>
+        <div class="absolute -top-1 -right-3 w-3 h-3 bg-blue-500 rounded-full animate-ping"></div>
+      </div>
+
+      <div class="relative w-12 h-12">
+        <svg class="animate-spin w-full h-full text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+      </div>
+
+      <p class="mt-6 text-gray-400 text-sm font-medium tracking-wide animate-pulse">
+        Loading your inspiration...
+      </p>
+
+    </div>
+
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+    </style>
+  </body>
+</html>
