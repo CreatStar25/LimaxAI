@@ -1,11 +1,11 @@
 ---
-title: "AI Abonelik Yorgunluğundan Bıktınız mı? Tanışın LimaxAI: İhtiyacınız Olan Tek Yaratıcı Paketi"
-description: "Discord sunucuları ve birden fazla abonelikle uğraşmayı bırakın. LimaxAI, Midjourney, Nano Banana, Sora, Keling ve Veo'yu tek bir güçlü, kullanıcı dostu platformda bir araya getiriyor. Muhteşem AI sanatı ve videoları anında oluşturun."
+title: "AI Abonelik Yorgunluğundan Sıkıldınız mı? Tanışın: LimaxAI, İhtiyacınız Olan Tek Yaratıcı Paketi"
+description: "Discord sunucuları ve birden fazla abonelikle uğraşmayı bırakın. LimaxAI, Midjourney, Nano Banana, Sora, Keling ve Veo'yu güçlü, kullanıcı dostu tek bir platformda bir araya getiriyor. Muhteşem AI sanatı ve videoları anında oluşturun."
 pubDate: 2026-01-30
-author: "LimaxAI Ekibi"
+author: "LimaxAI Team"
 image: "https://img.limaxai.com/limaxaiblog/limaxai-all-in-one-ai-generator-dashboard.webp"
 tags: ["AI Tools", "Midjourney", "Sora", "Keling", "Nano Banana", "AI Video"]
-lang: "en"
+lang: "tr"
 ---
 
 Bir saniyeliğine dürüst olalım. 2026'da dijital bir içerik üreticisi olmak giderek pahalılaşıyor ve karmaşıklaşıyor.
@@ -14,37 +14,37 @@ Fotoğraf gerçekçiliğinde bir portre mi istiyorsunuz? **Midjourney** için Di
 Sinematik bir video klip mi lazım? **Keling**'e giriş yapıyorsunuz veya **Sora** kredileri için bekliyorsunuz.
 O viral, 3B el çizimi estetiğinin peşinde misiniz? Şimdi de belirli **Nano Banana** iş akışlarını arıyorsunuz.
 
-İşiniz bittiğinde, 20 açık sekme, cüzdanınızı boşaltan 5 farklı aylık abonelik ve bir baş ağrınız oluyor.
+İşiniz bittiğinde, 20 sekme açık, cüzdanınızı tüketen 5 farklı aylık abonelik ve bir baş ağrınız oluyor.
 
 **Bu kadar zor olmak zorunda değil.**
 
-**LimaxAI**'a hoş geldiniz. Hep kullanmak istediğimiz platformu biz inşa ettik: **Tek bir arayüz. En iyi modellerin hepsi. Sonsuz yaratıcılık.**
+**LimaxAI** işte burada. Her zaman kullanmak istediğimiz platformu biz inşa ettik: **Tek bir arayüz. En iyi modellerin hepsi. Sonsuz yaratıcılık.**
 
 ![LimaxAI, Midjourney, Sora, Keling ve daha fazlasını tek bir panoda toplar](https://img.limaxai.com/limaxaiblog/limaxai-all-in-one-ai-generator-dashboard.webp)
 
-## Hepsinin Yerine Sadece Bir Modelle Yetinmek Neden?
+## Hepsinin Tek Bir Yerde Olduğu Bir Platform Varken Neden Tek Bir Modelle Yetinelim?
 
 Biz sadece başka bir "AI Sarmalayıcı" değiliz. LimaxAI, iş akışınızı kolaylaştırmak için tasarlanmış bir toplama motorudur. İster statik sanat ister sinematik video üretiyor olun, dünyanın en güçlü motorlarını tek bir çatı altında entegre ettik.
 
 ### 1. En İyi Görüntü Üreticileri (Discord Gerekmez)
 
-Kalabalık bir Discord sunucusunda Midjourney'i cep telefonunuzda kullanmayı denediyseniz, acıyı biliyorsunuzdur.
+Kalabalık bir Discord sunucusunda Midjourney'i cep telefonunuzdan kullanmayı denediyseniz, acıyı biliyorsunuz.
 
 LimaxAI'da, **Midjourney**'in gücünü doğrudan temiz, web tabanlı bir arayüze getiriyoruz. Ama burada durmadık.
 
-Trendlerin hızla değiştiğini biliyoruz. Bu yüzden, **Stable Diffusion** gibi ağır topların yanı sıra, **Nano Banana** (o trend, 3B illüstratif avatarlar ve blind-box stilleri için mükemmel) gibi spesifik, yüksek talep gören stilleri destekliyoruz.
+Trendlerin hızlı hareket ettiğini biliyoruz. Bu yüzden, **Stable Diffusion** gibi ağır topların yanı sıra, **Nano Banana** (o trend, 3B illüstratif avatarlar ve blind-box stilleri için mükemmel) gibi spesifik, yüksek talep gören stilleri de destekliyoruz.
 
 * **Anında Karşılaştırın:** Aynı komutu farklı modellerde çalıştırarak hangi stilin vizyonunuza uyduğunu görün.
-* **Özel & Güvenli:** Artık halka açık besleme karmaşası yok. Yaratımlarınız sizin.
+* **Özel & Güvenli:** Artık herkese açık besleme karmaşası yok. Yaratımlarınız size ait.
 
 ### 2. Video Devrimi: Sora, Keling ve Veo
 
-2026, AI Video'nun yılı. Ancak erişim parçalanmış durumda. Bazı araçlar yalnızca davetiye ile; diğerleri coğrafi olarak kilitli veya inanılmaz pahalı.
+2026, AI Video'nun yılı. Ancak erişim parçalı. Bazı araçlar yalnızca davetiye ile; diğerleri coğrafi olarak kilitli veya inanılmaz pahalı.
 
 LimaxAI bu duvarları yıkıyor. AI video üretiminin devlerine sorunsuz erişim sağlıyoruz:
 
 * **Sora:** Akıl almaz fizik ve gerçekçilik ihtiyacınız olduğunda.
-* **Keling:** Sanatsal hareket ve tutarlılığın şu anki kralı.
+* **Keling:** Sanatsal hareket ve tutarlılığın mevcut kralı.
 * **Veo:** Google'ın yüksek çözünürlüklü video sentezi için güç merkezi.
 * **Runway & Luma:** Evet, onları da destekliyoruz.
 
@@ -54,11 +54,11 @@ YouTube için B-roll, sosyal medya için animasyonlu varlıklar veya filminiz i�
 
 ## Gerçekten Akıcı Bir İş Akışı
 
-Yaratıcılığın en büyük düşmanı sürtünmedir. LimaxAI sürtünmeyi ortadan kaldırır.
+Yaratıcılığın en büyük katili sürtünmedir. LimaxAI sürtünmeyi ortadan kaldırır.
 
-* **Birleşik Faturalandırma:** Burada 30$, orada 20$ ödemeyi bırakın. Tek bir abonelik her şeyi kapsar.
+* **Birleşik Faturalandırma:** Şurada 30$, burada 20$ ödemeyi bırakın. Tek bir abonelik her şeyi kapsar.
 * **Birleşik Geçmiş:** Tüm görüntüleriniz ve videolarınız tek bir aranabilir galeride saklanır.
-* **Çapraz-Mod Yaratımı:** Midjourney ile bir görüntü oluşturun, ardından onu Keling ile anında canlandırın. İndirme ve yeniden yükleme gerekmez.
+* **Çapraz Modal Yaratım:** Midjourney ile bir görüntü oluşturun, ardından onu anında Keling ile canlandırın. İndirme ve yeniden yükleme gerekmez.
 
 ## Yaratıcılığınızı Güçlendirmeye Hazır mısınız?
 

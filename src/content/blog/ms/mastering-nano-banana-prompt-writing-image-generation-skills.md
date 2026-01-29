@@ -8,43 +8,43 @@ tags: ["Prompt Engineering", "Nano Banana", "3D Art", "AI Image Generation", "Tu
 lang: "ms"
 ---
 
-Anda pasti pernah melihatnya di seluruh media sosial. Watak-watak 3D berkualiti tinggi, berkilat dan comel yang kelihatan seperti mainan vinil mahal atau koleksi "kotak buta".
+Anda pasti pernah melihatnya di seluruh media sosial. Watak-watak 3D yang comel, berkilat, dan berkualiti tinggi itu yang kelihatan seperti mainan vinil mahal atau koleksi "kotak buta".
 
-Dalam komuniti AI, estetika ini sering dirujuk sebagai gaya **"Nano Banana"** (atau kadangkala "gaya Pop Mart" atau "Render C4D"). Ia penuh warna, bersifat taktil dan sangat memuaskan untuk dilihat.
+Dalam komuniti AI, estetika ini sering dirujuk sebagai gaya **"Nano Banana"** (atau kadangkala "gaya Pop Mart" atau "Render C4D"). Ia penuh warna, boleh dirasa, dan sangat memuaskan untuk dilihat.
 
 Tetapi inilah kekecewaannya: setiap kali anda cuba menjana sendiri menggunakan prompt asas, hasilnya selalunya kelihatan... rata. Atau lebih teruk, menakutkan dan tidak semula jadi.
 
-Hari ini, kami akan memecahkan **kemahiran penulisan prompt dan penjanaan imej Nano Banana** khusus yang anda perlu kuasai untuk gaya ini. Dan bahagian terbaiknya? Anda tidak perlu menjadi artis 3D untuk melakukannya.
+Hari ini, kami akan memecahkan **kemahiran penulisan prompt dan penjanaan imej Nano Banana** yang spesifik yang anda perlu kuasai untuk gaya ini. Dan bahagian terbaiknya? Anda tidak perlu menjadi artis 3D untuk melakukannya.
 
 ![Contoh Watak 3D Gaya Nano Banana](https://img.limaxai.com/limaxaiblog/nano-banana-prompt-writing-cover.webp)
 
 ## Anatomi Prompt "Nano Banana" yang Sempurna
 
-Mencipta rupa khusus ini bukanlah sihir; ia adalah formula. Untuk mendapatkan rupa "mainan vinil" premium, prompt anda perlu memenuhi empat tonggak khusus: **Subjek, Bahan, Pencahayaan, dan Penderia.**
+Mencipta rupa spesifik ini bukanlah sihir; ia adalah formula. Untuk mendapatkan rupa "mainan vinil" premium itu, prompt anda perlu memenuhi empat tonggak spesifik: **Subjek, Bahan, Pencahayaan, dan Pemapar.**
 
 ### 1. Subjek: Fikirkan "Chibi"
-Gaya Nano Banana berkembang maju dengan proporsi yang dibesar-besarkan. Anda tidak mencari realisme; anda mencari *daya tarikan*.
+Gaya Nano Banana berkembang dengan proporsi yang dibesar-besarkan. Anda tidak mencari realisme; anda mencari *daya tarikan*.
 * **Kata kunci untuk digunakan:** `Chibi`, `Comel`, `Kepala besar`, `Badan kecil`, `Mata ekspresif`, `Bentuk bulat`.
 
-### 2. Bahan: Ia Mesti Bersifat Taktil
-Di sinilah 90% pemula gagal. Jika anda tidak menentukan tekstur, AI akan memberi anda kartun generik. Anda mahu ia kelihatan seperti objek fizikal yang boleh anda sentuh.
+### 2. Bahan: Ia Mesti Boleh Dirasai
+Di sinilah 90% pemula gagal. Jika anda tidak mentakrifkan tekstur, AI akan memberi anda kartun generik. Anda mahu ia kelihatan seperti objek fizikal yang boleh anda sentuh.
 * **Kata kunci untuk digunakan:** `Tekstur PVC`, `Bahan tanah liat`, `Kemasan matte`, `Kaca beku`, `Plastik berkilat`, `Mainan vinil`.
 
 ### 3. Pencahayaan: Kualiti Studio
-Pencahayaan yang buruk merosakkan seni 3D. Untuk rupa komersial bersih dan tinggi, anda perlukan pencahayaan lembut dan terkawal.
+Pencahayaan yang buruk membunuh seni 3D. Untuk rupa komersial yang bersih dan tinggi, anda perlukan pencahayaan lembut dan terkawal.
 * **Kata kunci untuk digunakan:** `Pencahayaan studio lembut`, `Cahaya tepi`, `Pencahayaan global`, `Fokus lembut`, `Latar belakang bersih`.
 
-### 4. Penderia: Tiru Sehingga Anda Berjaya
-Beritahu AI enjin pemapar yang mana patut ditiru.
+### 4. Pemapar: Tiru Sehingga Anda Berjaya
+Beritahu AI enjin pemapar mana yang patut ditirunya.
 * **Kata kunci untuk digunakan:** `C4D`, `Octane Render`, `Unreal Engine 5`, `Blender 3D`, `Kesetiaan tinggi`, `Resolusi 8k`.
 
 ![Pemecahan struktur prompt untuk seni 3D](https://img.limaxai.com/limaxaiblog/nano-banana-prompt-structure-example.webp)
 
 ## Gunakan Formula Prompt Ini
 
-Berikut adalah templat yang boleh anda salin dan tampal terus ke dalam **LimaxAI** untuk bermula dengan segera.
+Berikut ialah templat yang boleh anda salin dan tampal terus ke dalam **LimaxAI** untuk bermula dengan segera.
 
-> **Subjek:** Seorang bayi angkasawan comel memegang bintang bercahaya, gaya chibi, gambar penuh badan
+> **Subjek:** Seorang angkasawan bayi comel memegang bintang bercahaya, gaya chibi, pandangan penuh badan
 > **Gaya:** Gaya Pop Mart, mainan kotak buta, estetika Nano Banana
 > **Bahan:** Campuran PVC berkilat dan tanah liat matte, tekstur terperinci tinggi
 > **Teknikal:** Pemapar Octane, C4D, 8k, jejak sinar, pencahayaan studio lembut, palet warna pastel
@@ -53,9 +53,9 @@ Berikut adalah templat yang boleh anda salin dan tampal terus ke dalam **LimaxAI
 
 ## Kemahiran Penjanaan Imej Lanjutan: Pencahayaan Adalah Kunci
 
-Jika imej anda masih terasa "rata", bahan rahsianya biasanya **Pencahayaan Tepi**.
+Jika imej anda masih terasa "rata", bahan rahsianya biasanya **Cahaya Tepi**.
 
-Pencahayaan tepi (atau pencahayaan belakang) menambah garis luar bercahaya pada watak anda, memisahkannya dari latar belakang dan menambah kedalaman.
+Cahaya tepi (atau cahaya belakang) menambah garis luar bercahaya pada watak anda, memisahkannya dari latar belakang dan menambah kedalaman.
 
 * **Cuba tambah ini pada prompt anda:** `"Pencahayaan volumetrik, cahaya tepi, kesan mekar"`
 
@@ -63,9 +63,9 @@ Pencahayaan tepi (atau pencahayaan belakang) menambah garis luar bercahaya pada 
 
 ## Mengapa Bergelut dengan Tetapan Kompleks?
 
-Mempelajari kejuruteraan prompt adalah kemahiran yang berharga, tetapi kadangkala anda hanya mahu hasilnya tanpa sakit kepala menguji 50 kombinasi kata kunci yang berbeza.
+Mempelajari kejuruteraan prompt adalah kemahiran yang berharga, tetapi kadangkala anda hanya mahukan hasilnya tanpa sakit kepala menguji 50 kombinasi kata kunci yang berbeza.
 
-Di **LimaxAI**, kami telah mengagregat model terbaik (termasuk yang dioptimumkan untuk gaya Nano Banana dan Midjourney) ke dalam satu papan pemuka. Anda tidak perlu menjadi pakar prompt untuk mendapatkan hasil profesional—platform kami melakukan kerja berat untuk anda.
+Di **LimaxAI**, kami telah mengumpulkan model terbaik (termasuk yang dioptimumkan untuk gaya Nano Banana dan Midjourney) ke dalam satu papan pemuka. Anda tidak perlu menjadi ahli sihir prompt untuk mendapatkan hasil profesional—platform kami melakukan kerja berat untuk anda.
 
 Berhenti meneka. Mula mencipta.
 
