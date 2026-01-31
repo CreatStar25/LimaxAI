@@ -4,6 +4,9 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 const { title, currentLang } = Astro.props;
+
+// 请将此处替换为您主站的 GA4 衡量 ID
+const GA_MEASUREMENT_ID = 'G-58B3K5R6KY'; 
 ---
 
 <html lang={currentLang}>
@@ -13,6 +16,22 @@ const { title, currentLang } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    {/* ================= Google Analytics 4 开始 ================= */}
+    <script 
+      type="text/partytown" 
+      async 
+      src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+    ></script>
+    <script type="text/partytown" define:vars={{ GA_MEASUREMENT_ID }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', GA_MEASUREMENT_ID);
+    </script>
+    {/* ================= Google Analytics 4 结束 ================= */}
+
   </head>
   <body class="flex flex-col min-h-screen bg-gray-50 text-gray-900">
     
