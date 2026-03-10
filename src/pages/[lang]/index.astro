@@ -25,11 +25,14 @@ export async function getStaticPaths() {
 }
 
 const { posts, currentLang } = Astro.props;
+const buildTime = new Date().toISOString();
 ---
 
 {/* 使用 Layout 包裹内容 */}
 <BaseLayout title="LimaxAI Blog" currentLang={currentLang}>
-  
+  {/* 线上排查用：查看网页源代码搜索 blog-build 可见本次构建时间与文章总数，确认是否为最新部署 */}
+  <div hidden data-blog-build-time={buildTime} data-blog-posts-count={posts.length} aria-hidden="true" />
+
   {/* 页面顶部的 Blog 标题区域 */}
   <div class="bg-white py-12 border-b border-gray-100 mb-8">
     <div class="max-w-7xl mx-auto px-4 text-center sm:px-6 lg:px-8">

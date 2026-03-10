@@ -1,0 +1,51 @@
+# Netlify: 博客列表与文章页不长期缓存，部署后能尽快看到新文章
+/en/
+  Cache-Control: public, max-age=0, must-revalidate
+/zh-cn/
+  Cache-Control: public, max-age=0, must-revalidate
+/zh-tw/
+  Cache-Control: public, max-age=0, must-revalidate
+/es/
+  Cache-Control: public, max-age=0, must-revalidate
+/ar/
+  Cache-Control: public, max-age=0, must-revalidate
+/pt/
+  Cache-Control: public, max-age=0, must-revalidate
+/id/
+  Cache-Control: public, max-age=0, must-revalidate
+/ms/
+  Cache-Control: public, max-age=0, must-revalidate
+/fr/
+  Cache-Control: public, max-age=0, must-revalidate
+/ru/
+  Cache-Control: public, max-age=0, must-revalidate
+/hi/
+  Cache-Control: public, max-age=0, must-revalidate
+/ja/
+  Cache-Control: public, max-age=0, must-revalidate
+/de/
+  Cache-Control: public, max-age=0, must-revalidate
+/ko/
+  Cache-Control: public, max-age=0, must-revalidate
+/tr/
+  Cache-Control: public, max-age=0, must-revalidate
+/vi/
+  Cache-Control: public, max-age=0, must-revalidate
+/th/
+  Cache-Control: public, max-age=0, must-revalidate
+/it/
+  Cache-Control: public, max-age=0, must-revalidate
+/fa/
+  Cache-Control: public, max-age=0, must-revalidate
+/nl/
+  Cache-Control: public, max-age=0, must-revalidate
+/pl/
+  Cache-Control: public, max-age=0, must-revalidate
+/sv/
+  Cache-Control: public, max-age=0, must-revalidate
+/uk/
+  Cache-Control: public, max-age=0, must-revalidate
+/ro/
+  Cache-Control: public, max-age=0, must-revalidate
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
