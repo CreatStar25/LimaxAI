@@ -5,7 +5,9 @@ import { Image } from 'astro:assets';
 const { post } = Astro.props;
 const { data, slug } = post;
 
-// 格式化日期
+const imageSrc = data.image ?? data.heroImage;
+const isLocalImage = typeof imageSrc === 'object' && imageSrc !== null && 'src' in imageSrc;
+
 const formattedDate = data.pubDate.toLocaleDateString('en-US', {
   year: 'numeric',
   month: 'long',
@@ -14,17 +16,26 @@ const formattedDate = data.pubDate.toLocaleDateString('en-US', {
 ---
 
 <article class="flex flex-col h-full overflow-hidden bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
-  {/* 封面图链接区域 */}
+  {/* 封面图链接区域：支持 image（本地/URL）或 heroImage（URL） */}
   <a href={`/${data.lang}/${slug.split('/').pop()}`} class="block aspect-[16/9] overflow-hidden bg-gray-100 group">
-    <Image 
-      src={data.image} 
-      alt={data.title} 
-      width={600} 
-      height={340} 
-      format="webp"
-      inferSize={true} 
-      class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
-    />
+    {isLocalImage ? (
+      <Image
+        src={imageSrc}
+        alt={data.title}
+        width={600}
+        height={340}
+        format="webp"
+        class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+      />
+    ) : (
+      <img
+        src={typeof imageSrc === 'string' ? imageSrc : ''}
+        alt={data.title}
+        width={600}
+        height={340}
+        class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+      />
+    )}
   </a>
 
   <div class="flex flex-col flex-1 p-6">

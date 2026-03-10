@@ -5,18 +5,19 @@ const blogCollection = defineCollection({
   schema: ({ image }) => z.object({
     title: z.string(),
     description: z.string(),
-    pubDate: z.date(),
+    pubDate: z.coerce.date(),
     author: z.string().default('LimaxAI Team'),
-    
-    // ⚠️ 修改点：删除了 .refine()，不再限制图片必须大于600px
-    image: image(),
-    
+    // 支持旧文 image（本地或 URL）或新文 heroImage（URL），至少有一个即可展示
+    image: z.union([image(), z.string().url()]).optional(),
+    heroImage: z.string().url().optional(),
     tags: z.array(z.string()),
     lang: z.enum([
-        'en', 'zh-cn', 'zh-tw', 'es', 'ar', 'pt', 'id', 'ms', 'fr', 'ru', 
-        'hi', 'ja', 'de', 'ko', 'tr', 'vi', 'th', 'it', 'fa', 'nl', 'pl', 
-        'sv', 'uk', 'ro'
+      'en', 'zh-cn', 'zh-tw', 'es', 'ar', 'pt', 'id', 'ms', 'fr', 'ru',
+      'hi', 'ja', 'de', 'ko', 'tr', 'vi', 'th', 'it', 'fa', 'nl', 'pl',
+      'sv', 'uk', 'ro'
     ]),
+  }).refine((data) => data.image != null || data.heroImage != null, {
+    message: '至少需要 image 或 heroImage 之一',
   }),
 });
 
