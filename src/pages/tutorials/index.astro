@@ -1,0 +1,46 @@
+---
+// 教程统一入口：根据浏览器语言重定向到对应语种的教程首页 /{lang}/tutorials/
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LimaxAI Tutorials - Loading...</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script is:inline>
+      (function() {
+        const langMap = {
+          'zh-cn': 'zh-cn', 'zh': 'zh-cn',
+          'zh-tw': 'zh-tw', 'zh-hk': 'zh-tw',
+          'es': 'es', 'ar': 'ar', 'pt': 'pt', 'id': 'id',
+          'ms': 'ms', 'fr': 'fr', 'ru': 'ru', 'hi': 'hi',
+          'ja': 'ja', 'de': 'de', 'ko': 'ko', 'tr': 'tr',
+          'vi': 'vi', 'th': 'th', 'it': 'it', 'fa': 'fa',
+          'nl': 'nl', 'pl': 'pl', 'sv': 'sv', 'uk': 'uk',
+          'ro': 'ro'
+        };
+        const userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+        let targetLang = 'en';
+        if (langMap[userLang]) {
+          targetLang = langMap[userLang];
+        } else {
+          const prefix = userLang.split('-')[0];
+          for (const key in langMap) {
+            if (prefix === key) {
+              targetLang = langMap[key];
+              break;
+            }
+          }
+        }
+        window.location.replace('/' + targetLang + '/tutorials/');
+      })();
+    </script>
+  </head>
+  <body class="bg-white flex flex-col items-center justify-center min-h-screen">
+    <div class="flex flex-col items-center">
+      <h1 class="text-2xl font-bold text-gray-900">LimaxAI</h1>
+      <p class="mt-4 text-gray-500 text-sm">Redirecting to tutorials...</p>
+    </div>
+  </body>
+</html>

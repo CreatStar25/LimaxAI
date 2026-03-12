@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import TutorialLayout from '../../../components/TutorialLayout.astro';
+import { LOCALES } from '../../../i18n/ui';
 import {
   getTutorialList,
   getTutorialArticle,
@@ -9,8 +10,7 @@ import {
 } from '../../../lib/tutorials';
 
 export async function getStaticPaths() {
-  const locales = ['en', 'zh-cn', 'zh-tw', 'es', 'ar', 'pt', 'id', 'ms', 'fr', 'ru', 'hi', 'ja', 'de', 'ko', 'tr', 'vi', 'th', 'it', 'fa', 'nl', 'pl', 'sv', 'uk', 'ro'];
-  return locales.map((lang) => {
+  return LOCALES.map((lang) => {
     const slug = getFirstTutorialSlug(lang);
     const article = getTutorialArticle(slug, lang)!;
     const list = getTutorialList(lang);

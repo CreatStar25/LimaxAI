@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import TutorialLayout from '../../../components/TutorialLayout.astro';
+import { LOCALES } from '../../../i18n/ui';
 import {
   getTutorialList,
   getTutorialArticle,
@@ -8,9 +9,8 @@ import {
 } from '../../../lib/tutorials';
 
 export async function getStaticPaths() {
-  const locales = ['en', 'zh-cn', 'zh-tw', 'es', 'ar', 'pt', 'id', 'ms', 'fr', 'ru', 'hi', 'ja', 'de', 'ko', 'tr', 'vi', 'th', 'it', 'fa', 'nl', 'pl', 'sv', 'uk', 'ro'];
   const paths: { params: { lang: string; slug: string }; props: object }[] = [];
-  for (const lang of locales) {
+  for (const lang of LOCALES) {
     const list = getTutorialList(lang);
     for (const entry of list) {
       const article = getTutorialArticle(entry.slug, lang);

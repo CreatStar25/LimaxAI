@@ -2,20 +2,47 @@
 // src/layouts/BaseLayout.astro
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { LOCALES } from '../i18n/ui';
 
 const { title, currentLang } = Astro.props;
 
 // 请将此处替换为您主站的 GA4 衡量 ID
-const GA_MEASUREMENT_ID = 'G-58B3K5R6KY'; 
+const GA_MEASUREMENT_ID = 'G-58B3K5R6KY';
+
+// 国内引擎：content-language 元标签（百度/360 依赖）
+const contentLanguageMap: Record<string, string> = {
+  'zh-cn': 'zh-CN',
+  'zh-tw': 'zh-TW',
+  'en': 'en-US',
+  'es': 'es-ES', 'ar': 'ar', 'pt': 'pt-BR', 'id': 'id', 'ms': 'ms', 'fr': 'fr-FR',
+  'ru': 'ru', 'hi': 'hi', 'ja': 'ja', 'de': 'de-DE', 'ko': 'ko-KR', 'tr': 'tr',
+  'vi': 'vi', 'th': 'th', 'it': 'it-IT', 'fa': 'fa', 'nl': 'nl-NL', 'pl': 'pl',
+  'sv': 'sv', 'uk': 'uk', 'ro': 'ro',
+};
+const contentLanguage = contentLanguageMap[currentLang] ?? 'en-US';
+
+// 国际引擎：hreflang + x-default（Google/Bing），x-default 指向英文
+const site = Astro.site?.href ?? 'https://blog.limaxai.com';
+const baseUrl = site.endsWith('/') ? site.slice(0, -1) : site;
+const pathname = Astro.url.pathname;
+const pathWithoutLang = pathname.replace(/^\/[^/]+/, '') || '/';
+const pathSuffix = pathWithoutLang === '/' ? '/' : pathWithoutLang;
 ---
 
 <html lang={currentLang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="content-language" content={contentLanguage} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {/* 国际引擎：hreflang，x-default 指向英文 */}
+    {LOCALES.map((locale) => {
+      const href = baseUrl + '/' + locale + pathSuffix;
+      return <link rel="alternate" hreflang={locale} href={href} />;
+    })}
+    <link rel="alternate" hreflang="x-default" href={baseUrl + '/en' + pathSuffix} />
 
     {/* ================= Google Analytics 4 开始 ================= */}
     <script 
