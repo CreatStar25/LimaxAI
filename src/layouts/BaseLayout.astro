@@ -26,7 +26,8 @@ const site = Astro.site?.href ?? 'https://blog.limaxai.com';
 const baseUrl = site.endsWith('/') ? site.slice(0, -1) : site;
 const pathname = Astro.url.pathname;
 const pathWithoutLang = pathname.replace(/^\/[^/]+/, '') || '/';
-const pathSuffix = pathWithoutLang === '/' ? '/' : pathWithoutLang;
+// 非根路径统一带尾部斜杠，与站内链接（如 /about/、/tutorials/）一致，避免语言切换跳错
+const pathSuffix = pathWithoutLang === '/' ? '/' : (pathWithoutLang.endsWith('/') ? pathWithoutLang : pathWithoutLang + '/');
 ---
 
 <html lang={currentLang}>
@@ -62,8 +63,8 @@ const pathSuffix = pathWithoutLang === '/' ? '/' : pathWithoutLang;
   </head>
   <body class="flex flex-col min-h-screen bg-gray-50 text-gray-900">
     
-    {/* 导航栏，传入当前语言 */}
-    <Header currentLang={currentLang} />
+    {/* 导航栏：传入当前语言与路径后缀，以便语言切换时保持同一页面 */}
+    <Header currentLang={currentLang} pathSuffix={pathSuffix} />
 
     {/* 主要内容区域 - slot 会被外部传入的内容替换 */}
     <main class="flex-grow">

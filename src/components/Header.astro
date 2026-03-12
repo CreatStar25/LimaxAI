@@ -2,9 +2,25 @@
 // src/components/Header.astro；导航与语言切换文案来自 src/i18n/ui.ts
 import { getUi, LOCALES, LOCALE_LABELS } from '../i18n/ui';
 
-const { currentLang = 'en' } = Astro.props;
+interface Props {
+  currentLang?: string;
+  /** 当前路径去掉语言前缀后的部分，如 /tutorials/midjourney-red-alert/；用于语言切换时保持同一页面 */
+  pathSuffix?: string;
+}
+const { currentLang = 'en', pathSuffix = '/' } = Astro.props;
 const t = getUi(currentLang);
 const currentLangLabel = LOCALE_LABELS[currentLang] ?? 'English';
+
+// 根据当前路径判断哪个导航项为选中态（蓝色）
+const pathNorm = pathSuffix.replace(/\/$/, '') || '/';
+const isBlog = pathNorm === '/';
+const isTutorial = pathNorm.startsWith('/tutorials');
+const isAbout = pathNorm.startsWith('/about');
+
+const navLinkClass = (active: boolean) =>
+  active
+    ? 'text-blue-600 font-bold px-4 py-2 text-base transition-colors'
+    : 'text-gray-500 hover:text-gray-900 px-4 py-2 text-base font-medium transition-colors';
 ---
 
 <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100">
@@ -21,9 +37,9 @@ const currentLangLabel = LOCALE_LABELS[currentLang] ?? 'English';
       {/* 2. 中间导航链接 - 修改点3：字体从 text-sm 改为 text-lg，增加点击区域 */}
       <nav class="hidden md:flex space-x-8">
         <a href="https://www.limaxai.com/" class="text-gray-500 hover:text-gray-900 px-4 py-2 text-base font-medium transition-colors">{t.navbar.home}</a>
-        <a href={`/${currentLang}/`} class="text-blue-600 font-bold px-4 py-2 text-base transition-colors">{t.navbar.blog}</a>
-        <a href={`/${currentLang}/tutorials/`} class="text-gray-500 hover:text-gray-900 px-4 py-2 text-base font-medium transition-colors">{t.navbar.tutorial}</a>
-        <a href={`/${currentLang}/about/`} class="text-gray-500 hover:text-gray-900 px-4 py-2 text-base font-medium transition-colors">{t.navbar.about}</a>
+        <a href={`/${currentLang}/`} class={navLinkClass(isBlog)}>{t.navbar.blog}</a>
+        <a href={`/${currentLang}/tutorials/`} class={navLinkClass(isTutorial)}>{t.navbar.tutorial}</a>
+        <a href={`/${currentLang}/about/`} class={navLinkClass(isAbout)}>{t.navbar.about}</a>
         <a href="https://api.limaxai.com/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-900 px-4 py-2 text-base font-medium transition-colors">{t.navbar.api}</a>
       </nav>
 
@@ -40,7 +56,7 @@ const currentLangLabel = LOCALE_LABELS[currentLang] ?? 'English';
             <div class="p-4 grid grid-cols-1 md:grid-cols-3 gap-2">
                 {LOCALES.map((code) => (
                     <a
-                        href={`/${code}/`}
+                        href={`/${code}${pathSuffix}`}
                         class={`block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors ${currentLang === code ? 'bg-blue-50 text-blue-700 font-semibold' : ''}`}
                     >
                         {LOCALE_LABELS[code]}
