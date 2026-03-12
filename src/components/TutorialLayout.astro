@@ -1,0 +1,139 @@
+---
+import type { TutorialArticle, TutorialListEntry } from '../lib/tutorials';
+
+const { currentLang, article, list, labels, slug } = Astro.props;
+---
+
+<div class="flex flex-col lg:flex-row gap-8 lg:gap-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+  {/* 左侧：文章列表 */}
+  <aside class="lg:w-60 xl:w-64 flex-shrink-0 order-2 lg:order-1 lg:sticky lg:top-24 lg:self-start">
+    <h2 class="text-xs font-semibold text-blue-600 uppercase tracking-wider mb-4">{labels.articleList}</h2>
+    <nav class="space-y-0.5 border-l-2 border-gray-100 pl-4" aria-label="Tutorial list">
+      {list.map((entry) => (
+        <a
+          href={`/${currentLang}/tutorials/${entry.slug}/`}
+          class={`block py-2.5 text-sm transition-colors rounded-r-lg pr-2 -mr-2 border-l-2 -ml-4 pl-4 ${entry.slug === slug ? 'font-medium text-gray-900 border-blue-600 bg-blue-50/50' : 'border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50'}`}
+        >
+          {entry.title}
+        </a>
+      ))}
+    </nav>
+  </aside>
+
+  {/* 中间：文章详情 */}
+  <main class="flex-1 min-w-0 order-1 lg:order-2 max-w-3xl">
+    <article>
+      <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 tracking-tight">{article.title}</h1>
+      <p class="text-gray-600 leading-relaxed mb-10">{article.intro}</p>
+
+      {article.sections.map((section) => (
+        <section id={section.id} class="scroll-mt-28 mb-12">
+          <h2 class="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-100">{section.title}</h2>
+          <div class="space-y-5">
+            {section.blocks.map((block) => {
+              if (block.type === 'paragraph') {
+                return <p class="text-gray-600 leading-relaxed">{block.text}</p>;
+              }
+              if (block.type === 'list') {
+                return (
+                  <ul class="list-none space-y-2.5">
+                    {block.items.map((item) => (
+                      <li class="flex items-start gap-2.5 text-gray-600">
+                        <span class="text-green-600 mt-0.5 flex-shrink-0" aria-hidden="true">✔</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                );
+              }
+              if (block.type === 'links') {
+                return (
+                  <ul class="list-none space-y-4">
+                    {block.items.map((link) => (
+                      <li class="pl-0">
+                        <a
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="text-blue-600 hover:underline font-medium"
+                        >
+                          {link.text}
+                        </a>
+                        {link.desc ? <p class="text-sm text-gray-500 mt-1">{link.desc}</p> : null}
+                      </li>
+                    ))}
+                  </ul>
+                );
+              }
+              if (block.type === 'table') {
+                return (
+                  <div class="overflow-x-auto my-4 rounded-lg border border-gray-200">
+                    <table class="min-w-full text-sm text-left">
+                      <thead class="bg-gray-50 text-gray-700 font-medium">
+                        <tr>
+                          {block.headers.map((h) => <th class="px-4 py-3 border-b border-gray-200">{h}</th>)}
+                        </tr>
+                      </thead>
+                      <tbody class="text-gray-600">
+                        {block.rows.map((row) => (
+                          <tr class="border-b border-gray-100 last:border-0">
+                            {row.map((cell) => <td class="px-4 py-3 align-top">{cell}</td>)}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                );
+              }
+              if (block.type === 'image') {
+                const src = block.src;
+                return (
+                  <figure class="my-4">
+                    {src ? (
+                      <img src={src} alt={block.alt} class="max-w-full h-auto rounded-lg border border-gray-200" />
+                    ) : (
+                      <div class="flex items-center justify-center rounded-lg border-2 border-dashed border-gray-200 bg-gray-50 text-gray-400 text-sm py-12 px-6" role="img" aria-label={block.alt}>
+                        [ 效果图占位 · {block.alt} ]
+                      </div>
+                    )}
+                    {block.caption ? <figcaption class="mt-2 text-sm text-gray-500">{block.caption}</figcaption> : null}
+                  </figure>
+                );
+              }
+              if (block.type === 'cta') {
+                return (
+                  <p class="pt-2">
+                    <a
+                      href={block.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-md hover:shadow-lg transition-all"
+                    >
+                      {block.text}
+                    </a>
+                  </p>
+                );
+              }
+              return null;
+            })}
+          </div>
+        </section>
+      ))}
+    </article>
+  </main>
+
+  {/* 右侧：页面导航（当前文章 TOC） */}
+  <aside class="xl:w-56 flex-shrink-0 order-3 hidden xl:block xl:sticky xl:top-24 xl:self-start">
+    <h2 class="text-xs font-semibold text-gray-900 uppercase tracking-wider mb-4">{labels.pageNav}</h2>
+    <nav class="space-y-1.5 border-l border-gray-200 pl-4" aria-label="On this page">
+      {article.sections.map((section) => (
+        <a
+          href={`#${section.id}`}
+          class="block py-1.5 text-sm text-gray-600 hover:text-blue-600 transition-colors"
+        >
+          {section.title}
+        </a>
+      ))}
+    </nav>
+  </aside>
+</div>

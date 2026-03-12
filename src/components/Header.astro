@@ -1,37 +1,10 @@
 ---
-// src/components/Header.astro
+// src/components/Header.astro；导航与语言切换文案来自 src/i18n/ui.ts
+import { getUi, LOCALES, LOCALE_LABELS } from '../i18n/ui';
+
 const { currentLang = 'en' } = Astro.props;
-
-// 修改点1：定义24种语言列表，label 改为“原生语言”显示
-const languages = [
-  { code: 'en', label: 'English' },
-  { code: 'zh-cn', label: '简体中文' },
-  { code: 'zh-tw', label: '繁體中文' },
-  { code: 'es', label: 'Español' },
-  { code: 'ar', label: 'العربية' },
-  { code: 'pt', label: 'Português' },
-  { code: 'id', label: 'Bahasa Indonesia' },
-  { code: 'ms', label: 'Bahasa Melayu' },
-  { code: 'fr', label: 'Français' },
-  { code: 'ru', label: 'Русский' },
-  { code: 'hi', label: 'हिन्दी' },
-  { code: 'ja', label: '日本語' },
-  { code: 'de', label: 'Deutsch' },
-  { code: 'ko', label: '한국어' },
-  { code: 'tr', label: 'Türkçe' },
-  { code: 'vi', label: 'Tiếng Việt' },
-  { code: 'th', label: 'ไทย' },
-  { code: 'it', label: 'Italiano' },
-  { code: 'fa', label: 'فارسی' },
-  { code: 'nl', label: 'Nederlands' },
-  { code: 'pl', label: 'Polski' },
-  { code: 'sv', label: 'Svenska' },
-  { code: 'uk', label: 'Українська' },
-  { code: 'ro', label: 'Română' }
-];
-
-// 获取当前语言的显示名称
-const currentLangLabel = languages.find(l => l.code === currentLang)?.label || 'English';
+const t = getUi(currentLang);
+const currentLangLabel = LOCALE_LABELS[currentLang] ?? 'English';
 ---
 
 <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100">
@@ -41,14 +14,17 @@ const currentLangLabel = languages.find(l => l.code === currentLang)?.label || '
       {/* 1. Logo 区域 - 修改点2：去掉了图标，只保留文字 */}
       <div class="flex-shrink-0 flex items-center">
         <a href={`/${currentLang}/`} class="text-2xl font-bold text-gray-900 flex items-center gap-2">
-           <span>LimaxAI</span>
+          <span>{t.navbar.logoText}</span>
         </a>
       </div>
 
       {/* 2. 中间导航链接 - 修改点3：字体从 text-sm 改为 text-lg，增加点击区域 */}
       <nav class="hidden md:flex space-x-8">
-        <a href="https://www.limaxai.com/" class="text-gray-500 hover:text-gray-900 px-4 py-2 text-base font-medium transition-colors">Home</a>
-        <a href={`/${currentLang}/`} class="text-blue-600 font-bold px-4 py-2 text-base transition-colors">Blog</a>
+        <a href="https://www.limaxai.com/" class="text-gray-500 hover:text-gray-900 px-4 py-2 text-base font-medium transition-colors">{t.navbar.home}</a>
+        <a href={`/${currentLang}/`} class="text-blue-600 font-bold px-4 py-2 text-base transition-colors">{t.navbar.blog}</a>
+        <a href={`/${currentLang}/tutorials/`} class="text-gray-500 hover:text-gray-900 px-4 py-2 text-base font-medium transition-colors">{t.navbar.tutorial}</a>
+        <a href={`/${currentLang}/about/`} class="text-gray-500 hover:text-gray-900 px-4 py-2 text-base font-medium transition-colors">{t.navbar.about}</a>
+        <a href="https://api.limaxai.com/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-900 px-4 py-2 text-base font-medium transition-colors">{t.navbar.api}</a>
       </nav>
 
       {/* 3. 右侧语言切换器 */}
@@ -62,12 +38,12 @@ const currentLangLabel = languages.find(l => l.code === currentLang)?.label || '
         {/* 下拉菜单：3列布局 */}
         <div id="lang-dropdown" class="hidden absolute right-0 mt-2 w-[600px] rounded-xl shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-right transform transition-all duration-200">
             <div class="p-4 grid grid-cols-1 md:grid-cols-3 gap-2">
-                {languages.map((lang) => (
-                    <a 
-                        href={`/${lang.code}/`} 
-                        class={`block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors ${currentLang === lang.code ? 'bg-blue-50 text-blue-700 font-semibold' : ''}`}
+                {LOCALES.map((code) => (
+                    <a
+                        href={`/${code}/`}
+                        class={`block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors ${currentLang === code ? 'bg-blue-50 text-blue-700 font-semibold' : ''}`}
                     >
-                        {lang.label}
+                        {LOCALE_LABELS[code]}
                     </a>
                 ))}
             </div>

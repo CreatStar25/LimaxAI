@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import TutorialLayout from '../../../components/TutorialLayout.astro';
+import {
+  getTutorialList,
+  getTutorialArticle,
+  getTutorialLabels,
+} from '../../../lib/tutorials';
+
+export async function getStaticPaths() {
+  const locales = ['en', 'zh-cn', 'zh-tw', 'es', 'ar', 'pt', 'id', 'ms', 'fr', 'ru', 'hi', 'ja', 'de', 'ko', 'tr', 'vi', 'th', 'it', 'fa', 'nl', 'pl', 'sv', 'uk', 'ro'];
+  const paths: { params: { lang: string; slug: string }; props: object }[] = [];
+  for (const lang of locales) {
+    const list = getTutorialList(lang);
+    for (const entry of list) {
+      const article = getTutorialArticle(entry.slug, lang);
+      if (article) {
+        paths.push({
+          params: { lang, slug: entry.slug },
+          props: {
+            currentLang: lang,
+            slug: entry.slug,
+            article,
+            list: list.map((e) => ({ slug: e.slug, title: e.title })),
+            labels: getTutorialLabels(lang),
+          },
+        });
+      }
+    }
+  }
+  return paths;
+}
+
+const { currentLang, slug, article, list, labels } = Astro.props;
+---
+
+<BaseLayout title={`${article.title} | LimaxAI`} currentLang={currentLang}>
+  <div class="bg-white border-b border-gray-100 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <a href={`/${currentLang}/`} class="text-sm text-gray-500 hover:text-blue-600 transition-colors">← Blog</a>
+    </div>
+  </div>
+  <TutorialLayout currentLang={currentLang} slug={slug} article={article} list={list} labels={labels} />
+</BaseLayout>

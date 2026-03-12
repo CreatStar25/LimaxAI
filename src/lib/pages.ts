@@ -15,19 +15,102 @@ export interface PageContent {
   body: string;
 }
 
-const aboutEn: PageContent = {
+/** 关于我们页面：支持多段落与小节标题 */
+export interface AboutSection {
+  heading?: string;
+  paragraphs: string[];
+}
+
+export interface AboutPageContent {
+  title: string;
+  sections: AboutSection[];
+}
+
+const aboutEn: AboutPageContent = {
   title: 'About',
-  body: 'LimaxAI is a professional AI generation platform. We bring together cutting-edge models for video and image creation in one place, so you can create stunning content without managing multiple subscriptions or switching between tools.',
+  sections: [
+    {
+      paragraphs: [
+        'We are the team behind LimaxAI — a group of young people who love technology and hate friction. In an era when AI tools are everywhere yet fragmented, we grew tired of subscribing to a dozen different services just to meet different creative needs: Midjourney for design, ChatGPT for copy, other platforms for video and music. The cost adds up, and it fragments the creative flow.',
+        'So we built LimaxAI. Our goal is simple: let everyone "use all kinds of AI tools as they wish" with one subscription that unlocks every creative scenario.',
+      ],
+    },
+    {
+      heading: 'All-in-one AI creation platform',
+      paragraphs: [
+        'Limaxai.com is an all-in-one AI creation platform that brings together top global AI capabilities: from large language models (ChatGPT, Claude, Gemini) to image models (Midjourney), from video generation (Seedance, Veo) to music (Suno), covering text, image, audio, and video. No more switching between tools or paying for overlapping features — one subscription unlocks the latest, strongest AI models and keeps your workflow smooth and costs under control.',
+      ],
+    },
+    {
+      heading: 'Developer ecosystem',
+      paragraphs: [
+        'Beyond the all-in-one platform for individual creators, we also focus on the developer ecosystem. api.limaxai.com offers affordable, stable API services, opening the AI capabilities we integrate to all developers. Whether you’re building your own product or improving existing workflows, you can access leading AI technology at low cost and lower the barrier to development.',
+      ],
+    },
+    {
+      paragraphs: [
+        'We believe the value of AI tools is "simplifying complexity and unleashing creativity." We will keep integrating more cutting-edge models and improving both the product experience and API services, so every creator and developer can focus on ideas and innovation, without being weighed down by tooling.',
+      ],
+    },
+  ],
 };
 
-const aboutZhCN: PageContent = {
+const aboutZhCN: AboutPageContent = {
   title: '关于我们',
-  body: 'LimaxAI 是专业 AI 生成平台。我们将前沿的视频与图像生成模型汇聚于一体，让您无需管理多个订阅或切换工具即可创作精彩内容。',
+  sections: [
+    {
+      paragraphs: [
+        '我们是 LimaxAI 的开发者 —— 一群热爱技术、拒绝繁琐的年轻人。在这个 AI 工具遍地开花却各自为战的时代，我们厌倦了为满足不同创作需求，被迫订阅一堆零散工具的麻烦：想做设计要开 Midjourney 会员，写文案要充 ChatGPT 套餐，剪视频、做音乐又得切换多个平台，不仅成本高昂，还割裂了创作灵感。',
+        '于是，LimaxAI 应运而生。我们的初心很简单：让每个人都能「随心所欲地使用各类 AI 工具」，用一个会员打通所有创作场景。',
+      ],
+    },
+    {
+      heading: '一站式 AI 创作平台',
+      paragraphs: [
+        'Limaxai.com 作为一站式 AI 创作平台，整合了全球最顶尖的 AI 能力：从大语言模型（ChatGPT、Claude、Gemini）到绘画模型（Midjourney），从视频生成（Seedance、Veo）到音乐创作（Suno），覆盖文字、图像、音频、视频全场景创作需求。不用在多个工具间来回切换，不用为重复功能付费，一个会员就能解锁最新、最强的 AI 模型，让创作流程更顺畅、成本更可控。',
+      ],
+    },
+    {
+      heading: '开发者生态',
+      paragraphs: [
+        '除了面向个人创作者的一站式平台，我们也关注开发者生态。api.limaxai.com 提供价格合理、稳定可靠的 API 接口服务，将我们整合的优质 AI 能力开放给所有开发者，无论是搭建自有产品，还是优化现有业务流程，都能以低成本接入顶尖 AI 技术，降低开发门槛。',
+      ],
+    },
+    {
+      paragraphs: [
+        '我们始终相信，AI 工具的价值在于「简化复杂，释放创造力」。未来，我们会持续整合更多前沿 AI 模型，优化使用体验与 API 服务，让每一位创作者、开发者都能专注于灵感与创新，无需被工具的繁琐所困扰。',
+      ],
+    },
+  ],
 };
 
-const aboutZhTW: PageContent = {
+const aboutZhTW: AboutPageContent = {
   title: '關於我們',
-  body: 'LimaxAI 是專業 AI 生成平台。我們將前沿的視頻與圖像生成模型匯聚於一體，讓您無需管理多個訂閱或切換工具即可創作精彩內容。',
+  sections: [
+    {
+      paragraphs: [
+        '我們是 LimaxAI 的開發者 —— 一群熱愛技術、拒絕繁瑣的年輕人。在這個 AI 工具遍地開花卻各自為戰的時代，我們厭倦了為滿足不同創作需求，被迫訂閱一堆零散工具的麻煩：想做設計要開 Midjourney 會員，寫文案要充 ChatGPT 套餐，剪視頻、做音樂又得切換多個平台，不僅成本高昂，還割裂了創作靈感。',
+        '於是，LimaxAI 應運而生。我們的初心很簡單：讓每個人都能「隨心所欲地使用各類 AI 工具」，用一個會員打通所有創作場景。',
+      ],
+    },
+    {
+      heading: '一站式 AI 創作平台',
+      paragraphs: [
+        'Limaxai.com 作為一站式 AI 創作平台，整合了全球最頂尖的 AI 能力：從大語言模型（ChatGPT、Claude、Gemini）到繪畫模型（Midjourney），從視頻生成（Seedance、Veo）到音樂創作（Suno），覆蓋文字、圖像、音頻、視頻全場景創作需求。不用在多個工具間來回切換，不用為重複功能付費，一個會員就能解鎖最新、最強的 AI 模型，讓創作流程更順暢、成本更可控。',
+      ],
+    },
+    {
+      heading: '開發者生態',
+      paragraphs: [
+        '除了面向個人創作者的一站式平台，我們也關注開發者生態。api.limaxai.com 提供價格合理、穩定可靠的 API 接口服務，將我們整合的優質 AI 能力開放給所有開發者，無論是搭建自有產品，還是優化現有業務流程，都能以低成本接入頂尖 AI 技術，降低開發門檻。',
+      ],
+    },
+    {
+      paragraphs: [
+        '我們始終相信，AI 工具的價值在於「簡化複雜，釋放創造力」。未來，我們會持續整合更多前沿 AI 模型，優化使用體驗與 API 服務，讓每一位創作者、開發者都能專注於靈感與創新，無需被工具的繁瑣所困擾。',
+      ],
+    },
+  ],
 };
 
 const privacyEn: PageContent = {
@@ -60,15 +143,31 @@ const termsZhTW: PageContent = {
   body: '使用 LimaxAI 即表示您同意本條款。您必須合法使用服務，不得濫用生成內容。我們可能會不時更新本條款，繼續使用即視為接受。',
 };
 
-const aboutByLocale: Record<string, PageContent> = {
+const aboutByLocale: Record<string, AboutPageContent> = {
   en: aboutEn,
   'zh-cn': aboutZhCN,
   'zh-tw': aboutZhTW,
-  es: { title: 'Sobre nosotros', body: 'LimaxAI es una plataforma profesional de generación con IA. Reunimos modelos de vanguardia para vídeo e imagen en un solo lugar.' },
-  fr: { title: 'À propos', body: 'LimaxAI est une plateforme professionnelle de génération IA. Nous réunissons des modèles de pointe pour la création de vidéos et d\'images.' },
-  de: { title: 'Über uns', body: 'LimaxAI ist eine professionelle KI-Generierungsplattform. Wir bündeln modernste Modelle für Video- und Bildcreation.' },
-  ja: { title: '会社概要', body: 'LimaxAIはプロのAI生成プラットフォームです。動画・画像生成の最先端モデルを一箇所でご利用いただけます。' },
-  ko: { title: '소개', body: 'LimaxAI는 전문 AI 생성 플랫폼입니다. 동영상과 이미지 제작을 위한 최신 모델을 한곳에서 제공합니다.' },
+  es: aboutEn,
+  ar: aboutEn,
+  pt: aboutEn,
+  id: aboutEn,
+  ms: aboutEn,
+  fr: aboutEn,
+  ru: aboutEn,
+  hi: aboutEn,
+  ja: aboutEn,
+  de: aboutEn,
+  ko: aboutEn,
+  tr: aboutEn,
+  vi: aboutEn,
+  th: aboutEn,
+  it: aboutEn,
+  fa: aboutEn,
+  nl: aboutEn,
+  pl: aboutEn,
+  sv: aboutEn,
+  uk: aboutEn,
+  ro: aboutEn,
 };
 
 const privacyByLocale: Record<string, PageContent> = {
@@ -97,8 +196,12 @@ function getContent(map: Record<string, PageContent>, locale: string): PageConte
   return map[locale] ?? map['en'] ?? { title: 'Page', body: '' };
 }
 
-export function getAboutContent(locale: string): PageContent {
-  return getContent(aboutByLocale, locale);
+function getAboutPageContent(locale: string): AboutPageContent {
+  return aboutByLocale[locale] ?? aboutEn;
+}
+
+export function getAboutContent(locale: string): AboutPageContent {
+  return getAboutPageContent(locale);
 }
 
 export function getPrivacyContent(locale: string): PageContent {

@@ -7,21 +7,32 @@ export async function getStaticPaths() {
     const content = getAboutContent(lang);
     return {
       params: { lang },
-      props: { currentLang: lang, title: content.title, body: content.body },
+      props: { currentLang: lang, content },
     };
   });
 }
 
-const { currentLang, title, body } = Astro.props;
+const { currentLang, content } = Astro.props;
 ---
 
-<BaseLayout title={`${title} | LimaxAI`} currentLang={currentLang}>
+<BaseLayout title={`${content.title} | LimaxAI`} currentLang={currentLang}>
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <h1 class="text-3xl font-bold text-gray-900 mb-6">{title}</h1>
-    <div class="prose prose-gray text-gray-600 leading-relaxed">
-      <p>{body}</p>
+    <h1 class="text-3xl font-bold text-gray-900 mb-10">{content.title}</h1>
+    <div class="prose prose-gray text-gray-600 leading-relaxed space-y-8">
+      {content.sections.map((section) => (
+        <section>
+          {section.heading ? (
+            <h2 class="text-xl font-semibold text-gray-900 mt-10 mb-4 first:mt-0">{section.heading}</h2>
+          ) : null}
+          <div class="space-y-4">
+            {section.paragraphs.map((para) => (
+              <p class="leading-relaxed">{para}</p>
+            ))}
+          </div>
+        </section>
+      ))}
     </div>
-    <p class="mt-8">
+    <p class="mt-10 pt-6 border-t border-gray-100">
       <a href={`/${currentLang}/`} class="text-blue-600 hover:underline">← Blog</a>
     </p>
   </div>
