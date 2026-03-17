@@ -20,6 +20,7 @@ export interface UiCopy {
     tutorial: string;
     about: string;
     api: string;
+    startCreate: string;
     features: string;
     pricing: string;
     faq: string;
@@ -35,6 +36,7 @@ export interface UiCopy {
       about: string;
       privacy: string;
       terms: string;
+      api: string;
       limaxai: string;
       suno: string;
       deepseek4: string;
@@ -80,6 +82,7 @@ const en: UiCopy = {
     tutorial: 'Tutorial',
     about: 'About',
     api: 'API',
+    startCreate: 'Start creating',
     features: 'Features',
     pricing: 'Pricing',
     faq: 'FAQ',
@@ -98,6 +101,7 @@ const en: UiCopy = {
       about: 'About',
       privacy: 'Privacy',
       terms: 'Terms',
+      api: 'API',
       limaxai: 'LimaxAI',
       suno: 'Suno',
       deepseek4: 'deepseek 4',
@@ -158,6 +162,7 @@ const zhCN: UiCopy = withEnFallback({
     tutorial: '使用教程',
     about: '关于',
     api: 'API接口',
+    startCreate: '开始创作',
     features: '功能',
     pricing: '定价',
     faq: '常见问题',
@@ -168,7 +173,7 @@ const zhCN: UiCopy = withEnFallback({
   footer: {
     brand: { intro: 'LimaxAI，专业 AI 生成平台。使用前沿模型创作精彩视频与图片。' },
     columns: { aiTools: 'AI 工具', aiVideo: 'AI 视频', aiImage: 'AI 图像', company: '公司' },
-    links: { blog: '博客', about: '关于我们', privacy: '隐私政策', terms: '服务条款' },
+    links: { blog: '博客', about: '关于我们', privacy: '隐私政策', terms: '服务条款', api: 'API接口' },
     copyright: '版权所有。',
   },
   buttons: { getStarted: '立即开始', learnMore: '了解更多', viewDetails: '查看详情', submit: '提交', back: '返回' },
@@ -183,6 +188,7 @@ const zhTW: UiCopy = withEnFallback({
     tutorial: '使用教程',
     about: '關於',
     api: 'API 介面',
+    startCreate: '開始創作',
     features: '功能',
     pricing: '定價',
     faq: '常見問題',
@@ -193,7 +199,7 @@ const zhTW: UiCopy = withEnFallback({
   footer: {
     brand: { intro: 'LimaxAI，專業 AI 生成平台。使用前沿模型創作精彩視頻與圖片。' },
     columns: { aiTools: 'AI 工具', aiVideo: 'AI 視頻', aiImage: 'AI 圖像', company: '公司' },
-    links: { blog: '部落格', about: '關於我們', privacy: '隱私政策', terms: '服務條款' },
+    links: { blog: '部落格', about: '關於我們', privacy: '隱私政策', terms: '服務條款', api: 'API 介面' },
     copyright: '版權所有。',
   },
   buttons: { getStarted: '立即開始', learnMore: '了解更多', viewDetails: '查看詳情', submit: '提交', back: '返回' },

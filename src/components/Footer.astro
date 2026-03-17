@@ -47,6 +47,7 @@ const columns = [
       { labelKey: 'about' as const, href: `/${currentLang}/about/` },
       { labelKey: 'privacy' as const, href: `/${currentLang}/privacy/` },
       { labelKey: 'terms' as const, href: `/${currentLang}/terms/` },
+      { labelKey: 'api' as const, href: 'https://api.limaxai.com/', external: true },
     ],
   },
 ];
@@ -82,6 +83,8 @@ const linkLabels: Record<keyof typeof t.links, string> = t.links;
                   <a
                     href={link.href}
                     class="text-sm text-gray-500 hover:text-gray-900 transition-colors"
+                    target={link.external ? '_blank' : undefined}
+                    rel={link.external ? 'noopener noreferrer' : undefined}
                   >
                     {linkLabels[link.labelKey]}
                   </a>

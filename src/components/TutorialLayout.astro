@@ -102,12 +102,12 @@ const { currentLang, article, list, labels, slug } = Astro.props;
               }
               if (block.type === 'cta') {
                 return (
-                  <p class="pt-2">
+                  <p class="pt-4 pb-2">
                     <a
                       href={block.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-md hover:shadow-lg transition-all"
+                      class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white rounded-xl shadow-lg hover:shadow-xl transition-all bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 hover:from-blue-500 hover:via-indigo-500 hover:to-violet-500"
                     >
                       {block.text}
                     </a>
