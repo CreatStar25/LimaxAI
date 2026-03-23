@@ -15,6 +15,18 @@ export interface PageContent {
   body: string;
 }
 
+export interface AgreementSection {
+  heading: string;
+  paragraphs: string[];
+}
+
+export interface AgreementContent {
+  title: string;
+  updatedAt: string;
+  intro: string;
+  sections: AgreementSection[];
+}
+
 /** 关于我们页面：支持多段落与小节标题 */
 export interface AboutSection {
   heading?: string;
@@ -143,6 +155,139 @@ const termsZhTW: PageContent = {
   body: '使用 LimaxAI 即表示您同意本條款。您必須合法使用服務，不得濫用生成內容。我們可能會不時更新本條款，繼續使用即視為接受。',
 };
 
+const autoDebitAgreementZhCN: AgreementContent = {
+  title: '用户开通代扣协议',
+  updatedAt: '2026-03-10',
+  intro: '欢迎您使用 LimaxAI 提供的周期订阅服务。为便于您持续使用服务，您可选择开通自动代扣（自动续费）能力。请在开通前仔细阅读本协议。您点击“同意并开通”或以其他方式确认，即视为您已充分理解并同意本协议全部内容。',
+  sections: [
+    {
+      heading: '一、协议适用范围',
+      paragraphs: [
+        '1. 本协议适用于您在 LimaxAI 平台购买周期订阅服务并授权第三方支付渠道进行自动代扣的场景。',
+        '2. 本协议是《服务条款》《隐私政策》的组成部分；未约定事项，按前述协议及平台公示规则执行。',
+      ],
+    },
+    {
+      heading: '二、自动代扣与自动续费说明',
+      paragraphs: [
+        '1. 自动代扣是指在您当前订阅周期届满前后，系统按照您已授权的支付方式自动扣取下一周期费用，以延续会员权益。',
+        '2. 开通后，如您未在当前周期到期前主动关闭自动续费，系统将视为您同意在每个续费周期按当时有效价格自动扣款。',
+        '3. 扣款成功后，订阅周期将顺延；如扣款失败，您可能无法继续享受对应会员权益。',
+      ],
+    },
+    {
+      heading: '三、费用与价格规则',
+      paragraphs: [
+        '1. 续费价格以续费当时页面展示、订单确认页或相关活动规则为准；促销到期后可能恢复原价。',
+        '2. 如因税费、汇率、渠道费率或产品策略调整导致价格变更，平台将通过站内页面、订单页或其他合理方式提示。',
+        '3. 您理解并同意：不同支付渠道、地区或币种可能导致实际扣款金额存在合理差异（含汇率换算及手续费）。',
+      ],
+    },
+    {
+      heading: '四、扣款时间与失败处理',
+      paragraphs: [
+        '1. 系统通常会在当前周期到期日前后发起扣款（具体时间以支付渠道处理时间为准）。',
+        '2. 若首次扣款失败，平台可能在合理期限内进行补扣或再次尝试扣款。',
+        '3. 因账户余额不足、银行卡/支付账户状态异常、风控拦截、网络故障等导致扣款失败的，相关责任由您与支付渠道按规则处理。',
+      ],
+    },
+    {
+      heading: '五、取消自动续费',
+      paragraphs: [
+        '1. 您可随时在 LimaxAI 账户设置或对应支付渠道管理页关闭自动续费。',
+        '2. 为避免临近周期边界产生扣款，建议您至少在当前订阅周期到期前 24 小时完成取消操作。',
+        '3. 取消生效后，不影响您在当前已支付周期内继续使用服务；到期后将不再自动扣款。',
+      ],
+    },
+    {
+      heading: '六、退款与例外',
+      paragraphs: [
+        '1. 除法律法规另有规定或平台另行承诺外，已扣取的订阅费用原则上不支持按已使用周期进行部分退款。',
+        '2. 如因系统错误导致重复扣款或明显计费异常，经核实后平台将按规则退款或提供等值补偿。',
+        '3. 通过第三方应用商店（如适用）支付的订单，退款路径和规则以该渠道政策为准。',
+      ],
+    },
+    {
+      heading: '七、用户授权与义务',
+      paragraphs: [
+        '1. 您确认提交的支付账户信息真实、有效，并有权进行本协议项下授权。',
+        '2. 您应妥善保管账户、设备及支付验证信息；因您保管不善导致的损失由您自行承担。',
+        '3. 如支付账户、手机号、邮箱等信息变更，您应及时更新，以免影响扣款通知和服务连续性。',
+      ],
+    },
+    {
+      heading: '八、平台权利与责任限制',
+      paragraphs: [
+        '1. 平台有权在法律允许范围内基于业务变化调整订阅档位、权益内容、价格或续费规则，并提前以合理方式通知。',
+        '2. 因不可抗力、支付渠道异常、网络故障、系统维护等非平台可控原因导致的扣款延迟或失败，平台不承担超出法律规定范围的责任。',
+      ],
+    },
+    {
+      heading: '九、协议变更与终止',
+      paragraphs: [
+        '1. 平台可根据法律法规、监管要求或业务变化对本协议进行更新，更新内容将通过页面公示等方式发布。',
+        '2. 若您不同意更新内容，可停止使用并关闭自动续费；继续使用或未关闭自动续费视为接受更新后的协议。',
+      ],
+    },
+    {
+      heading: '十、法律适用与争议解决',
+      paragraphs: [
+        '1. 本协议的订立、生效、解释、履行及争议解决，适用中华人民共和国法律（不含冲突规范）。',
+        '2. 因本协议产生的争议，双方应先友好协商；协商不成的，任一方可向平台运营主体所在地有管辖权的人民法院提起诉讼。',
+      ],
+    },
+    {
+      heading: '十一、联系方式',
+      paragraphs: [
+        '如您对本协议或自动续费有疑问，可通过 LimaxAI 官方客服渠道与我们联系。',
+      ],
+    },
+  ],
+};
+
+const autoDebitAgreementZhTW: AgreementContent = {
+  title: '用戶開通代扣協議',
+  updatedAt: autoDebitAgreementZhCN.updatedAt,
+  intro: autoDebitAgreementZhCN.intro,
+  sections: autoDebitAgreementZhCN.sections,
+};
+
+const autoDebitAgreementEn: AgreementContent = {
+  title: 'Auto-Debit Agreement',
+  updatedAt: autoDebitAgreementZhCN.updatedAt,
+  intro: 'This agreement governs your authorization for recurring subscription auto-debit on LimaxAI. By enabling auto-renewal, you agree that we may automatically charge your selected payment method at each billing cycle unless you cancel before renewal.',
+  sections: [
+    {
+      heading: 'Scope',
+      paragraphs: [
+        'This agreement applies to recurring subscription purchases and auto-renewal authorization on LimaxAI.',
+        'It supplements the Terms of Service and Privacy Policy.',
+      ],
+    },
+    {
+      heading: 'Renewal and Charges',
+      paragraphs: [
+        'If auto-renewal is enabled and not canceled before the current term ends, the next billing cycle will be charged automatically at the then-effective price.',
+        'Charge timing and processing depend on the payment channel.',
+      ],
+    },
+    {
+      heading: 'Cancellation',
+      paragraphs: [
+        'You can cancel auto-renewal anytime in account settings or through your payment provider.',
+        'To avoid renewal on the next cycle, please cancel at least 24 hours before expiration.',
+      ],
+    },
+    {
+      heading: 'Refunds and Liability',
+      paragraphs: [
+        'Refunds follow applicable laws and platform/channel policies.',
+        'For duplicate or abnormal charges caused by system errors, we will verify and process correction or refund.',
+      ],
+    },
+  ],
+};
+
 const aboutByLocale: Record<string, AboutPageContent> = {
   en: aboutEn,
   'zh-cn': aboutZhCN,
@@ -192,6 +337,33 @@ const termsByLocale: Record<string, PageContent> = {
   ko: { title: '이용약관', body: 'LimaxAI 이용 시 본 약관에 동의하는 것입니다. 서비스를 법적으로 이용해 주세요.' },
 };
 
+const autoDebitAgreementByLocale: Record<string, AgreementContent> = {
+  en: autoDebitAgreementEn,
+  'zh-cn': autoDebitAgreementZhCN,
+  'zh-tw': autoDebitAgreementZhTW,
+  es: autoDebitAgreementEn,
+  ar: autoDebitAgreementEn,
+  pt: autoDebitAgreementEn,
+  id: autoDebitAgreementEn,
+  ms: autoDebitAgreementEn,
+  fr: autoDebitAgreementEn,
+  ru: autoDebitAgreementEn,
+  hi: autoDebitAgreementEn,
+  ja: autoDebitAgreementEn,
+  de: autoDebitAgreementEn,
+  ko: autoDebitAgreementEn,
+  tr: autoDebitAgreementEn,
+  vi: autoDebitAgreementEn,
+  th: autoDebitAgreementEn,
+  it: autoDebitAgreementEn,
+  fa: autoDebitAgreementEn,
+  nl: autoDebitAgreementEn,
+  pl: autoDebitAgreementEn,
+  sv: autoDebitAgreementEn,
+  uk: autoDebitAgreementEn,
+  ro: autoDebitAgreementEn,
+};
+
 function getContent(map: Record<string, PageContent>, locale: string): PageContent {
   return map[locale] ?? map['en'] ?? { title: 'Page', body: '' };
 }
@@ -210,6 +382,10 @@ export function getPrivacyContent(locale: string): PageContent {
 
 export function getTermsContent(locale: string): PageContent {
   return getContent(termsByLocale, locale);
+}
+
+export function getAutoDebitAgreementContent(locale: string): AgreementContent {
+  return autoDebitAgreementByLocale[locale] ?? autoDebitAgreementEn;
 }
 
 export function getAllLocales(): readonly string[] {

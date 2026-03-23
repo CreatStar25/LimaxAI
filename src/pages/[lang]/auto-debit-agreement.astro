@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAutoDebitAgreementContent, getAllLocales } from '../../lib/pages';
+
+export async function getStaticPaths() {
+  return getAllLocales().map((lang) => {
+    const content = getAutoDebitAgreementContent(lang);
+    return {
+      params: { lang },
+      props: {
+        currentLang: lang,
+        title: content.title,
+        updatedAt: content.updatedAt,
+        intro: content.intro,
+        sections: content.sections,
+      },
+    };
+  });
+}
+
+const { currentLang, title, updatedAt, intro, sections } = Astro.props;
+---
+
+<BaseLayout title={`${title} | LimaxAI`} currentLang={currentLang}>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <h1 class="text-3xl font-bold text-gray-900 mb-3">{title}</h1>
+    <p class="text-sm text-gray-500 mb-6">更新日期 / Updated at: {updatedAt}</p>
+    <div class="prose prose-gray text-gray-700 leading-relaxed">
+      <p>{intro}</p>
+      {sections.map((section: { heading: string; paragraphs: string[] }) => (
+        <section class="mt-6">
+          <h2 class="text-xl font-semibold text-gray-900">{section.heading}</h2>
+          {section.paragraphs.map((paragraph: string) => <p>{paragraph}</p>)}
+        </section>
+      ))}
+    </div>
+    <p class="mt-8">
+      <a href={`/${currentLang}/`} class="text-blue-600 hover:underline">← Blog</a>
+    </p>
+  </div>
+</BaseLayout>
