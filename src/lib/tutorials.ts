@@ -11,6 +11,9 @@ import {
   getNanobanana2DesignArticleForExtraLocale,
   getNanobanana2LaunchArticleForExtraLocale,
 } from './tutorial-nanobanana2-design-launch-extra';
+import {
+  getMidjourneySelectedSeriesArticle,
+} from './tutorial-midjourney-selected-series';
 
 export interface TutorialLink {
   url: string;
@@ -66,6 +69,11 @@ const listZhCN: TutorialListEntry[] = [
   { slug: 'nanobanana2-ecommerce-detail', title: 'Nano banana 2 给出一整套电商详情页（儿童坐姿矫正器实例）' },
   { slug: 'nanobanana2-design-assistant', title: 'Nano Banana 2 当“设计助理”用：分镜、批量精修、多尺寸' },
   { slug: 'nanobanana2-google-launch', title: '谷歌新发Nano Banana 2已上线，快来尝鲜！' },
+  { slug: 'midjourney-selected-prompts-1', title: 'Midjourney 精选 · 附完整提示词1' },
+  { slug: 'midjourney-selected-prompts-2', title: 'Midjourney 精选 · 附完整提示词2' },
+  { slug: 'midjourney-selected-prompts-3', title: 'Midjourney 精选 · 附完整提示词3' },
+  { slug: 'midjourney-selected-prompts-4', title: 'Midjourney 精选 · 附完整提示词4' },
+  { slug: 'midjourney-selected-prompts-5', title: 'Midjourney 精选 · 附完整提示词5' },
   { slug: 'ai-video-guide', title: 'AI 视频生成入门' },
 ];
 
@@ -87,6 +95,11 @@ const listZhTW: TutorialListEntry[] = [
   { slug: 'nanobanana2-ecommerce-detail', title: 'Nano banana 2 給出一整套電商詳情頁（兒童坐姿矯正器實例）' },
   { slug: 'nanobanana2-design-assistant', title: 'Nano Banana 2 當「設計助理」用：分鏡、批量精修、多尺寸' },
   { slug: 'nanobanana2-google-launch', title: '谷歌新發Nano Banana 2已上線，快來嘗鮮！' },
+  { slug: 'midjourney-selected-prompts-1', title: 'Midjourney 精选 · 附完整提示词1' },
+  { slug: 'midjourney-selected-prompts-2', title: 'Midjourney 精选 · 附完整提示词2' },
+  { slug: 'midjourney-selected-prompts-3', title: 'Midjourney 精选 · 附完整提示词3' },
+  { slug: 'midjourney-selected-prompts-4', title: 'Midjourney 精选 · 附完整提示词4' },
+  { slug: 'midjourney-selected-prompts-5', title: 'Midjourney 精选 · 附完整提示词5' },
   { slug: 'ai-video-guide', title: 'AI 視頻生成入門' },
 ];
 
@@ -108,6 +121,11 @@ const listEn: TutorialListEntry[] = [
   { slug: 'nanobanana2-ecommerce-detail', title: 'Nano Banana 2: Full E‑commerce Detail Page (Posture Corrector Example)' },
   { slug: 'nanobanana2-design-assistant', title: 'Nano Banana 2 as Design Assistant: Storyboards, Batch Edit, Multi-Size' },
   { slug: 'nanobanana2-google-launch', title: 'Google’s Nano Banana 2 Is Here—Try It Now' },
+  { slug: 'midjourney-selected-prompts-1', title: 'Midjourney Picks · Full Prompt Pack 1' },
+  { slug: 'midjourney-selected-prompts-2', title: 'Midjourney Picks · Full Prompt Pack 2' },
+  { slug: 'midjourney-selected-prompts-3', title: 'Midjourney Picks · Full Prompt Pack 3' },
+  { slug: 'midjourney-selected-prompts-4', title: 'Midjourney Picks · Full Prompt Pack 4' },
+  { slug: 'midjourney-selected-prompts-5', title: 'Midjourney Picks · Full Prompt Pack 5' },
   { slug: 'ai-video-guide', title: 'AI Video Generation Guide' },
 ];
 
@@ -2940,6 +2958,26 @@ const articleNanobanana2LaunchByLocale: Record<string, TutorialArticle> = {
   ),
 };
 
+function buildSelectedSeriesByLocale(slug: string): Record<string, TutorialArticle> {
+  return {
+    en: getMidjourneySelectedSeriesArticle(slug, 'en') as TutorialArticle,
+    'zh-cn': getMidjourneySelectedSeriesArticle(slug, 'zh-cn') as TutorialArticle,
+    'zh-tw': getMidjourneySelectedSeriesArticle(slug, 'zh-tw') as TutorialArticle,
+    ...Object.fromEntries(
+      EXTRA_LOCALES.map((loc) => {
+        const a = getMidjourneySelectedSeriesArticle(slug, loc);
+        return [loc, (a ?? getMidjourneySelectedSeriesArticle(slug, 'en')) as TutorialArticle];
+      }),
+    ),
+  };
+}
+
+const articleSelectedPrompts1ByLocale = buildSelectedSeriesByLocale('midjourney-selected-prompts-1');
+const articleSelectedPrompts2ByLocale = buildSelectedSeriesByLocale('midjourney-selected-prompts-2');
+const articleSelectedPrompts3ByLocale = buildSelectedSeriesByLocale('midjourney-selected-prompts-3');
+const articleSelectedPrompts4ByLocale = buildSelectedSeriesByLocale('midjourney-selected-prompts-4');
+const articleSelectedPrompts5ByLocale = buildSelectedSeriesByLocale('midjourney-selected-prompts-5');
+
 const articlesBySlugAndLocale: Record<string, Record<string, TutorialArticle>> = {
   'limaxai-guide': articleLimaxaiByLocale,
   'midjourney-tutorial': articleMidjourneyTutorialByLocale,
@@ -2958,6 +2996,11 @@ const articlesBySlugAndLocale: Record<string, Record<string, TutorialArticle>> =
   'nanobanana2-ecommerce-detail': articleNanobanana2EcommerceByLocale,
   'nanobanana2-design-assistant': articleNanobanana2DesignByLocale,
   'nanobanana2-google-launch': articleNanobanana2LaunchByLocale,
+  'midjourney-selected-prompts-1': articleSelectedPrompts1ByLocale,
+  'midjourney-selected-prompts-2': articleSelectedPrompts2ByLocale,
+  'midjourney-selected-prompts-3': articleSelectedPrompts3ByLocale,
+  'midjourney-selected-prompts-4': articleSelectedPrompts4ByLocale,
+  'midjourney-selected-prompts-5': articleSelectedPrompts5ByLocale,
   'ai-video-guide': articleAiVideoByLocale,
 };
 
