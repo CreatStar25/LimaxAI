@@ -19,7 +19,7 @@ lang: "th"
 
 ## 2. แนวทางพรอมต์คำสั่งสำหรับภาพบุคคลและแฟชั่น
 
-- **ว���นเทจ/ยุค 80**: Close-up of models in colorful bows and ribbons, retro 80s-inspired kitsch style, pop art. --ar 31:64 --stylize 500
+- **วินเทจ/ยุค 80**: Close-up of models in colorful bows and ribbons, retro 80s-inspired kitsch style, pop art. --ar 31:64 --stylize 500
 - **สไตล์ขาวดำระดับมาสเตอร์**: Black and white photograph of a beautiful woman in long coat, 1950s style, in the style of Peter Lindbergh, soft lighting. --ar 85:128
 - **มุมต่ำ/บนพื้นเต้นรำ**: Woman in black leather pants held up by people on dance floor, arms outstretched, blue lighting, low angle, Canon EOS R6. --ar 64:51
 - **บันได/แสงและเงา**: Woman on stairs, black dress and high heels, dim lit with shadows, photorealistic. --ar 85:128

@@ -28,9 +28,36 @@ export async function getStaticPaths() {
 }
 
 const { currentLang, slug, article, list, labels } = Astro.props;
+const tutorialSeoTitleByLocale: Record<string, string> = {
+  en: 'LimaxAI Tutorials | AI Tool Usage Guides & How-Tos',
+  'zh-cn': 'LimaxAI 使用教程 | AI 工具使用指南与实操教程',
+  'zh-tw': 'LimaxAI 使用教程 | AI 工具使用指南與實作教學',
+  es: 'Tutoriales de LimaxAI | Guías de uso y tutoriales prácticos de herramientas de IA',
+  ar: 'دروس LimaxAI | أدلة استخدام أدوات الذكاء الاصطناعي وشروحات عملية',
+  pt: 'Tutoriais LimaxAI | Guias de uso e passo a passo de ferramentas de IA',
+  id: 'Tutorial LimaxAI | Panduan penggunaan dan cara praktik alat AI',
+  ms: 'Tutorial LimaxAI | Panduan penggunaan & langkah praktikal alat AI',
+  fr: 'Tutoriels LimaxAI | Guides d’utilisation et modes d’emploi des outils IA',
+  ru: 'Руководства LimaxAI | Гайды по использованию AI-инструментов и пошаговые инструкции',
+  hi: 'LimaxAI ट्यूटोरियल्स | AI टूल उपयोग गाइड्स और कैसे करें मार्गदर्शिकाएँ',
+  ja: 'LimaxAIチュートリアル | AIツールの使い方ガイド＆ハウツー',
+  de: 'LimaxAI Tutorials | Nutzungsleitfäden und How-tos für KI-Tools',
+  ko: 'LimaxAI 튜토리얼 | AI 도구 사용 가이드 및 실전 방법서',
+  tr: 'LimaxAI Eğitimleri | Yapay zeka araçları kullanım rehberleri ve nasıl yapılır içerikleri',
+  vi: 'Hướng dẫn LimaxAI | Cẩm nang sử dụng và hướng dẫn thực hành công cụ AI',
+  th: 'บทช่วยสอน LimaxAI | คู่มือการใช้งานและวิธีทำสำหรับเครื่องมือ AI',
+  it: 'Tutorial LimaxAI | Guide all’uso e how-to per strumenti AI',
+  fa: 'آموزش‌های LimaxAI | راهنمای استفاده و آموزش‌های گام‌به‌گام ابزارهای هوش مصنوعی',
+  nl: 'LimaxAI-tutorials | Gebruikersgidsen en how-to’s voor AI-tools',
+  pl: 'Samouczki LimaxAI | Przewodniki użytkowania i instrukcje krok po kroku narzędzi AI',
+  sv: 'LimaxAI-guider | Användningsguider och how-to för AI-verktyg',
+  uk: 'Туторіали LimaxAI | Посібники з використання та покрокові інструкції для AI-інструментів',
+  ro: 'Tutoriale LimaxAI | Ghiduri de utilizare și instrucțiuni practice pentru instrumente AI',
+};
+const tutorialSeoTitle = tutorialSeoTitleByLocale[currentLang] ?? tutorialSeoTitleByLocale.en;
 ---
 
-<BaseLayout title={`${article.title} | LimaxAI`} currentLang={currentLang}>
+<BaseLayout title={tutorialSeoTitle} currentLang={currentLang}>
   <div class="bg-white border-b border-gray-100 py-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <a href={`/${currentLang}/`} class="text-sm text-gray-500 hover:text-blue-600 transition-colors">← Blog</a>

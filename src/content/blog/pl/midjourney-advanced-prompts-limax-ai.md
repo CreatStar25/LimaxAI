@@ -15,7 +15,7 @@ Możesz zawsze ufać **Midjourney**. W tym artykule zebraliśmy zestaw **zaawans
 
 ## 1. Dlaczego warto nadal zbierać prompty Midjourney
 
-Świat AI do generowania obrazów rozwija się dynamicznie, ale **Midjourney** nadal radzi sobie świetnie pod względem stabilności stylu, jakości portretów i kontroli kompozycji. Zachowaj te **prompty Midjourney** ��� możesz ich użyć do bezpośredniego generowania obrazów lub rozłożyć je na części i zastosować ich strukturę na platformach takich jak Zimo, Doubao czy **Limax AI**.
+Świat AI do generowania obrazów rozwija się dynamicznie, ale **Midjourney** nadal radzi sobie świetnie pod względem stabilności stylu, jakości portretów i kontroli kompozycji. Zachowaj te **prompty Midjourney**, abyś mógł ich użyć do bezpośredniego generowania obrazów lub rozłożyć je na części i zastosować ich strukturę na platformach takich jak Zimo, Doubao czy **Limax AI**.
 
 ## 2. Pomysły na prompty do portretów i mody
 

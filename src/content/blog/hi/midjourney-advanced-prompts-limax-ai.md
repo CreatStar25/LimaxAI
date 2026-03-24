@@ -7,7 +7,7 @@ heroImage: "https://img.limaxai.com/aiweb/midjourney-prompts-limax-cover.png"
 lang: "hi"
 ---
 
-आप हमेशा **Midjourney** पर भरोसा कर सकते हैं। यह लेख **Midjourney के उन्नत प्रॉम्प्ट्स** का एक संग्रह प्रस्तुत करता है, जिसमें पोर्ट्रेट फोटोग्राफी की विभिन्न शैल���याँ और सौंदर्यशास्त्र का शिखर शामिल है, इसे संग्रहित करके धीरे-धीरे उपयोग करने के लिए उपयुक्त है; अंत में **Limax AI** रचना प्रवेश दिया गया है।
+आप हमेशा **Midjourney** पर भरोसा कर सकते हैं। यह लेख **Midjourney के उन्नत प्रॉम्प्ट्स** का एक संग्रह प्रस्तुत करता है, जिसमें पोर्ट्रेट फोटोग्राफी की विभिन्न शैलियाँ और सौंदर्यशास्त्र का शिखर शामिल है, इसे संग्रहित करके धीरे-धीरे उपयोग करने के लिए उपयुक्त है; अंत में **Limax AI** रचना प्रवेश दिया गया है।
 
 **[👉 अभी रचना शुरू करें](https://limaxai.com)**
 
@@ -25,7 +25,7 @@ lang: "hi"
 - **सीढ़ियाँ/लाइट एंड शैडो**: Woman on stairs, black dress and high heels, dim lit with shadows, photorealistic. --ar 85:128  
 - **त्योहार/उपहार**: Eccentric woman with white hair, large red bow, golden gift box, Christmas tree, plastic dress, low angle, Kodak Gold 200 style. --ar 3:4  
 
-उपरोक्त सभी को आवश्यकतानुसार विषय, दृश्य और अनुपात बदल���र उपयोग किया जा सकता है, संग्रहित करके धीरे-धीरे उपयोग करें।
+उपरोक्त सभी को आवश्यकतानुसार विषय, दृश्य और अनुपात बदलकर उपयोग किया जा सकता है, संग्रहित करके धीरे-धीरे उपयोग करें।
 
 ![Midjourney शैली उदाहरण](https://img.limaxai.com/aiweb/midjourney-prompts-limax-style2.png)
 

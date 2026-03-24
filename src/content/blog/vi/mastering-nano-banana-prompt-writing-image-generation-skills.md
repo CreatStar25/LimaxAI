@@ -44,7 +44,7 @@ Hãy nói với AI trình kết xuất nào mà nó nên bắt chước.
 
 Đây là một mẫu bạn có thể sao chép và dán trực tiếp vào **LimaxAI** để bắt đầu ngay lập tức.
 
-> **Chủ th���:** Một em bé phi hành gia dễ thương đang cầm một ngôi sao phát sáng, phong cách chibi, góc chụp toàn thân
+> **Chủ thể:** Một em bé phi hành gia dễ thương đang cầm một ngôi sao phát sáng, phong cách chibi, góc chụp toàn thân
 > **Phong cách:** Phong cách Pop mart, đồ chơi blind box, thẩm mỹ Nano Banana
 > **Chất liệu:** Kết hợp PVC bóng và đất sét mờ, kết cấu chi tiết cao
 > **Kỹ thuật:** Octane render, C4D, 8k, ray tracing, ánh sáng studio mềm mại, bảng màu pastel

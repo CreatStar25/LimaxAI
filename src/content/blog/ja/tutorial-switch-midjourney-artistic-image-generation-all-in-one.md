@@ -41,7 +41,7 @@ LimaxAIでは、以下のことが可能です：
 
 ![Midjourneyオプションを表示するLimaxAIモデルセレクター](https://img.limaxai.com/limaxaiblog/midjourney-web-interface-tutorial-step.webp)
 
-### ���テップ2：芸術的なプロンプトを作成する
+### ステップ2：芸術的なプロンプトを作成する
 私たちのWebインターフェースでは、複雑なパラメータコードを覚える必要はありません。アート用語に集中してください。
 
 見事な油絵風の仕上がりを目指すなら、以下の構造を試してみてください：

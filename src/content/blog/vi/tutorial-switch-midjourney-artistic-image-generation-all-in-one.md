@@ -27,7 +27,7 @@ Trước khi đi vào phần "Làm thế nào", hãy nói về lý do "Tại sao
 Trên LimaxAI, bạn nhận được:
 1.  **Không Gian Làm Việc Riêng Tư:** Không còn cảnh lộn xộn từ bảng tin công cộng.
 2.  **Cài Đặt Trực Quan:** Nhấp nút để chọn tỷ lệ khung hình và phong cách thay vì gõ `--ar 16:9 --v 6.0`.
-3.  **Lợi Thế "Tất Cả Trong Một":** Tạo một hình ảnh với Midjourney, sau đ�� ngay lập tức làm động nó với Runway hoặc Keling mà không cần rời khỏi trang.
+3.  **Lợi Thế "Tất Cả Trong Một":** Tạo một hình ảnh với Midjourney, sau đó ngay lập tức làm động nó với Runway hoặc Keling mà không cần rời khỏi trang.
 
 ## Từng Bước: Tạo Tác Phẩm Nghệ Thuật Trên LimaxAI
 

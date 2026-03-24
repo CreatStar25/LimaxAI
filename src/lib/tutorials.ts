@@ -3,6 +3,15 @@
  * 支持多语种，按 locale 返回左侧列表与当前文章详情；右侧 TOC 由文章 sections 生成。
  */
 
+import {
+  getGeometryComicArticleForExtraLocale,
+  getNanobanana2EcommerceArticleForExtraLocale,
+} from './tutorial-articles-extra-locales';
+import {
+  getNanobanana2DesignArticleForExtraLocale,
+  getNanobanana2LaunchArticleForExtraLocale,
+} from './tutorial-nanobanana2-design-launch-extra';
+
 export interface TutorialLink {
   url: string;
   text: string;
@@ -2880,35 +2889,6 @@ function makeClassicIllustrationArticle(loc: string): TutorialArticle {
     ],
   };
 }
-/** 几何漫画 / 3 篇 Nano Banana 2：21 语种仅本地化标题与摘要，正文暂用英文 */
-const geometryComicTitleIntroByLocale: Record<string, { title: string; intro: string }> = {
-  es: { title: 'Midjourney: Código de estilo cómic geométrico', intro: 'Además del prompt, Midjourney permite códigos de estilo (sref) para unificar el estilo. Aquí el código de cómic geométrico y 10 ejemplos para LimaxAI.' },
-  ar: { title: 'Midjourney: رمز أسلوب الكوميك الهندسي', intro: 'بالإضافة إلى الوصف، يدعم Midjourney رموز الأسلوب (sref) لتوحيد المظهر. هنا رمز الكوميك الهندسي و10 أمثلة لـ LimaxAI.' },
-  pt: { title: 'Midjourney: Código de estilo banda desenhada geométrica', intro: 'Além do prompt, o Midjourney suporta códigos de estilo (sref) para unificar. Aqui o código de banda desenhada geométrica e 10 exemplos para LimaxAI.' },
-  id: { title: 'Midjourney: Kode gaya komik geometris', intro: 'Selain prompt, Midjourney mendukung kode gaya (sref) untuk menyatukan gaya. Berikut kode komik geometris dan 10 contoh untuk LimaxAI.' },
-  ms: { title: 'Midjourney: Kod gaya komik geometri', intro: 'Selain prompt, Midjourney menyokong kod gaya (sref) untuk menyatukan gaya. Di bawah kod komik geometri dan 10 contoh untuk LimaxAI.' },
-  fr: { title: 'Midjourney : Code de style bande dessinée géométrique', intro: 'Outre le prompt, Midjourney prend en charge les codes de style (sref). Voici le code bande dessinée géométrique et 10 exemples pour LimaxAI.' },
-  ru: { title: 'Midjourney: Стилевой код геометрического комикса', intro: 'Кроме промпта, Midjourney поддерживает коды стиля (sref). Здесь код геометрического комикса и 10 примеров для LimaxAI.' },
-  hi: { title: 'Midjourney: ज्यामितीय कॉमिक स्टाइल कोड', intro: 'प्रॉम्प्ट के अलावा Midjourney स्टाइल कोड (sref) से एक जैसा लुक देता है। यहाँ ज्यामितीय कॉमिक कोड और 10 उदाहरण LimaxAI के लिए।' },
-  ja: { title: 'Midjourney: 幾何漫画スタイルコード', intro: 'プロンプトに加え、Midjourneyはスタイルコード（sref）で統一できます。ここでは幾何漫画のコードと10例をLimaxAI用に紹介。' },
-  de: { title: 'Midjourney: Stilcode geometrischer Comic', intro: 'Neben dem Prompt unterstützt Midjourney Stilcodes (sref). Hier der geometrische-Comic-Code und 10 Beispiele für LimaxAI.' },
-  ko: { title: 'Midjourney: 기하학적 만화 스타일 코드', intro: '프롬프트 외에 Midjourney는 스타일 코드(sref)로 통일할 수 있습니다. 여기 기하학적 만화 코드와 10가지 예시를 LimaxAI용으로 안내합니다.' },
-  tr: { title: 'Midjourney: Geometrik çizgi roman stil kodu', intro: 'Prompt dışında Midjourney stil kodu (sref) ile birleşik stil verir. İşte geometrik çizgi roman kodu ve LimaxAI için 10 örnek.' },
-  vi: { title: 'Midjourney: Mã phong cách truyện tranh hình học', intro: 'Ngoài prompt, Midjourney hỗ trợ mã phong cách (sref) để thống nhất. Đây là mã truyện tranh hình học và 10 ví dụ cho LimaxAI.' },
-  th: { title: 'Midjourney: รหัสสไตล์การ์ตูนเรขาคณิต', intro: 'นอกจากพรอมป์ Midjourney รองรับรหัสสไตล์ (sref) เพื่อให้สไตล์เดียวกัน นี่คือรหัสการ์ตูนเรขาคณิตและ 10 ตัวอย่างสำหรับ LimaxAI' },
-  it: { title: 'Midjourney: Codice stile fumetto geometrico', intro: 'Oltre al prompt, Midjourney supporta codici di stile (sref). Ecco il codice fumetto geometrico e 10 esempi per LimaxAI.' },
-  fa: { title: 'Midjourney: کد سبک کمیک هندسی', intro: 'علاوه بر پرامپت، Midjourney از کدهای سبک (sref) پشتیبانی می‌کند. اینجا کد کمیک هندسی و ۱۰ نمونه برای LimaxAI.' },
-  nl: { title: 'Midjourney: Stijlcode geometrisch stripverhaal', intro: 'Naast de prompt ondersteunt Midjourney stijlcodes (sref). Hier de geometrisch-stripcode en 10 voorbeelden voor LimaxAI.' },
-  pl: { title: 'Midjourney: Kod stylu komiks geometryczny', intro: 'Oprócz promptu Midjourney obsługuje kody stylu (sref). Oto kod komiksu geometrycznego i 10 przykładów dla LimaxAI.' },
-  sv: { title: 'Midjourney: Stilkod geometrisk serie', intro: 'Förutom prompt stöder Midjourney stilkoder (sref). Här koden för geometrisk serie och 10 exempel för LimaxAI.' },
-  uk: { title: 'Midjourney: Стильовий код геометричного коміксу', intro: 'Окрім промпта Midjourney підтримує коди стилю (sref). Тут код геометричного коміксу та 10 прикладів для LimaxAI.' },
-  ro: { title: 'Midjourney: Cod de stil benzi desenate geometrice', intro: 'Pe lângă prompt, Midjourney acceptă coduri de stil (sref). Iată codul pentru benzi desenate geometrice și 10 exemple pentru LimaxAI.' },
-};
-function makeGeometryComicArticle(loc: string): TutorialArticle {
-  const c = geometryComicTitleIntroByLocale[loc];
-  if (!c) return articleGeometryComicEn;
-  return { ...articleGeometryComicEn, title: c.title, intro: c.intro };
-}
 const articleClassicIllustrationByLocale: Record<string, TutorialArticle> = {
   en: articleClassicIllustrationEn,
   'zh-cn': articleClassicIllustrationZhCN,
@@ -2919,25 +2899,45 @@ const articleGeometryComicByLocale: Record<string, TutorialArticle> = {
   en: articleGeometryComicEn,
   'zh-cn': articleGeometryComicZhCN,
   'zh-tw': articleGeometryComicZhTW,
-  ...Object.fromEntries(EXTRA_LOCALES.map((loc) => [loc, makeGeometryComicArticle(loc)])),
+  ...Object.fromEntries(
+    EXTRA_LOCALES.map((loc) => {
+      const a = getGeometryComicArticleForExtraLocale(loc);
+      return [loc, (a ?? articleGeometryComicEn) as TutorialArticle];
+    }),
+  ),
 };
 const articleNanobanana2EcommerceByLocale: Record<string, TutorialArticle> = {
   en: articleNanobanana2EcommerceEn,
   'zh-cn': articleNanobanana2EcommerceZhCN,
   'zh-tw': articleNanobanana2EcommerceZhTW,
-  ...Object.fromEntries(EXTRA_LOCALES.map((loc) => [loc, articleNanobanana2EcommerceEn])),
+  ...Object.fromEntries(
+    EXTRA_LOCALES.map((loc) => {
+      const a = getNanobanana2EcommerceArticleForExtraLocale(loc);
+      return [loc, (a ?? articleNanobanana2EcommerceEn) as TutorialArticle];
+    }),
+  ),
 };
 const articleNanobanana2DesignByLocale: Record<string, TutorialArticle> = {
   en: articleNanobanana2DesignEn,
   'zh-cn': articleNanobanana2DesignZhCN,
   'zh-tw': articleNanobanana2DesignZhTW,
-  ...Object.fromEntries(EXTRA_LOCALES.map((loc) => [loc, articleNanobanana2DesignEn])),
+  ...Object.fromEntries(
+    EXTRA_LOCALES.map((loc) => {
+      const a = getNanobanana2DesignArticleForExtraLocale(loc);
+      return [loc, (a ?? articleNanobanana2DesignEn) as TutorialArticle];
+    }),
+  ),
 };
 const articleNanobanana2LaunchByLocale: Record<string, TutorialArticle> = {
   en: articleNanobanana2LaunchEn,
   'zh-cn': articleNanobanana2LaunchZhCN,
   'zh-tw': articleNanobanana2LaunchZhTW,
-  ...Object.fromEntries(EXTRA_LOCALES.map((loc) => [loc, articleNanobanana2LaunchEn])),
+  ...Object.fromEntries(
+    EXTRA_LOCALES.map((loc) => {
+      const a = getNanobanana2LaunchArticleForExtraLocale(loc);
+      return [loc, (a ?? articleNanobanana2LaunchEn) as TutorialArticle];
+    }),
+  ),
 };
 
 const articlesBySlugAndLocale: Record<string, Record<string, TutorialArticle>> = {
@@ -2963,10 +2963,19 @@ const articlesBySlugAndLocale: Record<string, Record<string, TutorialArticle>> =
 
 function getList(locale: string): TutorialListEntry[] {
   const base = listByLocale[locale] ?? listEn;
-  return base.map((e) => {
+  const mapped = base.map((e) => {
     const art = getArticle(e.slug, locale);
     return { ...e, title: art?.title ?? e.title };
   });
+  // 防止新增文章只接入了映射未加入列表：自动补齐，避免教程页与 sitemap 漏收录
+  const seen = new Set(mapped.map((e) => e.slug));
+  const missing = Object.keys(articlesBySlugAndLocale)
+    .filter((slug) => !seen.has(slug))
+    .map((slug) => {
+      const art = getArticle(slug, locale) ?? getArticle(slug, 'en');
+      return { slug, title: art?.title ?? slug };
+    });
+  return [...mapped, ...missing];
 }
 
 function getArticle(slug: string, locale: string): TutorialArticle | null {

@@ -35,7 +35,7 @@ W LimaxAI dostarczamy moc **Midjourney** bezpośrednio do czystego, internetoweg
 Wiemy, że trendy zmieniają się szybko. Dlatego obsługujemy konkretne, wysoko pożądane style, takie jak **Nano Banana** (idealne do tych modnych, trójwymiarowych ilustracyjnych awatarów i stylów "blind-box"), obok takich potęg jak **Stable Diffusion**.
 
 * **Porównuj natychmiast:** Uruchom to samo polecenie w różnych modelach, aby zobaczyć, który styl pasuje do Twojej wizji.
-* **Prywatne i bezpieczne:** Koniec z bałaganem w publicznym kanale. Twoje dzieła nale��ą do Ciebie.
+* **Prywatne i bezpieczne:** Koniec z bałaganem w publicznym kanale. Twoje dzieła należą do Ciebie.
 
 ### 2. Rewolucja wideo: Sora, Keling i Veo
 

@@ -38,7 +38,7 @@ AI 커뮤니티에서는 이러한 미학을 종종 **"나노 바나나(Nano Ban
 AI에게 어떤 렌더링 엔진을 모방해야 하는지 알려주세요.
 * **사용할 키워드:** `C4D`, `옥테인 렌더(Octane Render)`, `언리얼 엔진 5(Unreal Engine 5)`, `블렌더 3D(Blender 3D)`, `고화질(High fidelity)`, `8K 해상도(8k resolution)`.
 
-![3D 아트 프롬프트 구조 ���석](https://img.limaxai.com/limaxaiblog/nano-banana-prompt-structure-example.webp)
+![3D 아트 프롬프트 구조 분석](https://img.limaxai.com/limaxaiblog/nano-banana-prompt-structure-example.webp)
 
 ## 이 프롬프트 공식을 활용하세요
 

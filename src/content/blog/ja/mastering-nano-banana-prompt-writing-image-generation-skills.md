@@ -42,7 +42,7 @@ AIに、どのレンダリングエンジンを模倣すべきかを伝えます
 
 ## このプロンプトの公式を活用しよう
 
-以下は、**LimaxAI**に直接コピー＆ペーストしてすぐに始めら��るテンプレートです。
+以下は、**LimaxAI**に直接コピー＆ペーストしてすぐに始められるテンプレートです。
 
 > **Subject:** A cute baby astronaut holding a glowing star, chibi style, full body shot
 > **Style:** Pop mart style, blind box toy, Nano Banana aesthetic
