@@ -28,6 +28,33 @@ export async function getStaticPaths() {
 }
 
 const { currentLang, slug, article, list, labels } = Astro.props;
+const backToBlogByLocale: Record<string, string> = {
+  en: 'Blog',
+  'zh-cn': '博客',
+  'zh-tw': '部落格',
+  es: 'Blog',
+  ar: 'المدونة',
+  pt: 'Blog',
+  id: 'Blog',
+  ms: 'Blog',
+  fr: 'Blog',
+  ru: 'Блог',
+  hi: 'ब्लॉग',
+  ja: 'ブログ',
+  de: 'Blog',
+  ko: '블로그',
+  tr: 'Blog',
+  vi: 'Blog',
+  th: 'บล็อก',
+  it: 'Blog',
+  fa: 'وبلاگ',
+  nl: 'Blog',
+  pl: 'Blog',
+  sv: 'Blogg',
+  uk: 'Блог',
+  ro: 'Blog',
+};
+const backToBlog = backToBlogByLocale[currentLang] ?? backToBlogByLocale.en;
 const tutorialSeoTitleByLocale: Record<string, string> = {
   en: 'LimaxAI Tutorials | AI Tool Usage Guides & How-Tos',
   'zh-cn': 'LimaxAI 使用教程 | AI 工具使用指南与实操教程',
@@ -57,10 +84,10 @@ const tutorialSeoTitleByLocale: Record<string, string> = {
 const tutorialSeoTitle = tutorialSeoTitleByLocale[currentLang] ?? tutorialSeoTitleByLocale.en;
 ---
 
-<BaseLayout title={tutorialSeoTitle} currentLang={currentLang}>
+<BaseLayout title={tutorialSeoTitle} description={article.intro} canonical={`${Astro.url.origin}/${currentLang}/tutorials/`} currentLang={currentLang}>
   <div class="bg-white border-b border-gray-100 py-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <a href={`/${currentLang}/`} class="text-sm text-gray-500 hover:text-blue-600 transition-colors">← Blog</a>
+      <a href={`/${currentLang}/`} class="text-sm text-gray-500 hover:text-blue-600 transition-colors">← {backToBlog}</a>
     </div>
   </div>
   <TutorialLayout currentLang={currentLang} slug={slug} article={article} list={list} labels={labels} />

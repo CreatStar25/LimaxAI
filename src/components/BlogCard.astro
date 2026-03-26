@@ -8,7 +8,7 @@ const { data, slug } = post;
 const imageSrc = data.image ?? data.heroImage;
 const isLocalImage = typeof imageSrc === 'object' && imageSrc !== null && 'src' in imageSrc;
 
-const formattedDate = data.pubDate.toLocaleDateString('en-US', {
+const formattedDate = data.pubDate.toLocaleDateString(data.lang, {
   year: 'numeric',
   month: 'long',
   day: 'numeric',

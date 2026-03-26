@@ -3043,31 +3043,52 @@ export function getFirstTutorialSlug(locale: string): string {
 const labelsZhCN = { articleList: '文章列表', pageNav: '页面导航' };
 const labelsZhTW = { articleList: '文章列表', pageNav: '頁面導航' };
 const labelsEn = { articleList: 'Article list', pageNav: 'On this page' };
+const labelsEs = { articleList: 'Lista de artículos', pageNav: 'En esta página' };
+const labelsAr = { articleList: 'قائمة المقالات', pageNav: 'في هذه الصفحة' };
+const labelsPt = { articleList: 'Lista de artigos', pageNav: 'Nesta página' };
+const labelsId = { articleList: 'Daftar artikel', pageNav: 'Di halaman ini' };
+const labelsMs = { articleList: 'Senarai artikel', pageNav: 'Pada halaman ini' };
+const labelsFr = { articleList: 'Liste des articles', pageNav: 'Sur cette page' };
+const labelsRu = { articleList: 'Список статей', pageNav: 'На этой странице' };
+const labelsHi = { articleList: 'लेख सूची', pageNav: 'इस पेज पर' };
+const labelsJa = { articleList: '記事一覧', pageNav: 'このページ' };
+const labelsDe = { articleList: 'Artikelliste', pageNav: 'Auf dieser Seite' };
+const labelsKo = { articleList: '문서 목록', pageNav: '이 페이지' };
+const labelsTr = { articleList: 'Makale listesi', pageNav: 'Bu sayfada' };
+const labelsVi = { articleList: 'Danh sách bài viết', pageNav: 'Trong trang này' };
+const labelsTh = { articleList: 'รายการบทความ', pageNav: 'ในหน้านี้' };
+const labelsIt = { articleList: 'Elenco articoli', pageNav: 'In questa pagina' };
+const labelsFa = { articleList: 'فهرست مقاله‌ها', pageNav: 'در این صفحه' };
+const labelsNl = { articleList: 'Artikellijst', pageNav: 'Op deze pagina' };
+const labelsPl = { articleList: 'Lista artykułów', pageNav: 'Na tej stronie' };
+const labelsSv = { articleList: 'Artikellista', pageNav: 'På den här sidan' };
+const labelsUk = { articleList: 'Список статей', pageNav: 'На цій сторінці' };
+const labelsRo = { articleList: 'Listă articole', pageNav: 'Pe această pagină' };
 const labelsByLocale: Record<string, { articleList: string; pageNav: string }> = {
   en: labelsEn,
   'zh-cn': labelsZhCN,
   'zh-tw': labelsZhTW,
-  es: labelsEn,
-  ar: labelsEn,
-  pt: labelsEn,
-  id: labelsEn,
-  ms: labelsEn,
-  fr: labelsEn,
-  ru: labelsEn,
-  hi: labelsEn,
-  ja: labelsEn,
-  de: labelsEn,
-  ko: labelsEn,
-  tr: labelsEn,
-  vi: labelsEn,
-  th: labelsEn,
-  it: labelsEn,
-  fa: labelsEn,
-  nl: labelsEn,
-  pl: labelsEn,
-  sv: labelsEn,
-  uk: labelsEn,
-  ro: labelsEn,
+  es: labelsEs,
+  ar: labelsAr,
+  pt: labelsPt,
+  id: labelsId,
+  ms: labelsMs,
+  fr: labelsFr,
+  ru: labelsRu,
+  hi: labelsHi,
+  ja: labelsJa,
+  de: labelsDe,
+  ko: labelsKo,
+  tr: labelsTr,
+  vi: labelsVi,
+  th: labelsTh,
+  it: labelsIt,
+  fa: labelsFa,
+  nl: labelsNl,
+  pl: labelsPl,
+  sv: labelsSv,
+  uk: labelsUk,
+  ro: labelsRo,
 };
 
 export function getTutorialLabels(locale: string) {

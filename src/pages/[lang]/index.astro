@@ -59,7 +59,7 @@ const blogSeoTitle = blogSeoTitleByLocale[currentLang] ?? blogSeoTitleByLocale.e
 ---
 
 {/* 使用 Layout 包裹内容；博客区文案来自 src/i18n/content.ts */}
-<BaseLayout title={blogSeoTitle} currentLang={currentLang} baiduSiteVerification>
+<BaseLayout title={blogSeoTitle} description={blogCopy.subtitle} canonical={`${Astro.url.origin}/${currentLang}/`} currentLang={currentLang} baiduSiteVerification>
   <div hidden data-blog-build-time={buildTime} data-blog-posts-count={posts.length} aria-hidden="true" />
 
   <div class="bg-white py-12 border-b border-gray-100 mb-8">
