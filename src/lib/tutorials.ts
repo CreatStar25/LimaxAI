@@ -14,6 +14,9 @@ import {
 import {
   getMidjourneySelectedSeriesArticle,
 } from './tutorial-midjourney-selected-series';
+import {
+  getMidjourneyV8Banana2Article,
+} from './tutorial-midjourney-v8-banana2';
 
 export interface TutorialLink {
   url: string;
@@ -54,6 +57,7 @@ type TutorialLocale = typeof LOCALES[number];
 const listZhCN: TutorialListEntry[] = [
   { slug: 'limaxai-guide', title: 'LimaxAI 使用指南' },
   { slug: 'midjourney-tutorial', title: 'Midjourney 使用教程' },
+  { slug: 'midjourney-v8-alpha-vs-banana2-multistyle-review', title: 'Midjourney V8 Alpha 对比 Banana 2，多风格测评来喽' },
   { slug: 'midjourney-animal-photography', title: 'Midjourney提示词——动物摄影（附公式）' },
   { slug: 'midjourney-flower-wallpaper', title: 'Midjourney提示词——鲜花壁纸（附公式）' },
   { slug: 'midjourney-gufeng-figure', title: 'Midjourney提示词——古风人物工笔画（附公式）' },
@@ -80,6 +84,7 @@ const listZhCN: TutorialListEntry[] = [
 const listZhTW: TutorialListEntry[] = [
   { slug: 'limaxai-guide', title: 'LimaxAI 使用指南' },
   { slug: 'midjourney-tutorial', title: 'Midjourney 使用教程' },
+  { slug: 'midjourney-v8-alpha-vs-banana2-multistyle-review', title: 'Midjourney V8 Alpha 對比 Banana 2，多風格實測來了' },
   { slug: 'midjourney-animal-photography', title: 'Midjourney提示詞——動物攝影（附公式）' },
   { slug: 'midjourney-flower-wallpaper', title: 'Midjourney提示詞——鮮花壁紙（附公式）' },
   { slug: 'midjourney-gufeng-figure', title: 'Midjourney提示詞——古風人物工筆畫（附公式）' },
@@ -95,17 +100,18 @@ const listZhTW: TutorialListEntry[] = [
   { slug: 'nanobanana2-ecommerce-detail', title: 'Nano banana 2 給出一整套電商詳情頁（兒童坐姿矯正器實例）' },
   { slug: 'nanobanana2-design-assistant', title: 'Nano Banana 2 當「設計助理」用：分鏡、批量精修、多尺寸' },
   { slug: 'nanobanana2-google-launch', title: '谷歌新發Nano Banana 2已上線，快來嘗鮮！' },
-  { slug: 'midjourney-selected-prompts-1', title: 'Midjourney 精选 · 附完整提示词1' },
-  { slug: 'midjourney-selected-prompts-2', title: 'Midjourney 精选 · 附完整提示词2' },
-  { slug: 'midjourney-selected-prompts-3', title: 'Midjourney 精选 · 附完整提示词3' },
-  { slug: 'midjourney-selected-prompts-4', title: 'Midjourney 精选 · 附完整提示词4' },
-  { slug: 'midjourney-selected-prompts-5', title: 'Midjourney 精选 · 附完整提示词5' },
-  { slug: 'ai-video-guide', title: 'AI 視頻生成入門' },
+  { slug: 'midjourney-selected-prompts-1', title: '【AI 繪畫】Midjourney 精選 · 附完整提示詞1' },
+  { slug: 'midjourney-selected-prompts-2', title: '【AI 繪畫】Midjourney 精選 · 附完整提示詞2' },
+  { slug: 'midjourney-selected-prompts-3', title: '【AI 繪畫】Midjourney 精選 · 附完整提示詞3' },
+  { slug: 'midjourney-selected-prompts-4', title: '【AI 繪畫】Midjourney 精選 · 附完整提示詞4' },
+  { slug: 'midjourney-selected-prompts-5', title: '【AI 繪畫】Midjourney 精選 · 附完整提示詞5' },
+  { slug: 'ai-video-guide', title: 'AI 影片生成入門' },
 ];
 
 const listEn: TutorialListEntry[] = [
   { slug: 'limaxai-guide', title: 'LimaxAI User Guide' },
   { slug: 'midjourney-tutorial', title: 'Midjourney Tutorial' },
+  { slug: 'midjourney-v8-alpha-vs-banana2-multistyle-review', title: 'Midjourney V8 Alpha vs Banana 2: Multi-style Benchmark Review' },
   { slug: 'midjourney-animal-photography', title: 'Midjourney Animal Photography Prompts' },
   { slug: 'midjourney-flower-wallpaper', title: 'Midjourney Flower Wallpaper Prompts' },
   { slug: 'midjourney-gufeng-figure', title: 'Midjourney Ancient-Style Figure Painting Prompts' },
@@ -288,6 +294,16 @@ const articleMidjourneyZhCN: TutorialArticle = {
   ],
 };
 
+const articleMidjourneyZhTW: TutorialArticle = {
+  slug: 'midjourney-tutorial',
+  title: 'Midjourney 使用教學',
+  intro: '本教學介紹如何在 LimaxAI 使用 Midjourney 進行影像創作，包含提示詞技巧與工作流程。',
+  sections: [
+    { id: 'basics', title: '基本用法', blocks: [{ type: 'paragraph', text: '在 LimaxAI 工作台選擇「Midjourney」模型，於輸入框鍵入描述性提示詞即可生成圖像。支援比例、風格等參數。' }] },
+    { id: 'tips', title: '💡 使用提示', blocks: [{ type: 'list', items: ['使用具體、具象的描述', '可註明畫風如「電影感」「賽博龐克」', '多試幾次以找到滿意結果'] }] },
+  ],
+};
+
 const articleMidjourneyEn: TutorialArticle = {
   slug: 'midjourney-tutorial',
   title: 'Midjourney Tutorial',
@@ -305,6 +321,16 @@ const articleAiVideoZhCN: TutorialArticle = {
   sections: [
     { id: 'models', title: '可用模型', blocks: [{ type: 'paragraph', text: 'LimaxAI 集成 Seedance、Veo、Sora 等视频模型，一个会员即可在平台内切换使用，无需分别订阅。' }] },
     { id: 'workflow', title: '基本流程', blocks: [{ type: 'list', items: ['输入画面描述或上传参考图', '选择时长与比例', '生成并下载或继续编辑'] }] },
+  ],
+};
+
+const articleAiVideoZhTW: TutorialArticle = {
+  slug: 'ai-video-guide',
+  title: 'AI 影片生成入門',
+  intro: '介紹如何使用 LimaxAI 中的 Seedance、Veo、Sora 等模型生成影片，從文案到成片。',
+  sections: [
+    { id: 'models', title: '可用模型', blocks: [{ type: 'paragraph', text: 'LimaxAI 整合 Seedance、Veo、Sora 等影片模型，一個會員即可在平台內切換使用，無需分別訂閱。' }] },
+    { id: 'workflow', title: '基本流程', blocks: [{ type: 'list', items: ['輸入畫面描述或上傳參考圖', '選擇時長與比例', '生成並下載或繼續編輯'] }] },
   ],
 };
 
@@ -417,7 +443,7 @@ function makeMidjourneyTutorialArticle(locale: string): TutorialArticle {
 const articleMidjourneyTutorialByLocale: Record<string, TutorialArticle> = {
   en: articleMidjourneyEn,
   'zh-cn': articleMidjourneyZhCN,
-  'zh-tw': articleMidjourneyZhCN,
+  'zh-tw': articleMidjourneyZhTW,
   ...Object.fromEntries(EXTRA_LOCALES.map((loc) => [loc, makeMidjourneyTutorialArticle(loc)])),
 };
 
@@ -456,8 +482,17 @@ function makeAiVideoGuideArticle(locale: string): TutorialArticle {
 const articleAiVideoByLocale: Record<string, TutorialArticle> = {
   en: articleAiVideoEn,
   'zh-cn': articleAiVideoZhCN,
-  'zh-tw': articleAiVideoZhCN,
+  'zh-tw': articleAiVideoZhTW,
   ...Object.fromEntries(EXTRA_LOCALES.map((loc) => [loc, makeAiVideoGuideArticle(loc)])),
+};
+
+const articleMidjourneyV8AlphaVsBanana2ByLocale: Record<string, TutorialArticle> = {
+  en: getMidjourneyV8Banana2Article('en') as TutorialArticle,
+  'zh-cn': getMidjourneyV8Banana2Article('zh-cn') as TutorialArticle,
+  'zh-tw': getMidjourneyV8Banana2Article('zh-tw') as TutorialArticle,
+  ...Object.fromEntries(
+    EXTRA_LOCALES.map((loc) => [loc, getMidjourneyV8Banana2Article(loc) as TutorialArticle]),
+  ),
 };
 
 /** 动物摄影提示词表格：动物 | 英文提示词 | 场景描述 */
@@ -2981,6 +3016,7 @@ const articleSelectedPrompts5ByLocale = buildSelectedSeriesByLocale('midjourney-
 const articlesBySlugAndLocale: Record<string, Record<string, TutorialArticle>> = {
   'limaxai-guide': articleLimaxaiByLocale,
   'midjourney-tutorial': articleMidjourneyTutorialByLocale,
+  'midjourney-v8-alpha-vs-banana2-multistyle-review': articleMidjourneyV8AlphaVsBanana2ByLocale,
   'midjourney-animal-photography': articleAnimalByLocale,
   'midjourney-flower-wallpaper': articleFlowerByLocale,
   'midjourney-gufeng-figure': articleGufengByLocale,
@@ -3024,7 +3060,78 @@ function getList(locale: string): TutorialListEntry[] {
 function getArticle(slug: string, locale: string): TutorialArticle | null {
   const byLocale = articlesBySlugAndLocale[slug];
   if (!byLocale) return null;
-  return byLocale[locale] ?? byLocale['en'] ?? null;
+  const article = byLocale[locale] ?? byLocale['en'] ?? null;
+  return article ? normalizeArticleCtaByLocale(article, locale) : null;
+}
+
+function ctaTextForLocale(locale: string, isMidjourney: boolean): string {
+  if (isMidjourney) {
+    if (locale === 'zh-cn') return '立刻使用Midjourney';
+    if (locale === 'zh-tw') return '立刻使用Midjourney';
+    return locale === 'es' ? 'Usar Midjourney ahora'
+      : locale === 'ar' ? 'استخدم Midjourney الآن'
+      : locale === 'pt' ? 'Usar Midjourney agora'
+      : locale === 'id' ? 'Gunakan Midjourney sekarang'
+      : locale === 'ms' ? 'Guna Midjourney sekarang'
+      : locale === 'fr' ? 'Utiliser Midjourney maintenant'
+      : locale === 'ru' ? 'Использовать Midjourney сейчас'
+      : locale === 'hi' ? 'Midjourney अभी उपयोग करें'
+      : locale === 'ja' ? '今すぐMidjourneyを使う'
+      : locale === 'de' ? 'Midjourney jetzt nutzen'
+      : locale === 'ko' ? '지금 Midjourney 사용하기'
+      : locale === 'tr' ? "Midjourney'i şimdi kullan"
+      : locale === 'vi' ? 'Dùng Midjourney ngay'
+      : locale === 'th' ? 'ใช้ Midjourney ทันที'
+      : locale === 'it' ? 'Usa Midjourney ora'
+      : locale === 'fa' ? 'همین حالا Midjourney را استفاده کن'
+      : locale === 'nl' ? 'Gebruik Midjourney nu'
+      : locale === 'pl' ? 'Użyj Midjourney teraz'
+      : locale === 'sv' ? 'Använd Midjourney nu'
+      : locale === 'uk' ? 'Використати Midjourney зараз'
+      : locale === 'ro' ? 'Folosește Midjourney acum'
+      : 'Use Midjourney Now';
+  }
+  if (locale === 'zh-cn') return '开始创作';
+  if (locale === 'zh-tw') return '開始創作';
+  return locale === 'es' ? 'Empezar a crear'
+    : locale === 'ar' ? 'ابدأ الإنشاء'
+    : locale === 'pt' ? 'Começar a criar'
+    : locale === 'id' ? 'Mulai membuat'
+    : locale === 'ms' ? 'Mula cipta'
+    : locale === 'fr' ? 'Commencer à créer'
+    : locale === 'ru' ? 'Начать создание'
+    : locale === 'hi' ? 'बनाना शुरू करें'
+    : locale === 'ja' ? '作成を始める'
+    : locale === 'de' ? 'Erstellen starten'
+    : locale === 'ko' ? '제작 시작'
+    : locale === 'tr' ? 'Oluşturmaya başla'
+    : locale === 'vi' ? 'Bắt đầu tạo'
+    : locale === 'th' ? 'เริ่มสร้าง'
+    : locale === 'it' ? 'Inizia a creare'
+    : locale === 'fa' ? 'شروع ساخت'
+    : locale === 'nl' ? 'Beginnen met maken'
+    : locale === 'pl' ? 'Zacznij tworzyć'
+    : locale === 'sv' ? 'Börja skapa'
+    : locale === 'uk' ? 'Почати створення'
+    : locale === 'ro' ? 'Începe crearea'
+    : 'Start creating';
+}
+
+function normalizeArticleCtaByLocale(article: TutorialArticle, locale: string): TutorialArticle {
+  let changed = false;
+  const sections = article.sections.map((s) => {
+    const blocks = s.blocks.map((b) => {
+      if (b.type !== 'cta') return b;
+      const url = (b.url ?? '').toLowerCase();
+      const isMidjourney = url.includes('/generate/image-tools/mjpro');
+      const text = ctaTextForLocale(locale, isMidjourney);
+      if (b.text === text) return b;
+      changed = true;
+      return { ...b, text };
+    });
+    return blocks === s.blocks ? s : { ...s, blocks };
+  });
+  return changed ? { ...article, sections } : article;
 }
 
 export function getTutorialList(locale: string): TutorialListEntry[] {

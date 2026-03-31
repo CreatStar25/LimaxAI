@@ -25,32 +25,47 @@ export const MIDJOURNEY_SELECTED_SERIES_SLUGS = [
 
 type SeriesSlug = (typeof MIDJOURNEY_SELECTED_SERIES_SLUGS)[number];
 
-const DATE = '2026-03-24';
-const CTA_TEXT = '立刻使用Midjourney';
+const DATE = '2026-03-31';
 const CTA_URL = 'https://www.limaxai.com/generate/image-tools/mjpro';
 
 const IMAGE_BY_SLUG: Record<SeriesSlug, string> = {
-  'midjourney-selected-prompts-1': 'https://img.limaxai.com/aiweb/limaxai-6.png',
-  'midjourney-selected-prompts-2': 'https://img.limaxai.com/aiweb/limaxai-7.png',
-  'midjourney-selected-prompts-3': 'https://img.limaxai.com/aiweb/limaxai-8.png',
-  'midjourney-selected-prompts-4': 'https://img.limaxai.com/aiweb/limaxai-9.png',
-  'midjourney-selected-prompts-5': 'https://img.limaxai.com/aiweb/limaxai-10.png',
+  'midjourney-selected-prompts-1': 'https://img.limaxai.com/aiweb/limaxai-midjourney-11.png',
+  'midjourney-selected-prompts-2': 'https://img.limaxai.com/aiweb/limaxai-midjourney-12.png',
+  'midjourney-selected-prompts-3': 'https://img.limaxai.com/aiweb/limaxai-midjourney-13.png',
+  'midjourney-selected-prompts-4': 'https://img.limaxai.com/aiweb/limaxai-midjourney-14.png',
+  'midjourney-selected-prompts-5': 'https://img.limaxai.com/aiweb/limaxai-midjourney-15.png',
 };
 
 const ZH_TITLE_BY_SLUG: Record<SeriesSlug, string> = {
-  'midjourney-selected-prompts-1': 'Midjourney 精选 · 附完整提示词1',
-  'midjourney-selected-prompts-2': 'Midjourney 精选 · 附完整提示词2',
-  'midjourney-selected-prompts-3': 'Midjourney 精选 · 附完整提示词3',
-  'midjourney-selected-prompts-4': 'Midjourney 精选 · 附完整提示词4',
-  'midjourney-selected-prompts-5': 'Midjourney 精选 · 附完整提示词5',
+  'midjourney-selected-prompts-1': 'Midjourney官方精选Prompt分享：女武神、卷心菜美女、科技数字人、指尖上的公鸡、科幻猎鹰、巫师猫、汉服、机械企鹅',
+  'midjourney-selected-prompts-2': 'Midjourney官方精选Prompt分享：迷雾森林、古怪厨房、雨云油画、外星部落、美洲虎、蓝色变形虫、流浪城市、狮鹫、独行者',
+  'midjourney-selected-prompts-3': 'Midjourney官方精选Prompt分享：熔岩狮子、蜘蛛、怪兽入侵、智慧能量、翡翠雕塑、蘑菇、熊猫、科幻插画、蜂鸟、移动城市',
+  'midjourney-selected-prompts-4': 'Midjourney官方精选Prompt分享：火山喷发、虚空骏马、抽象画、雨滴、末日骑士、巨浪、小女孩、传奇都市、怪兽飞艇',
+  'midjourney-selected-prompts-5': 'Midjourney官方精选Prompt分享：企鹅、日出、龙宝宝、鼠人、冰淇淋城市、九尾狐、齿轮动物、蛇女、小蜜蜂、柚子城',
+};
+
+const ZH_TW_TITLE_BY_SLUG: Record<SeriesSlug, string> = {
+  'midjourney-selected-prompts-1': 'Midjourney官方精選Prompt分享：女武神、捲心菜美女、科技數位人、指尖上的公雞、科幻獵鷹、巫師貓、漢服、機械企鵝',
+  'midjourney-selected-prompts-2': 'Midjourney官方精選Prompt分享：迷霧森林、古怪廚房、雨雲油畫、外星部落、美洲虎、藍色變形蟲、流浪城市、獅鷲、獨行者',
+  'midjourney-selected-prompts-3': 'Midjourney官方精選Prompt分享：熔岩獅子、蜘蛛、怪獸入侵、智慧能量、翡翠雕塑、蘑菇、熊貓、科幻插畫、蜂鳥、移動城市',
+  'midjourney-selected-prompts-4': 'Midjourney官方精選Prompt分享：火山噴發、虛空駿馬、抽象畫、雨滴、末日騎士、巨浪、小女孩、傳奇都市、怪獸飛艇',
+  'midjourney-selected-prompts-5': 'Midjourney官方精選Prompt分享：企鵝、日出、龍寶寶、鼠人、冰淇淋城市、九尾狐、齒輪動物、蛇女、小蜜蜂、柚子城',
 };
 
 const EN_TITLE_BY_SLUG: Record<SeriesSlug, string> = {
-  'midjourney-selected-prompts-1': 'Midjourney Picks · Full Prompt Pack 1',
-  'midjourney-selected-prompts-2': 'Midjourney Picks · Full Prompt Pack 2',
-  'midjourney-selected-prompts-3': 'Midjourney Picks · Full Prompt Pack 3',
-  'midjourney-selected-prompts-4': 'Midjourney Picks · Full Prompt Pack 4',
-  'midjourney-selected-prompts-5': 'Midjourney Picks · Full Prompt Pack 5',
+  'midjourney-selected-prompts-1': 'Midjourney Official Prompt Picks: Valkyrie, Cabbage Beauty, Tech Digital Human, Fingertip Rooster, Sci‑fi Falcon, Wizard Cat, Hanfu, Mecha Penguin',
+  'midjourney-selected-prompts-2': 'Midjourney Official Prompt Picks: Misty Forest, Quirky Kitchen, Rain-Cloud Oil Painting, Alien Tribe, Jaguar, Blue Amoeba, Wandering City, Griffin, Lone Wanderer',
+  'midjourney-selected-prompts-3': 'Midjourney Official Prompt Picks: Lava Lion, Spider, Monster Invasion, Intelligent Energy, Jade Sculpture, Mushroom, Panda, Sci‑fi Illustration, Hummingbird, Mobile City',
+  'midjourney-selected-prompts-4': 'Midjourney Official Prompt Picks: Volcanic Eruption, Void Steed, Abstract Art, Raindrops, Doomsday Knight, Giant Waves, Little Girl, Legendary Metropolis, Monster Airship',
+  'midjourney-selected-prompts-5': 'Midjourney Official Prompt Picks: Penguin, Sunrise, Baby Dragon, Ratfolk, Ice Cream City, Nine‑Tailed Fox, Gear Animals, Snake Woman, Little Bee, Pomelo City',
+};
+
+const EN_ITEMS_BY_SLUG: Record<SeriesSlug, string> = {
+  'midjourney-selected-prompts-1': 'Valkyrie, Cabbage Beauty, Tech Digital Human, Fingertip Rooster, Sci‑fi Falcon, Wizard Cat, Hanfu, Mecha Penguin',
+  'midjourney-selected-prompts-2': 'Misty Forest, Quirky Kitchen, Rain-Cloud Oil Painting, Alien Tribe, Jaguar, Blue Amoeba, Wandering City, Griffin, Lone Wanderer',
+  'midjourney-selected-prompts-3': 'Lava Lion, Spider, Monster Invasion, Intelligent Energy, Jade Sculpture, Mushroom, Panda, Sci‑fi Illustration, Hummingbird, Mobile City',
+  'midjourney-selected-prompts-4': 'Volcanic Eruption, Void Steed, Abstract Art, Raindrops, Doomsday Knight, Giant Waves, Little Girl, Legendary Metropolis, Monster Airship',
+  'midjourney-selected-prompts-5': 'Penguin, Sunrise, Baby Dragon, Ratfolk, Ice Cream City, Nine‑Tailed Fox, Gear Animals, Snake Woman, Little Bee, Pomelo City',
 };
 
 const EXTRA_LOCALES = ['es', 'ar', 'pt', 'id', 'ms', 'fr', 'ru', 'hi', 'ja', 'de', 'ko', 'tr', 'vi', 'th', 'it', 'fa', 'nl', 'pl', 'sv', 'uk', 'ro'] as const;
@@ -462,43 +477,120 @@ function keywordText(slug: SeriesSlug, locale: string): string {
 }
 
 function rowsFor(slug: SeriesSlug, locale: string): string[][] {
-  const isNano = slug === 'midjourney-selected-prompts-3' || slug === 'midjourney-selected-prompts-4' || slug === 'midjourney-selected-prompts-5';
-  if (locale === 'zh-cn' || locale === 'zh-tw') {
-    return [
-      [
-        isNano ? 'Nano Banana 商品图模板' : 'Midjourney 商业主视觉模板',
-        'masterpiece, cinematic composition, premium commercial key visual, strong subject isolation, volumetric light, ultra-detailed, high contrast',
-        '用于封面、专题头图、落地页首屏，强化点击率与品牌识别。',
-      ],
-      [
-        isNano ? 'Nano Banana 电商详情模板' : 'Midjourney 教程配图模板',
-        'clean UI style, infographic layout, layered hierarchy, modern tech design, readable text safe area, blue and white palette',
-        '用于教程步骤图、功能说明图、图文混排页面。',
-      ],
-      [
-        isNano ? 'Nano Banana 场景化营销模板' : 'Midjourney 场景故事模板',
-        'realistic lifestyle scene, natural light, product in use, emotional storytelling, depth of field, editorial photo style',
-        '用于电商详情、社媒素材、案例页和活动推广图。',
-      ],
-    ];
-  }
-  return [
-    [
-      isNano ? 'Nano Banana product visual template' : 'Midjourney hero visual template',
-      'masterpiece, cinematic composition, premium commercial key visual, strong subject isolation, volumetric light, ultra-detailed, high contrast',
-      'Best for covers, landing hero sections, and high-CTR blog thumbnails.',
+  const rowsBySlug: Record<SeriesSlug, string[][]> = {
+    'midjourney-selected-prompts-1': [
+      ['女武神 / Valkyrie', 'valkyrie warrior, silver armor, norse mythology, cinematic lighting, ultra detailed, dramatic sky, epic composition --ar 3:4 --stylize 300', '神话战士海报、游戏角色概念设定'],
+      ['卷心菜美女 / Cabbage Beauty', 'fashion portrait of a woman made of layered cabbage leaves, editorial photography, soft rim light, surreal beauty, high detail --ar 2:3', '创意时尚视觉、品牌海报'],
+      ['科技数字人 / Tech Digital Human', 'futuristic digital human, holographic UI, neon blue glow, cyber city backdrop, realistic skin detail --ar 16:9', '科技产品 KV、AI 品牌首页头图'],
+      ['指尖上的公鸡 / Fingertip Rooster', 'tiny rooster standing on fingertip, macro shot, shallow depth of field, golden sunlight, photorealistic --ar 3:2', '社媒吸睛图、趣味封面图'],
+      ['科幻猎鹰 / Sci-fi Falcon', 'mecha falcon, metallic feathers, high-speed dive, volumetric fog, cinematic sci-fi art --ar 21:9', '科幻插画、视频分镜概念图'],
+      ['巫师猫 / Wizard Cat', 'wizard cat in starry robe, magical library, glowing spell circle, fantasy illustration --ar 4:5', 'IP 角色设计、故事型配图'],
+      ['汉服 / Hanfu Portrait', 'hanfu portrait, flowing silk, classical chinese courtyard, elegant posture, soft natural light --ar 3:4', '国风品牌视觉、节日专题图'],
+      ['机械企鹅 / Mecha Penguin', 'mechanical penguin, arctic base, hard-surface design, cinematic backlight, highly detailed --ar 16:9', '科幻产品页、模型创意展示'],
     ],
-    [
-      isNano ? 'Nano Banana e-commerce detail template' : 'Midjourney tutorial graphic template',
-      'clean UI style, infographic layout, layered hierarchy, modern tech design, readable text safe area, blue and white palette',
-      'Best for tutorial steps, feature explanation images, and product documents.',
+    'midjourney-selected-prompts-2': [
+      ['迷雾森林 / Misty Forest', 'misty pine forest, morning haze, soft sunlight rays, fantasy matte painting, high detail --ar 16:9', '环境概念图、小说封面背景'],
+      ['古怪厨房 / Quirky Kitchen', 'quirky retro kitchen, colorful tiles, odd props, wide-angle photography, cinematic color grading --ar 3:2', '生活方式内容、创意广告场景'],
+      ['雨云油画 / Rain-Cloud Oil Painting', 'storm cloud above old town, expressive oil painting texture, moody palette, brushstroke rich --ar 4:3', '艺术风格实验、展览海报'],
+      ['外星部落 / Alien Tribe', 'alien tribe gathering, bioluminescent skin patterns, ceremonial masks, sci-fi concept art --ar 16:9', '世界观设定、影视前期概念'],
+      ['美洲虎 / Jaguar', 'jaguar close-up, rainforest bokeh, wet fur detail, wildlife photography style --ar 3:2', '动物摄影风、自然主题视觉'],
+      ['蓝色变形虫 / Blue Amoeba', 'abstract blue amoeba shape, translucent texture, fluid motion, macro abstract render --ar 1:1', '抽象背景图、科技材料视觉'],
+      ['流浪城市 / Wandering City', 'walking city on mechanical legs, post-apocalyptic desert, atmospheric perspective --ar 21:9', '科幻世界观、游戏场景概念'],
+      ['狮鹫 / Griffin', 'majestic griffin on cliff, sunset backlight, fantasy realism, ultra detailed --ar 3:4', '奇幻海报、角色设定图'],
+      ['独行者 / Lone Wanderer', 'lone wanderer in vast wasteland, long coat, cinematic composition, moody color --ar 2:1', '叙事型封面、短片分镜参考'],
     ],
-    [
-      isNano ? 'Nano Banana scene marketing template' : 'Midjourney storytelling template',
-      'realistic lifestyle scene, natural light, product in use, emotional storytelling, depth of field, editorial photo style',
-      'Best for e-commerce details, social media creatives, and campaign visuals.',
+    'midjourney-selected-prompts-3': [
+      ['熔岩狮子 / Lava Lion', 'lava lion roaring, molten cracks, volcanic smoke, high contrast fantasy realism --ar 16:9', '高冲击力主视觉、活动海报'],
+      ['蜘蛛 / Spider Macro', 'macro spider portrait, dew droplets, dramatic side light, ultra detailed texture --ar 3:2', '微距生物视觉、科普配图'],
+      ['怪兽入侵 / Monster Invasion', 'giant monsters invading modern city, cinematic destruction scene, wide shot --ar 21:9', '电影感宣传图、剧情设定图'],
+      ['智慧能量 / Intelligent Energy', 'abstract intelligent energy core, glowing particles, sci-fi laboratory environment --ar 1:1', 'AI 概念图、科技品牌 KV'],
+      ['翡翠雕塑 / Jade Sculpture', 'emerald jade sculpture, museum lighting, polished stone texture, elegant composition --ar 4:5', '文化艺术视觉、展陈海报'],
+      ['蘑菇 / Fantasy Mushroom', 'bioluminescent giant mushrooms, mystical forest floor, dreamy lighting --ar 4:3', '童话场景、治愈系插画'],
+      ['熊猫 / Panda Portrait', 'panda portrait in bamboo mist, cinematic wildlife photography, gentle mood --ar 3:4', '动物主题封面、公益宣传图'],
+      ['科幻插画 / Sci-fi Illustration', 'futuristic metropolis skyline, flying vehicles, neon atmosphere, concept illustration --ar 16:9', '科技内容配图、栏目头图'],
+      ['蜂鸟 / Hummingbird', 'hummingbird in flight, frozen motion, vibrant feathers, macro photography style --ar 3:2', '自然摄影风、高细节展示图'],
+      ['移动城市 / Mobile City', 'mobile city fortress traversing desert, colossal scale, cinematic dust lighting --ar 21:9', '末世题材设定、游戏场景图'],
     ],
-  ];
+    'midjourney-selected-prompts-4': [
+      ['火山喷发 / Volcanic Eruption', 'volcanic eruption at night, lava fountain, ash cloud, cinematic landscape --ar 16:9', '自然灾害视觉、纪录片封面'],
+      ['虚空骏马 / Void Steed', 'void steed with cosmic mane, starfield backdrop, fantasy character art --ar 3:4', '奇幻角色图、故事封面'],
+      ['抽象画 / Abstract Painting', 'bold abstract painting, geometric fragments, expressive brush strokes, gallery style --ar 1:1', '艺术设计灵感图、社媒方图'],
+      ['雨滴 / Raindrops Macro', 'raindrops on glass, city bokeh reflection, macro photography, cinematic mood --ar 4:5', '情绪化封面、音乐视觉配图'],
+      ['末日骑士 / Doomsday Knight', 'doomsday knight in ruined cathedral, heavy armor, dramatic backlight --ar 2:3', '暗黑题材海报、角色概念图'],
+      ['巨浪 / Giant Wave', 'gigantic ocean wave, tiny ship silhouette, stormy sky, high drama realism --ar 21:9', '冲击性横幅图、场景概念图'],
+      ['小女孩 / Little Girl Story Frame', 'little girl with red scarf in old alley, cinematic storytelling shot --ar 3:2', '叙事型插图、剧情短片分镜'],
+      ['传奇都市 / Legendary Metropolis', 'legendary metropolis with floating towers, golden dusk, epic worldbuilding --ar 16:9', '世界观展示图、栏目头图'],
+      ['怪兽飞艇 / Monster Airship', 'monster-shaped airship above steampunk city, clouds and sun rays, concept art --ar 16:9', '蒸汽朋克视觉、海报主图'],
+    ],
+    'midjourney-selected-prompts-5': [
+      ['企鹅 / Penguin Character', 'cute penguin explorer, snow field, soft lighting, stylized 3d illustration --ar 3:4', '吉祥物形象、儿童向内容配图'],
+      ['日出 / Sunrise Landscape', 'sunrise over mountain sea, warm golden rays, peaceful cinematic landscape --ar 16:9', '治愈系封面、旅行内容头图'],
+      ['龙宝宝 / Baby Dragon', 'baby dragon hatching from crystal egg, fantasy cave lighting, ultra cute --ar 4:5', '奇幻 IP 形象、故事插图'],
+      ['鼠人 / Ratfolk', 'ratfolk rogue character, medieval alley, detailed costume, concept art --ar 2:3', '角色卡设定、游戏素材图'],
+      ['冰淇淋城市 / Ice Cream City', 'ice cream city architecture, pastel palette, whimsical fantasy, clean render --ar 1:1', '品牌活动视觉、甜品主题海报'],
+      ['九尾狐 / Nine-Tailed Fox', 'nine-tailed fox in moonlit forest, ethereal glow, mythic fantasy illustration --ar 3:4', '东方奇幻主视觉、节庆内容图'],
+      ['齿轮动物 / Gear Animals', 'animals made of brass gears, steampunk style, mechanical details, studio light --ar 3:2', '工业创意图、科技艺术混搭图'],
+      ['蛇女 / Snake Woman', 'snake woman sorceress, ancient temple ruins, dramatic shadows, fantasy realism --ar 2:3', '暗黑奇幻题材、角色主视觉'],
+      ['小蜜蜂 / Little Bee Macro', 'little bee collecting nectar, macro lens, shallow depth, vivid flower colors --ar 3:2', '自然科普图、产品素材背景'],
+      ['柚子城 / Pomelo City', 'pomelo-inspired city design, citrus textures, bright fantasy world, isometric style --ar 1:1', '品牌创意图、社媒传播图'],
+    ],
+  };
+  const zhRows = rowsBySlug[slug];
+  if (locale === 'zh-cn' || locale === 'zh-tw') return zhRows;
+  return zhRows.map(([name, prompt]) => [name, prompt, 'Use for tutorial visuals, campaign creatives, social media assets, and concept exploration.']);
+}
+
+function ctaTextByLocale(locale: string): string {
+  if (locale === 'zh-cn') return '立刻使用Midjourney';
+  if (locale === 'zh-tw') return '立刻使用Midjourney';
+  return locale === 'es' ? 'Usar Midjourney ahora'
+    : locale === 'ar' ? 'استخدم Midjourney الآن'
+    : locale === 'pt' ? 'Usar Midjourney agora'
+    : locale === 'id' ? 'Gunakan Midjourney sekarang'
+    : locale === 'ms' ? 'Guna Midjourney sekarang'
+    : locale === 'fr' ? 'Utiliser Midjourney maintenant'
+    : locale === 'ru' ? 'Использовать Midjourney сейчас'
+    : locale === 'hi' ? 'Midjourney अभी उपयोग करें'
+    : locale === 'ja' ? '今すぐMidjourneyを使う'
+    : locale === 'de' ? 'Midjourney jetzt nutzen'
+    : locale === 'ko' ? '지금 Midjourney 사용하기'
+    : locale === 'tr' ? "Midjourney'i şimdi kullan"
+    : locale === 'vi' ? 'Dùng Midjourney ngay'
+    : locale === 'th' ? 'ใช้ Midjourney ทันที'
+    : locale === 'it' ? 'Usa Midjourney ora'
+    : locale === 'fa' ? 'همین حالا Midjourney را استفاده کن'
+    : locale === 'nl' ? 'Gebruik Midjourney nu'
+    : locale === 'pl' ? 'Użyj Midjourney teraz'
+    : locale === 'sv' ? 'Använd Midjourney nu'
+    : locale === 'uk' ? 'Використати Midjourney зараз'
+    : locale === 'ro' ? 'Folosește Midjourney acum'
+    : 'Use Midjourney Now';
+}
+
+function localizedExtraTitle(locale: string, slug: SeriesSlug): string {
+  const prefix = locale === 'es' ? 'Selección oficial de prompts de Midjourney'
+    : locale === 'ar' ? 'مختارات Midjourney الرسمية من الـ prompts'
+    : locale === 'pt' ? 'Seleção oficial de prompts do Midjourney'
+    : locale === 'id' ? 'Prompt pilihan resmi Midjourney'
+    : locale === 'ms' ? 'Prompt pilihan rasmi Midjourney'
+    : locale === 'fr' ? 'Sélection officielle de prompts Midjourney'
+    : locale === 'ru' ? 'Официальная подборка prompt Midjourney'
+    : locale === 'hi' ? 'Midjourney के आधिकारिक चयनित prompts'
+    : locale === 'ja' ? 'Midjourney公式厳選Prompt'
+    : locale === 'de' ? 'Offizielle Midjourney Prompt-Auswahl'
+    : locale === 'ko' ? 'Midjourney 공식 선정 Prompt'
+    : locale === 'tr' ? 'Midjourney resmi prompt seçkisi'
+    : locale === 'vi' ? 'Prompt tuyển chọn chính thức của Midjourney'
+    : locale === 'th' ? 'Prompt คัดสรรอย่างเป็นทางการของ Midjourney'
+    : locale === 'it' ? 'Selezione ufficiale di prompt Midjourney'
+    : locale === 'fa' ? 'اشتراک‌گذاری promptهای منتخب رسمی Midjourney'
+    : locale === 'nl' ? 'Officiële Midjourney promptselectie'
+    : locale === 'pl' ? 'Oficjalny wybór promptów Midjourney'
+    : locale === 'sv' ? 'Midjourney officiella prompturval'
+    : locale === 'uk' ? 'Офіційна добірка prompt Midjourney'
+    : locale === 'ro' ? 'Selecție oficială de prompturi Midjourney'
+    : 'Midjourney Official Prompt Picks';
+  return `${prefix}: ${EN_ITEMS_BY_SLUG[slug]}`;
 }
 
 function buildBaseArticle(locale: string, slug: SeriesSlug, title: string): SeriesTutorialArticle {
@@ -581,7 +673,7 @@ function buildBaseArticle(locale: string, slug: SeriesSlug, title: string): Seri
         title: pack.ctaTitle,
         blocks: [
           { type: 'paragraph', text: pack.ctaP },
-          { type: 'cta', text: CTA_TEXT, url: CTA_URL },
+          { type: 'cta', text: ctaTextByLocale(locale), url: CTA_URL },
         ],
       },
     ],
@@ -589,41 +681,17 @@ function buildBaseArticle(locale: string, slug: SeriesSlug, title: string): Seri
 }
 
 export const midjourneySelectedSeriesTitlesZhCN: Record<SeriesSlug, string> = ZH_TITLE_BY_SLUG;
-export const midjourneySelectedSeriesTitlesZhTW: Record<SeriesSlug, string> = ZH_TITLE_BY_SLUG;
+export const midjourneySelectedSeriesTitlesZhTW: Record<SeriesSlug, string> = ZH_TW_TITLE_BY_SLUG;
 export const midjourneySelectedSeriesTitlesEn: Record<SeriesSlug, string> = EN_TITLE_BY_SLUG;
 
 export function getMidjourneySelectedSeriesArticle(slug: string, locale: string): SeriesTutorialArticle | null {
   if (!MIDJOURNEY_SELECTED_SERIES_SLUGS.includes(slug as SeriesSlug)) return null;
   const s = slug as SeriesSlug;
-  const num = s.split('-').pop() ?? '1';
-  const localizedTitleByLocale: Record<string, string> = {
-    es: `Selección Midjourney · Prompts completos ${num}`,
-    ar: `مختارات Midjourney · prompts كاملة ${num}`,
-    pt: `Seleção Midjourney · Prompts completos ${num}`,
-    id: `Pilihan Midjourney · Prompt Lengkap ${num}`,
-    ms: `Pilihan Midjourney · Prompt Lengkap ${num}`,
-    fr: `Sélection Midjourney · Prompts complets ${num}`,
-    ru: `Подборка Midjourney · Полные prompt ${num}`,
-    hi: `Midjourney चयन · पूर्ण prompts ${num}`,
-    ja: `Midjourney 精選 · 完全プロンプト ${num}`,
-    de: `Midjourney Auswahl · Vollständige Prompts ${num}`,
-    ko: `Midjourney 셀렉션 · 전체 Prompt ${num}`,
-    tr: `Midjourney Seçkisi · Tam Prompt ${num}`,
-    vi: `Tuyển tập Midjourney · Prompt đầy đủ ${num}`,
-    th: `คัดสรร Midjourney · Prompt ฉบับเต็ม ${num}`,
-    it: `Selezione Midjourney · Prompt completi ${num}`,
-    fa: `منتخب Midjourney · prompt کامل ${num}`,
-    nl: `Midjourney Selectie · Volledige Prompts ${num}`,
-    pl: `Wybór Midjourney · Pełne prompty ${num}`,
-    sv: `Midjourney urval · Kompletta prompts ${num}`,
-    uk: `Добірка Midjourney · Повні prompt ${num}`,
-    ro: `Selecție Midjourney · Prompturi complete ${num}`,
-  };
   if (locale === 'zh-cn') return buildBaseArticle(locale, s, ZH_TITLE_BY_SLUG[s]);
-  if (locale === 'zh-tw') return buildBaseArticle(locale, s, ZH_TITLE_BY_SLUG[s]);
+  if (locale === 'zh-tw') return buildBaseArticle(locale, s, ZH_TW_TITLE_BY_SLUG[s]);
   if (locale === 'en') return buildBaseArticle(locale, s, EN_TITLE_BY_SLUG[s]);
   if (EXTRA_LOCALES.includes(locale as (typeof EXTRA_LOCALES)[number])) {
-    return buildBaseArticle(locale, s, localizedTitleByLocale[locale] ?? EN_TITLE_BY_SLUG[s]);
+    return buildBaseArticle(locale, s, localizedExtraTitle(locale, s));
   }
   return buildBaseArticle('en', s, EN_TITLE_BY_SLUG[s]);
 }
