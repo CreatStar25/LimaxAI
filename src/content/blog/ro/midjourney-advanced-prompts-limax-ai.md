@@ -9,7 +9,7 @@ lang: "ro"
 
 Poți avea întotdeauna încredere în **Midjourney**. Acest articol compilează o serie de **prompt-uri avansate Midjourney**, diverse stiluri de fotografie portretistică, vârful esteticii, perfecte pentru a fi salvate și folosite în timp; la sfârșit găsiți portalul de creație **Limax AI**.
 
-**[👉 Începe să creezi acum](https://limaxai.com)**
+**[👉 Începe să creezi acum](https://www.limaxai.com/)**
 
 ![Prompt-uri avansate Midjourney](https://img.limaxai.com/aiweb/midjourney-prompts-limax-cover.png)
 
@@ -42,4 +42,4 @@ Toate cele de mai sus pot fi modificate după nevoie în ceea ce privește subie
 
 Această serie de **prompt-uri avansate Midjourney** acoperă multiple stiluri: portretistică, modă, retro, senzualitate cinematografică, pot fi salvate pentru utilizare ulterioară, deconstruite și reasamblate. Dacă doriți să creați lucrări similare cu **Limax AI**, faceți clic pe butonul de mai jos.
 
-**[👉 Începe să creezi acum](https://limaxai.com)**
+**[👉 Începe să creezi acum](https://www.limaxai.com/)**

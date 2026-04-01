@@ -9,7 +9,7 @@ lang: "nl"
 
 Je kunt altijd op **Midjourney** vertrouwen. Dit artikel verzamelt een reeks **geavanceerde Midjourney prompts** voor portretfotografie in verschillende stijlen, esthetisch topniveau, ideaal om te bewaren en rustig te gebruiken; aan het einde vind je de **Limax AI** creatie-ingang.
 
-**[👉 Begin nu met creëren](https://limaxai.com)**
+**[👉 Begin nu met creëren](https://www.limaxai.com/)**
 
 ![Geavanceerde Midjourney prompts](https://img.limaxai.com/aiweb/midjourney-prompts-limax-cover.png)
 
@@ -42,4 +42,4 @@ Je kunt het onderwerp, de scène en de verhouding naar behoefte aanpassen. Bewaa
 
 Deze **geavanceerde Midjourney prompts** beslaan portretten, mode, vintage, filmische sfeer en meer. Bewaar ze om rustig te gebruiken, te ontleden en te hercombineren. Wil je vergelijkbare creaties maken met **Limax AI**, klik dan op de knop hieronder.
 
-**[👉 Begin nu met creëren](https://limaxai.com)**
+**[👉 Begin nu met creëren](https://www.limaxai.com/)**

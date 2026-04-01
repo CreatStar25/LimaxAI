@@ -9,7 +9,7 @@ lang: "pt"
 
 Você pode sempre confiar no **Midjourney**. Este artigo reúne uma coleção de **prompts avançados do Midjourney**, vários estilos de fotografia de retrato, o teto da estética, perfeitos para guardar e usar aos poucos; no final, incluímos a entrada para criação com **Limax AI**.
 
-**[👉 Comece a criar agora](https://limaxai.com)**
+**[👉 Comece a criar agora](https://www.limaxai.com/)**
 
 ![Prompts avançados do Midjourney](https://img.limaxai.com/aiweb/midjourney-prompts-limax-cover.png)
 
@@ -42,4 +42,4 @@ Todos os itens acima podem ser ajustados conforme a necessidade do sujeito, cen�
 
 Esta coleção de **prompts avançados do Midjourney** abrange vários estilos como retrato, moda, vintage e sensibilidade cinematográfica. Pode guardá-los para usar aos poucos, desmontar e recombinar. Para criar obras semelhantes com **Limax AI**, clique no botão abaixo.
 
-**[👉 Comece a criar agora](https://limaxai.com)**
+**[👉 Comece a criar agora](https://www.limaxai.com/)**

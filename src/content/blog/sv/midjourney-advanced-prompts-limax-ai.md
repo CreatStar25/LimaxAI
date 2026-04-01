@@ -9,7 +9,7 @@ lang: "sv"
 
 Du kan alltid lita på **Midjourney**. Den här artikeln samlar en mängd **avancerade Midjourney-prompts** för porträttfotografi i olika stilar och estetiska höjdpunkter, perfekta att spara och använda långsamt; i slutet finns en **Limax AI** skapande-ingång.
 
-**[👉 Börja skapa nu](https://limaxai.com)**
+**[👉 Börja skapa nu](https://www.limaxai.com/)**
 
 ![Avancerade Midjourney-prompts](https://img.limaxai.com/aiweb/midjourney-prompts-limax-cover.png)
 
@@ -42,4 +42,4 @@ Alla ovan kan anpassas efter behov för ämne, scen och proportioner, spara och 
 
 Denna samling **avancerade Midjourney-prompts** täcker porträtt, mode, retro, filmisk känsla och flera andra stilar, perfekta att spara och använda långsamt, dela upp och omstrukturera. Vill du använda **Limax AI** för liknande skapande, klicka på knappen nedan.
 
-**[👉 Börja skapa nu](https://limaxai.com)**
+**[👉 Börja skapa nu](https://www.limaxai.com/)**

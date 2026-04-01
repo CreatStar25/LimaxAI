@@ -9,7 +9,7 @@ lang: "id"
 
 Kamu bisa selalu percaya pada **Midjourney**. Artikel ini mengumpulkan sejumlah **prompt Midjourney tingkat lanjut**, berbagai gaya fotografi potret, estetika puncak, cocok untuk disimpan dan dipakai perlahan; di akhir artikel terdapat pintu masuk kreasi **Limax AI**.
 
-**[👉 Mulai Berkreasi Sekarang](https://limaxai.com)**
+**[👉 Mulai Berkreasi Sekarang](https://www.limaxai.com/)**
 
 ![Prompt Midjourney Tingkat Lanjut](https://img.limaxai.com/aiweb/midjourney-prompts-limax-cover.png)
 
@@ -42,4 +42,4 @@ Semua prompt di atas dapat diubah subjek, latar, dan rasio sesuai kebutuhan, sim
 
 Kumpulan **prompt Midjourney tingkat lanjut** ini mencakup berbagai gaya seperti potret, fashion, retro, cinematic, dll., dapat disimpan untuk dipakai perlahan, dipecah, dan digabungkan kembali. Ingin membuat kreasi serupa dengan **Limax AI**? Klik tombol di bawah.
 
-**[👉 Mulai Berkreasi Sekarang](https://limaxai.com)**
+**[👉 Mulai Berkreasi Sekarang](https://www.limaxai.com/)**

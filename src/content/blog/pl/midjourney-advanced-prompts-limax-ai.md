@@ -9,7 +9,7 @@ lang: "pl"
 
 Możesz zawsze ufać **Midjourney**. W tym artykule zebraliśmy zestaw **zaawansowanych promptów Midjourney** do portretów fotograficznych w różnych stylach, będących szczytem estetyki — idealnych do zachowania i stopniowego wykorzystania. Na końcu znajdziesz link do tworzenia w **Limax AI**.
 
-**[👉 Zacznij tworzyć od razu](https://limaxai.com)**
+**[👉 Zacznij tworzyć od razu](https://www.limaxai.com/)**
 
 ![Zaawansowane prompty Midjourney](https://img.limaxai.com/aiweb/midjourney-prompts-limax-cover.png)
 
@@ -42,4 +42,4 @@ Wszystkie powyższe prompty można modyfikować według potrzeb — zmieniając 
 
 Ten zestaw **zaawansowanych promptów Midjourney** obejmuje różne style: portretowy, modowy, vintage, filmowy i inne. Możesz je zachować, stopniowo wykorzystywać, rozkładać na części i łączyć na nowo. Jeśli chcesz tworzyć podobne prace w **Limax AI**, kliknij przycisk poniżej.
 
-**[👉 Zacznij tworzyć od razu](https://limaxai.com)**
+**[👉 Zacznij tworzyć od razu](https://www.limaxai.com/)**

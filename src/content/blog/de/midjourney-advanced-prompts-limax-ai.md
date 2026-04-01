@@ -9,7 +9,7 @@ lang: "de"
 
 Du kannst **Midjourney** immer vertrauen. Dieser Artikel stellt eine Sammlung **fortgeschrittener Midjourney-Prompts** vor – verschiedene Stile der Porträtfotografie, das ästhetische Nonplusultra, perfekt zum Aufheben und späteren Verwenden; am Ende findest du den Zugang zur Erstellung mit **Limax AI**.
 
-**[👉 Sofort mit der Erstellung beginnen](https://limaxai.com)**
+**[👉 Sofort mit der Erstellung beginnen](https://www.limaxai.com/)**
 
 ![Fortgeschrittene Midjourney-Prompts](https://img.limaxai.com/aiweb/midjourney-prompts-limax-cover.png)
 
@@ -42,4 +42,4 @@ Alle oben genannten Prompts können je nach Bedarf in Subjekt, Szene und Seitenv
 
 Diese Sammlung **fortgeschrittener Midjourney-Prompts** deckt verschiedene Stile wie Porträt, Mode, Vintage und Cinematic Look ab. Hebe sie dir für später auf, um sie zu nutzen, zu analysieren und neu zu kombinieren. Wenn du mit **Limax AI** ähnliche Kreationen erstellen möchtest, klicke auf den Button unten.
 
-**[👉 Sofort mit der Erstellung beginnen](https://limaxai.com)**
+**[👉 Sofort mit der Erstellung beginnen](https://www.limaxai.com/)**

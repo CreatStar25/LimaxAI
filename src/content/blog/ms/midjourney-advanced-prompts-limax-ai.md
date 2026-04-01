@@ -9,7 +9,7 @@ lang: "ms"
 
 Anda sentiasa boleh percayakan **Midjourney**. Artikel ini menyusun koleksi **petunjuk lanjutan Midjourney** untuk pelbagai gaya fotografi potret dan estetika puncak, sesuai disimpan dan digunakan perlahan-lahan; diakhiri dengan pintu masuk penciptaan **Limax AI**.
 
-**[👉 Mulakan Penciptaan Sekarang](https://limaxai.com)**
+**[👉 Mulakan Penciptaan Sekarang](https://www.limaxai.com/)**
 
 ![Petunjuk Lanjutan Midjourney](https://img.limaxai.com/aiweb/midjourney-prompts-limax-cover.png)
 
@@ -42,4 +42,4 @@ Semua di atas boleh diubahsuai mengikut keperluan subjek, latar dan nisbah. Simp
 
 Koleksi **petunjuk lanjutan Midjourney** ini merangkumi pelbagai gaya seperti potret, fesyen, retro, dan kesan sinematik. Boleh disimpan untuk digunakan perlahan-lahan, diuraikan dan digabungkan semula. Untuk penciptaan serupa menggunakan **Limax AI**, klik butang di bawah.
 
-**[👉 Mulakan Penciptaan Sekarang](https://limaxai.com)**
+**[👉 Mulakan Penciptaan Sekarang](https://www.limaxai.com/)**

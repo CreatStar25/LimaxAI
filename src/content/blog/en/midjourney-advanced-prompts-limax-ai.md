@@ -9,7 +9,7 @@ lang: "en"
 
 You can always trust **Midjourney**. This article compiles a batch of **advanced Midjourney prompts** for various portrait photography styles and aesthetic pinnacles, perfect for saving and using gradually; includes a **Limax AI** creation portal at the end.
 
-**[👉 Start Creating Now](https://limaxai.com)**
+**[👉 Start Creating Now](https://www.limaxai.com/)**
 
 ![Advanced Midjourney Prompts](https://img.limaxai.com/aiweb/midjourney-prompts-limax-cover.png)
 
@@ -42,4 +42,4 @@ You can modify the subject, scene, and aspect ratio as needed. Save these for gr
 
 This batch of **advanced Midjourney prompts** covers various styles including portraits, fashion, retro, and cinematic vibes. Save them for gradual use, deconstruction, and recombination. To create similar works with **Limax AI**, click the button below.
 
-**[👉 Start Creating Now](https://limaxai.com)**
+**[👉 Start Creating Now](https://www.limaxai.com/)**

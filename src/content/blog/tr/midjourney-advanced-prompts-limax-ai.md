@@ -9,7 +9,7 @@ lang: "tr"
 
 **Midjourney**'e her zaman güvenebilirsiniz. Bu makale, **Midjourney gelişmiş prompt'larından** bir seçki sunuyor; portre fotoğrafçılığı için çeşitli stiller, estetik zirve, saklayıp yavaş yavaş kullanmak için ideal. Sonunda **Limax AI** yaratım girişi bulunuyor.
 
-**[👉 Hemen Yaratmaya Başla](https://limaxai.com)**
+**[👉 Hemen Yaratmaya Başla](https://www.limaxai.com/)**
 
 ![Midjourney Gelişmiş Prompt'ları](https://img.limaxai.com/aiweb/midjourney-prompts-limax-cover.png)
 
@@ -42,4 +42,4 @@ Yukarıdakiler, ihtiyaca göre özne, sahne ve oran değiştirilerek kullanılab
 
 Bu **Midjourney gelişmiş prompt** koleksiyonu, portre, moda, retro, sinematik hissiyat gibi çeşitli stilleri kapsıyor, saklayıp yavaş yavaş kullanabilir, parçalara ayırıp yeniden birleştirebilirsiniz. **Limax AI** ile benzer yaratımlar yapmak için aşağıdaki butona tıklayın.
 
-**[👉 Hemen Yaratmaya Başla](https://limaxai.com)**
+**[👉 Hemen Yaratmaya Başla](https://www.limaxai.com/)**

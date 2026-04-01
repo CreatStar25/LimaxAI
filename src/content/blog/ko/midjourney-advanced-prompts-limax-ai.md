@@ -9,7 +9,7 @@ lang: "ko"
 
 **Midjourney**는 언제나 믿을 수 있습니다. 본문은 **Midjourney 고급 프롬프트**를 한데 모았습니다. 인물 사진의 다양한 스타일, 미학의 정점으로, 소장해 두고 천천히 활용하기에 좋습니다. 글 말미에 **Limax AI** 창작 입구를 첨부합니다.
 
-**[👉 지금 바로 창작 시작하기](https://limaxai.com)**
+**[👉 지금 바로 창작 시작하기](https://www.limaxai.com/)**
 
 ![Midjourney 고급 프롬프트](https://img.limaxai.com/aiweb/midjourney-prompts-limax-cover.png)
 
@@ -42,4 +42,4 @@ lang: "ko"
 
 이번 **Midjourney 고급 프롬프트**는 인물, 패션, 레트로, 영화적 감성 등 다양한 스타일을 포괄하며, 모아 두고 천천히 활용하거나 분해 재구성할 수 있습니다. **Limax AI**로 유사한 창작을 하고 싶다면 아래 버튼을 클릭하세요.
 
-**[👉 지금 바로 창작 시작하기](https://limaxai.com)**
+**[👉 지금 바로 창작 시작하기](https://www.limaxai.com/)**

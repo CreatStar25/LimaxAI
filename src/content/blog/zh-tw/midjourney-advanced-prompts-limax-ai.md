@@ -9,7 +9,7 @@ lang: "zh-tw"
 
 你可以永遠相信 **Midjourney**。本文整理一批 **Midjourney 高級提示詞**，人像攝影各種風格、美學天花板，適合收藏慢慢用；文末附 **Limax AI** 創作入口。
 
-**[👉 立刻開始創作](https://limaxai.com)**
+**[👉 立刻開始創作](https://www.limaxai.com/)**
 
 ![Midjourney 高級提示詞](https://img.limaxai.com/aiweb/midjourney-prompts-limax-cover.png)
 
@@ -42,4 +42,4 @@ lang: "zh-tw"
 
 這批 **Midjourney 高級提示詞** 涵蓋人像、時尚、復古、電影感等多種風格，可收藏後慢慢用、拆解重組。想用 **Limax AI** 做同類創作，可點下方按鈕。
 
-**[👉 立刻開始創作](https://limaxai.com)**
+**[👉 立刻開始創作](https://www.limaxai.com/)**

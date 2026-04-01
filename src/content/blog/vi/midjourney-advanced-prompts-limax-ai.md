@@ -9,7 +9,7 @@ lang: "vi"
 
 Bạn có thể luôn tin tưởng vào **Midjourney**. Bài viết này tổng hợp một loạt **từ khóa nâng cao Midjourney**, đa dạng phong cách chụp chân dung, đỉnh cao thẩm mỹ, phù hợp để lưu lại dùng dần; cuối bài có kèm lối vào sáng tạo **Limax AI**.
 
-**[👉 Bắt đầu sáng tạo ngay](https://limaxai.com)**
+**[👉 Bắt đầu sáng tạo ngay](https://www.limaxai.com/)**
 
 ![Từ khóa nâng cao Midjourney](https://img.limaxai.com/aiweb/midjourney-prompts-limax-cover.png)
 
@@ -42,4 +42,4 @@ Tất cả đều có thể điều chỉnh chủ thể, bối cảnh và tỷ l
 
 Loạt **từ khóa nâng cao Midjourney** này bao gồm nhiều phong cách như chân dung, thời trang, retro, cảm giác điện ảnh, có thể lưu lại dùng dần, phân tích và kết hợp lại. Muốn sáng tạo tương tự với **Limax AI**, hãy nhấp vào nút bên dưới.
 
-**[👉 Bắt đầu sáng tạo ngay](https://limaxai.com)**
+**[👉 Bắt đầu sáng tạo ngay](https://www.limaxai.com/)**

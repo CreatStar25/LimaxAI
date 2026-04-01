@@ -9,7 +9,7 @@ lang: "ja"
 
 **Midjourney** はいつでも信頼できます。この記事では、**Midjourney の高度なプロンプト** をまとめました。ポートレート写真の様々なスタイル、美学の頂点を網羅しており、保存してじっくり使うのに最適です。文末には **Limax AI** の創作入り口も用意しています。
 
-**[👉 今すぐ創作を始める](https://limaxai.com)**
+**[👉 今すぐ創作を始める](https://www.limaxai.com/)**
 
 ![Midjourney 高度なプロンプト](https://img.limaxai.com/aiweb/midjourney-prompts-limax-cover.png)
 
@@ -42,4 +42,4 @@ lang: "ja"
 
 この **Midjourney 高度なプロンプト集** は、ポートレート、ファッション、ヴィンテージ、映画的な雰囲気など、様々なスタイルを網羅しています。保存してじっくり使ったり、分解・再構築したりすることができます。**Limax AI** で同様の創作をしたい方は、下のボタンをクリックしてください。
 
-**[👉 今すぐ創作を始める](https://limaxai.com)**
+**[👉 今すぐ創作を始める](https://www.limaxai.com/)**
