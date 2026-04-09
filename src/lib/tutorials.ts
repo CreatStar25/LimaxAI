@@ -17,6 +17,10 @@ import {
 import {
   getMidjourneyV8Banana2Article,
 } from './tutorial-midjourney-v8-banana2';
+import {
+  MIDJOURNEY_NEW_BATCH_SLUGS,
+  getMidjourneyNewBatchArticle,
+} from './tutorial-midjourney-new-batch';
 
 export interface TutorialLink {
   url: string;
@@ -3012,6 +3016,22 @@ const articleSelectedPrompts2ByLocale = buildSelectedSeriesByLocale('midjourney-
 const articleSelectedPrompts3ByLocale = buildSelectedSeriesByLocale('midjourney-selected-prompts-3');
 const articleSelectedPrompts4ByLocale = buildSelectedSeriesByLocale('midjourney-selected-prompts-4');
 const articleSelectedPrompts5ByLocale = buildSelectedSeriesByLocale('midjourney-selected-prompts-5');
+const articleMidjourneyNewBatchBySlug: Record<string, Record<string, TutorialArticle>> = Object.fromEntries(
+  MIDJOURNEY_NEW_BATCH_SLUGS.map((slug) => [
+    slug,
+    {
+      en: getMidjourneyNewBatchArticle(slug, 'en') as TutorialArticle,
+      'zh-cn': getMidjourneyNewBatchArticle(slug, 'zh-cn') as TutorialArticle,
+      'zh-tw': getMidjourneyNewBatchArticle(slug, 'zh-tw') as TutorialArticle,
+      ...Object.fromEntries(
+        EXTRA_LOCALES.map((loc) => {
+          const a = getMidjourneyNewBatchArticle(slug, loc);
+          return [loc, (a ?? getMidjourneyNewBatchArticle(slug, 'en')) as TutorialArticle];
+        }),
+      ),
+    },
+  ]),
+);
 
 const articlesBySlugAndLocale: Record<string, Record<string, TutorialArticle>> = {
   'limaxai-guide': articleLimaxaiByLocale,
@@ -3038,6 +3058,7 @@ const articlesBySlugAndLocale: Record<string, Record<string, TutorialArticle>> =
   'midjourney-selected-prompts-4': articleSelectedPrompts4ByLocale,
   'midjourney-selected-prompts-5': articleSelectedPrompts5ByLocale,
   'ai-video-guide': articleAiVideoByLocale,
+  ...articleMidjourneyNewBatchBySlug,
 };
 
 function getList(locale: string): TutorialListEntry[] {
