@@ -292,27 +292,153 @@ const aboutByLocale: Record<string, AboutPageContent> = {
   en: aboutEn,
   'zh-cn': aboutZhCN,
   'zh-tw': aboutZhTW,
-  es: aboutEn,
-  ar: aboutEn,
-  pt: aboutEn,
-  id: aboutEn,
-  ms: aboutEn,
-  fr: aboutEn,
-  ru: aboutEn,
-  hi: aboutEn,
-  ja: aboutEn,
-  de: aboutEn,
-  ko: aboutEn,
-  tr: aboutEn,
-  vi: aboutEn,
-  th: aboutEn,
-  it: aboutEn,
-  fa: aboutEn,
-  nl: aboutEn,
-  pl: aboutEn,
-  sv: aboutEn,
-  uk: aboutEn,
-  ro: aboutEn,
+  es: {
+    title: 'Sobre nosotros',
+    sections: [
+      { paragraphs: ['Somos el equipo detrás de LimaxAI. Creamos una plataforma para unificar herramientas de IA en un solo flujo de trabajo y reducir costes de suscripción.'] },
+      { heading: 'Nuestra misión', paragraphs: ['Con una sola membresía, puedes usar modelos líderes para texto, imagen, audio y video. Queremos que creadores y equipos se enfoquen en resultados, no en cambiar entre plataformas.'] },
+    ],
+  },
+  ar: {
+    title: 'من نحن',
+    sections: [
+      { paragraphs: ['نحن فريق LimaxAI. بنينا منصة تجمع أدوات الذكاء الاصطناعي في مسار عمل واحد وتقلل تكاليف الاشتراكات المتعددة.'] },
+      { heading: 'رسالتنا', paragraphs: ['باشتراك واحد يمكنك استخدام نماذج رائدة للنصوص والصور والصوت والفيديو. هدفنا أن يركز المبدعون على الإنتاج بدلاً من التنقل بين أدوات متفرقة.'] },
+    ],
+  },
+  pt: {
+    title: 'Sobre',
+    sections: [
+      { paragraphs: ['Somos a equipe por trás da LimaxAI. Construímos uma plataforma para unificar ferramentas de IA em um fluxo único e reduzir custos.'] },
+      { heading: 'Nossa missão', paragraphs: ['Com uma única assinatura, você acessa modelos líderes para texto, imagem, áudio e vídeo. Queremos que criadores foquem em resultado, não em trocar de plataforma.'] },
+    ],
+  },
+  id: {
+    title: 'Tentang',
+    sections: [
+      { paragraphs: ['Kami adalah tim di balik LimaxAI. Kami membangun platform yang menyatukan alat AI dalam satu alur kerja agar lebih efisien dan hemat biaya.'] },
+      { heading: 'Misi kami', paragraphs: ['Dengan satu langganan, Anda dapat memakai model AI terbaik untuk teks, gambar, audio, dan video tanpa pindah-pindah layanan.'] },
+    ],
+  },
+  ms: {
+    title: 'Perihal',
+    sections: [
+      { paragraphs: ['Kami ialah pasukan di sebalik LimaxAI. Kami menyatukan pelbagai alat AI dalam satu aliran kerja bagi memudahkan penciptaan.'] },
+      { heading: 'Misi kami', paragraphs: ['Dengan satu langganan, anda boleh guna model AI utama untuk teks, imej, audio dan video tanpa bertukar platform.'] },
+    ],
+  },
+  fr: {
+    title: 'À propos',
+    sections: [
+      { paragraphs: ['Nous sommes l’équipe de LimaxAI. Nous avons créé une plateforme qui unifie les outils IA dans un flux unique et réduit la complexité opérationnelle.'] },
+      { heading: 'Notre mission', paragraphs: ['Avec un seul abonnement, vous accédez aux meilleurs modèles pour texte, image, audio et vidéo, sans fragmentation des outils.'] },
+    ],
+  },
+  ru: {
+    title: 'О нас',
+    sections: [
+      { paragraphs: ['Мы команда LimaxAI. Наша платформа объединяет разрозненные AI-инструменты в единый рабочий контур и снижает стоимость использования.'] },
+      { heading: 'Наша цель', paragraphs: ['Одна подписка открывает доступ к ведущим моделям для текста, изображений, аудио и видео, чтобы вы фокусировались на результате.'] },
+    ],
+  },
+  hi: {
+    title: 'हमारे बारे में',
+    sections: [
+      { paragraphs: ['हम LimaxAI की टीम हैं। हमने अलग-अलग AI टूल्स को एक वर्कफ़्लो में जोड़ने के लिए यह प्लेटफ़ॉर्म बनाया है।'] },
+      { heading: 'हमारा लक्ष्य', paragraphs: ['एक सदस्यता से आप टेक्स्ट, इमेज, ऑडियो और वीडियो के लिए प्रमुख मॉडल इस्तेमाल कर सकते हैं और काम को तेज़ बना सकते हैं।'] },
+    ],
+  },
+  ja: {
+    title: '会社概要',
+    sections: [
+      { paragraphs: ['私たちは LimaxAI の開発チームです。分散した AI ツールを1つのワークフローに統合し、制作効率を高めるためにこのプラットフォームを作りました。'] },
+      { heading: 'ミッション', paragraphs: ['1つのサブスクリプションで、テキスト・画像・音声・動画の主要モデルを利用でき、創作に集中できます。'] },
+    ],
+  },
+  de: {
+    title: 'Über uns',
+    sections: [
+      { paragraphs: ['Wir sind das Team hinter LimaxAI. Unsere Plattform bündelt verschiedene KI-Tools in einem Workflow und reduziert Aufwand sowie Kosten.'] },
+      { heading: 'Unsere Mission', paragraphs: ['Mit einem Abo erhalten Sie Zugang zu führenden Modellen für Text, Bild, Audio und Video – ohne Tool-Wechsel.'] },
+    ],
+  },
+  ko: {
+    title: '소개',
+    sections: [
+      { paragraphs: ['우리는 LimaxAI 팀입니다. 분산된 AI 도구를 하나의 워크플로로 통합해 창작 효율을 높이기 위해 플랫폼을 만들었습니다.'] },
+      { heading: '우리의 미션', paragraphs: ['하나의 구독으로 텍스트, 이미지, 오디오, 비디오의 주요 모델을 사용해 더 빠르게 결과를 만들 수 있습니다.'] },
+    ],
+  },
+  tr: {
+    title: 'Hakkımızda',
+    sections: [
+      { paragraphs: ['Biz LimaxAI ekibiyiz. Farklı yapay zeka araçlarını tek bir üretim akışında birleştiren bir platform geliştirdik.'] },
+      { heading: 'Misyonumuz', paragraphs: ['Tek abonelikle metin, görsel, ses ve video için önde gelen modellere erişmenizi sağlayarak üretimi hızlandırıyoruz.'] },
+    ],
+  },
+  vi: {
+    title: 'Giới thiệu',
+    sections: [
+      { paragraphs: ['Chúng tôi là đội ngũ LimaxAI. Nền tảng được xây dựng để hợp nhất nhiều công cụ AI vào một quy trình làm việc duy nhất.'] },
+      { heading: 'Sứ mệnh', paragraphs: ['Một gói đăng ký giúp bạn dùng các mô hình hàng đầu cho văn bản, hình ảnh, âm thanh và video mà không cần đổi nền tảng.'] },
+    ],
+  },
+  th: {
+    title: 'เกี่ยวกับเรา',
+    sections: [
+      { paragraphs: ['เราเป็นทีม LimaxAI โดยสร้างแพลตฟอร์มที่รวมเครื่องมือ AI หลายตัวไว้ในเวิร์กโฟลว์เดียว เพื่อให้ทำงานได้เร็วและคุ้มค่าขึ้น'] },
+      { heading: 'พันธกิจของเรา', paragraphs: ['สมัครสมาชิกครั้งเดียวเพื่อใช้งานโมเดลชั้นนำด้านข้อความ ภาพ เสียง และวิดีโอ โดยไม่ต้องสลับหลายแพลตฟอร์ม'] },
+    ],
+  },
+  it: {
+    title: 'Chi siamo',
+    sections: [
+      { paragraphs: ['Siamo il team di LimaxAI. Abbiamo creato una piattaforma che unifica strumenti AI diversi in un unico flusso operativo.'] },
+      { heading: 'Missione', paragraphs: ['Con un solo abbonamento accedi ai migliori modelli per testo, immagini, audio e video, riducendo tempi e costi di produzione.'] },
+    ],
+  },
+  fa: {
+    title: 'درباره ما',
+    sections: [
+      { paragraphs: ['ما تیم LimaxAI هستیم. این پلتفرم را ساختیم تا ابزارهای پراکنده هوش مصنوعی را در یک جریان کاری یکپارچه کنیم.'] },
+      { heading: 'ماموریت ما', paragraphs: ['با یک اشتراک، به مدل‌های برتر متن، تصویر، صوت و ویدیو دسترسی دارید و بدون جابه‌جایی بین سرویس‌ها تولید می‌کنید.'] },
+    ],
+  },
+  nl: {
+    title: 'Over ons',
+    sections: [
+      { paragraphs: ['Wij zijn het team achter LimaxAI. Ons platform brengt meerdere AI-tools samen in één workflow voor hogere productiviteit.'] },
+      { heading: 'Onze missie', paragraphs: ['Met één abonnement gebruikt u toonaangevende modellen voor tekst, beeld, audio en video zonder versnipperde tools.'] },
+    ],
+  },
+  pl: {
+    title: 'O nas',
+    sections: [
+      { paragraphs: ['Jesteśmy zespołem LimaxAI. Stworzyliśmy platformę, która łączy wiele narzędzi AI w jeden spójny workflow.'] },
+      { heading: 'Nasza misja', paragraphs: ['Jedna subskrypcja daje dostęp do modeli dla tekstu, obrazu, audio i wideo, aby przyspieszyć pracę twórczą.'] },
+    ],
+  },
+  sv: {
+    title: 'Om oss',
+    sections: [
+      { paragraphs: ['Vi är teamet bakom LimaxAI. Vi byggde en plattform som samlar flera AI-verktyg i ett enhetligt arbetsflöde.'] },
+      { heading: 'Vårt uppdrag', paragraphs: ['Med en prenumeration får du tillgång till ledande modeller för text, bild, ljud och video utan onödiga verktygsbyten.'] },
+    ],
+  },
+  uk: {
+    title: 'Про нас',
+    sections: [
+      { paragraphs: ['Ми команда LimaxAI. Наша платформа об’єднує різні AI-інструменти в один зрозумілий робочий процес.'] },
+      { heading: 'Наша місія', paragraphs: ['Одна підписка відкриває доступ до провідних моделей для тексту, зображень, аудіо та відео, щоб прискорити створення контенту.'] },
+    ],
+  },
+  ro: {
+    title: 'Despre noi',
+    sections: [
+      { paragraphs: ['Suntem echipa LimaxAI. Platforma noastră unifică instrumente AI diferite într-un singur flux de lucru eficient.'] },
+      { heading: 'Misiunea noastră', paragraphs: ['Cu un singur abonament folosești modele de top pentru text, imagine, audio și video, fără fragmentarea procesului de creație.'] },
+    ],
+  },
 };
 
 const privacyByLocale: Record<string, PageContent> = {
@@ -320,10 +446,26 @@ const privacyByLocale: Record<string, PageContent> = {
   'zh-cn': privacyZhCN,
   'zh-tw': privacyZhTW,
   es: { title: 'Política de privacidad', body: 'Respetamos su privacidad. Esta página describe cómo recopilamos, usamos y protegemos su información al usar LimaxAI.' },
+  ar: { title: 'سياسة الخصوصية', body: 'نحترم خصوصيتك. توضح هذه الصفحة كيفية جمع بياناتك واستخدامها وحمايتها عند استخدام خدمات LimaxAI.' },
+  pt: { title: 'Política de Privacidade', body: 'Respeitamos sua privacidade. Esta página descreve como coletamos, usamos e protegemos seus dados ao usar o LimaxAI.' },
+  id: { title: 'Kebijakan Privasi', body: 'Kami menghormati privasi Anda. Halaman ini menjelaskan cara kami mengumpulkan, menggunakan, dan melindungi data saat Anda memakai LimaxAI.' },
+  ms: { title: 'Dasar Privasi', body: 'Kami menghormati privasi anda. Halaman ini menerangkan cara kami mengumpul, menggunakan dan melindungi data semasa menggunakan LimaxAI.' },
   fr: { title: 'Politique de confidentialité', body: 'Nous respectons votre vie privée. Cette page décrit comment nous collectons, utilisons et protégeons vos données.' },
+  ru: { title: 'Политика конфиденциальности', body: 'Мы уважаем вашу конфиденциальность. На этой странице описано, как LimaxAI собирает, использует и защищает персональные данные.' },
+  hi: { title: 'गोपनीयता नीति', body: 'हम आपकी गोपनीयता का सम्मान करते हैं। यह पेज बताता है कि LimaxAI उपयोग करते समय आपका डेटा कैसे एकत्र, उपयोग और सुरक्षित किया जाता है।' },
   de: { title: 'Datenschutz', body: 'Wir respektieren Ihre Privatsphäre. Diese Seite beschreibt, wie wir Ihre Daten erfassen, nutzen und schützen.' },
   ja: { title: 'プライバシー', body: '当社はお客様のプライバシーを尊重します。本ページではLimaxAI利用時の個人情報の取り扱いを説明します。' },
   ko: { title: '개인정보처리방침', body: '당사는 귀하의 개인정보를 존중합니다. LimaxAI 이용 시 수집·이용·보호 방침을 안내합니다.' },
+  tr: { title: 'Gizlilik Politikası', body: 'Gizliliğinize saygı duyuyoruz. Bu sayfa, LimaxAI kullanırken verilerin nasıl toplandığını, işlendiğini ve korunduğunu açıklar.' },
+  vi: { title: 'Chính sách quyền riêng tư', body: 'Chúng tôi tôn trọng quyền riêng tư của bạn. Trang này mô tả cách LimaxAI thu thập, sử dụng và bảo vệ dữ liệu cá nhân.' },
+  th: { title: 'นโยบายความเป็นส่วนตัว', body: 'เราเคารพความเป็นส่วนตัวของคุณ หน้านี้อธิบายวิธีที่ LimaxAI เก็บ ใช้ และปกป้องข้อมูลส่วนบุคคลของคุณ' },
+  it: { title: 'Informativa sulla privacy', body: 'Rispettiamo la tua privacy. Questa pagina descrive come LimaxAI raccoglie, utilizza e protegge i tuoi dati personali.' },
+  fa: { title: 'حریم خصوصی', body: 'ما به حریم خصوصی شما احترام می‌گذاریم. این صفحه توضیح می‌دهد LimaxAI چگونه داده‌های شما را جمع‌آوری، استفاده و محافظت می‌کند.' },
+  nl: { title: 'Privacybeleid', body: 'Wij respecteren uw privacy. Op deze pagina leest u hoe LimaxAI persoonsgegevens verzamelt, gebruikt en beschermt.' },
+  pl: { title: 'Polityka prywatności', body: 'Szanujemy Twoją prywatność. Ta strona opisuje, jak LimaxAI gromadzi, wykorzystuje i chroni dane osobowe.' },
+  sv: { title: 'Integritetspolicy', body: 'Vi respekterar din integritet. Den här sidan förklarar hur LimaxAI samlar in, använder och skyddar personuppgifter.' },
+  uk: { title: 'Політика конфіденційності', body: 'Ми поважаємо вашу конфіденційність. На цій сторінці описано, як LimaxAI збирає, використовує та захищає персональні дані.' },
+  ro: { title: 'Politica de confidențialitate', body: 'Respectăm confidențialitatea ta. Această pagină explică modul în care LimaxAI colectează, utilizează și protejează datele personale.' },
 };
 
 const termsByLocale: Record<string, PageContent> = {
@@ -331,45 +473,172 @@ const termsByLocale: Record<string, PageContent> = {
   'zh-cn': termsZhCN,
   'zh-tw': termsZhTW,
   es: { title: 'Términos de servicio', body: 'Al usar LimaxAI acepta estos términos. Debe usar el servicio de forma legal y no hacer mal uso del contenido generado.' },
+  ar: { title: 'شروط الخدمة', body: 'باستخدام LimaxAI فإنك توافق على هذه الشروط. يجب استخدام الخدمة بشكل قانوني وعدم إساءة استخدام المحتوى المُنشأ.' },
+  pt: { title: 'Termos de Serviço', body: 'Ao usar o LimaxAI, você concorda com estes termos. Use o serviço de forma legal e sem uso indevido do conteúdo gerado.' },
+  id: { title: 'Ketentuan Layanan', body: 'Dengan menggunakan LimaxAI, Anda menyetujui ketentuan ini. Gunakan layanan secara legal dan jangan menyalahgunakan konten yang dihasilkan.' },
+  ms: { title: 'Terma Perkhidmatan', body: 'Dengan menggunakan LimaxAI, anda bersetuju dengan terma ini. Gunakan perkhidmatan secara sah dan jangan menyalahgunakan kandungan yang dijana.' },
   fr: { title: 'Conditions d\'utilisation', body: 'En utilisant LimaxAI vous acceptez ces conditions. Vous devez utiliser le service de manière légale.' },
+  ru: { title: 'Условия использования', body: 'Используя LimaxAI, вы соглашаетесь с этими условиями. Сервис должен использоваться законно и без злоупотребления сгенерированным контентом.' },
+  hi: { title: 'सेवा की शर्तें', body: 'LimaxAI का उपयोग करके आप इन शर्तों से सहमत होते हैं। सेवा का उपयोग कानूनी रूप से करें और जनरेटेड सामग्री का दुरुपयोग न करें।' },
   de: { title: 'Nutzungsbedingungen', body: 'Mit der Nutzung von LimaxAI akzeptieren Sie diese Bedingungen. Sie müssen den Dienst rechtmäßig nutzen.' },
   ja: { title: '利用規約', body: 'LimaxAIのご利用により本規約に同意したものとみなします。法令に従いご利用ください。' },
   ko: { title: '이용약관', body: 'LimaxAI 이용 시 본 약관에 동의하는 것입니다. 서비스를 법적으로 이용해 주세요.' },
+  tr: { title: 'Hizmet Şartları', body: 'LimaxAI kullanarak bu şartları kabul etmiş olursunuz. Hizmeti yasal çerçevede kullanmalı ve üretilen içeriği kötüye kullanmamalısınız.' },
+  vi: { title: 'Điều khoản dịch vụ', body: 'Khi sử dụng LimaxAI, bạn đồng ý với các điều khoản này. Bạn phải sử dụng dịch vụ hợp pháp và không lạm dụng nội dung được tạo ra.' },
+  th: { title: 'ข้อกำหนดการให้บริการ', body: 'เมื่อใช้ LimaxAI ถือว่าคุณยอมรับข้อกำหนดนี้ คุณต้องใช้บริการอย่างถูกต้องตามกฎหมายและไม่ใช้เนื้อหาที่สร้างขึ้นในทางที่ผิด' },
+  it: { title: 'Termini di servizio', body: 'Utilizzando LimaxAI accetti questi termini. Devi usare il servizio in modo legale e non abusare dei contenuti generati.' },
+  fa: { title: 'شرایط استفاده از خدمات', body: 'با استفاده از LimaxAI با این شرایط موافقت می‌کنید. استفاده از سرویس باید قانونی باشد و محتوای تولیدشده نباید سوءاستفاده شود.' },
+  nl: { title: 'Servicevoorwaarden', body: 'Door LimaxAI te gebruiken gaat u akkoord met deze voorwaarden. Gebruik de dienst op legale wijze en misbruik gegenereerde content niet.' },
+  pl: { title: 'Regulamin świadczenia usług', body: 'Korzystając z LimaxAI akceptujesz te warunki. Usługę należy używać zgodnie z prawem i bez nadużywania wygenerowanych treści.' },
+  sv: { title: 'Användarvillkor', body: 'Genom att använda LimaxAI godkänner du dessa villkor. Tjänsten ska användas lagligt och genererat innehåll får inte missbrukas.' },
+  uk: { title: 'Умови користування', body: 'Використовуючи LimaxAI, ви погоджуєтеся з цими умовами. Сервіс потрібно використовувати законно та без зловживань згенерованим контентом.' },
+  ro: { title: 'Termeni de utilizare', body: 'Prin utilizarea LimaxAI accepți acești termeni. Serviciul trebuie folosit legal, fără utilizarea abuzivă a conținutului generat.' },
 };
 
 const autoDebitAgreementByLocale: Record<string, AgreementContent> = {
   en: autoDebitAgreementEn,
   'zh-cn': autoDebitAgreementZhCN,
   'zh-tw': autoDebitAgreementZhTW,
-  es: autoDebitAgreementEn,
-  ar: autoDebitAgreementEn,
-  pt: autoDebitAgreementEn,
-  id: autoDebitAgreementEn,
-  ms: autoDebitAgreementEn,
-  fr: autoDebitAgreementEn,
-  ru: autoDebitAgreementEn,
-  hi: autoDebitAgreementEn,
-  ja: autoDebitAgreementEn,
-  de: autoDebitAgreementEn,
-  ko: autoDebitAgreementEn,
-  tr: autoDebitAgreementEn,
-  vi: autoDebitAgreementEn,
-  th: autoDebitAgreementEn,
-  it: autoDebitAgreementEn,
-  fa: autoDebitAgreementEn,
-  nl: autoDebitAgreementEn,
-  pl: autoDebitAgreementEn,
-  sv: autoDebitAgreementEn,
-  uk: autoDebitAgreementEn,
-  ro: autoDebitAgreementEn,
+  es: {
+    title: 'Acuerdo de débito automático',
+    updatedAt: autoDebitAgreementZhCN.updatedAt,
+    intro: 'Este acuerdo regula la renovación automática de suscripciones en LimaxAI. Al activarla, autorizas el cobro recurrente por ciclo.',
+    sections: [{ heading: 'Alcance y cancelación', paragraphs: ['Puedes cancelar la renovación automática en cualquier momento desde tu cuenta o proveedor de pago.', 'Para evitar el siguiente cobro, cancela al menos 24 horas antes del vencimiento.'] }],
+  },
+  ar: {
+    title: 'اتفاقية الخصم التلقائي',
+    updatedAt: autoDebitAgreementZhCN.updatedAt,
+    intro: 'تنظّم هذه الاتفاقية التجديد التلقائي لاشتراكات LimaxAI. عند التفعيل، أنت تفوّض الخصم الدوري لكل دورة.',
+    sections: [{ heading: 'النطاق والإلغاء', paragraphs: ['يمكنك إلغاء التجديد التلقائي في أي وقت من إعدادات الحساب أو عبر مزوّد الدفع.', 'لتجنب الخصم للدورة القادمة، ألغِ قبل 24 ساعة على الأقل من موعد الانتهاء.'] }],
+  },
+  pt: {
+    title: 'Acordo de débito automático',
+    updatedAt: autoDebitAgreementZhCN.updatedAt,
+    intro: 'Este acordo regula a renovação automática da assinatura no LimaxAI. Ao ativar, você autoriza cobranças recorrentes por ciclo.',
+    sections: [{ heading: 'Escopo e cancelamento', paragraphs: ['Você pode cancelar a renovação automática a qualquer momento nas configurações da conta ou no provedor de pagamento.', 'Para evitar a próxima cobrança, cancele com pelo menos 24 horas de antecedência.'] }],
+  },
+  id: {
+    title: 'Perjanjian auto-debit',
+    updatedAt: autoDebitAgreementZhCN.updatedAt,
+    intro: 'Perjanjian ini mengatur perpanjangan otomatis langganan LimaxAI. Dengan mengaktifkan, Anda memberi otorisasi penagihan berulang tiap periode.',
+    sections: [{ heading: 'Cakupan dan pembatalan', paragraphs: ['Anda dapat menonaktifkan perpanjangan otomatis kapan saja dari pengaturan akun atau penyedia pembayaran.', 'Untuk menghindari tagihan berikutnya, batalkan minimal 24 jam sebelum jatuh tempo.'] }],
+  },
+  ms: {
+    title: 'Perjanjian auto-debit',
+    updatedAt: autoDebitAgreementZhCN.updatedAt,
+    intro: 'Perjanjian ini mengawal pembaharuan automatik langganan LimaxAI. Dengan pengaktifan, anda membenarkan caj berulang setiap kitaran.',
+    sections: [{ heading: 'Skop dan pembatalan', paragraphs: ['Anda boleh menutup pembaharuan automatik pada bila-bila masa melalui tetapan akaun atau penyedia pembayaran.', 'Untuk mengelak caj seterusnya, batalkan sekurang-kurangnya 24 jam sebelum tamat tempoh.'] }],
+  },
+  fr: {
+    title: 'Accord de prélèvement automatique',
+    updatedAt: autoDebitAgreementZhCN.updatedAt,
+    intro: 'Cet accord encadre le renouvellement automatique des abonnements LimaxAI. En l’activant, vous autorisez un prélèvement récurrent à chaque cycle.',
+    sections: [{ heading: 'Portée et annulation', paragraphs: ['Vous pouvez désactiver le renouvellement automatique à tout moment depuis votre compte ou votre moyen de paiement.', 'Pour éviter le prochain prélèvement, annulez au moins 24 heures avant l’échéance.'] }],
+  },
+  ru: {
+    title: 'Соглашение об автосписании',
+    updatedAt: autoDebitAgreementZhCN.updatedAt,
+    intro: 'Это соглашение регулирует автопродление подписки LimaxAI. Включая его, вы разрешаете регулярное списание оплаты по циклам.',
+    sections: [{ heading: 'Область действия и отмена', paragraphs: ['Отключить автопродление можно в любой момент в настройках аккаунта или у платежного провайдера.', 'Чтобы избежать следующего списания, отмените автопродление минимум за 24 часа до окончания периода.'] }],
+  },
+  hi: {
+    title: 'ऑटो-डेबिट समझौता',
+    updatedAt: autoDebitAgreementZhCN.updatedAt,
+    intro: 'यह समझौता LimaxAI सदस्यता के ऑटो-रिन्यूअल को नियंत्रित करता है। इसे चालू करने पर आप प्रत्येक बिलिंग चक्र के लिए स्वतः भुगतान की अनुमति देते हैं।',
+    sections: [{ heading: 'दायरा और रद्द करना', paragraphs: ['आप खाते की सेटिंग्स या पेमेंट प्रदाता से किसी भी समय ऑटो-रिन्यूअल बंद कर सकते हैं।', 'अगले शुल्क से बचने के लिए समाप्ति से कम से कम 24 घंटे पहले रद्द करें।'] }],
+  },
+  ja: {
+    title: '自動引き落とし同意書',
+    updatedAt: autoDebitAgreementZhCN.updatedAt,
+    intro: '本同意書は LimaxAI の自動更新課金に関する条件を定めます。自動更新を有効化すると、各請求周期で自動決済が行われます。',
+    sections: [{ heading: '適用範囲と解約', paragraphs: ['自動更新はアカウント設定または決済プロバイダ側でいつでも停止できます。', '次回請求を回避するには、満了時刻の24時間前までに停止してください。'] }],
+  },
+  de: {
+    title: 'Vereinbarung zum automatischen Einzug',
+    updatedAt: autoDebitAgreementZhCN.updatedAt,
+    intro: 'Diese Vereinbarung regelt die automatische Verlängerung von LimaxAI-Abos. Mit Aktivierung autorisieren Sie wiederkehrende Abbuchungen je Abrechnungszyklus.',
+    sections: [{ heading: 'Geltungsbereich und Kündigung', paragraphs: ['Sie können die automatische Verlängerung jederzeit in den Kontoeinstellungen oder beim Zahlungsanbieter deaktivieren.', 'Um die nächste Abbuchung zu vermeiden, kündigen Sie mindestens 24 Stunden vor Ablauf.'] }],
+  },
+  ko: {
+    title: '자동 결제 동의서',
+    updatedAt: autoDebitAgreementZhCN.updatedAt,
+    intro: '본 동의서는 LimaxAI 구독의 자동 갱신 결제를 규정합니다. 자동 갱신을 켜면 각 결제 주기마다 자동 청구에 동의하게 됩니다.',
+    sections: [{ heading: '적용 범위 및 해지', paragraphs: ['자동 갱신은 계정 설정 또는 결제 제공업체에서 언제든지 해지할 수 있습니다.', '다음 결제를 피하려면 만료 24시간 전까지 해지하세요.'] }],
+  },
+  tr: {
+    title: 'Otomatik tahsilat sözleşmesi',
+    updatedAt: autoDebitAgreementZhCN.updatedAt,
+    intro: 'Bu sözleşme LimaxAI aboneliğinin otomatik yenilemesini düzenler. Etkinleştirildiğinde her dönem için tekrar eden tahsilatı onaylamış olursunuz.',
+    sections: [{ heading: 'Kapsam ve iptal', paragraphs: ['Otomatik yenilemeyi hesap ayarlarından veya ödeme sağlayıcısından dilediğiniz zaman kapatabilirsiniz.', 'Bir sonraki tahsilatı önlemek için en az 24 saat önce iptal edin.'] }],
+  },
+  vi: {
+    title: 'Thỏa thuận ghi nợ tự động',
+    updatedAt: autoDebitAgreementZhCN.updatedAt,
+    intro: 'Thỏa thuận này quy định gia hạn tự động cho gói LimaxAI. Khi bật, bạn ủy quyền trừ tiền định kỳ theo chu kỳ thanh toán.',
+    sections: [{ heading: 'Phạm vi và hủy', paragraphs: ['Bạn có thể tắt gia hạn tự động bất cứ lúc nào trong cài đặt tài khoản hoặc tại nhà cung cấp thanh toán.', 'Để tránh lần trừ tiền tiếp theo, hãy hủy trước ít nhất 24 giờ.'] }],
+  },
+  th: {
+    title: 'ข้อตกลงการหักเงินอัตโนมัติ',
+    updatedAt: autoDebitAgreementZhCN.updatedAt,
+    intro: 'ข้อตกลงนี้กำหนดการต่ออายุอัตโนมัติของสมาชิก LimaxAI เมื่อเปิดใช้งานถือว่าคุณยินยอมให้เรียกเก็บเงินซ้ำตามรอบบิล',
+    sections: [{ heading: 'ขอบเขตและการยกเลิก', paragraphs: ['คุณสามารถยกเลิกการต่ออายุอัตโนมัติได้ทุกเมื่อจากบัญชีหรือผู้ให้บริการชำระเงิน', 'เพื่อหลีกเลี่ยงการเรียกเก็บรอบถัดไป กรุณายกเลิกก่อนหมดอายุอย่างน้อย 24 ชั่วโมง'] }],
+  },
+  it: {
+    title: 'Accordo di addebito automatico',
+    updatedAt: autoDebitAgreementZhCN.updatedAt,
+    intro: 'Questo accordo regola il rinnovo automatico degli abbonamenti LimaxAI. Attivandolo autorizzi addebiti ricorrenti per ciascun ciclo.',
+    sections: [{ heading: 'Ambito e annullamento', paragraphs: ['Puoi disattivare il rinnovo automatico in qualsiasi momento dalle impostazioni account o dal provider di pagamento.', 'Per evitare il prossimo addebito, annulla almeno 24 ore prima della scadenza.'] }],
+  },
+  fa: {
+    title: 'توافق‌نامه برداشت خودکار',
+    updatedAt: autoDebitAgreementZhCN.updatedAt,
+    intro: 'این توافق‌نامه تمدید خودکار اشتراک LimaxAI را تنظیم می‌کند. با فعال‌سازی، برداشت دوره‌ای در هر چرخه پرداخت را مجاز می‌کنید.',
+    sections: [{ heading: 'دامنه و لغو', paragraphs: ['می‌توانید تمدید خودکار را هر زمان از تنظیمات حساب یا ارائه‌دهنده پرداخت غیرفعال کنید.', 'برای جلوگیری از برداشت بعدی، حداقل ۲۴ ساعت قبل از انقضا لغو کنید.'] }],
+  },
+  nl: {
+    title: 'Automatische incasso-overeenkomst',
+    updatedAt: autoDebitAgreementZhCN.updatedAt,
+    intro: 'Deze overeenkomst regelt automatische verlenging van LimaxAI-abonnementen. Bij activering geeft u toestemming voor periodieke afschrijving per facturatiecyclus.',
+    sections: [{ heading: 'Toepassing en annulering', paragraphs: ['U kunt automatische verlenging op elk moment uitschakelen via accountinstellingen of uw betaalprovider.', 'Om de volgende afschrijving te voorkomen, annuleer ten minste 24 uur voor afloop.'] }],
+  },
+  pl: {
+    title: 'Umowa automatycznego obciążenia',
+    updatedAt: autoDebitAgreementZhCN.updatedAt,
+    intro: 'Umowa reguluje automatyczne odnawianie subskrypcji LimaxAI. Włączenie funkcji oznacza zgodę na cykliczne obciążenia płatnicze.',
+    sections: [{ heading: 'Zakres i anulowanie', paragraphs: ['Automatyczne odnawianie można wyłączyć w dowolnym momencie w ustawieniach konta lub u operatora płatności.', 'Aby uniknąć kolejnego obciążenia, anuluj co najmniej 24 godziny przed wygaśnięciem.'] }],
+  },
+  sv: {
+    title: 'Avtal om automatisk debitering',
+    updatedAt: autoDebitAgreementZhCN.updatedAt,
+    intro: 'Detta avtal reglerar automatisk förnyelse av LimaxAI-prenumerationer. När funktionen aktiveras godkänner du återkommande debitering per period.',
+    sections: [{ heading: 'Omfattning och uppsägning', paragraphs: ['Du kan när som helst stänga av automatisk förnyelse i kontoinställningar eller hos betalningsleverantören.', 'För att undvika nästa debitering, avbryt minst 24 timmar före periodens slut.'] }],
+  },
+  uk: {
+    title: 'Угода про автосписання',
+    updatedAt: autoDebitAgreementZhCN.updatedAt,
+    intro: 'Ця угода регулює автоматичне продовження підписки LimaxAI. Після активації ви дозволяєте регулярне списання коштів за кожний платіжний цикл.',
+    sections: [{ heading: 'Сфера дії та скасування', paragraphs: ['Автопродовження можна вимкнути в будь-який час у налаштуваннях акаунта або у платіжного провайдера.', 'Щоб уникнути наступного списання, скасуйте функцію щонайменше за 24 години до завершення періоду.'] }],
+  },
+  ro: {
+    title: 'Acord de debitare automată',
+    updatedAt: autoDebitAgreementZhCN.updatedAt,
+    intro: 'Acest acord reglementează reînnoirea automată a abonamentului LimaxAI. Activarea înseamnă autorizarea debitărilor recurente pentru fiecare ciclu.',
+    sections: [{ heading: 'Domeniu și anulare', paragraphs: ['Poți dezactiva reînnoirea automată oricând din setările contului sau prin furnizorul de plată.', 'Pentru a evita debitarea următoare, anulează cu cel puțin 24 de ore înainte de expirare.'] }],
+  },
 };
 
 function getContent(map: Record<string, PageContent>, locale: string): PageContent {
-  return map[locale] ?? map['en'] ?? { title: 'Page', body: '' };
+  const content = map[locale];
+  if (content) return content;
+  if (locale === 'en' && map.en) return map.en;
+  throw new Error(`[pages] Missing localized content for locale: ${locale}`);
 }
 
 function getAboutPageContent(locale: string): AboutPageContent {
-  return aboutByLocale[locale] ?? aboutEn;
+  const content = aboutByLocale[locale];
+  if (content) return content;
+  if (locale === 'en') return aboutEn;
+  throw new Error(`[pages] Missing about content for locale: ${locale}`);
 }
 
 export function getAboutContent(locale: string): AboutPageContent {
@@ -385,7 +654,10 @@ export function getTermsContent(locale: string): PageContent {
 }
 
 export function getAutoDebitAgreementContent(locale: string): AgreementContent {
-  return autoDebitAgreementByLocale[locale] ?? autoDebitAgreementEn;
+  const content = autoDebitAgreementByLocale[locale];
+  if (content) return content;
+  if (locale === 'en') return autoDebitAgreementEn;
+  throw new Error(`[pages] Missing auto debit agreement content for locale: ${locale}`);
 }
 
 export function getAllLocales(): readonly string[] {

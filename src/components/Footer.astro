@@ -1,43 +1,49 @@
 ---
 // src/components/Footer.astro
-// 左侧：Logo、标题、简介；右侧：4 列导航。无社交链接。多语种从 src/i18n/ui.ts 取文案。
+// 左侧：品牌区；右侧：5 列导航（AI Image, AI Video, AI Music, AI Tools, Company）
 import { getUi } from '../i18n/ui';
 
 const { currentLang = 'en' } = Astro.props;
 const currentYear = new Date().getFullYear();
 const t = getUi(currentLang).footer;
 
-// 四列导航：每列标题 key + 链接列表（labelKey, href）。链接保持不变，仅文案随语种切换。
 const columns = [
   {
-    titleKey: 'aiTools' as const,
+    titleKey: 'aiImage' as const,
     links: [
-      { labelKey: 'limaxai' as const, href: 'https://www.limaxai.com/' },
-      { labelKey: 'suno' as const, href: 'https://suno.hk/' },
-      { labelKey: 'deepseek4' as const, href: 'https://deepseek4.hk/' },
-      { labelKey: 'notebooklm' as const, href: 'https://notebooklm.vip/' },
-      { labelKey: 'openclaw' as const, href: 'https://openclawd.hk/' },
-      { labelKey: 'gemini30' as const, href: 'https://gemini3.hk/' },
+      { labelKey: 'midjourney' as const, href: 'https://midjourney.cfd' },
+      { labelKey: 'nanoBananaPro' as const, href: 'https://nanobanana-pro.vip' },
+      { labelKey: 'nanoBanana2' as const, href: 'https://nanobananapro.hk' },
+      { labelKey: 'nanoBanana3' as const, href: 'https://nanobanana3.top' },
     ],
   },
   {
     titleKey: 'aiVideo' as const,
     links: [
-      { labelKey: 'seedance20' as const, href: 'https://seedance22.com/' },
-      { labelKey: 'seedance15' as const, href: 'https://seedance2.hk/' },
-      { labelKey: 'veo31' as const, href: 'https://veo3.hk/' },
-      { labelKey: 'veo3' as const, href: 'https://veo3.hk/' },
-      { labelKey: 'sora' as const, href: 'https://www.limaxai.com/generate/video-tools/so' },
-      { labelKey: 'sora2' as const, href: 'https://www.limaxai.com/generate/video-tools/so' },
+      { labelKey: 'seedance20' as const, href: 'https://seedance22.com' },
+      { labelKey: 'seedance15' as const, href: 'https://seedance2.hk' },
+      { labelKey: 'veo3' as const, href: 'https://veo3.hk' },
+      { labelKey: 'happyHorse1' as const, href: 'https://happyhorse.fans/' },
+      { labelKey: 'happyHorse2' as const, href: 'https://happy-horse.hk/' },
     ],
   },
   {
-    titleKey: 'aiImage' as const,
+    titleKey: 'aiMusic' as const,
     links: [
-      { labelKey: 'midjourney' as const, href: 'https://www.limaxai.com/generate/image-tools/mjpro' },
-      { labelKey: 'nanoBanana2' as const, href: 'https://nanobananapro.hk/' },
-      { labelKey: 'nanoBananaPro' as const, href: 'https://nanobanana-pro.vip/' },
-      { labelKey: 'nanoBanana3' as const, href: 'https://nanobanana3.top/' },
+      { labelKey: 'suno' as const, href: 'https://sunoai.me/' },
+      { labelKey: 'sunoHK' as const, href: 'https://suno.hk/' },
+      { labelKey: 'udio' as const, href: 'https://udio.hk/' },
+    ],
+  },
+  {
+    titleKey: 'aiTools' as const,
+    links: [
+      { labelKey: 'limaxai' as const, href: 'https://www.limaxai.com/' },
+      { labelKey: 'deepseek4' as const, href: 'https://deepseek4.hk' },
+      { labelKey: 'notebooklm' as const, href: 'https://notebooklm.vip' },
+      { labelKey: 'openclaw' as const, href: 'https://openclawd.hk' },
+      { labelKey: 'gemini30' as const, href: 'https://gemini3.hk' },
+      { labelKey: 'geminiWatermarkErase' as const, href: 'https://geminiwatermarkerase.com/' },
     ],
   },
   {
@@ -46,8 +52,7 @@ const columns = [
       { labelKey: 'blog' as const, href: `/${currentLang}/` },
       { labelKey: 'about' as const, href: `/${currentLang}/about/` },
       { labelKey: 'privacy' as const, href: `/${currentLang}/privacy/` },
-      { labelKey: 'terms' as const, href: `http://limaxai.com/${currentLang}/terms-of-service/` },
-      { labelKey: 'autoDebitAgreement' as const, href: `/${currentLang}/auto-debit-agreement/` },
+      { labelKey: 'terms' as const, href: `/${currentLang}/terms/` },
       { labelKey: 'api' as const, href: 'https://api.limaxai.com/', external: true },
     ],
   },
@@ -71,8 +76,8 @@ const linkLabels: Record<keyof typeof t.links, string> = t.links;
         </p>
       </div>
 
-      {/* 右侧：四列导航 */}
-      <div class="flex-1 grid grid-cols-2 sm:grid-cols-4 gap-8 lg:gap-10">
+      {/* 右侧：五列导航 */}
+      <div class="flex-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-10">
         {columns.map((col) => (
           <div>
             <h3 class="text-base font-bold text-gray-900 mb-4">

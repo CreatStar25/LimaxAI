@@ -37,7 +37,16 @@ const pathWithoutLang = pathname.replace(/^\/[^/]+/, '') || '/';
 const pathSuffix = pathWithoutLang === '/' ? '/' : (pathWithoutLang.endsWith('/') ? pathWithoutLang : pathWithoutLang + '/');
 
 const metaDescription = description || String(title || 'LimaxAI');
-const canonicalUrl = canonical || Astro.url.href;
+const rawCanonical = String(canonical || `${baseUrl}${Astro.url.pathname}`);
+const canonicalUrl = (() => {
+  if (rawCanonical.startsWith('http')) {
+    const hasTrailing = rawCanonical.endsWith('/') || rawCanonical.includes('?') || rawCanonical.includes('#');
+    return hasTrailing ? rawCanonical : rawCanonical + '/';
+  }
+  const path = rawCanonical.startsWith('/') ? rawCanonical : '/' + rawCanonical;
+  const hasTrailing = path.endsWith('/') || path.includes('?') || path.includes('#');
+  return `${baseUrl}${hasTrailing ? path : path + '/'}`;
+})();
 const absoluteImage = image
   ? (String(image).startsWith('http') ? String(image) : `${baseUrl}${String(image).startsWith('/') ? '' : '/'}${String(image)}`)
   : `${baseUrl}/favicon.svg`;
@@ -55,6 +64,10 @@ const absoluteImage = image
     <meta name="description" content={metaDescription} />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="LimaxAI" />
@@ -74,6 +87,19 @@ const absoluteImage = image
       return <link rel="alternate" hreflang={locale} href={href} />;
     })}
     <link rel="alternate" hreflang="x-default" href={baseUrl + '/en' + pathSuffix} />
+
+    {/* 百度统计（仅简中/繁中加载） */}
+    {(currentLang === 'zh-cn' || currentLang === 'zh-tw') && (
+      <script is:inline>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement('script');
+          hm.src = 'https://hm.baidu.com/hm.js?cd3aae11bcdf5378a37885c4ed4e4d78';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+      </script>
+    )}
 
     {/* ================= Google Analytics 4 开始 ================= */}
     <script

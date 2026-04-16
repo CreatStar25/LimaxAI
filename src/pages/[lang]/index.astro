@@ -27,39 +27,40 @@ export async function getStaticPaths() {
 
 const { posts, currentLang } = Astro.props;
 const buildTime = new Date().toISOString();
+const siteBase = (Astro.site?.href ?? 'https://blog.limaxai.com').replace(/\/$/, '');
 const c = getContent(currentLang);
 const blogCopy = c.blog;
 const blogSeoTitleByLocale: Record<string, string> = {
-  en: 'LimaxAI Blog | All-in-One AI Tool Platform',
-  'zh-cn': 'LimaxAI 博客 | 一站式 AI 工具平台',
-  'zh-tw': 'LimaxAI 部落格 | 一站式 AI 工具平台',
-  es: 'Blog de LimaxAI | Plataforma integral de herramientas de IA',
-  ar: 'مدونة LimaxAI | منصة أدوات ذكاء اصطناعي شاملة',
-  pt: 'Blog da LimaxAI | Plataforma completa de ferramentas de IA',
-  id: 'Blog LimaxAI | Platform alat AI all-in-one',
-  ms: 'Blog LimaxAI | Platform alat AI semua-dalam-satu',
-  fr: 'Blog LimaxAI | Plateforme tout-en-un d’outils IA',
-  ru: 'Блог LimaxAI | Универсальная платформа ИИ-инструментов',
-  hi: 'LimaxAI ब्लॉग | ऑल-इन-वन AI टूल प्लेटफ़ॉर्म',
-  ja: 'LimaxAIブログ | オールインワンAIツールプラットフォーム',
-  de: 'LimaxAI Blog | All-in-One KI-Tool-Plattform',
-  ko: 'LimaxAI 블로그 | 올인원 AI 도구 플랫폼',
-  tr: 'LimaxAI Blog | Hepsi Bir Arada Yapay Zeka Araç Platformu',
-  vi: 'Blog LimaxAI | Nền tảng công cụ AI tất-cả-trong-một',
-  th: 'บล็อก LimaxAI | แพลตฟอร์มเครื่องมือ AI แบบครบวงจร',
-  it: 'Blog LimaxAI | Piattaforma all-in-one di strumenti AI',
-  fa: 'وبلاگ LimaxAI | پلتفرم یکپارچه ابزارهای هوش مصنوعی',
-  nl: 'LimaxAI Blog | Alles-in-één AI-toolplatform',
-  pl: 'Blog LimaxAI | Kompleksowa platforma narzędzi AI',
-  sv: 'LimaxAI-bloggen | Allt-i-ett-plattform för AI-verktyg',
-  uk: 'Блог LimaxAI | Універсальна платформа AI-інструментів',
-  ro: 'Blog LimaxAI | Platformă all-in-one de instrumente AI',
+  en: 'LimaxAI Blog - Popular AI Tutorials & News',
+  'zh-cn': 'LimaxAI 博客 - 热门AI教程及资讯',
+  'zh-tw': 'LimaxAI 部落格 - 熱門AI教程及資訊',
+  es: 'Blog de LimaxAI - Tutoriales y noticias populares de IA',
+  ar: 'مدونة LimaxAI - دروس وأخبار الذكاء الاصطناعي الشائعة',
+  pt: 'Blog da LimaxAI - Tutoriais e notícias populares de IA',
+  id: 'Blog LimaxAI - Tutorial dan berita AI populer',
+  ms: 'Blog LimaxAI - Tutorial dan berita AI popular',
+  fr: 'Blog LimaxAI - Tutoriels et actualités populaires de l\'IA',
+  ru: 'Блог LimaxAI - Популярные руководства и новости из мира ИИ',
+  hi: 'LimaxAI ब्लॉग - लोकप्रिय AI ट्यूटोरियल और समाचार',
+  ja: 'LimaxAIブログ - 人気のAIチュートリアル＆ニュース',
+  de: 'LimaxAI Blog - Beliebte KI-Tutorials und Neuigkeiten',
+  ko: 'LimaxAI 블로그 - 인기 AI 튜토리얼 및 뉴스',
+  tr: 'LimaxAI Blog - Popüler Yapay Zeka Eğitimleri ve Haberleri',
+  vi: 'Blog LimaxAI - Hướng dẫn và tin tức AI phổ biến',
+  th: 'บล็อก LimaxAI - บทช่วยสอนและข่าว AI ยอดนิยม',
+  it: 'Blog LimaxAI - Tutorial e notizie popolari sull\'IA',
+  fa: 'وبلاگ LimaxAI - آموزش‌ها و اخبار محبوب هوش مصنوعی',
+  nl: 'LimaxAI Blog - Populaire AI-tutorials en nieuws',
+  pl: 'Blog LimaxAI - Popularne samouczki i wiadomości o AI',
+  sv: 'LimaxAI-bloggen - Populära AI-guider och nyheter',
+  uk: 'Блог LimaxAI - Популярні туторіали та новини AI',
+  ro: 'Blog LimaxAI - Tutoriale populare AI și noutăți',
 };
 const blogSeoTitle = blogSeoTitleByLocale[currentLang] ?? blogSeoTitleByLocale.en;
 ---
 
 {/* 使用 Layout 包裹内容；博客区文案来自 src/i18n/content.ts */}
-<BaseLayout title={blogSeoTitle} description={blogCopy.subtitle} canonical={`${Astro.url.origin}/${currentLang}/`} currentLang={currentLang} baiduSiteVerification>
+<BaseLayout title={blogSeoTitle} description={blogCopy.subtitle} canonical={`${siteBase}/${currentLang}/`} currentLang={currentLang} baiduSiteVerification>
   <div hidden data-blog-build-time={buildTime} data-blog-posts-count={posts.length} aria-hidden="true" />
 
   <div class="bg-white py-12 border-b border-gray-100 mb-8">

@@ -28,6 +28,7 @@ export async function getStaticPaths() {
 }
 
 const { currentLang, slug, article, list, labels } = Astro.props;
+const siteBase = (Astro.site?.href ?? 'https://blog.limaxai.com').replace(/\/$/, '');
 const backToBlogByLocale: Record<string, string> = {
   en: 'Blog',
   'zh-cn': '博客',
@@ -84,7 +85,7 @@ const tutorialSeoTitleByLocale: Record<string, string> = {
 const tutorialSeoTitle = tutorialSeoTitleByLocale[currentLang] ?? tutorialSeoTitleByLocale.en;
 ---
 
-<BaseLayout title={tutorialSeoTitle} description={article.intro} canonical={`${Astro.url.origin}/${currentLang}/tutorials/`} currentLang={currentLang}>
+<BaseLayout title={tutorialSeoTitle} description={article.intro} canonical={`${siteBase}/${currentLang}/tutorials/`} currentLang={currentLang}>
   <div class="bg-white border-b border-gray-100 py-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <a href={`/${currentLang}/`} class="text-sm text-gray-500 hover:text-blue-600 transition-colors">← {backToBlog}</a>

@@ -7,9 +7,12 @@ interface Props {
   /** 当前路径去掉语言前缀后的部分，如 /tutorials/midjourney-red-alert/；用于语言切换时保持同一页面 */
   pathSuffix?: string;
 }
-const { currentLang = 'en', pathSuffix = '/' } = Astro.props;
+const { currentLang = 'en', pathSuffix: rawPathSuffix = '/' } = Astro.props;
 const t = getUi(currentLang);
 const currentLangLabel = LOCALE_LABELS[currentLang] ?? 'English';
+
+// 确保 pathSuffix 以 / 结尾，避免语言切换器产生无尾斜杠 URL
+const pathSuffix = rawPathSuffix === '/' ? '/' : (rawPathSuffix.endsWith('/') ? rawPathSuffix : rawPathSuffix + '/');
 
 // 根据当前路径判断哪个导航项为选中态（蓝色）
 const pathNorm = pathSuffix.replace(/\/$/, '') || '/';
@@ -28,8 +31,9 @@ const navLinkClass = (active: boolean) =>
       
       {/* 1. Logo 区域 - 修改点2：去掉了图标，只保留文字 */}
       <div class="flex-shrink-0 flex items-center">
-        <a href={`/${currentLang}/`} class="text-2xl font-bold text-gray-900 flex items-center gap-2">
-          <span>{t.navbar.logoText}</span>
+        <a href={`/${currentLang}/`} class="flex items-center gap-2.5">
+          <img src="/logo.png" alt="LimaxAI Logo" class="h-8 w-auto object-contain" width="32" height="32" />
+          <span class="text-2xl font-bold text-gray-900">{t.navbar.logoText}</span>
         </a>
       </div>
 

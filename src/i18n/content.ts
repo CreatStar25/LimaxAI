@@ -196,6 +196,9 @@ const ar: ContentCopy = withEnContentFallback({
   blog: { title: 'المدونة', subtitle: 'اكتشف دروس فن الذكاء الاصطناعي وأفضل التلميحات والإلهام الإبداعي.', noPosts: 'لا توجد منشورات', checkBackLater: 'تحقق لاحقاً للحصول على تحديثات بهذه اللغة.' },
   hero: { title: 'منصة احترافية لتوليد الذكاء الاصطناعي', subtitle: 'أنشئ فيديوهات وصوراً مذهلة بنماذج متطورة.', description: 'منصة واحدة لـ Midjourney وSora والمزيد. ابدأ خلال دقائق.' },
   features: { sectionTitle: 'الميزات', items: [{ name: 'صورة بالذكاء الاصطناعي', description: 'ولّد صوراً عالية الجودة بنماذج رائدة.' }, { name: 'فيديو بالذكاء الاصطناعي', description: 'أنشئ محتوى فيديو بأدوات حديثة.' }] },
+  testimonials: { sectionTitle: 'آراء المستخدمين', items: [{ quote: 'LimaxAI يجمع كل أدوات الذكاء الاصطناعي المفضلة لدي في مكان واحد.', author: 'مبدع', role: 'مصمم' }] },
+  pricing: { sectionTitle: 'الأسعار', plans: [{ name: 'Pro', description: 'للمحترفين', price: 'من X $/شهر', features: ['جميع أدوات الذكاء الاصطناعي', 'دعم ذو أولوية'] }] },
+  faq: { sectionTitle: 'الأسئلة الشائعة', items: [{ question: 'ما هو LimaxAI؟', answer: 'منصة احترافية لتوليد الذكاء الاصطناعي للصور والفيديوهات.' }, { question: 'كيف أبدأ؟', answer: 'سجّل واختر خطة للبدء في الإنشاء.' }] },
   cta: { title: 'هل أنت مستعد للإنشاء؟', description: 'انضم إلى آلاف المبدعين الذين يستخدمون LimaxAI.', buttonText: 'ابدأ الإنشاء الآن' },
 });
 
@@ -203,6 +206,9 @@ const pt: ContentCopy = withEnContentFallback({
   blog: { title: 'Blog', subtitle: 'Descubra tutoriais de arte IA, melhores prompts e inspiração criativa.', noPosts: 'Nenhum post encontrado', checkBackLater: 'Volte mais tarde para atualizações neste idioma.' },
   hero: { title: 'Plataforma profissional de geração por IA', subtitle: 'Crie vídeos e imagens com modelos de ponta.', description: 'Uma plataforma para Midjourney, Sora, Keling, Nano Banana e mais. Comece em minutos.' },
   features: { sectionTitle: 'Recursos', items: [{ name: 'Imagem IA', description: 'Gere imagens de alta qualidade com modelos líderes.' }, { name: 'Vídeo IA', description: 'Crie conteúdo em vídeo com ferramentas de ponta.' }] },
+  testimonials: { sectionTitle: 'O que dizem os usuários', items: [{ quote: 'LimaxAI reúne todas as minhas ferramentas IA favoritas em um só lugar.', author: 'Criador', role: 'Designer' }] },
+  pricing: { sectionTitle: 'Preços', plans: [{ name: 'Pro', description: 'Para profissionais', price: 'De X $/mês', features: ['Todas as ferramentas IA', 'Suporte prioritário'] }] },
+  faq: { sectionTitle: 'FAQ', items: [{ question: 'O que é LimaxAI?', answer: 'Uma plataforma profissional de geração IA para imagens e vídeos.' }, { question: 'Como começar?', answer: 'Registre-se e escolha um plano para começar a criar.' }] },
   cta: { title: 'Pronto para criar?', description: 'Junte-se a milhares de criadores que usam LimaxAI.', buttonText: 'Começar a criar agora' },
 });
 
@@ -210,6 +216,9 @@ const id: ContentCopy = withEnContentFallback({
   blog: { title: 'Blog', subtitle: 'Temukan tutorial seni AI, prompt terbaik, dan inspirasi kreatif.', noPosts: 'Tidak ada postingan', checkBackLater: 'Periksa nanti untuk pembaruan dalam bahasa ini.' },
   hero: { title: 'Platform generasi AI profesional', subtitle: 'Buat video dan gambar dengan model terkini.', description: 'Satu platform untuk Midjourney, Sora, Keling, Nano Banana, dan lainnya. Mulai dalam hitungan menit.' },
   features: { sectionTitle: 'Fitur', items: [{ name: 'Gambar AI', description: 'Hasilkan gambar berkualitas tinggi dengan model unggulan.' }, { name: 'Video AI', description: 'Buat konten video dengan alat mutakhir.' }] },
+  testimonials: { sectionTitle: 'Kata pengguna', items: [{ quote: 'LimaxAI menyatukan semua alat AI favorit saya di satu tempat.', author: 'Kreator', role: 'Desainer' }] },
+  pricing: { sectionTitle: 'Harga', plans: [{ name: 'Pro', description: 'Untuk profesional', price: 'Dari X $/bulan', features: ['Semua alat AI', 'Dukungan prioritas'] }] },
+  faq: { sectionTitle: 'FAQ', items: [{ question: 'Apa itu LimaxAI?', answer: 'Platform generasi AI profesional untuk gambar dan video.' }, { question: 'Bagaimana cara memulai?', answer: 'Daftar dan pilih paket untuk mulai membuat.' }] },
   cta: { title: 'Siap membuat?', description: 'Bergabung dengan ribuan kreator yang menggunakan LimaxAI.', buttonText: 'Mulai membuat sekarang' },
 });
 
@@ -217,6 +226,9 @@ const ms: ContentCopy = withEnContentFallback({
   blog: { title: 'Blog', subtitle: 'Temui tutorial seni AI, prompt terbaik dan inspirasi kreatif.', noPosts: 'Tiada siaran', checkBackLater: 'Semak kemudian untuk kemas kini dalam bahasa ini.' },
   hero: { title: 'Platform penjanaan AI profesional', subtitle: 'Cipta video dan imej dengan model canggih.', description: 'Satu platform untuk Midjourney, Sora, Keling, Nano Banana dan lain-lain. Mula dalam beberapa minit.' },
   features: { sectionTitle: 'Ciri', items: [{ name: 'Imej AI', description: 'Hasilkan imej berkualiti tinggi dengan model terkemuka.' }, { name: 'Video AI', description: 'Cipta kandungan video dengan alat terkini.' }] },
+  testimonials: { sectionTitle: 'Apa kata pengguna', items: [{ quote: 'LimaxAI menghimpunkan semua alat AI kegemaran saya di satu tempat.', author: 'Pencipta', role: 'Pereka' }] },
+  pricing: { sectionTitle: 'Harga', plans: [{ name: 'Pro', description: 'Untuk profesional', price: 'Dari X $/bulan', features: ['Semua alat AI', 'Sokongan keutamaan'] }] },
+  faq: { sectionTitle: 'Soalan Lazim', items: [{ question: 'Apa itu LimaxAI?', answer: 'Platform penjanaan AI profesional untuk imej dan video.' }, { question: 'Bagaimana untuk bermula?', answer: 'Daftar dan pilih pelan untuk mula mencipta.' }] },
   cta: { title: 'Sedia untuk mencipta?', description: 'Sertai ribuan pencipta yang menggunakan LimaxAI.', buttonText: 'Mula mencipta sekarang' },
 });
 
@@ -362,9 +374,14 @@ const contentByLocale: Record<Locale, ContentCopy> = {
   ro,
 };
 
-/** 根据语种获取首页专属内容，缺省回退到 en */
+/** 根据语种获取首页专属内容，缺省回退到 en 并输出控制台警告 */
 export function getContent(locale: string): ContentCopy {
-  return contentByLocale[locale as Locale] ?? en;
+  const c = contentByLocale[locale as Locale];
+  if (!c) {
+    console.warn(`[i18n] Missing content for locale "${locale}", falling back to en.`);
+    return en;
+  }
+  return c;
 }
 
 export const content = contentByLocale;

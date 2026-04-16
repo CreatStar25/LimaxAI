@@ -17,7 +17,7 @@ const formattedDate = data.pubDate.toLocaleDateString(data.lang, {
 
 <article class="flex flex-col h-full overflow-hidden bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
   {/* 封面图链接区域：支持 image（本地/URL）或 heroImage（URL） */}
-  <a href={`/${data.lang}/${slug.split('/').pop()}`} class="block aspect-[16/9] overflow-hidden bg-gray-100 group">
+  <a href={`/${data.lang}/${slug.split('/').pop()}/`} class="block aspect-[16/9] overflow-hidden bg-gray-100 group">
     {isLocalImage ? (
       <Image
         src={imageSrc}
@@ -50,7 +50,7 @@ const formattedDate = data.pubDate.toLocaleDateString(data.lang, {
 
     {/* 2. 标题：限制 2 行，超出省略号 */}
     <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 group line-clamp-2 h-[3.25rem]">
-      <a href={`/${data.lang}/${slug.split('/').pop()}`} class="hover:text-blue-600 transition-colors">
+      <a href={`/${data.lang}/${slug.split('/').pop()}/`} class="hover:text-blue-600 transition-colors">
         {data.title}
       </a>
     </h2>

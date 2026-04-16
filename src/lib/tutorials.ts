@@ -59,8 +59,6 @@ type TutorialLocale = typeof LOCALES[number];
 
 /** 默认教程列表（slug + 标题），多语种 */
 const listZhCN: TutorialListEntry[] = [
-  { slug: 'limaxai-guide', title: 'LimaxAI 使用指南' },
-  { slug: 'midjourney-tutorial', title: 'Midjourney 使用教程' },
   { slug: 'midjourney-v8-alpha-vs-banana2-multistyle-review', title: 'Midjourney V8 Alpha 对比 Banana 2，多风格测评来喽' },
   { slug: 'midjourney-animal-photography', title: 'Midjourney提示词——动物摄影（附公式）' },
   { slug: 'midjourney-flower-wallpaper', title: 'Midjourney提示词——鲜花壁纸（附公式）' },
@@ -86,8 +84,6 @@ const listZhCN: TutorialListEntry[] = [
 ];
 
 const listZhTW: TutorialListEntry[] = [
-  { slug: 'limaxai-guide', title: 'LimaxAI 使用指南' },
-  { slug: 'midjourney-tutorial', title: 'Midjourney 使用教程' },
   { slug: 'midjourney-v8-alpha-vs-banana2-multistyle-review', title: 'Midjourney V8 Alpha 對比 Banana 2，多風格實測來了' },
   { slug: 'midjourney-animal-photography', title: 'Midjourney提示詞——動物攝影（附公式）' },
   { slug: 'midjourney-flower-wallpaper', title: 'Midjourney提示詞——鮮花壁紙（附公式）' },
@@ -113,8 +109,6 @@ const listZhTW: TutorialListEntry[] = [
 ];
 
 const listEn: TutorialListEntry[] = [
-  { slug: 'limaxai-guide', title: 'LimaxAI User Guide' },
-  { slug: 'midjourney-tutorial', title: 'Midjourney Tutorial' },
   { slug: 'midjourney-v8-alpha-vs-banana2-multistyle-review', title: 'Midjourney V8 Alpha vs Banana 2: Multi-style Benchmark Review' },
   { slug: 'midjourney-animal-photography', title: 'Midjourney Animal Photography Prompts' },
   { slug: 'midjourney-flower-wallpaper', title: 'Midjourney Flower Wallpaper Prompts' },
@@ -166,158 +160,8 @@ const listByLocale: Record<string, TutorialListEntry[]> = {
   ro: listEn,
 };
 
-/** 文章详情：按 slug + locale */
-const articleLimaxaiZhCN: TutorialArticle = {
-  slug: 'limaxai-guide',
-  title: 'LimaxAI 使用指南',
-  intro: '欢迎来到 LimaxAI 使用指南专区！这里汇集了关于 LimaxAI 的全面教程、使用技巧与最佳实践。',
-  sections: [
-    {
-      id: 'quick-access',
-      title: '快速访问通道',
-      blocks: [
-        {
-          type: 'links',
-          items: [
-            { url: 'https://www.limaxai.com/', text: 'LimaxAI 官网', desc: '一站式 AI 创作平台，支持 Midjourney、Sora、Veo 等' },
-            { url: 'https://api.limaxai.com/', text: 'API 文档', desc: '开发者接口，低成本接入顶尖 AI 能力' },
-          ],
-        },
-      ],
-    },
-    {
-      id: 'latest',
-      title: '🌟 最新文章',
-      blocks: [
-        {
-          type: 'paragraph',
-          text: '以下为博客中与 LimaxAI 相关的最新内容，涵盖国内可用入口、使用教程与技巧。',
-        },
-        {
-          type: 'list',
-          items: [
-            '国内直连访问方式',
-            'Midjourney / Sora / Veo 完整体验',
-            '一个会员打通图文音视频创作',
-          ],
-        },
-      ],
-    },
-    {
-      id: 'tips',
-      title: '💡 使用提示',
-      blocks: [
-        {
-          type: 'paragraph',
-          text: '建议先注册 LimaxAI 账号并选择适合的套餐，即可在同一个工作台内切换不同 AI 模型，无需在多个工具间来回切换。',
-        },
-      ],
-    },
-  ],
-};
 
-const articleLimaxaiZhTW: TutorialArticle = {
-  slug: 'limaxai-guide',
-  title: 'LimaxAI 使用指南',
-  intro: '歡迎來到 LimaxAI 使用指南專區！這裡匯集了關於 LimaxAI 的全面教程、使用技巧與最佳實踐。',
-  sections: [
-    {
-      id: 'quick-access',
-      title: '快速訪問通道',
-      blocks: [
-        {
-          type: 'links',
-          items: [
-            { url: 'https://www.limaxai.com/', text: 'LimaxAI 官網', desc: '一站式 AI 創作平台，支援 Midjourney、Sora、Veo 等' },
-            { url: 'https://api.limaxai.com/', text: 'API 文檔', desc: '開發者接口，低成本接入頂尖 AI 能力' },
-          ],
-        },
-      ],
-    },
-    {
-      id: 'latest',
-      title: '🌟 最新文章',
-      blocks: [
-        { type: 'paragraph', text: '以下為部落格中與 LimaxAI 相關的最新內容，涵蓋國內可用入口、使用教程與技巧。' },
-        { type: 'list', items: ['國內直連訪問方式', 'Midjourney / Sora / Veo 完整體驗', '一個會員打通圖文音視頻創作'] },
-      ],
-    },
-    {
-      id: 'tips',
-      title: '💡 使用提示',
-      blocks: [
-        { type: 'paragraph', text: '建議先註冊 LimaxAI 帳號並選擇適合的套餐，即可在同一個工作台內切換不同 AI 模型，無需在多個工具間來回切換。' },
-      ],
-    },
-  ],
-};
-
-const articleLimaxaiEn: TutorialArticle = {
-  slug: 'limaxai-guide',
-  title: 'LimaxAI User Guide',
-  intro: 'Welcome to the LimaxAI user guide! Here you will find tutorials, tips, and best practices for using LimaxAI.',
-  sections: [
-    {
-      id: 'quick-access',
-      title: 'Quick access',
-      blocks: [
-        {
-          type: 'links',
-          items: [
-            { url: 'https://www.limaxai.com/', text: 'LimaxAI', desc: 'All-in-one AI creation platform: Midjourney, Sora, Veo, and more.' },
-            { url: 'https://api.limaxai.com/', text: 'API docs', desc: 'Developer API to access top AI models at low cost.' },
-          ],
-        },
-      ],
-    },
-    {
-      id: 'latest',
-      title: '🌟 Latest posts',
-      blocks: [
-        { type: 'paragraph', text: 'Check our blog for the latest guides and tips on LimaxAI.' },
-        { type: 'list', items: ['Direct access options', 'Full experience with Midjourney / Sora / Veo', 'One subscription for text, image, audio, and video'] },
-      ],
-    },
-    {
-      id: 'tips',
-      title: '💡 Tips',
-      blocks: [
-        { type: 'paragraph', text: 'Sign up for LimaxAI and choose a plan to use multiple AI models in one workspace without switching between tools.' },
-      ],
-    },
-  ],
-};
-
-const articleMidjourneyZhCN: TutorialArticle = {
-  slug: 'midjourney-tutorial',
-  title: 'Midjourney 使用教程',
-  intro: '本教程介绍如何在 LimaxAI 中使用 Midjourney 进行图像创作，包括提示词技巧与工作流。',
-  sections: [
-    { id: 'basics', title: '基础用法', blocks: [{ type: 'paragraph', text: '在 LimaxAI 工作台选择「Midjourney」模型，在输入框中输入描述性提示词即可生成图像。支持比例、风格等参数。' }] },
-    { id: 'tips', title: '💡 使用提示', blocks: [{ type: 'list', items: ['使用具体、具象的描述', '可注明画风如「电影感」「赛博朋克」', '多试几次以找到满意结果'] }] },
-  ],
-};
-
-const articleMidjourneyZhTW: TutorialArticle = {
-  slug: 'midjourney-tutorial',
-  title: 'Midjourney 使用教學',
-  intro: '本教學介紹如何在 LimaxAI 使用 Midjourney 進行影像創作，包含提示詞技巧與工作流程。',
-  sections: [
-    { id: 'basics', title: '基本用法', blocks: [{ type: 'paragraph', text: '在 LimaxAI 工作台選擇「Midjourney」模型，於輸入框鍵入描述性提示詞即可生成圖像。支援比例、風格等參數。' }] },
-    { id: 'tips', title: '💡 使用提示', blocks: [{ type: 'list', items: ['使用具體、具象的描述', '可註明畫風如「電影感」「賽博龐克」', '多試幾次以找到滿意結果'] }] },
-  ],
-};
-
-const articleMidjourneyEn: TutorialArticle = {
-  slug: 'midjourney-tutorial',
-  title: 'Midjourney Tutorial',
-  intro: 'Learn how to use Midjourney on LimaxAI for image creation, including prompt tips and workflow.',
-  sections: [
-    { id: 'basics', title: 'Basics', blocks: [{ type: 'paragraph', text: 'Select the Midjourney model in the LimaxAI workspace, enter a descriptive prompt, and generate. Aspect ratio and style parameters are supported.' }] },
-    { id: 'tips', title: '💡 Tips', blocks: [{ type: 'list', items: ['Use concrete, specific descriptions', 'Specify style (e.g. cinematic, cyberpunk)', 'Try multiple times to get the best result'] }] },
-  ],
-};
-
+/** AI 视频指南 — 3 语种（基础） */
 const articleAiVideoZhCN: TutorialArticle = {
   slug: 'ai-video-guide',
   title: 'AI 视频生成入门',
@@ -350,106 +194,6 @@ const articleAiVideoEn: TutorialArticle = {
 
 /** 21 个扩展语种（除 en, zh-cn, zh-tw 外），用于为仅有三语版本的文章生成完整 24 语种 */
 const EXTRA_LOCALES = ['es', 'ar', 'pt', 'id', 'ms', 'fr', 'ru', 'hi', 'ja', 'de', 'ko', 'tr', 'vi', 'th', 'it', 'fa', 'nl', 'pl', 'sv', 'uk', 'ro'] as const;
-
-/** LimaxAI 使用指南 — 21 语种 copy */
-interface LimaxaiGuideCopy {
-  title: string;
-  intro: string;
-  quickAccessTitle: string;
-  link1Text: string;
-  link1Desc: string;
-  link2Text: string;
-  link2Desc: string;
-  latestTitle: string;
-  latestP: string;
-  latestItems: [string, string, string];
-  tipsTitle: string;
-  tipsP: string;
-}
-const limaxaiGuideCopyByLocale: Record<string, LimaxaiGuideCopy> = {
-  es: { title: 'Guía de LimaxAI', intro: 'Bienvenido a la guía de LimaxAI. Aquí encontrarás tutoriales, consejos y mejores prácticas.', quickAccessTitle: 'Acceso rápido', link1Text: 'LimaxAI', link1Desc: 'Plataforma todo en uno: Midjourney, Sora, Veo y más.', link2Text: 'API', link2Desc: 'API para desarrolladores, acceso a modelos IA a bajo coste.', latestTitle: '🌟 Últimas entradas', latestP: 'Consulta nuestro blog para guías y consejos sobre LimaxAI.', latestItems: ['Acceso directo', 'Experiencia completa con Midjourney / Sora / Veo', 'Una suscripción para texto, imagen, audio y vídeo'], tipsTitle: '💡 Consejos', tipsP: 'Regístrate en LimaxAI y elige un plan para usar varios modelos en un solo espacio.' },
-  ar: { title: 'دليل LimaxAI', intro: 'مرحباً بك في دليل LimaxAI. ستجد هنا دروساً ونصائحاً وأفضل الممارسات.', quickAccessTitle: 'وصول سريع', link1Text: 'LimaxAI', link1Desc: 'منصة شاملة: Midjourney وSora وVeo والمزيد.', link2Text: 'API', link2Desc: 'واجهة مطوري، وصول منخفض التكلفة لأفضل نماذج الذكاء الاصطناعي.', latestTitle: '🌟 أحدث المقالات', latestP: 'راجع مدونتنا لأحدث الأدلة والنصائح حول LimaxAI.', latestItems: ['خيارات الوصول المباشر', 'تجربة كاملة مع Midjourney / Sora / Veo', 'اشتراك واحد للنص والصورة والصوت والفيديو'], tipsTitle: '💡 نصائح', tipsP: 'سجّل في LimaxAI واختر خطة لاستخدام عدة نماذج في مساحة عمل واحدة.' },
-  pt: { title: 'Guia LimaxAI', intro: 'Bem-vindo ao guia LimaxAI. Aqui encontrará tutoriais, dicas e melhores práticas.', quickAccessTitle: 'Acesso rápido', link1Text: 'LimaxAI', link1Desc: 'Plataforma all-in-one: Midjourney, Sora, Veo e mais.', link2Text: 'API', link2Desc: 'API para desenvolvedores, acesso a modelos de IA a baixo custo.', latestTitle: '🌟 Últimos posts', latestP: 'Consulte o nosso blog para guias e dicas sobre LimaxAI.', latestItems: ['Opções de acesso direto', 'Experiência completa com Midjourney / Sora / Veo', 'Uma subscrição para texto, imagem, áudio e vídeo'], tipsTitle: '💡 Dicas', tipsP: 'Registe-se no LimaxAI e escolha um plano para usar vários modelos numa só área.' },
-  id: { title: 'Panduan LimaxAI', intro: 'Selamat datang di panduan LimaxAI. Di sini Anda akan menemukan tutorial, tips, dan praktik terbaik.', quickAccessTitle: 'Akses cepat', link1Text: 'LimaxAI', link1Desc: 'Platform all-in-one: Midjourney, Sora, Veo, dan lainnya.', link2Text: 'API', link2Desc: 'API pengembang, akses ke model AI berbiaya rendah.', latestTitle: '🌟 Post terbaru', latestP: 'Cek blog kami untuk panduan dan tips tentang LimaxAI.', latestItems: ['Opsi akses langsung', 'Pengalaman penuh dengan Midjourney / Sora / Veo', 'Satu langganan untuk teks, gambar, audio, dan video'], tipsTitle: '💡 Tips', tipsP: 'Daftar LimaxAI dan pilih paket untuk menggunakan berbagai model dalam satu workspace.' },
-  ms: { title: 'Panduan LimaxAI', intro: 'Selamat datang ke panduan LimaxAI. Di sini anda akan jumpa tutorial, tip dan amalan terbaik.', quickAccessTitle: 'Akses pantas', link1Text: 'LimaxAI', link1Desc: 'Platform all-in-one: Midjourney, Sora, Veo dan lain-lain.', link2Text: 'API', link2Desc: 'API pembangun, akses model AI kos rendah.', latestTitle: '🌟 Catatan terbaharu', latestP: 'Semak blog kami untuk panduan dan tip tentang LimaxAI.', latestItems: ['Pilihan akses langsung', 'Pengalaman penuh dengan Midjourney / Sora / Veo', 'Satu langganan untuk teks, imej, audio dan video'], tipsTitle: '💡 Tip', tipsP: 'Daftar LimaxAI dan pilih pelan untuk menggunakan pelbagai model dalam satu ruang kerja.' },
-  fr: { title: 'Guide LimaxAI', intro: 'Bienvenue dans le guide LimaxAI. Vous y trouverez des tutoriels, astuces et bonnes pratiques.', quickAccessTitle: 'Accès rapide', link1Text: 'LimaxAI', link1Desc: 'Plateforme tout-en-un : Midjourney, Sora, Veo et plus.', link2Text: 'API', link2Desc: 'API développeur, accès à des modèles IA à bas coût.', latestTitle: '🌟 Derniers articles', latestP: 'Consultez notre blog pour les guides et astuces LimaxAI.', latestItems: ['Options d\'accès direct', 'Expérience complète avec Midjourney / Sora / Veo', 'Un abonnement pour texte, image, audio et vidéo'], tipsTitle: '💡 Conseils', tipsP: 'Inscrivez-vous à LimaxAI et choisissez un forfait pour utiliser plusieurs modèles dans un même espace.' },
-  ru: { title: 'Руководство LimaxAI', intro: 'Добро пожаловать в руководство LimaxAI. Здесь вы найдёте уроки, советы и лучшие практики.', quickAccessTitle: 'Быстрый доступ', link1Text: 'LimaxAI', link1Desc: 'Платформа «всё в одном»: Midjourney, Sora, Veo и другие.', link2Text: 'API', link2Desc: 'API для разработчиков, доступ к топовым ИИ-моделям по низкой цене.', latestTitle: '🌟 Новые записи', latestP: 'Читайте наш блог — актуальные гайды и советы по LimaxAI.', latestItems: ['Прямой доступ', 'Полный опыт с Midjourney / Sora / Veo', 'Одна подписка на текст, изображения, аудио и видео'], tipsTitle: '💡 Советы', tipsP: 'Зарегистрируйтесь в LimaxAI и выберите план, чтобы использовать несколько моделей в одном рабочем пространстве.' },
-  hi: { title: 'LimaxAI गाइड', intro: 'LimaxAI गाइड में आपका स्वागत है। यहाँ ट्यूटोरियल, टिप्स और बेस्ट प्रैक्टिस मिलेंगी।', quickAccessTitle: 'त्वरित पहुँच', link1Text: 'LimaxAI', link1Desc: 'ऑल-इन-वन प्लेटफ़ॉर्म: Midjourney, Sora, Veo आदि।', link2Text: 'API', link2Desc: 'डेवलपर API, कम लागत में टॉप AI मॉडल।', latestTitle: '🌟 नवीनतम पोस्ट', latestP: 'LimaxAI पर नवीनतम गाइड और टिप्स के लिए ब्लॉग देखें।', latestItems: ['डायरेक्ट एक्सेस', 'Midjourney / Sora / Veo के साथ पूर्ण अनुभव', 'टेक्स्ट, इमेज, ऑडियो और वीडियो के लिए एक सब्सक्रिप्शन'], tipsTitle: '💡 टिप्स', tipsP: 'LimaxAI में साइन अप करें और एक ही वर्कस्पेस में कई मॉडल इस्तेमाल करने के लिए प्लान चुनें।' },
-  ja: { title: 'LimaxAI ガイド', intro: 'LimaxAI ガイドへようこそ。チュートリアル、ヒント、ベストプラクティスをご用意しています。', quickAccessTitle: 'クイックアクセス', link1Text: 'LimaxAI', link1Desc: 'オールインワン：Midjourney、Sora、Veo など。', link2Text: 'API', link2Desc: '開発者向け API、低コストでトップ AI モデルにアクセス。', latestTitle: '🌟 最新記事', latestP: 'ブログで LimaxAI のガイドとヒントをチェック。', latestItems: ['直接アクセス', 'Midjourney / Sora / Veo のフル体験', 'テキスト・画像・音声・動画が1つのサブスクで'], tipsTitle: '💡 ヒント', tipsP: 'LimaxAI に登録し、1つのワークスペースで複数モデルを使えるプランを選択。' },
-  de: { title: 'LimaxAI-Anleitung', intro: 'Willkommen in der LimaxAI-Anleitung. Hier finden Sie Tutorials, Tipps und Best Practices.', quickAccessTitle: 'Schnellzugriff', link1Text: 'LimaxAI', link1Desc: 'All-in-One-Plattform: Midjourney, Sora, Veo und mehr.', link2Text: 'API', link2Desc: 'Entwickler-API, günstiger Zugang zu Top-KI-Modellen.', latestTitle: '🌟 Neueste Beiträge', latestP: 'In unserem Blog finden Sie Anleitungen und Tipps zu LimaxAI.', latestItems: ['Direkter Zugang', 'Volles Erlebnis mit Midjourney / Sora / Veo', 'Ein Abo für Text, Bild, Audio und Video'], tipsTitle: '💡 Tipps', tipsP: 'Registrieren Sie sich bei LimaxAI und wählen Sie einen Plan, um mehrere Modelle in einem Arbeitsbereich zu nutzen.' },
-  ko: { title: 'LimaxAI 가이드', intro: 'LimaxAI 가이드에 오신 것을 환영합니다. 튜토리얼, 팁, 모범 사례를 확인하세요.', quickAccessTitle: '빠른 링크', link1Text: 'LimaxAI', link1Desc: '올인원 플랫폼: Midjourney, Sora, Veo 등.', link2Text: 'API', link2Desc: '개발자 API, 저비용으로 최고 AI 모델 이용.', latestTitle: '🌟 최신 글', latestP: '블로그에서 LimaxAI 가이드와 팁을 확인하세요.', latestItems: ['직접 접속', 'Midjourney / Sora / Veo 완전 체험', '텍스트·이미지·오디오·비디오 한 구독으로'], tipsTitle: '💡 팁', tipsP: 'LimaxAI에 가입하고 한 워크스페이스에서 여러 모델을 쓰는 플랜을 선택하세요.' },
-  tr: { title: 'LimaxAI Kılavuzu', intro: 'LimaxAI kılavuzuna hoş geldiniz. Eğitimler, ipuçları ve en iyi uygulamalar burada.', quickAccessTitle: 'Hızlı erişim', link1Text: 'LimaxAI', link1Desc: 'Hepsi bir arada platform: Midjourney, Sora, Veo ve daha fazlası.', link2Text: 'API', link2Desc: 'Geliştirici API\'si, düşük maliyetle üst düzey AI modelleri.', latestTitle: '🌟 Son yazılar', latestP: 'LimaxAI rehberleri ve ipuçları için blogumuzu inceleyin.', latestItems: ['Doğrudan erişim', 'Midjourney / Sora / Veo tam deneyim', 'Metin, görsel, ses ve video için tek abonelik'], tipsTitle: '💡 İpuçları', tipsP: 'LimaxAI\'ye kaydolun ve tek bir alanda birden fazla model kullanmak için bir plan seçin.' },
-  vi: { title: 'Hướng dẫn LimaxAI', intro: 'Chào mừng bạn đến với hướng dẫn LimaxAI. Tại đây có hướng dẫn, mẹo và cách dùng tốt nhất.', quickAccessTitle: 'Truy cập nhanh', link1Text: 'LimaxAI', link1Desc: 'Nền tảng all-in-one: Midjourney, Sora, Veo và hơn thế.', link2Text: 'API', link2Desc: 'API cho nhà phát triển, truy cập mô hình AI hàng đầu với chi phí thấp.', latestTitle: '🌟 Bài mới', latestP: 'Xem blog của chúng tôi để biết hướng dẫn và mẹo về LimaxAI.', latestItems: ['Truy cập trực tiếp', 'Trải nghiệm đầy đủ với Midjourney / Sora / Veo', 'Một gói cho văn bản, hình ảnh, âm thanh và video'], tipsTitle: '💡 Mẹo', tipsP: 'Đăng ký LimaxAI và chọn gói để dùng nhiều mô hình trong một không gian làm việc.' },
-  th: { title: 'คู่มือ LimaxAI', intro: 'ยินดีต้อนรับสู่คู่มือ LimaxAI ที่นี่มีบทช่วยสอน เคล็ดลับ และแนวทางปฏิบัติที่ดีที่สุด', quickAccessTitle: 'การเข้าถึงด่วน', link1Text: 'LimaxAI', link1Desc: 'แพลตฟอร์มรวม: Midjourney, Sora, Veo และอื่นๆ', link2Text: 'API', link2Desc: 'API สำหรับนักพัฒนา เข้าถึงโมเดล AI ชั้นนำในต้นทุนต่ำ', latestTitle: '🌟 โพสต์ล่าสุด', latestP: 'ดูบล็อกของเราเพื่อคู่มือและเคล็ดลับเกี่ยวกับ LimaxAI', latestItems: ['ตัวเลือกการเข้าถึงโดยตรง', 'ประสบการณ์เต็มรูปแบบกับ Midjourney / Sora / Veo', 'หนึ่งการสมัครสมาชิกสำหรับข้อความ ภาพ เสียง และวิดีโอ'], tipsTitle: '💡 เคล็ดลับ', tipsP: 'สมัคร LimaxAI และเลือกแผนเพื่อใช้หลายโมเดลในพื้นที่ทำงานเดียว' },
-  it: { title: 'Guida LimaxAI', intro: 'Benvenuto nella guida LimaxAI. Qui troverai tutorial, consigli e best practice.', quickAccessTitle: 'Accesso rapido', link1Text: 'LimaxAI', link1Desc: 'Piattaforma tutto-in-uno: Midjourney, Sora, Veo e altro.', link2Text: 'API', link2Desc: 'API per sviluppatori, accesso a modelli AI top a basso costo.', latestTitle: '🌟 Ultimi post', latestP: 'Consulta il nostro blog per guide e consigli su LimaxAI.', latestItems: ['Accesso diretto', 'Esperienza completa con Midjourney / Sora / Veo', 'Un abbonamento per testo, immagine, audio e video'], tipsTitle: '💡 Consigli', tipsP: 'Iscriviti a LimaxAI e scegli un piano per usare più modelli in un unico spazio.' },
-  fa: { title: 'راهنمای LimaxAI', intro: 'به راهنمای LimaxAI خوش آمدید. در اینجا آموزش‌ها، نکات و بهترین روش‌ها را پیدا می‌کنید.', quickAccessTitle: 'دسترسی سریع', link1Text: 'LimaxAI', link1Desc: 'پلتفرم همه‌دریکی: Midjourney، Sora، Veo و غیره.', link2Text: 'API', link2Desc: 'API توسعه‌دهنده، دسترسی کم‌هزینه به مدل‌های برتر AI.', latestTitle: '🌟 آخرین پست‌ها', latestP: 'برای راهنما و نکات LimaxAI وبلاگ ما را ببینید.', latestItems: ['گزینه‌های دسترسی مستقیم', 'تجربه کامل با Midjourney / Sora / Veo', 'یک اشتراک برای متن، تصویر، صدا و ویدیو'], tipsTitle: '💡 نکات', tipsP: 'در LimaxAI ثبت‌نام کنید و طرحی انتخاب کنید تا چند مدل را در یک فضای کار استفاده کنید.' },
-  nl: { title: 'LimaxAI-handleiding', intro: 'Welkom bij de LimaxAI-handleiding. Hier vind je tutorials, tips en best practices.', quickAccessTitle: 'Snelle toegang', link1Text: 'LimaxAI', link1Desc: 'All-in-one platform: Midjourney, Sora, Veo en meer.', link2Text: 'API', link2Desc: 'Ontwikkelaars-API, toegang tot top AI-modellen tegen lage kosten.', latestTitle: '🌟 Laatste berichten', latestP: 'Bekijk onze blog voor handleidingen en tips over LimaxAI.', latestItems: ['Directe toegang', 'Volledige ervaring met Midjourney / Sora / Veo', 'Eén abonnement voor tekst, beeld, audio en video'], tipsTitle: '💡 Tips', tipsP: 'Registreer bij LimaxAI en kies een plan om meerdere modellen in één werkruimte te gebruiken.' },
-  pl: { title: 'Przewodnik LimaxAI', intro: 'Witaj w przewodniku LimaxAI. Tutaj znajdziesz tutoriale, porady i dobre praktyki.', quickAccessTitle: 'Szybki dostęp', link1Text: 'LimaxAI', link1Desc: 'Platforma all-in-one: Midjourney, Sora, Veo i inne.', link2Text: 'API', link2Desc: 'API dla deweloperów, tani dostęp do czołowych modeli AI.', latestTitle: '🌟 Najnowsze wpisy', latestP: 'Sprawdź nasz blog po przewodniki i porady o LimaxAI.', latestItems: ['Bezpośredni dostęp', 'Pełne doświadczenie z Midjourney / Sora / Veo', 'Jedna subskrypcja na tekst, obraz, dźwięk i wideo'], tipsTitle: '💡 Porady', tipsP: 'Zarejestruj się w LimaxAI i wybierz plan, aby używać wielu modeli w jednej przestrzeni.' },
-  sv: { title: 'LimaxAI-guide', intro: 'Välkommen till LimaxAI-guiden. Här hittar du tutorials, tips och bästa praxis.', quickAccessTitle: 'Snabbåtkomst', link1Text: 'LimaxAI', link1Desc: 'Allt-i-ett-plattform: Midjourney, Sora, Veo och mer.', link2Text: 'API', link2Desc: 'Utvecklar-API, tillgång till topp AI-modeller till låg kostnad.', latestTitle: '🌟 Senaste inlägg', latestP: 'Kolla vår blogg för guider och tips om LimaxAI.', latestItems: ['Direktåtkomst', 'Full upplevelse med Midjourney / Sora / Veo', 'Ett abonnemang för text, bild, ljud och video'], tipsTitle: '💡 Tips', tipsP: 'Registrera dig på LimaxAI och välj en plan för att använda flera modeller i en arbetsyta.' },
-  uk: { title: 'Посібник LimaxAI', intro: 'Ласкаво просимо до посібника LimaxAI. Тут ви знайдете уроки, поради та найкращі практики.', quickAccessTitle: 'Швидкий доступ', link1Text: 'LimaxAI', link1Desc: 'Платформа «все в одному»: Midjourney, Sora, Veo тощо.', link2Text: 'API', link2Desc: 'API для розробників, доступ до топових AI-моделей за низькою ціною.', latestTitle: '🌟 Останні записи', latestP: 'Читайте наш блог — актуальні гайди та поради з LimaxAI.', latestItems: ['Прямий доступ', 'Повний досвід з Midjourney / Sora / Veo', 'Одна підписка на текст, зображення, аудіо та відео'], tipsTitle: '💡 Поради', tipsP: 'Зареєструйтеся в LimaxAI та оберіть план, щоб використовувати кілька моделей в одному робочому просторі.' },
-  ro: { title: 'Ghid LimaxAI', intro: 'Bine ați venit la ghidul LimaxAI. Aici veți găsi tutoriale, sfaturi și cele mai bune practici.', quickAccessTitle: 'Acces rapid', link1Text: 'LimaxAI', link1Desc: 'Platformă all-in-one: Midjourney, Sora, Veo și altele.', link2Text: 'API', link2Desc: 'API pentru dezvoltatori, acces la modele AI de top la cost redus.', latestTitle: '🌟 Ultimele articole', latestP: 'Consultați blogul nostru pentru ghiduri și sfaturi despre LimaxAI.', latestItems: ['Opțiuni de acces direct', 'Experiență completă cu Midjourney / Sora / Veo', 'Un abonament pentru text, imagine, audio și video'], tipsTitle: '💡 Sfaturi', tipsP: 'Înregistrați-vă la LimaxAI și alegeți un plan pentru a folosi mai multe modele într-un singur spațiu de lucru.' },
-};
-
-function makeLimaxaiGuideArticle(locale: string): TutorialArticle {
-  const c = limaxaiGuideCopyByLocale[locale];
-  if (!c) return articleLimaxaiEn;
-  return {
-    slug: 'limaxai-guide',
-    title: c.title,
-    intro: c.intro,
-    sections: [
-      { id: 'quick-access', title: c.quickAccessTitle, blocks: [{ type: 'links', items: [{ url: 'https://www.limaxai.com/', text: c.link1Text, desc: c.link1Desc }, { url: 'https://api.limaxai.com/', text: c.link2Text, desc: c.link2Desc }] }] },
-      { id: 'latest', title: c.latestTitle, blocks: [{ type: 'paragraph', text: c.latestP }, { type: 'list', items: c.latestItems }] },
-      { id: 'tips', title: c.tipsTitle, blocks: [{ type: 'paragraph', text: c.tipsP }] },
-    ],
-  };
-}
-
-const articleLimaxaiByLocale: Record<string, TutorialArticle> = {
-  en: articleLimaxaiEn,
-  'zh-cn': articleLimaxaiZhCN,
-  'zh-tw': articleLimaxaiZhTW,
-  ...Object.fromEntries(EXTRA_LOCALES.map((loc) => [loc, makeLimaxaiGuideArticle(loc)])),
-};
-
-/** Midjourney 教程 — 21 语种 */
-interface MidjourneyTutorialCopy { title: string; intro: string; basicsTitle: string; basicsP: string; tipsTitle: string; tipsItems: [string, string, string]; }
-const midjourneyTutorialCopyByLocale: Record<string, MidjourneyTutorialCopy> = {
-  es: { title: 'Tutorial Midjourney', intro: 'Aprende a usar Midjourney en LimaxAI para crear imágenes, con consejos de prompts y flujo.', basicsTitle: 'Básicos', basicsP: 'Selecciona el modelo Midjourney en LimaxAI, escribe un prompt descriptivo y genera. Se admiten proporción y estilo.', tipsTitle: '💡 Consejos', tipsItems: ['Usa descripciones concretas', 'Indica estilo (p. ej. cinematográfico, cyberpunk)', 'Prueba varias veces para el mejor resultado'] },
-  ar: { title: 'درس Midjourney', intro: 'تعلّم استخدام Midjourney على LimaxAI لإنشاء الصور، مع نصائح للأوامر وسير العمل.', basicsTitle: 'أساسيات', basicsP: 'اختر نموذج Midjourney في مساحة LimaxAI، أدخل وصفاً، ثم ولّد. النسبة والأسلوب مدعومان.', tipsTitle: '💡 نصائح', tipsItems: ['استخدم أوصافاً محددة', 'حدد الأسلوب (مثلاً سينمائي، سايبربانك)', 'جرّب عدة مرات للحصول على أفضل نتيجة'] },
-  pt: { title: 'Tutorial Midjourney', intro: 'Aprenda a usar o Midjourney no LimaxAI para criar imagens, com dicas de prompt e fluxo.', basicsTitle: 'Básicos', basicsP: 'Selecione o modelo Midjourney no LimaxAI, insira um prompt descritivo e gere. Proporção e estilo são suportados.', tipsTitle: '💡 Dicas', tipsItems: ['Use descrições concretas', 'Especifique estilo (ex.: cinematográfico, cyberpunk)', 'Tente várias vezes para o melhor resultado'] },
-  id: { title: 'Tutorial Midjourney', intro: 'Pelajari cara menggunakan Midjourney di LimaxAI untuk pembuatan gambar, termasuk tips prompt dan alur kerja.', basicsTitle: 'Dasar', basicsP: 'Pilih model Midjourney di workspace LimaxAI, masukkan prompt deskriptif, lalu hasilkan. Rasio dan parameter gaya didukung.', tipsTitle: '💡 Tips', tipsItems: ['Gunakan deskripsi yang konkret', 'Tentukan gaya (mis. sinematik, cyberpunk)', 'Coba beberapa kali untuk hasil terbaik'] },
-  ms: { title: 'Tutorial Midjourney', intro: 'Belajar menggunakan Midjourney di LimaxAI untuk penciptaan imej, dengan tip prompt dan aliran kerja.', basicsTitle: 'Asas', basicsP: 'Pilih model Midjourney dalam ruang kerja LimaxAI, masukkan prompt deskriptif dan hasilkan. Nisbah dan gaya disokong.', tipsTitle: '💡 Tip', tipsItems: ['Guna penerangan konkrit', 'Nyatakan gaya (cth. sinematik, cyberpunk)', 'Cuba beberapa kali untuk hasil terbaik'] },
-  fr: { title: 'Tutoriel Midjourney', intro: 'Apprenez à utiliser Midjourney sur LimaxAI pour la création d\'images, avec conseils de prompt et workflow.', basicsTitle: 'Bases', basicsP: 'Sélectionnez le modèle Midjourney dans LimaxAI, entrez un prompt descriptif et générez. Ratio et style sont supportés.', tipsTitle: '💡 Conseils', tipsItems: ['Utilisez des descriptions concrètes', 'Précisez le style (ex. cinématique, cyberpunk)', 'Essayez plusieurs fois pour le meilleur résultat'] },
-  ru: { title: 'Урок Midjourney', intro: 'Как использовать Midjourney в LimaxAI для создания изображений: подсказки по промптам и рабочий процесс.', basicsTitle: 'Основы', basicsP: 'Выберите модель Midjourney в рабочей области LimaxAI, введите описательный промпт и сгенерируйте. Поддерживаются соотношение и стиль.', tipsTitle: '💡 Советы', tipsItems: ['Используйте конкретные описания', 'Указывайте стиль (напр. кинематографичный, киберпанк)', 'Пробуйте несколько раз для лучшего результата'] },
-  hi: { title: 'Midjourney ट्यूटोरियल', intro: 'LimaxAI पर Midjourney से छवि बनाना सीखें, प्रॉम्प्ट टिप्स और वर्कफ़्लो के साथ।', basicsTitle: 'बुनियाद', basicsP: 'LimaxAI वर्कस्पेस में Midjourney मॉडल चुनें, विवरणात्मक प्रॉम्प्ट डालें और जनरेट करें। अनुपात और स्टाइल सपोर्टेड।', tipsTitle: '💡 टिप्स', tipsItems: ['ठोस, स्पष्ट विवरण इस्तेमाल करें', 'स्टाइल बताएं (जैसे सिनेमैटिक, साइबरपंक)', 'बेहतर नतीजे के लिए कई बार कोशिश करें'] },
-  ja: { title: 'Midjourney チュートリアル', intro: 'LimaxAIでMidjourneyを使った画像作成、プロンプトのコツとワークフローを学びます。', basicsTitle: '基礎', basicsP: 'LimaxAIのワークスペースでMidjourneyモデルを選び、説明プロンプトを入力して生成。アスペクト比やスタイルに対応。', tipsTitle: '💡 ヒント', tipsItems: ['具体的な描写を使う', 'スタイルを指定（例：シネマティック、サイバーパンク）', '満足いくまで何度か試す'] },
-  de: { title: 'Midjourney-Tutorial', intro: 'So nutzen Sie Midjourney auf LimaxAI für die Bildererstellung, inkl. Prompt-Tipps und Workflow.', basicsTitle: 'Grundlagen', basicsP: 'Wählen Sie das Midjourney-Modell im LimaxAI-Arbeitsbereich, geben Sie einen beschreibenden Prompt ein und generieren Sie. Seitenverhältnis und Stil werden unterstützt.', tipsTitle: '💡 Tipps', tipsItems: ['Konkrete, spezifische Beschreibungen verwenden', 'Stil angeben (z. B. filmisch, Cyberpunk)', 'Mehrmals ausprobieren für das beste Ergebnis'] },
-  ko: { title: 'Midjourney 튜토리얼', intro: 'LimaxAI에서 Midjourney로 이미지 제작하는 방법, 프롬프트 팁과 워크플로를 소개합니다.', basicsTitle: '기초', basicsP: 'LimaxAI 워크스페이스에서 Midjourney 모델을 선택하고 설명 프롬프트를 입력해 생성합니다. 비율과 스타일을 지원합니다.', tipsTitle: '💡 팁', tipsItems: ['구체적이고 명확한 설명 사용', '스타일 지정(예: 시네마틱, 사이버펑크)', '만족할 때까지 여러 번 시도'] },
-  tr: { title: 'Midjourney Öğreticisi', intro: 'LimaxAI\'de Midjourney ile görsel oluşturma, prompt ipuçları ve iş akışı.', basicsTitle: 'Temeller', basicsP: 'LimaxAI çalışma alanında Midjourney modelini seçin, açıklayıcı prompt girin ve oluşturun. En-boy oranı ve stil desteklenir.', tipsTitle: '💡 İpuçları', tipsItems: ['Somut, net açıklamalar kullanın', 'Stil belirtin (örn. sinematik, cyberpunk)', 'En iyi sonuç için birkaç kez deneyin'] },
-  vi: { title: 'Hướng dẫn Midjourney', intro: 'Cách dùng Midjourney trên LimaxAI để tạo ảnh, gồm mẹo prompt và quy trình.', basicsTitle: 'Cơ bản', basicsP: 'Chọn model Midjourney trong workspace LimaxAI, nhập prompt mô tả rồi tạo. Hỗ trợ tỷ lệ và phong cách.', tipsTitle: '💡 Mẹo', tipsItems: ['Dùng mô tả cụ thể', 'Chỉ rõ phong cách (vd. điện ảnh, cyberpunk)', 'Thử vài lần để có kết quả tốt nhất'] },
-  th: { title: 'บทช่วยสอน Midjourney', intro: 'เรียนรู้การใช้ Midjourney บน LimaxAI สำหรับการสร้างภาพ พร้อมเคล็ดลับพรอมป์และเวิร์กโฟลว์', basicsTitle: 'พื้นฐาน', basicsP: 'เลือกโมเดล Midjourney ใน LimaxAI workspace ป้อนพรอมป์เชิงพรรณนา แล้วสร้าง รองรับอัตราส่วนและสไตล์', tipsTitle: '💡 เคล็ดลับ', tipsItems: ['ใช้คำอธิบายที่ชัดเจน', 'ระบุสไตล์ (เช่น ภาพยนตร์ ไซเบอร์พังก์)', 'ลองหลายครั้งเพื่อผลลัพธ์ที่ดีที่สุด'] },
-  it: { title: 'Tutorial Midjourney', intro: 'Come usare Midjourney su LimaxAI per la creazione di immagini, con consigli sui prompt e sul flusso.', basicsTitle: 'Base', basicsP: 'Seleziona il modello Midjourney in LimaxAI, inserisci un prompt descrittivo e genera. Proporzioni e stile supportati.', tipsTitle: '💡 Consigli', tipsItems: ['Usa descrizioni concrete', 'Specifica lo stile (es. cinematografico, cyberpunk)', 'Prova più volte per il risultato migliore'] },
-  fa: { title: 'آموزش Midjourney', intro: 'استفاده از Midjourney در LimaxAI برای خلق تصویر، همراه نکات پرامپت و گردش کار.', basicsTitle: 'مبانی', basicsP: 'مدل Midjourney را در فضای LimaxAI انتخاب کنید، پرامپت توضیحی وارد کنید و تولید کنید. نسبت و سبک پشتیبانی می‌شوند.', tipsTitle: '💡 نکات', tipsItems: ['از توضیحات مشخص استفاده کنید', 'سبک را مشخص کنید (مثلاً سینمایی، سایبرپانک)', 'چند بار امتحان کنید تا بهترین نتیجه را بگیرید'] },
-  nl: { title: 'Midjourney-tutorial', intro: 'Leer Midjourney op LimaxAI te gebruiken voor beeldcreatie, met prompttips en workflow.', basicsTitle: 'Basis', basicsP: 'Selecteer het Midjourney-model in de LimaxAI-werkruimte, voer een beschrijvende prompt in en genereer. Aspectverhouding en stijl worden ondersteund.', tipsTitle: '💡 Tips', tipsItems: ['Gebruik concrete, specifieke beschrijvingen', 'Geef stijl op (bijv. cinematisch, cyberpunk)', 'Probeer meerdere keren voor het beste resultaat'] },
-  pl: { title: 'Tutorial Midjourney', intro: 'Jak używać Midjourney na LimaxAI do tworzenia obrazów — wskazówki dot. promptów i przepływu pracy.', basicsTitle: 'Podstawy', basicsP: 'Wybierz model Midjourney w obszarze LimaxAI, wprowadź opisowy prompt i generuj. Obsługiwane są proporcje i styl.', tipsTitle: '💡 Porady', tipsItems: ['Używaj konkretnych opisów', 'Określ styl (np. filmowy, cyberpunk)', 'Próbuj kilka razy dla najlepszego efektu'] },
-  sv: { title: 'Midjourney-guide', intro: 'Lär dig använda Midjourney på LimaxAI för bildskapande, med prompttips och arbetsflöde.', basicsTitle: 'Grunderna', basicsP: 'Välj Midjourney-modellen i LimaxAI-arbetsytan, ange en beskrivande prompt och generera. Bildförhållande och stil stöds.', tipsTitle: '💡 Tips', tipsItems: ['Använd konkreta, specifika beskrivningar', 'Ange stil (t.ex. filmisk, cyberpunk)', 'Försök flera gånger för bästa resultat'] },
-  uk: { title: 'Підручник Midjourney', intro: 'Як використовувати Midjourney в LimaxAI для створення зображень: поради щодо промптів і робочий процес.', basicsTitle: 'Основи', basicsP: 'Виберіть модель Midjourney у робочому просторі LimaxAI, введіть описовий промпт і згенеруйте. Підтримуються співвідношення та стиль.', tipsTitle: '💡 Поради', tipsItems: ['Використовуйте конкретні описи', 'Вкажіть стиль (напр. кіно, кіберпанк)', 'Спробуйте кілька разів для кращого результату'] },
-  ro: { title: 'Tutorial Midjourney', intro: 'Cum să folosești Midjourney pe LimaxAI pentru crearea de imagini, cu sfaturi despre prompturi și flux.', basicsTitle: 'Baze', basicsP: 'Selectați modelul Midjourney în spațiul LimaxAI, introduceți un prompt descriptiv și generați. Raportul și stilul sunt acceptate.', tipsTitle: '💡 Sfaturi', tipsItems: ['Folosiți descrieri concrete', 'Specificați stilul (ex. cinematografic, cyberpunk)', 'Încercați de mai multe ori pentru cel mai bun rezultat'] },
-};
-
-function makeMidjourneyTutorialArticle(locale: string): TutorialArticle {
-  const c = midjourneyTutorialCopyByLocale[locale];
-  if (!c) return articleMidjourneyEn;
-  return { slug: 'midjourney-tutorial', title: c.title, intro: c.intro, sections: [{ id: 'basics', title: c.basicsTitle, blocks: [{ type: 'paragraph', text: c.basicsP }] }, { id: 'tips', title: c.tipsTitle, blocks: [{ type: 'list', items: c.tipsItems }] }] };
-}
-
-const articleMidjourneyTutorialByLocale: Record<string, TutorialArticle> = {
-  en: articleMidjourneyEn,
-  'zh-cn': articleMidjourneyZhCN,
-  'zh-tw': articleMidjourneyZhTW,
-  ...Object.fromEntries(EXTRA_LOCALES.map((loc) => [loc, makeMidjourneyTutorialArticle(loc)])),
-};
 
 /** AI 视频指南 — 21 语种 */
 interface AiVideoGuideCopy { title: string; intro: string; modelsTitle: string; modelsP: string; workflowTitle: string; workflowItems: [string, string, string]; }
@@ -556,7 +300,7 @@ const articleAnimalZhCN: TutorialArticle = {
       title: '开始创作',
       blocks: [
         { type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示词与 Midjourney 等模型生成动物摄影风格图片，无需翻墙，一个账号即可体验多种 AI 模型。' },
-        { type: 'cta', text: '开始创作', url: 'https://limaxai.com' },
+        { type: 'cta', text: '开始创作', url: 'https://www.limaxai.com' },
       ],
     },
   ],
@@ -571,7 +315,7 @@ const articleAnimalZhTW: TutorialArticle = {
     { id: 'examples', title: '動物攝影提示詞示例', blocks: [{ type: 'paragraph', text: '以下為 10 組可直接使用的英文提示詞及對應場景描述，可在 LimaxAI 的 Midjourney 中直接輸入使用。' }, { type: 'table', headers: ['動物', '英文提示詞', '場景描述'], rows: animalTableRowsZh }] },
     { id: 'formula', title: '通用公式', blocks: [{ type: 'paragraph', text: '英文公式：a [animal] wearing a [clothing style] [clothing item], [doing something idle or relaxing] in [environment/background], in the style of realistic photography, natural lighting, [optional: cinematic tone/color]' }, { type: 'paragraph', text: '中文對應：一隻[動物]穿著[服裝風格][具體服裝]，[處於某個悠閒或放鬆的動作]，在[背景環境]中，風格為真實攝影、自然光線，[可選：電影質感或色調]。' }] },
     { id: 'images', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-1.webp', alt: '動物攝影效果圖 1 貓', caption: '圖1 貓' }, { type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-2.webp', alt: '動物攝影效果圖 2 熊', caption: '圖2 熊' }, { type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-3.webp', alt: '動物攝影效果圖 3 狗', caption: '圖3 狗' }, { type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-4.webp', alt: '動物攝影效果圖 4 鴿', caption: '圖4 鴿' }] },
-    { id: 'start', title: '開始創作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示詞與 Midjourney 等模型生成動物攝影風格圖片，無需翻牆，一個帳號即可體驗多種 AI 模型。' }, { type: 'cta', text: '開始創作', url: 'https://limaxai.com' }] },
+    { id: 'start', title: '開始創作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示詞與 Midjourney 等模型生成動物攝影風格圖片，無需翻牆，一個帳號即可體驗多種 AI 模型。' }, { type: 'cta', text: '開始創作', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -723,7 +467,7 @@ const articleFlowerZhCN: TutorialArticle = {
       title: '开始创作',
       blocks: [
         { type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示词与 Midjourney 等模型生成鲜花壁纸风格图片，无需翻墙，一个账号即可体验多种 AI 模型。' },
-        { type: 'cta', text: '开始创作', url: 'https://limaxai.com' },
+        { type: 'cta', text: '开始创作', url: 'https://www.limaxai.com' },
       ],
     },
   ],
@@ -740,7 +484,7 @@ const articleFlowerZhTW: TutorialArticle = {
     { id: 'formula', title: '通用公式', blocks: [{ type: 'paragraph', text: '英文公式：Colorful illustration, a large [FLOWER] in [MAIN_COLOR] on a background of [DARK_BACKGROUND_COLORS] patterns with [GOLD_ACCENTS], [SPECIAL_EFFECT], text "No. [NUMBER] [THEME] Wallpaper," rich colors, fantasy art style, Chinese traditional pattern wallpaper design, high resolution, hyper-realistic details, ultra detailed illustration, ornate floral arrangement, dark background, hyper-detailed, high definition, super detailed.' }, { type: 'paragraph', text: '中文對應：色彩豐富的插畫，一朵/一簇[花朵]（主色為[主色]）置於帶有[深色背景配色]紋樣的背景上，點綴[金色元素]，[特殊效果]，文字「No. [編號] [主題] 壁紙」，色彩濃郁，奇幻藝術風格，中國傳統紋樣壁紙設計，高解析度，超寫實細節，超細節插畫，華麗花卉構圖，深色背景，超精細，高清，超級細緻。' }] },
     { id: 'image2', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-6.webp', alt: '鮮花壁紙效果圖 2', caption: '效果圖 2' }] },
     { id: 'image3', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-7.webp', alt: '鮮花壁紙效果圖 3', caption: '效果圖 3' }] },
-    { id: 'start', title: '開始創作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示詞與 Midjourney 等模型生成鮮花壁紙風格圖片，無需翻牆，一個帳號即可體驗多種 AI 模型。' }, { type: 'cta', text: '開始創作', url: 'https://limaxai.com' }] },
+    { id: 'start', title: '開始創作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示詞與 Midjourney 等模型生成鮮花壁紙風格圖片，無需翻牆，一個帳號即可體驗多種 AI 模型。' }, { type: 'cta', text: '開始創作', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -768,7 +512,7 @@ const articleFlowerEn: TutorialArticle = {
     { id: 'formula', title: 'General formula', blocks: [{ type: 'paragraph', text: 'English: Colorful illustration, a large [FLOWER] in [MAIN_COLOR] on a background of [DARK_BACKGROUND_COLORS] patterns with [GOLD_ACCENTS], [SPECIAL_EFFECT], text "No. [NUMBER] [THEME] Wallpaper," rich colors, fantasy art style, Chinese traditional pattern wallpaper design, high resolution, hyper-realistic details, ultra detailed illustration, ornate floral arrangement, dark background, hyper-detailed, high definition, super detailed.' }, { type: 'paragraph', text: 'Pattern: Colorful illustration, one or more [flowers] in [main color] on [dark background] patterns with [gold accents], [special effect], text "No. [number] [theme] Wallpaper," then the shared style tail.' }] },
     { id: 'image2', title: 'Sample image', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-6.webp', alt: 'Flower wallpaper sample 2', caption: 'Sample 2' }] },
     { id: 'image3', title: 'Sample image', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-7.webp', alt: 'Flower wallpaper sample 3', caption: 'Sample 3' }] },
-    { id: 'start', title: 'Start creating', blocks: [{ type: 'paragraph', text: 'Use these prompts with Midjourney and other models on LimaxAI—no VPN needed, one account for multiple AI tools.' }, { type: 'cta', text: 'Start creating', url: 'https://limaxai.com' }] },
+    { id: 'start', title: 'Start creating', blocks: [{ type: 'paragraph', text: 'Use these prompts with Midjourney and other models on LimaxAI—no VPN needed, one account for multiple AI tools.' }, { type: 'cta', text: 'Start creating', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -797,7 +541,7 @@ const articleGufengZhCN: TutorialArticle = {
     { id: 'formula', title: '通用公式', blocks: [{ type: 'paragraph', text: '英文公式：A painting of [CHARACTER/ARCHETYPE] in the Ancient Chinese Painting Art, with an elegant mustache and long hair, wearing [CLOTHING/ARMOR]. The background is light beige. A [COLOR] [EMBLEM/TOTEM] appears on one side of him. His expression exudes [MOOD] as he looks forward towards the viewer. He has dark eyes and holds/wears [SIGNATURE PROP/DETAIL].' }, { type: 'paragraph', text: '中文对应：中国古代绘画艺术中的[人物/原型]，留着优雅的胡子和长发，身穿[服饰/盔甲]。背景是浅米色的。他的一侧出现了[颜色][徽记/图腾]。当他展望观众时，他的表情流露出[情绪/气质]。他有一双黑眼睛，并手持/佩戴[标志性道具/细节]。' }] },
     { id: 'image2', title: '效果图', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-9.webp', alt: '古风人物工笔画效果图 2', caption: '效果图 2' }] },
     { id: 'image3', title: '效果图', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-10.webp', alt: '古风人物工笔画效果图 3', caption: '效果图 3' }] },
-    { id: 'start', title: '开始创作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示词与 Midjourney 等模型生成古风人物工笔画风格图片，无需翻墙，一个账号即可体验多种 AI 模型。' }, { type: 'cta', text: '开始创作', url: 'https://limaxai.com' }] },
+    { id: 'start', title: '开始创作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示词与 Midjourney 等模型生成古风人物工笔画风格图片，无需翻墙，一个账号即可体验多种 AI 模型。' }, { type: 'cta', text: '开始创作', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -812,7 +556,7 @@ const articleGufengZhTW: TutorialArticle = {
     { id: 'formula', title: '通用公式', blocks: [{ type: 'paragraph', text: '英文公式：A painting of [CHARACTER/ARCHETYPE] in the Ancient Chinese Painting Art, with an elegant mustache and long hair, wearing [CLOTHING/ARMOR]. The background is light beige. A [COLOR] [EMBLEM/TOTEM] appears on one side of him. His expression exudes [MOOD] as he looks forward towards the viewer. He has dark eyes and holds/wears [SIGNATURE PROP/DETAIL].' }, { type: 'paragraph', text: '中文對應：中國古代繪畫藝術中的[人物/原型]，留著優雅的鬍子和長髮，身穿[服飾/盔甲]。背景是淺米色的。他的一側出現了[顏色][徽記/圖騰]。當他展望觀眾時，他的表情流露出[情緒/氣質]。他有一雙黑眼睛，並手持/佩戴[標誌性道具/細節]。' }] },
     { id: 'image2', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-9.webp', alt: '古風人物工筆畫效果圖 2', caption: '效果圖 2' }] },
     { id: 'image3', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-10.webp', alt: '古風人物工筆畫效果圖 3', caption: '效果圖 3' }] },
-    { id: 'start', title: '開始創作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示詞與 Midjourney 等模型生成古風人物工筆畫風格圖片，無需翻牆，一個帳號即可體驗多種 AI 模型。' }, { type: 'cta', text: '開始創作', url: 'https://limaxai.com' }] },
+    { id: 'start', title: '開始創作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示詞與 Midjourney 等模型生成古風人物工筆畫風格圖片，無需翻牆，一個帳號即可體驗多種 AI 模型。' }, { type: 'cta', text: '開始創作', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -840,7 +584,7 @@ const articleGufengEn: TutorialArticle = {
     { id: 'formula', title: 'General formula', blocks: [{ type: 'paragraph', text: 'English: A painting of [CHARACTER/ARCHETYPE] in the Ancient Chinese Painting Art, with an elegant mustache and long hair, wearing [CLOTHING/ARMOR]. The background is light beige. A [COLOR] [EMBLEM/TOTEM] appears on one side of him. His expression exudes [MOOD] as he looks forward towards the viewer. He has dark eyes and holds/wears [SIGNATURE PROP/DETAIL].' }, { type: 'paragraph', text: 'Pattern: [Character] in Ancient Chinese Painting Art, mustache and long hair, [clothing], light beige background, [color] [emblem] on one side, [mood], dark eyes, [prop].' }] },
     { id: 'image2', title: 'Sample image', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-9.webp', alt: 'Ancient-style figure sample 2', caption: 'Sample 2' }] },
     { id: 'image3', title: 'Sample image', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-10.webp', alt: 'Ancient-style figure sample 3', caption: 'Sample 3' }] },
-    { id: 'start', title: 'Start creating', blocks: [{ type: 'paragraph', text: 'Use these prompts with Midjourney and other models on LimaxAI—no VPN needed, one account for multiple AI tools.' }, { type: 'cta', text: 'Start creating', url: 'https://limaxai.com' }] },
+    { id: 'start', title: 'Start creating', blocks: [{ type: 'paragraph', text: 'Use these prompts with Midjourney and other models on LimaxAI—no VPN needed, one account for multiple AI tools.' }, { type: 'cta', text: 'Start creating', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -871,7 +615,7 @@ const articleTextureZhCN: TutorialArticle = {
     { id: 'formula', title: '通用公式', blocks: [{ type: 'paragraph', text: '英文公式：[Subject] made of [Material], featuring [Texture details], adorned with [Decor elements], wearing [Scarf/Accessory], set against [Background], cinematic lighting, ultra detailed, 8k' }, { type: 'paragraph', text: '中文对应：[主体]由[材质]制成，具有[纹理细节]，装饰[装饰元素]，佩戴[配饰]，置于[背景]之中，电影级光效，超精细，8K。' }] },
     { id: 'image2', title: '效果图', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-12.webp', alt: '质感效果图 2', caption: '效果图 2' }] },
     { id: 'image3', title: '效果图', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-13.webp', alt: '质感效果图 3', caption: '效果图 3' }] },
-    { id: 'start', title: '开始创作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示词与 Midjourney 等模型生成不同质感风格图片，无需翻墙，一个账号即可体验多种 AI 模型。' }, { type: 'cta', text: '开始创作', url: 'https://limaxai.com' }] },
+    { id: 'start', title: '开始创作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示词与 Midjourney 等模型生成不同质感风格图片，无需翻墙，一个账号即可体验多种 AI 模型。' }, { type: 'cta', text: '开始创作', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -886,7 +630,7 @@ const articleTextureZhTW: TutorialArticle = {
     { id: 'formula', title: '通用公式', blocks: [{ type: 'paragraph', text: '英文公式：[Subject] made of [Material], featuring [Texture details], adorned with [Decor elements], wearing [Scarf/Accessory], set against [Background], cinematic lighting, ultra detailed, 8k' }, { type: 'paragraph', text: '中文對應：[主體]由[材質]製成，具有[紋理細節]，裝飾[裝飾元素]，佩戴[配飾]，置於[背景]之中，電影級光效，超精細，8K。' }] },
     { id: 'image2', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-12.webp', alt: '質感效果圖 2', caption: '效果圖 2' }] },
     { id: 'image3', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-13.webp', alt: '質感效果圖 3', caption: '效果圖 3' }] },
-    { id: 'start', title: '開始創作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示詞與 Midjourney 等模型生成不同質感風格圖片，無需翻牆，一個帳號即可體驗多種 AI 模型。' }, { type: 'cta', text: '開始創作', url: 'https://limaxai.com' }] },
+    { id: 'start', title: '開始創作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示詞與 Midjourney 等模型生成不同質感風格圖片，無需翻牆，一個帳號即可體驗多種 AI 模型。' }, { type: 'cta', text: '開始創作', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -916,7 +660,7 @@ const articleTextureEn: TutorialArticle = {
     { id: 'formula', title: 'General formula', blocks: [{ type: 'paragraph', text: 'English: [Subject] made of [Material], featuring [Texture details], adorned with [Decor elements], wearing [Scarf/Accessory], set against [Background], cinematic lighting, ultra detailed, 8k' }, { type: 'paragraph', text: 'Pattern: [Subject] + [material], [texture details], [decor], [background], cinematic lighting, ultra detailed, 8k.' }] },
     { id: 'image2', title: 'Sample image', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-12.webp', alt: 'Texture sample 2', caption: 'Sample 2' }] },
     { id: 'image3', title: 'Sample image', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-13.webp', alt: 'Texture sample 3', caption: 'Sample 3' }] },
-    { id: 'start', title: 'Start creating', blocks: [{ type: 'paragraph', text: 'Use these prompts with Midjourney and other models on LimaxAI—no VPN needed, one account for multiple AI tools.' }, { type: 'cta', text: 'Start creating', url: 'https://limaxai.com' }] },
+    { id: 'start', title: 'Start creating', blocks: [{ type: 'paragraph', text: 'Use these prompts with Midjourney and other models on LimaxAI—no VPN needed, one account for multiple AI tools.' }, { type: 'cta', text: 'Start creating', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -945,7 +689,7 @@ const articleZeldaZhCN: TutorialArticle = {
     { id: 'formula', title: '通用公式', blocks: [{ type: 'paragraph', text: '英文公式：[Character] from the video game The Legend of Zelda, a [mood] portrait with [hair] and [outfit/armor], [background/scene], in the style of fantasy art painting, using oil paint, [lighting], [color palette], [detail level].' }, { type: 'paragraph', text: '中文对应：[角色]来自《塞尔达传说》，[情绪氛围]肖像，具有[发型/发色]与[服装/盔甲]，[背景/场景]，奇幻艺术绘画风格，油画质感，[光照]，[配色]，[细节程度]。' }] },
     { id: 'image2', title: '效果图', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-15.webp', alt: '塞尔达风格效果图 2', caption: '效果图 2' }] },
     { id: 'image3', title: '效果图', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-16.webp', alt: '塞尔达风格效果图 3', caption: '效果图 3' }] },
-    { id: 'start', title: '开始创作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示词与 Midjourney 等模型生成塞尔达风格角色图，无需翻墙，一个账号即可体验多种 AI 模型。' }, { type: 'cta', text: '开始创作', url: 'https://limaxai.com' }] },
+    { id: 'start', title: '开始创作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示词与 Midjourney 等模型生成塞尔达风格角色图，无需翻墙，一个账号即可体验多种 AI 模型。' }, { type: 'cta', text: '开始创作', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -960,7 +704,7 @@ const articleZeldaZhTW: TutorialArticle = {
     { id: 'formula', title: '通用公式', blocks: [{ type: 'paragraph', text: '英文公式：[Character] from the video game The Legend of Zelda, a [mood] portrait with [hair] and [outfit/armor], [background/scene], in the style of fantasy art painting, using oil paint, [lighting], [color palette], [detail level].' }, { type: 'paragraph', text: '中文對應：[角色]來自《塞爾達傳說》，[情緒氛圍]肖像，具有[髮型/髮色]與[服裝/盔甲]，[背景/場景]，奇幻藝術繪畫風格，油畫質感，[光照]，[配色]，[細節程度]。' }] },
     { id: 'image2', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-15.webp', alt: '塞爾達風格效果圖 2', caption: '效果圖 2' }] },
     { id: 'image3', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-16.webp', alt: '塞爾達風格效果圖 3', caption: '效果圖 3' }] },
-    { id: 'start', title: '開始創作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示詞與 Midjourney 等模型生成塞爾達風格角色圖，無需翻牆，一個帳號即可體驗多種 AI 模型。' }, { type: 'cta', text: '開始創作', url: 'https://limaxai.com' }] },
+    { id: 'start', title: '開始創作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示詞與 Midjourney 等模型生成塞爾達風格角色圖，無需翻牆，一個帳號即可體驗多種 AI 模型。' }, { type: 'cta', text: '開始創作', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -988,7 +732,7 @@ const articleZeldaEn: TutorialArticle = {
     { id: 'formula', title: 'General formula', blocks: [{ type: 'paragraph', text: 'English: [Character] from the video game The Legend of Zelda, a [mood] portrait with [hair] and [outfit/armor], [background/scene], in the style of fantasy art painting, using oil paint, [lighting], [color palette], [detail level].' }, { type: 'paragraph', text: 'Pattern: [Character] + [mood] portrait, [hair], [outfit], [background], fantasy art oil painting, [lighting], [palette], [detail].' }] },
     { id: 'image2', title: 'Sample image', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-15.webp', alt: 'Zelda-style sample 2', caption: 'Sample 2' }] },
     { id: 'image3', title: 'Sample image', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-16.webp', alt: 'Zelda-style sample 3', caption: 'Sample 3' }] },
-    { id: 'start', title: 'Start creating', blocks: [{ type: 'paragraph', text: 'Use these prompts with Midjourney and other models on LimaxAI—no VPN needed, one account for multiple AI tools.' }, { type: 'cta', text: 'Start creating', url: 'https://limaxai.com' }] },
+    { id: 'start', title: 'Start creating', blocks: [{ type: 'paragraph', text: 'Use these prompts with Midjourney and other models on LimaxAI—no VPN needed, one account for multiple AI tools.' }, { type: 'cta', text: 'Start creating', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -1028,7 +772,7 @@ const articleRedAlertZhCN: TutorialArticle = {
     { id: 'formula', title: '通用公式', blocks: [{ type: 'paragraph', text: '英文公式：Red Alert, a [兵种] with [装备], [描述], photograph, 16K, [风格], [细节], [特效], [配色], ultra-detailed, best quality' }, { type: 'paragraph', text: '中文对应：红色警戒，一个[兵种]带有[装备]，[动作/场景描述]，照片，16K，[风格]，[细节]，[特效]，[配色]，超高清，最佳画质。' }] },
     { id: 'image2', title: '效果图', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-21.webp', alt: '红色警戒效果图 2', caption: '效果图 2' }] },
     { id: 'image3', title: '效果图', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-22.webp', alt: '红色警戒效果图 3', caption: '效果图 3' }] },
-    { id: 'start', title: '开始创作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示词与 Midjourney 等模型生成红色警戒风格图片，无需翻墙，一个账号即可体验多种 AI 模型。' }, { type: 'cta', text: '开始创作', url: 'https://limaxai.com' }] },
+    { id: 'start', title: '开始创作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示词与 Midjourney 等模型生成红色警戒风格图片，无需翻墙，一个账号即可体验多种 AI 模型。' }, { type: 'cta', text: '开始创作', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -1043,7 +787,7 @@ const articleRedAlertZhTW: TutorialArticle = {
     { id: 'formula', title: '通用公式', blocks: [{ type: 'paragraph', text: '英文公式：Red Alert, a [兵種] with [裝備], [描述], photograph, 16K, [風格], [細節], [特效], [配色], ultra-detailed, best quality' }, { type: 'paragraph', text: '中文對應：紅色警戒，一個[兵種]帶有[裝備]，[動作/場景描述]，照片，16K，[風格]，[細節]，[特效]，[配色]，超高清，最佳畫質。' }] },
     { id: 'image2', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-21.webp', alt: '紅色警戒效果圖 2', caption: '效果圖 2' }] },
     { id: 'image3', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-22.webp', alt: '紅色警戒效果圖 3', caption: '效果圖 3' }] },
-    { id: 'start', title: '開始創作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示詞與 Midjourney 等模型生成紅色警戒風格圖片，無需翻牆，一個帳號即可體驗多種 AI 模型。' }, { type: 'cta', text: '開始創作', url: 'https://limaxai.com' }] },
+    { id: 'start', title: '開始創作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示詞與 Midjourney 等模型生成紅色警戒風格圖片，無需翻牆，一個帳號即可體驗多種 AI 模型。' }, { type: 'cta', text: '開始創作', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -1082,7 +826,7 @@ const articleRedAlertEn: TutorialArticle = {
     { id: 'formula', title: 'General formula', blocks: [{ type: 'paragraph', text: 'English: Red Alert, a [unit type] with [gear], [description], photograph, 16K, [style], [details], [effects], [color palette], ultra-detailed, best quality' }, { type: 'paragraph', text: 'Pattern: Red Alert + [unit], [gear], [action/scene], photograph, 16K, [style], [details], [effects], [colors], ultra-detailed, best quality.' }] },
     { id: 'image2', title: 'Sample image', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-21.webp', alt: 'Red Alert sample 2', caption: 'Sample 2' }] },
     { id: 'image3', title: 'Sample image', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-22.webp', alt: 'Red Alert sample 3', caption: 'Sample 3' }] },
-    { id: 'start', title: 'Start creating', blocks: [{ type: 'paragraph', text: 'Use these prompts with Midjourney and other models on LimaxAI—no VPN needed, one account for multiple AI tools.' }, { type: 'cta', text: 'Start creating', url: 'https://limaxai.com' }] },
+    { id: 'start', title: 'Start creating', blocks: [{ type: 'paragraph', text: 'Use these prompts with Midjourney and other models on LimaxAI—no VPN needed, one account for multiple AI tools.' }, { type: 'cta', text: 'Start creating', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -1143,7 +887,7 @@ const articleComposition20ZhCN: TutorialArticle = {
     { id: 'image1', title: '效果图', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-23.webp', alt: 'Midjourney 构图效果图 1', caption: '效果图 1' }] },
     { id: 'image2', title: '效果图', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-24.webp', alt: 'Midjourney 构图效果图 2', caption: '效果图 2' }] },
     { id: 'image3', title: '效果图', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-25.webp', alt: 'Midjourney 构图效果图 3', caption: '效果图 3' }] },
-    { id: 'start', title: '开始创作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示词与 Midjourney 等模型生成各类构图画面，无需翻墙，一个账号即可体验多种 AI 模型。' }, { type: 'cta', text: '开始创作', url: 'https://limaxai.com' }] },
+    { id: 'start', title: '开始创作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示词与 Midjourney 等模型生成各类构图画面，无需翻墙，一个账号即可体验多种 AI 模型。' }, { type: 'cta', text: '开始创作', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -1157,7 +901,7 @@ const articleComposition20ZhTW: TutorialArticle = {
     { id: 'image1', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-23.webp', alt: 'Midjourney 構圖效果圖 1', caption: '效果圖 1' }] },
     { id: 'image2', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-24.webp', alt: 'Midjourney 構圖效果圖 2', caption: '效果圖 2' }] },
     { id: 'image3', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-25.webp', alt: 'Midjourney 構圖效果圖 3', caption: '效果圖 3' }] },
-    { id: 'start', title: '開始創作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示詞與 Midjourney 等模型生成各類構圖畫面，無需翻牆，一個帳號即可體驗多種 AI 模型。' }, { type: 'cta', text: '開始創作', url: 'https://limaxai.com' }] },
+    { id: 'start', title: '開始創作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示詞與 Midjourney 等模型生成各類構圖畫面，無需翻牆，一個帳號即可體驗多種 AI 模型。' }, { type: 'cta', text: '開始創作', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -1171,7 +915,7 @@ const articleComposition20En: TutorialArticle = {
     { id: 'image1', title: 'Sample image', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-23.webp', alt: 'Midjourney composition sample 1', caption: 'Sample 1' }] },
     { id: 'image2', title: 'Sample image', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-24.webp', alt: 'Midjourney composition sample 2', caption: 'Sample 2' }] },
     { id: 'image3', title: 'Sample image', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-25.webp', alt: 'Midjourney composition sample 3', caption: 'Sample 3' }] },
-    { id: 'start', title: 'Start creating', blocks: [{ type: 'paragraph', text: 'Use these prompts with Midjourney and other models on LimaxAI—no VPN needed, one account for multiple AI tools.' }, { type: 'cta', text: 'Start creating', url: 'https://limaxai.com' }] },
+    { id: 'start', title: 'Start creating', blocks: [{ type: 'paragraph', text: 'Use these prompts with Midjourney and other models on LimaxAI—no VPN needed, one account for multiple AI tools.' }, { type: 'cta', text: 'Start creating', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -1227,7 +971,7 @@ function makeComposition20Article(locale: string): TutorialArticle {
       { id: 'image1', title: c.imageTitle, blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-23.webp', alt: c.imageTitle + ' 1', caption: c.imageTitle + ' 1' }] },
       { id: 'image2', title: c.imageTitle, blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-24.webp', alt: c.imageTitle + ' 2', caption: c.imageTitle + ' 2' }] },
       { id: 'image3', title: c.imageTitle, blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-25.webp', alt: c.imageTitle + ' 3', caption: c.imageTitle + ' 3' }] },
-      { id: 'start', title: c.startTitle, blocks: [{ type: 'paragraph', text: c.startText }, { type: 'cta', text: c.ctaText, url: 'https://limaxai.com' }] },
+      { id: 'start', title: c.startTitle, blocks: [{ type: 'paragraph', text: c.startText }, { type: 'cta', text: c.ctaText, url: 'https://www.limaxai.com' }] },
     ],
   };
 }
@@ -1297,7 +1041,7 @@ const articleSelectedPromptsZhCN: TutorialArticle = {
     { id: 'image1', title: '效果图', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-26.webp', alt: 'Midjourney 精选效果图 1', caption: '效果图 1' }] },
     { id: 'image2', title: '效果图', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-27.webp', alt: 'Midjourney 精选效果图 2', caption: '效果图 2' }] },
     { id: 'image3', title: '效果图', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-28.webp', alt: 'Midjourney 精选效果图 3', caption: '效果图 3' }] },
-    { id: 'start', title: '开始创作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示词与 Midjourney 等模型生成图片，无需翻墙，一个账号即可体验多种 AI 模型。' }, { type: 'cta', text: '开始创作', url: 'https://limaxai.com' }] },
+    { id: 'start', title: '开始创作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示词与 Midjourney 等模型生成图片，无需翻墙，一个账号即可体验多种 AI 模型。' }, { type: 'cta', text: '开始创作', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -1311,7 +1055,7 @@ const articleSelectedPromptsZhTW: TutorialArticle = {
     { id: 'image1', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-26.webp', alt: 'Midjourney 精選效果圖 1', caption: '效果圖 1' }] },
     { id: 'image2', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-27.webp', alt: 'Midjourney 精選效果圖 2', caption: '效果圖 2' }] },
     { id: 'image3', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-28.webp', alt: 'Midjourney 精選效果圖 3', caption: '效果圖 3' }] },
-    { id: 'start', title: '開始創作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示詞與 Midjourney 等模型生成圖片，無需翻牆，一個帳號即可體驗多種 AI 模型。' }, { type: 'cta', text: '開始創作', url: 'https://limaxai.com' }] },
+    { id: 'start', title: '開始創作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示詞與 Midjourney 等模型生成圖片，無需翻牆，一個帳號即可體驗多種 AI 模型。' }, { type: 'cta', text: '開始創作', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -1325,7 +1069,7 @@ const articleSelectedPromptsEn: TutorialArticle = {
     { id: 'image1', title: 'Sample image', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-26.webp', alt: 'Midjourney selected sample 1', caption: 'Sample 1' }] },
     { id: 'image2', title: 'Sample image', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-27.webp', alt: 'Midjourney selected sample 2', caption: 'Sample 2' }] },
     { id: 'image3', title: 'Sample image', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-28.webp', alt: 'Midjourney selected sample 3', caption: 'Sample 3' }] },
-    { id: 'start', title: 'Start creating', blocks: [{ type: 'paragraph', text: 'Use these prompts with Midjourney and other models on LimaxAI—no VPN needed, one account for multiple AI tools.' }, { type: 'cta', text: 'Start creating', url: 'https://limaxai.com' }] },
+    { id: 'start', title: 'Start creating', blocks: [{ type: 'paragraph', text: 'Use these prompts with Midjourney and other models on LimaxAI—no VPN needed, one account for multiple AI tools.' }, { type: 'cta', text: 'Start creating', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -1352,7 +1096,7 @@ const articlePenWashInkZhCN: TutorialArticle = {
     { id: 'image1', title: '效果图', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-29.webp', alt: '钢笔淡彩水墨效果图 1', caption: '效果图 1' }] },
     { id: 'image2', title: '效果图', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-30.webp', alt: '钢笔淡彩水墨效果图 2', caption: '效果图 2' }] },
     { id: 'image3', title: '效果图', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-31.webp', alt: '钢笔淡彩水墨效果图 3', caption: '效果图 3' }] },
-    { id: 'start', title: '开始创作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示词与 Midjourney 等模型生成钢笔淡彩水墨风格图片，无需翻墙，一个账号即可体验多种 AI 模型。' }, { type: 'cta', text: '开始创作', url: 'https://limaxai.com' }] },
+    { id: 'start', title: '开始创作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示词与 Midjourney 等模型生成钢笔淡彩水墨风格图片，无需翻墙，一个账号即可体验多种 AI 模型。' }, { type: 'cta', text: '开始创作', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -1366,7 +1110,7 @@ const articlePenWashInkZhTW: TutorialArticle = {
     { id: 'image1', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-29.webp', alt: '鋼筆淡彩水墨效果圖 1', caption: '效果圖 1' }] },
     { id: 'image2', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-30.webp', alt: '鋼筆淡彩水墨效果圖 2', caption: '效果圖 2' }] },
     { id: 'image3', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-31.webp', alt: '鋼筆淡彩水墨效果圖 3', caption: '效果圖 3' }] },
-    { id: 'start', title: '開始創作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示詞與 Midjourney 等模型生成鋼筆淡彩水墨風格圖片，無需翻牆，一個帳號即可體驗多種 AI 模型。' }, { type: 'cta', text: '開始創作', url: 'https://limaxai.com' }] },
+    { id: 'start', title: '開始創作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示詞與 Midjourney 等模型生成鋼筆淡彩水墨風格圖片，無需翻牆，一個帳號即可體驗多種 AI 模型。' }, { type: 'cta', text: '開始創作', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -1380,7 +1124,7 @@ const articlePenWashInkEn: TutorialArticle = {
     { id: 'image1', title: 'Sample image', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-29.webp', alt: 'Pen-and-wash ink sample 1', caption: 'Sample 1' }] },
     { id: 'image2', title: 'Sample image', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-30.webp', alt: 'Pen-and-wash ink sample 2', caption: 'Sample 2' }] },
     { id: 'image3', title: 'Sample image', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-31.webp', alt: 'Pen-and-wash ink sample 3', caption: 'Sample 3' }] },
-    { id: 'start', title: 'Start creating', blocks: [{ type: 'paragraph', text: 'Use these prompts with Midjourney and other models on LimaxAI—no VPN needed, one account for multiple AI tools.' }, { type: 'cta', text: 'Start creating', url: 'https://limaxai.com' }] },
+    { id: 'start', title: 'Start creating', blocks: [{ type: 'paragraph', text: 'Use these prompts with Midjourney and other models on LimaxAI—no VPN needed, one account for multiple AI tools.' }, { type: 'cta', text: 'Start creating', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -1436,7 +1180,7 @@ function makePenWashInkArticle(locale: string): TutorialArticle {
       { id: 'image1', title: c.imageTitle, blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-29.webp', alt: c.imageTitle + ' 1', caption: c.imageTitle + ' 1' }] },
       { id: 'image2', title: c.imageTitle, blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-30.webp', alt: c.imageTitle + ' 2', caption: c.imageTitle + ' 2' }] },
       { id: 'image3', title: c.imageTitle, blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-31.webp', alt: c.imageTitle + ' 3', caption: c.imageTitle + ' 3' }] },
-      { id: 'start', title: c.startTitle, blocks: [{ type: 'paragraph', text: c.startText }, { type: 'cta', text: c.ctaText, url: 'https://limaxai.com' }] },
+      { id: 'start', title: c.startTitle, blocks: [{ type: 'paragraph', text: c.startText }, { type: 'cta', text: c.ctaText, url: 'https://www.limaxai.com' }] },
     ],
   };
 }
@@ -1506,7 +1250,7 @@ const articleSelectedStylesZhCN: TutorialArticle = {
     { id: 'image1', title: '效果图', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-32.webp', alt: '精选风格效果图 1', caption: '效果图 1' }] },
     { id: 'image2', title: '效果图', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-33.webp', alt: '精选风格效果图 2', caption: '效果图 2' }] },
     { id: 'image3', title: '效果图', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-34.webp', alt: '精选风格效果图 3', caption: '效果图 3' }] },
-    { id: 'start', title: '开始创作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示词与 Midjourney 等模型生成各类风格图片，无需翻墙，一个账号即可体验多种 AI 模型。' }, { type: 'cta', text: '开始创作', url: 'https://limaxai.com' }] },
+    { id: 'start', title: '开始创作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示词与 Midjourney 等模型生成各类风格图片，无需翻墙，一个账号即可体验多种 AI 模型。' }, { type: 'cta', text: '开始创作', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -1520,7 +1264,7 @@ const articleSelectedStylesZhTW: TutorialArticle = {
     { id: 'image1', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-32.webp', alt: '精選風格效果圖 1', caption: '效果圖 1' }] },
     { id: 'image2', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-33.webp', alt: '精選風格效果圖 2', caption: '效果圖 2' }] },
     { id: 'image3', title: '效果圖', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-34.webp', alt: '精選風格效果圖 3', caption: '效果圖 3' }] },
-    { id: 'start', title: '開始創作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示詞與 Midjourney 等模型生成各類風格圖片，無需翻牆，一個帳號即可體驗多種 AI 模型。' }, { type: 'cta', text: '開始創作', url: 'https://limaxai.com' }] },
+    { id: 'start', title: '開始創作', blocks: [{ type: 'paragraph', text: '在 LimaxAI 上可直接使用上述提示詞與 Midjourney 等模型生成各類風格圖片，無需翻牆，一個帳號即可體驗多種 AI 模型。' }, { type: 'cta', text: '開始創作', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -1534,7 +1278,7 @@ const articleSelectedStylesEn: TutorialArticle = {
     { id: 'image1', title: 'Sample image', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-32.webp', alt: 'Selected styles sample 1', caption: 'Sample 1' }] },
     { id: 'image2', title: 'Sample image', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-33.webp', alt: 'Selected styles sample 2', caption: 'Sample 2' }] },
     { id: 'image3', title: 'Sample image', blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-34.webp', alt: 'Selected styles sample 3', caption: 'Sample 3' }] },
-    { id: 'start', title: 'Start creating', blocks: [{ type: 'paragraph', text: 'Use these prompts with Midjourney and other models on LimaxAI—no VPN needed, one account for multiple AI tools.' }, { type: 'cta', text: 'Start creating', url: 'https://limaxai.com' }] },
+    { id: 'start', title: 'Start creating', blocks: [{ type: 'paragraph', text: 'Use these prompts with Midjourney and other models on LimaxAI—no VPN needed, one account for multiple AI tools.' }, { type: 'cta', text: 'Start creating', url: 'https://www.limaxai.com' }] },
   ],
 };
 
@@ -1590,7 +1334,7 @@ function makeSelectedStylesArticle(locale: string): TutorialArticle {
       { id: 'image1', title: c.imageTitle, blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-32.webp', alt: c.imageTitle + ' 1', caption: c.imageTitle + ' 1' }] },
       { id: 'image2', title: c.imageTitle, blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-33.webp', alt: c.imageTitle + ' 2', caption: c.imageTitle + ' 2' }] },
       { id: 'image3', title: c.imageTitle, blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-34.webp', alt: c.imageTitle + ' 3', caption: c.imageTitle + ' 3' }] },
-      { id: 'start', title: c.startTitle, blocks: [{ type: 'paragraph', text: c.startText }, { type: 'cta', text: c.ctaText, url: 'https://limaxai.com' }] },
+      { id: 'start', title: c.startTitle, blocks: [{ type: 'paragraph', text: c.startText }, { type: 'cta', text: c.ctaText, url: 'https://www.limaxai.com' }] },
     ],
   };
 }
@@ -1655,7 +1399,7 @@ function makeSelectedPromptsArticle(locale: string): TutorialArticle {
       { id: 'image1', title: c.imageTitle, blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-26.webp', alt: c.imageTitle + ' 1', caption: c.imageTitle + ' 1' }] },
       { id: 'image2', title: c.imageTitle, blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-27.webp', alt: c.imageTitle + ' 2', caption: c.imageTitle + ' 2' }] },
       { id: 'image3', title: c.imageTitle, blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-28.webp', alt: c.imageTitle + ' 3', caption: c.imageTitle + ' 3' }] },
-      { id: 'start', title: c.startTitle, blocks: [{ type: 'paragraph', text: c.startText }, { type: 'cta', text: c.ctaText, url: 'https://limaxai.com' }] },
+      { id: 'start', title: c.startTitle, blocks: [{ type: 'paragraph', text: c.startText }, { type: 'cta', text: c.ctaText, url: 'https://www.limaxai.com' }] },
     ],
   };
 }
@@ -2522,7 +2266,7 @@ function makeFlowerArticle(locale: string): TutorialArticle {
       { id: 'formula', title: c.formulaTitle, blocks: [{ type: 'paragraph', text: c.formulaEn }, { type: 'paragraph', text: c.formulaLocal }] },
       { id: 'image2', title: c.imageTitle, blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-6.webp', alt: c.imageTitle + ' 2', caption: c.imageTitle + ' 2' }] },
       { id: 'image3', title: c.imageTitle, blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-7.webp', alt: c.imageTitle + ' 3', caption: c.imageTitle + ' 3' }] },
-      { id: 'start', title: c.startTitle, blocks: [{ type: 'paragraph', text: c.startText }, { type: 'cta', text: c.ctaText, url: 'https://limaxai.com' }] },
+      { id: 'start', title: c.startTitle, blocks: [{ type: 'paragraph', text: c.startText }, { type: 'cta', text: c.ctaText, url: 'https://www.limaxai.com' }] },
     ],
   };
 }
@@ -2549,7 +2293,7 @@ function makeGufengArticle(locale: string): TutorialArticle {
       { id: 'formula', title: c.formulaTitle, blocks: [{ type: 'paragraph', text: c.formulaEn }, { type: 'paragraph', text: c.formulaLocal }] },
       { id: 'image2', title: c.imageTitle, blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-9.webp', alt: c.imageTitle + ' 2', caption: c.imageTitle + ' 2' }] },
       { id: 'image3', title: c.imageTitle, blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-10.webp', alt: c.imageTitle + ' 3', caption: c.imageTitle + ' 3' }] },
-      { id: 'start', title: c.startTitle, blocks: [{ type: 'paragraph', text: c.startText }, { type: 'cta', text: c.ctaText, url: 'https://limaxai.com' }] },
+      { id: 'start', title: c.startTitle, blocks: [{ type: 'paragraph', text: c.startText }, { type: 'cta', text: c.ctaText, url: 'https://www.limaxai.com' }] },
     ],
   };
 }
@@ -2576,7 +2320,7 @@ function makeTextureArticle(locale: string): TutorialArticle {
       { id: 'formula', title: c.formulaTitle, blocks: [{ type: 'paragraph', text: c.formulaEn }, { type: 'paragraph', text: c.formulaLocal }] },
       { id: 'image2', title: c.imageTitle, blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-12.webp', alt: c.imageTitle + ' 2', caption: c.imageTitle + ' 2' }] },
       { id: 'image3', title: c.imageTitle, blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-13.webp', alt: c.imageTitle + ' 3', caption: c.imageTitle + ' 3' }] },
-      { id: 'start', title: c.startTitle, blocks: [{ type: 'paragraph', text: c.startText }, { type: 'cta', text: c.ctaText, url: 'https://limaxai.com' }] },
+      { id: 'start', title: c.startTitle, blocks: [{ type: 'paragraph', text: c.startText }, { type: 'cta', text: c.ctaText, url: 'https://www.limaxai.com' }] },
     ],
   };
 }
@@ -2603,7 +2347,7 @@ function makeZeldaArticle(locale: string): TutorialArticle {
       { id: 'formula', title: c.formulaTitle, blocks: [{ type: 'paragraph', text: c.formulaEn }, { type: 'paragraph', text: c.formulaLocal }] },
       { id: 'image2', title: c.imageTitle, blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-15.webp', alt: c.imageTitle + ' 2', caption: c.imageTitle + ' 2' }] },
       { id: 'image3', title: c.imageTitle, blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjoueney-16.webp', alt: c.imageTitle + ' 3', caption: c.imageTitle + ' 3' }] },
-      { id: 'start', title: c.startTitle, blocks: [{ type: 'paragraph', text: c.startText }, { type: 'cta', text: c.ctaText, url: 'https://limaxai.com' }] },
+      { id: 'start', title: c.startTitle, blocks: [{ type: 'paragraph', text: c.startText }, { type: 'cta', text: c.ctaText, url: 'https://www.limaxai.com' }] },
     ],
   };
 }
@@ -2630,7 +2374,7 @@ function makeRedAlertArticle(locale: string): TutorialArticle {
       { id: 'formula', title: c.formulaTitle, blocks: [{ type: 'paragraph', text: c.formulaEn }, { type: 'paragraph', text: c.formulaLocal }] },
       { id: 'image2', title: c.imageTitle, blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-21.webp', alt: c.imageTitle + ' 2', caption: c.imageTitle + ' 2' }] },
       { id: 'image3', title: c.imageTitle, blocks: [{ type: 'image', src: 'https://img.limaxai.com/aiweb/midjourney-22.webp', alt: c.imageTitle + ' 3', caption: c.imageTitle + ' 3' }] },
-      { id: 'start', title: c.startTitle, blocks: [{ type: 'paragraph', text: c.startText }, { type: 'cta', text: c.ctaText, url: 'https://limaxai.com' }] },
+      { id: 'start', title: c.startTitle, blocks: [{ type: 'paragraph', text: c.startText }, { type: 'cta', text: c.ctaText, url: 'https://www.limaxai.com' }] },
     ],
   };
 }
@@ -3034,8 +2778,6 @@ const articleMidjourneyNewBatchBySlug: Record<string, Record<string, TutorialArt
 );
 
 const articlesBySlugAndLocale: Record<string, Record<string, TutorialArticle>> = {
-  'limaxai-guide': articleLimaxaiByLocale,
-  'midjourney-tutorial': articleMidjourneyTutorialByLocale,
   'midjourney-v8-alpha-vs-banana2-multistyle-review': articleMidjourneyV8AlphaVsBanana2ByLocale,
   'midjourney-animal-photography': articleAnimalByLocale,
   'midjourney-flower-wallpaper': articleFlowerByLocale,
@@ -3165,7 +2907,7 @@ export function getTutorialArticle(slug: string, locale: string): TutorialArticl
 
 export function getFirstTutorialSlug(locale: string): string {
   const list = getList(locale);
-  return list[0]?.slug ?? 'limaxai-guide';
+  return list[0]?.slug ?? 'midjourney-v8-alpha-vs-banana2-multistyle-review';
 }
 
 const labelsZhCN = { articleList: '文章列表', pageNav: '页面导航' };

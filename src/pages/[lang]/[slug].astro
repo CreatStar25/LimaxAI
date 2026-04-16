@@ -32,7 +32,8 @@ const formattedDate = entry.data.pubDate.toLocaleDateString(entry.data.lang, {
 });
 
 const postSlug = entry.slug.split('/').pop();
-const canonical = `${Astro.url.origin}/${entry.data.lang}/${postSlug}/`;
+const siteBase = (Astro.site?.href ?? 'https://blog.limaxai.com').replace(/\/$/, '');
+const canonical = `${siteBase}/${entry.data.lang}/${postSlug}/`;
 const image = entry.data.heroImage ?? (typeof entry.data.image === 'string' ? entry.data.image : '');
 const readMinutes = Math.max(1, Math.ceil(entry.body.length / 800));
 ---

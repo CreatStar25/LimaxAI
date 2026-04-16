@@ -5,7 +5,8 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://blog.limaxai.com', // 你的域名
+  site: 'https://blog.limaxai.com',
+  trailingSlash: 'always',
   integrations: [tailwind(), sitemap()],
   i18n: {
     defaultLocale: 'en',
