@@ -2,6 +2,8 @@
 // src/layouts/BaseLayout.astro
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import SchemaData from '../components/SchemaData.astro';
+import PerformanceMonitor from '../components/PerformanceMonitor.astro';
 import { LOCALES } from '../i18n/ui';
 
 const {
@@ -11,6 +13,7 @@ const {
   image = '',
   canonical = Astro.url.href,
   baiduSiteVerification = false,
+  alternateUrls = {},
 } = Astro.props;
 
 // 请将此处替换为您主站的 GA4 衡量 ID
@@ -29,24 +32,63 @@ const contentLanguageMap: Record<string, string> = {
 const contentLanguage = contentLanguageMap[currentLang] ?? 'en-US';
 
 // 国际引擎：hreflang + x-default（Google/Bing），x-default 指向英文
-const site = Astro.site?.href ?? 'https://blog.limaxai.com';
-const baseUrl = site.endsWith('/') ? site.slice(0, -1) : site;
+// 强制使用 blog.limaxai.com 作为主要域名，避免 www 和 blog 域名混淆
+const baseUrl = 'https://blog.limaxai.com';
 const pathname = Astro.url.pathname;
 const pathWithoutLang = pathname.replace(/^\/[^/]+/, '') || '/';
 // 非根路径统一带尾部斜杠，与站内链接（如 /about/、/tutorials/）一致，避免语言切换跳错
 const pathSuffix = pathWithoutLang === '/' ? '/' : (pathWithoutLang.endsWith('/') ? pathWithoutLang : pathWithoutLang + '/');
 
-const metaDescription = description || String(title || 'LimaxAI');
-const rawCanonical = String(canonical || `${baseUrl}${Astro.url.pathname}`);
-const canonicalUrl = (() => {
-  if (rawCanonical.startsWith('http')) {
-    const hasTrailing = rawCanonical.endsWith('/') || rawCanonical.includes('?') || rawCanonical.includes('#');
-    return hasTrailing ? rawCanonical : rawCanonical + '/';
+// 智能生成 hreflang 链接
+const getHreflangHref = (locale: string) => {
+  // 对于当前页面，生成对应语言的版本
+  // 首先检查是否有特定的语言对应逻辑（通过 props 传入）
+  if (alternateUrls && alternateUrls[locale]) {
+    return alternateUrls[locale];
   }
-  const path = rawCanonical.startsWith('/') ? rawCanonical : '/' + rawCanonical;
-  const hasTrailing = path.endsWith('/') || path.includes('?') || path.includes('#');
-  return `${baseUrl}${hasTrailing ? path : path + '/'}`;
-})();
+  
+  // 否则使用标准路径格式
+  return `${baseUrl}/${locale}${pathSuffix}`;
+};
+
+const metaDescription = description || String(title || 'LimaxAI');
+
+// 简化 canonical URL 生成逻辑
+const getCanonicalUrl = () => {
+  // 优先使用传入的 canonical 参数
+  let urlToUse = canonical;
+  
+  // 如果没有传入 canonical，使用当前页面 URL
+  if (!urlToUse) {
+    urlToUse = Astro.url.href;
+  }
+  
+  try {
+    // 解析 URL
+    const urlObj = new URL(urlToUse, baseUrl);
+    
+    // 统一域名到 blog.limaxai.com
+    urlObj.hostname = 'blog.limaxai.com';
+    
+    // 确保协议是 https
+    urlObj.protocol = 'https:';
+    
+    // 根据 trailingSlash 配置处理尾部斜杠
+    if (!urlObj.pathname.endsWith('/') && !urlObj.search && !urlObj.hash) {
+      urlObj.pathname = urlObj.pathname + '/';
+    }
+    
+    return urlObj.href;
+  } catch {
+    // 如果 URL 解析失败，回退到简单的拼接
+    const path = String(canonical || Astro.url.pathname);
+    const normalizedPath = path.startsWith('/') ? path : '/' + path;
+    const needsTrailingSlash = !normalizedPath.endsWith('/') && !normalizedPath.includes('?') && !normalizedPath.includes('#');
+    return `${baseUrl}${normalizedPath}${needsTrailingSlash ? '/' : ''}`;
+  }
+};
+
+const canonicalUrl = getCanonicalUrl();
 const absoluteImage = image
   ? (String(image).startsWith('http') ? String(image) : `${baseUrl}${String(image).startsWith('/') ? '' : '/'}${String(image)}`)
   : `${baseUrl}/favicon.svg`;
@@ -55,10 +97,23 @@ const absoluteImage = image
 <html lang={currentLang}>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    
+    {/* SEO 验证标签 */}
     {baiduSiteVerification && <meta name="baidu-site-verification" content="codeva-NNhQvugjuQ" />}
+    <meta name="google-site-verification" content="your-google-verification-code" />
+    <meta name="msvalidate.01" content="your-bing-verification-code" />
+    <meta name="yandex-verification" content="your-yandex-verification-code" />
+    
+    {/* 内容语言和生成器 */}
     <meta http-equiv="content-language" content={contentLanguage} />
     <meta name="generator" content={Astro.generator} />
+    
+    {/* 性能优化 meta 标签 */}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#3b82f6" />
+    <meta name="color-scheme" content="light dark" />
 
     <title>{title}</title>
     <meta name="description" content={metaDescription} />
@@ -75,18 +130,61 @@ const absoluteImage = image
     <meta property="og:description" content={metaDescription} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={absoluteImage} />
+    <meta property="og:image:alt" content={title} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content={contentLanguage} />
 
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@LimaxAI" />
+    <meta name="twitter:creator" content="@LimaxAI" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={metaDescription} />
     <meta name="twitter:image" content={absoluteImage} />
+    <meta name="twitter:image:alt" content={title} />
 
     {/* 国际引擎：hreflang，x-default 指向英文 */}
     {LOCALES.map((locale) => {
-      const href = baseUrl + '/' + locale + pathSuffix;
-      return <link rel="alternate" hreflang={locale} href={href} />;
+      const href = getHreflangHref(locale);
+      // 标准化 hreflang 值（例如 zh-cn 需要保持原样，但需要确保格式正确）
+      const hreflangValue = locale.toLowerCase().replace('_', '-');
+      return <link rel="alternate" hreflang={hreflangValue} href={href} />;
     })}
-    <link rel="alternate" hreflang="x-default" href={baseUrl + '/en' + pathSuffix} />
+    <link rel="alternate" hreflang="x-default" href={getHreflangHref('en')} />
+
+    {/* ================= 结构化数据 (JSON-LD) 开始 ================= */}
+    {/* 网站级 Schema */}
+    <SchemaData 
+      type="WebSite" 
+      currentLang={currentLang}
+      data={{
+        "name": "LimaxAI Blog",
+        "url": baseUrl,
+        "description": "Professional AI generation platform blog with tutorials and news",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": `${baseUrl}/search?q={search_term_string}`,
+          "query-input": "required name=search_term_string"
+        }
+      }} 
+    />
+
+    {/* 组织级 Schema */}
+    <SchemaData 
+      type="Organization" 
+      currentLang={currentLang}
+      data={{
+        "name": "LimaxAI",
+        "url": "https://www.limaxai.com",
+        "logo": `${baseUrl}/logo.png`,
+        "sameAs": [
+          "https://twitter.com/LimaxAI",
+          "https://github.com/LimaxAI",
+          "https://www.linkedin.com/company/limaxai"
+        ]
+      }} 
+    />
+    {/* ================= 结构化数据 (JSON-LD) 结束 ================= */}
 
     {/* 百度统计（仅简中/繁中加载） */}
     {(currentLang === 'zh-cn' || currentLang === 'zh-tw') && (
@@ -129,6 +227,24 @@ const absoluteImage = image
 
     {/* 底部栏：传入当前语种以同步多语种文案 */}
     <Footer currentLang={currentLang} />
+
+    {/* 性能监控 */}
+    <PerformanceMonitor 
+      gaMeasurementId={GA_MEASUREMENT_ID}
+      trackCWV={true}
+      trackCLS={true}
+      trackFID={true}
+      trackLCP={true}
+      trackINP={true}
+      debug={false}
+    />
+
+    {/* SEO 检查清单 (开发环境) */}
+    <SeoChecklist 
+      showInProduction={false}
+      currentPage={Astro.url.pathname}
+      currentLang={currentLang}
+    />
 
   </body>
 </html>

@@ -1,0 +1,65 @@
+# robots.txt for LimaxAI Blog
+# Generated: 2026-04-24
+# Domain: https://blog.limaxai.com
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://blog.limaxai.com/sitemap-index.xml
+Sitemap: https://blog.limaxai.com/sitemap-zh-cn.xml
+
+# Crawl delay (optional, adjust based on server capacity)
+Crawl-delay: 2
+
+# Disallow admin and private directories
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+
+# Allow search engines to index all pages
+Allow: /*.html$
+Allow: /*.htm$
+Allow: /*.php$
+
+# Special handling for common bots
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Crawl-delay: 2
+
+User-agent: Baiduspider
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Crawl-delay: 3
+Sitemap: https://blog.limaxai.com/sitemap-zh-cn.xml
+
+User-agent: YandexBot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# Block AI crawlers that may misuse content (optional)
+User-agent: ChatGPT-User
+Disallow: /
+User-agent: GPTBot
+Disallow: /
+User-agent: CCBot
+Disallow: /
+User-agent: Claude-Web
+Disallow: /
+
+# Development and staging environments (if applicable)
+# Disallow: /staging/
+# Disallow: /dev/

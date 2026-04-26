@@ -1,0 +1,289 @@
+---
+// src/components/PerformanceMonitor.astro
+// 性能监控组件，用于跟踪 Core Web Vitals 和用户体验指标
+
+interface PerformanceMonitorProps {
+  gaMeasurementId?: string;
+  trackCWV?: boolean;
+  trackCLS?: boolean;
+  trackFID?: boolean;
+  trackLCP?: boolean;
+  trackINP?: boolean;
+  debug?: boolean;
+}
+
+const {
+  gaMeasurementId = 'G-58B3K5R6KY',
+  trackCWV = true,
+  trackCLS = true,
+  trackFID = true,
+  trackLCP = true,
+  trackINP = true,
+  debug = false,
+} = Astro.props;
+---
+
+<script is:inline>
+(function() {
+  'use strict';
+  
+  // 性能监控配置
+  const config = {
+    gaId: '${gaMeasurementId}',
+    trackCWV: ${trackCWV},
+    trackCLS: ${trackCLS},
+    trackFID: ${trackFID},
+    trackLCP: ${trackLCP},
+    trackINP: ${trackINP},
+    debug: ${debug}
+  };
+  
+  // 存储性能数据
+  const perfData = {
+    cls: { value: 0, entries: [] },
+    lcp: { value: 0, entry: null },
+    fid: { value: 0, entry: null },
+    inp: { value: 0, entry: null }
+  };
+  
+  // 发送数据到 Google Analytics
+  function sendToGA(metricName, metricValue, metricDelta, metricId) {
+    if (typeof gtag !== 'function') return;
+    
+    gtag('event', 'core_web_vitals', {
+      event_category: 'Web Vitals',
+      event_label: metricId,
+      value: Math.round(metricName === 'CLS' ? metricValue * 1000 : metricValue),
+      non_interaction: true,
+      [metricName.toLowerCase()]: metricValue,
+      delta: metricDelta
+    });
+    
+    if (config.debug) {
+      console.log(`[PerformanceMonitor] ${metricName}:`, {
+        value: metricValue,
+        delta: metricDelta,
+        id: metricId
+      });
+    }
+  }
+  
+  // 监控 CLS (Cumulative Layout Shift)
+  if (config.trackCLS && 'PerformanceObserver' in window) {
+    try {
+      const clsObserver = new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          if (!entry.hadRecentInput) {
+            perfData.cls.value += entry.value;
+            perfData.cls.entries.push(entry);
+          }
+        }
+      });
+      
+      clsObserver.observe({ type: 'layout-shift', buffered: true });
+      
+      // 页面卸载时报告 CLS
+      window.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden') {
+          sendToGA('CLS', perfData.cls.value, perfData.cls.value, 'final');
+        }
+      });
+    } catch (e) {
+      if (config.debug) console.error('[PerformanceMonitor] CLS error:', e);
+    }
+  }
+  
+  // 监控 LCP (Largest Contentful Paint)
+  if (config.trackLCP && 'PerformanceObserver' in window) {
+    try {
+      const lcpObserver = new PerformanceObserver((entryList) => {
+        const entries = entryList.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        perfData.lcp.value = lastEntry.startTime;
+        perfData.lcp.entry = lastEntry;
+        
+        sendToGA('LCP', lastEntry.startTime, lastEntry.startTime, lastEntry.id);
+      });
+      
+      lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
+    } catch (e) {
+      if (config.debug) console.error('[PerformanceMonitor] LCP error:', e);
+    }
+  }
+  
+  // 监控 FID (First Input Delay) 和 INP (Interaction to Next Paint)
+  if ((config.trackFID || config.trackINP) && 'PerformanceObserver' in window) {
+    try {
+      const interactionObserver = new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          if (entry.entryType === 'first-input') {
+            perfData.fid.value = entry.processingStart - entry.startTime;
+            perfData.fid.entry = entry;
+            sendToGA('FID', perfData.fid.value, perfData.fid.value, entry.name);
+          } else if (entry.entryType === 'event' && entry.interactionId) {
+            // INP 跟踪
+            perfData.inp.value = entry.duration;
+            perfData.inp.entry = entry;
+            sendToGA('INP', entry.duration, entry.duration, entry.name);
+          }
+        }
+      });
+      
+      interactionObserver.observe({
+        type: 'first-input',
+        buffered: true
+      });
+      
+      interactionObserver.observe({
+        type: 'event',
+        durationThreshold: 0,
+        buffered: true
+      });
+    } catch (e) {
+      if (config.debug) console.error('[PerformanceMonitor] Interaction tracking error:', e);
+    }
+  }
+  
+  // 页面加载时间跟踪
+  if ('PerformanceObserver' in window) {
+    try {
+      const navigationObserver = new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            const metrics = {
+              TTFB: entry.responseStart - entry.requestStart,
+              FCP: entry.domContentLoadedEventEnd - entry.startTime,
+              DOMComplete: entry.domComplete - entry.startTime,
+              Load: entry.loadEventEnd - entry.startTime
+            };
+            
+            if (config.debug) {
+              console.log('[PerformanceMonitor] Navigation timing:', metrics);
+            }
+            
+            // 发送到 GA
+            if (typeof gtag === 'function') {
+              Object.entries(metrics).forEach(([name, value]) => {
+                gtag('event', 'navigation_timing', {
+                  event_category: 'Performance',
+                  event_label: name,
+                  value: Math.round(value),
+                  non_interaction: true
+                });
+              });
+            }
+          }
+        }
+      });
+      
+      navigationObserver.observe({ type: 'navigation', buffered: true });
+    } catch (e) {
+      if (config.debug) console.error('[PerformanceMonitor] Navigation timing error:', e);
+    }
+  }
+  
+  // 资源加载监控
+  if (config.debug && 'PerformanceObserver' in window) {
+    try {
+      const resourceObserver = new PerformanceObserver((entryList) => {
+        const slowResources = [];
+        
+        for (const entry of entryList.getEntries()) {
+          if (entry.duration > 1000) { // 超过 1 秒的资源
+            slowResources.push({
+              name: entry.name,
+              duration: entry.duration.toFixed(2),
+              type: entry.initiatorType
+            });
+          }
+        }
+        
+        if (slowResources.length > 0) {
+          console.log('[PerformanceMonitor] Slow resources:', slowResources);
+        }
+      });
+      
+      resourceObserver.observe({ type: 'resource', buffered: true });
+    } catch (e) {
+      // 静默失败
+    }
+  }
+  
+  // 用户交互跟踪
+  document.addEventListener('DOMContentLoaded', () => {
+    // 跟踪链接点击
+    document.addEventListener('click', (e) => {
+      const target = e.target.closest('a');
+      if (target && target.href) {
+        const linkData = {
+          href: target.href,
+          text: target.textContent?.trim() || '',
+          isExternal: target.hostname !== window.location.hostname,
+          hasNoopener: target.rel.includes('noopener'),
+          hasNoreferrer: target.rel.includes('noreferrer')
+        };
+        
+        if (config.debug) {
+          console.log('[PerformanceMonitor] Link click:', linkData);
+        }
+        
+        // 发送到 GA
+        if (typeof gtag === 'function') {
+          gtag('event', 'link_click', {
+            event_category: 'User Interaction',
+            event_label: linkData.href,
+            link_text: linkData.text,
+            is_external: linkData.isExternal,
+            non_interaction: false
+          });
+        }
+      }
+    });
+    
+    // 跟踪表单交互
+    document.addEventListener('submit', (e) => {
+      if (e.target.tagName === 'FORM') {
+        const form = e.target;
+        const formData = {
+          id: form.id || 'unnamed',
+          action: form.action,
+          method: form.method,
+          fields: Array.from(form.elements).filter(el => 
+            el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.tagName === 'SELECT'
+          ).length
+        };
+        
+        if (config.debug) {
+          console.log('[PerformanceMonitor] Form submit:', formData);
+        }
+        
+        // 发送到 GA
+        if (typeof gtag === 'function') {
+          gtag('event', 'form_submit', {
+            event_category: 'User Interaction',
+            event_label: formData.action,
+            form_id: formData.id,
+            field_count: formData.fields,
+            non_interaction: false
+          });
+        }
+      }
+    });
+  });
+  
+  if (config.debug) {
+    console.log('[PerformanceMonitor] Initialized with config:', config);
+  }
+})();
+</script>
+
+{/* 隐藏的性能监控数据容器 */}
+<div id="performance-monitor-data" style="display: none;" 
+  data-ga-id="${gaMeasurementId}"
+  data-track-cwv="${trackCWV}"
+  data-debug="${debug}"
+  data-timestamp="${new Date().toISOString()}"
+  data-page-url="${Astro.url.href}"
+  data-page-lang="${Astro.props.currentLang || 'en'}"
+  data-user-agent="navigator.userAgent">
+</div>

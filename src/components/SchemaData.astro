@@ -1,0 +1,32 @@
+---
+// src/components/SchemaData.astro
+// 结构化数据 (JSON-LD) 组件
+
+interface SchemaProps {
+  type: 'WebSite' | 'Article' | 'BreadcrumbList' | 'Organization';
+  data: any;
+  currentLang?: string;
+}
+
+const { type, data, currentLang = 'en' } = Astro.props;
+
+// 根据类型生成不同的 Schema
+const getSchema = () => {
+  const baseSchema = {
+    "@context": "https://schema.org",
+    "@type": type,
+    ...data
+  };
+
+  // 为多语言内容添加语言信息
+  if (currentLang && type !== 'BreadcrumbList') {
+    baseSchema.inLanguage = currentLang;
+  }
+
+  return baseSchema;
+};
+
+const schema = getSchema();
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema, null, 2)}></script>

@@ -68,7 +68,7 @@ const linkLabels: Record<keyof typeof t.links, string> = t.links;
       {/* 左侧：品牌区 - Logo、标题、简介 */}
       <div class="lg:max-w-sm flex-shrink-0">
         <a href={`/${currentLang}/`} class="inline-flex items-center gap-2 mb-3">
-          <img src="https://img.limaxai.com/aiweb/limaxai.png" alt="" class="h-8 w-8 object-contain" width="32" height="32" />
+          <img src="https://img.limaxai.com/aiweb/limaxai.png" alt="LimaxAI Logo" class="h-8 w-8 object-contain" width="32" height="32" loading="lazy" decoding="async" />
           <span class="text-xl font-bold text-gray-900">{t.brand.title}</span>
         </a>
         <p class="text-gray-500 text-sm leading-relaxed">

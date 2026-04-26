@@ -1,0 +1,375 @@
+---
+// src/components/SeoChecklist.astro
+// SEO 优化检查清单组件，用于开发阶段验证
+
+interface SeoChecklistProps {
+  showInProduction?: boolean;
+  currentPage?: string;
+  currentLang?: string;
+}
+
+const {
+  showInProduction = false,
+  currentPage = typeof window !== 'undefined' ? window.location.pathname : '',
+  currentLang = 'en',
+} = Astro.props;
+
+// 只在开发环境或明确允许时显示
+const showChecklist = import.meta.env.DEV || showInProduction;
+---
+
+{showChecklist && (
+  <div id="seo-checklist" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    border: 2px solid #3b82f6;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 9999;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 12px;
+    display: none;
+  ">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+      <h3 style="margin: 0; font-size: 14px; font-weight: bold; color: #1e40af;">SEO 检查清单</h3>
+      <button onclick="document.getElementById('seo-checklist').style.display='none'" style="
+        background: none;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        color: #666;
+      ">×</button>
+    </div>
+    
+    <div style="margin-bottom: 12px;">
+      <div style="font-size: 11px; color: #666; margin-bottom: 4px;">页面: {currentPage}</div>
+      <div style="font-size: 11px; color: #666;">语言: {currentLang}</div>
+    </div>
+    
+    <div id="seo-checklist-items" style="font-size: 12px;">
+      {/* 检查项将通过 JavaScript 动态生成 */}
+    </div>
+    
+    <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #e5e7eb;">
+      <div style="display: flex; justify-content: space-between; font-size: 11px;">
+        <span id="seo-score" style="font-weight: bold;">评分: 计算中...</span>
+        <span id="seo-issues" style="color: #dc2626;">问题: 0</span>
+      </div>
+    </div>
+  </div>
+)}
+
+<script is:inline>
+(function() {
+  'use strict';
+  
+  // 等待 DOM 加载完成
+  document.addEventListener('DOMContentLoaded', function() {
+    const checklist = document.getElementById('seo-checklist');
+    if (!checklist) return;
+    
+    const checklistItems = document.getElementById('seo-checklist-items');
+    const scoreElement = document.getElementById('seo-score');
+    const issuesElement = document.getElementById('seo-issues');
+    
+    let totalScore = 0;
+    let maxScore = 0;
+    let issueCount = 0;
+    
+    // SEO 检查项定义
+    const checks = [
+      {
+        id: 'title',
+        name: '页面标题',
+        check: function() {
+          const title = document.title;
+          const hasTitle = title && title.trim().length > 0;
+          const length = title ? title.length : 0;
+          const isValidLength = length >= 10 && length <= 60;
+          
+          return {
+            passed: hasTitle && isValidLength,
+            score: hasTitle ? (isValidLength ? 10 : 5) : 0,
+            maxScore: 10,
+            message: hasTitle 
+              ? (isValidLength 
+                ? `✅ 标题: "${title.substring(0, 30)}..." (${length} 字符)`
+                : `⚠️ 标题长度${length}字符，建议10-60字符`
+              ) : '❌ 缺少页面标题'
+          };
+        }
+      },
+      {
+        id: 'description',
+        name: '页面描述',
+        check: function() {
+          const metaDesc = document.querySelector('meta[name="description"]');
+          const content = metaDesc ? metaDesc.getAttribute('content') : '';
+          const hasDesc = content && content.trim().length > 0;
+          const length = content ? content.length : 0;
+          const isValidLength = length >= 50 && length <= 160;
+          
+          return {
+            passed: hasDesc && isValidLength,
+            score: hasDesc ? (isValidLength ? 10 : 5) : 0,
+            maxScore: 10,
+            message: hasDesc
+              ? (isValidLength
+                ? `✅ 描述: "${content.substring(0, 40)}..." (${length} 字符)`
+                : `⚠️ 描述长度${length}字符，建议50-160字符`
+              ) : '❌ 缺少页面描述'
+          };
+        }
+      },
+      {
+        id: 'canonical',
+        name: 'Canonical 链接',
+        check: function() {
+          const canonical = document.querySelector('link[rel="canonical"]');
+          const hasCanonical = !!canonical;
+          const href = canonical ? canonical.getAttribute('href') : '';
+          const isAbsolute = href && href.startsWith('http');
+          
+          return {
+            passed: hasCanonical && isAbsolute,
+            score: hasCanonical ? (isAbsolute ? 10 : 5) : 0,
+            maxScore: 10,
+            message: hasCanonical
+              ? (isAbsolute
+                ? `✅ Canonical: ${href.substring(0, 40)}...`
+                : `⚠️ Canonical 应该是绝对URL`
+              ) : '❌ 缺少 Canonical 链接'
+          };
+        }
+      },
+      {
+        id: 'h1',
+        name: 'H1 标签',
+        check: function() {
+          const h1s = document.querySelectorAll('h1');
+          const count = h1s.length;
+          const hasOneH1 = count === 1;
+          const hasH1 = count > 0;
+          
+          return {
+            passed: hasOneH1,
+            score: hasH1 ? (hasOneH1 ? 10 : 5) : 0,
+            maxScore: 10,
+            message: hasH1
+              ? (hasOneH1
+                ? `✅ 有 1 个 H1 标签`
+                : `⚠️ 有 ${count} 个 H1 标签，建议只有 1 个`
+              ) : '❌ 缺少 H1 标签'
+          };
+        }
+      },
+      {
+        id: 'images',
+        name: '图片 Alt 属性',
+        check: function() {
+          const images = document.querySelectorAll('img');
+          let missingAlt = 0;
+          let decorativeAlt = 0;
+          let validAlt = 0;
+          
+          images.forEach(img => {
+            const alt = img.getAttribute('alt');
+            if (alt === null || alt === undefined) {
+              missingAlt++;
+            } else if (alt === '' || alt === ' ') {
+              decorativeAlt++;
+            } else {
+              validAlt++;
+            }
+          });
+          
+          const total = images.length;
+          const allHaveAlt = missingAlt === 0;
+          
+          return {
+            passed: allHaveAlt,
+            score: total > 0 ? (allHaveAlt ? 10 : 5) : 10,
+            maxScore: 10,
+            message: total > 0
+              ? (allHaveAlt
+                ? `✅ 所有图片都有 alt 属性 (${validAlt} 有效, ${decorativeAlt} 装饰性)`
+                : `⚠️ ${missingAlt}/${total} 张图片缺少 alt 属性`
+              ) : '✅ 无图片需要检查'
+          };
+        }
+      },
+      {
+        id: 'structured-data',
+        name: '结构化数据',
+        check: function() {
+          const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+          const hasSchema = scripts.length > 0;
+          let schemaTypes = [];
+          
+          scripts.forEach(script => {
+            try {
+              const data = JSON.parse(script.textContent || '{}');
+              if (data['@type']) {
+                schemaTypes.push(data['@type']);
+              }
+            } catch (e) {
+              // 解析失败
+            }
+          });
+          
+          return {
+            passed: hasSchema,
+            score: hasSchema ? 10 : 0,
+            maxScore: 10,
+            message: hasSchema
+              ? `✅ 找到结构化数据: ${schemaTypes.join(', ')}`
+              : '❌ 缺少结构化数据'
+          };
+        }
+      },
+      {
+        id: 'opengraph',
+        name: 'Open Graph 标签',
+        check: function() {
+          const requiredTags = ['og:title', 'og:description', 'og:image', 'og:url'];
+          let missingTags = [];
+          
+          requiredTags.forEach(tag => {
+            const meta = document.querySelector(`meta[property="${tag}"]`);
+            if (!meta || !meta.getAttribute('content')) {
+              missingTags.push(tag);
+            }
+          });
+          
+          const hasAllTags = missingTags.length === 0;
+          
+          return {
+            passed: hasAllTags,
+            score: hasAllTags ? 10 : 5,
+            maxScore: 10,
+            message: hasAllTags
+              ? '✅ 所有必需的 Open Graph 标签都存在'
+              : `⚠️ 缺少 Open Graph 标签: ${missingTags.join(', ')}`
+          };
+        }
+      },
+      {
+        id: 'hreflang',
+        name: '多语言链接',
+        check: function() {
+          const hreflangs = document.querySelectorAll('link[rel="alternate"][hreflang]');
+          const hasHreflang = hreflangs.length > 0;
+          const hasXDefault = document.querySelector('link[rel="alternate"][hreflang="x-default"]');
+          
+          return {
+            passed: hasHreflang && hasXDefault,
+            score: hasHreflang ? (hasXDefault ? 10 : 5) : 0,
+            maxScore: 10,
+            message: hasHreflang
+              ? (hasXDefault
+                ? `✅ 有 ${hreflangs.length} 个 hreflang 链接和 x-default`
+                : `⚠️ 有 ${hreflangs.length} 个 hreflang 链接，但缺少 x-default`
+              ) : '❌ 缺少 hreflang 链接'
+          };
+        }
+      },
+      {
+        id: 'performance',
+        name: '性能优化',
+        check: function() {
+          const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+          const externalLinks = document.querySelectorAll('a[href^="http"]');
+          let secureExternalLinks = 0;
+          
+          externalLinks.forEach(link => {
+            if (link.rel.includes('noopener') && link.rel.includes('noreferrer')) {
+              secureExternalLinks++;
+            }
+          });
+          
+          const hasLazyImages = lazyImages.length > 0;
+          const allExternalSecure = externalLinks.length === 0 || secureExternalLinks === externalLinks.length;
+          
+          return {
+            passed: hasLazyImages && allExternalSecure,
+            score: (hasLazyImages ? 5 : 0) + (allExternalSecure ? 5 : 0),
+            maxScore: 10,
+            message: `${
+              hasLazyImages ? '✅' : '⚠️'
+            } 懒加载图片: ${lazyImages.length} | ${
+              allExternalSecure ? '✅' : '⚠️'
+            } 外部链接安全: ${secureExternalLinks}/${externalLinks.length}`
+          };
+        }
+      }
+    ];
+    
+    // 执行检查
+    checks.forEach(check => {
+      try {
+        const result = check.check();
+        totalScore += result.score;
+        maxScore += result.maxScore;
+        if (!result.passed) issueCount++;
+        
+        const item = document.createElement('div');
+        item.style.cssText = `
+          padding: 6px 0;
+          border-bottom: 1px solid #f3f4f6;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+        `;
+        
+        const text = document.createElement('div');
+        text.style.cssText = 'flex: 1; margin-right: 8px; line-height: 1.4;';
+        text.innerHTML = `<div style="font-weight: 500; margin-bottom: 2px;">${check.name}</div>
+                         <div style="font-size: 11px; color: ${result.passed ? '#059669' : result.score > 0 ? '#d97706' : '#dc2626'};">${result.message}</div>`;
+        
+        const score = document.createElement('div');
+        score.style.cssText = 'font-weight: bold; font-size: 11px; white-space: nowrap;';
+        score.textContent = `${result.score}/${result.maxScore}`;
+        
+        item.appendChild(text);
+        item.appendChild(score);
+        checklistItems.appendChild(item);
+      } catch (e) {
+        console.error(`SEO check failed for ${check.name}:`, e);
+      }
+    });
+    
+    // 更新评分和问题计数
+    const percentage = maxScore > 0 ? Math.round((totalScore / maxScore) * 100) : 100;
+    scoreElement.textContent = `评分: ${percentage}% (${totalScore}/${maxScore})`;
+    issuesElement.textContent = `问题: ${issueCount}`;
+    issuesElement.style.color = issueCount === 0 ? '#059669' : '#dc2626';
+    
+    // 显示检查清单
+    checklist.style.display = 'block';
+    
+    // 添加键盘快捷键 (Ctrl+Shift+S)
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && e.shiftKey && e.key === 'S') {
+        e.preventDefault();
+        checklist.style.display = checklist.style.display === 'none' ? 'block' : 'none';
+      }
+    });
+  });
+})();
+</script>
+
+<style>
+@media (max-width: 768px) {
+  #seo-checklist {
+    max-width: calc(100vw - 40px) !important;
+    right: 10px !important;
+    left: 10px !important;
+  }
+}
+</style>

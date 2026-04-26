@@ -227,7 +227,7 @@ const ms: ContentCopy = withEnContentFallback({
   hero: { title: 'Platform penjanaan AI profesional', subtitle: 'Cipta video dan imej dengan model canggih.', description: 'Satu platform untuk Midjourney, Sora, Keling, Nano Banana dan lain-lain. Mula dalam beberapa minit.' },
   features: { sectionTitle: 'Ciri', items: [{ name: 'Imej AI', description: 'Hasilkan imej berkualiti tinggi dengan model terkemuka.' }, { name: 'Video AI', description: 'Cipta kandungan video dengan alat terkini.' }] },
   testimonials: { sectionTitle: 'Apa kata pengguna', items: [{ quote: 'LimaxAI menghimpunkan semua alat AI kegemaran saya di satu tempat.', author: 'Pencipta', role: 'Pereka' }] },
-  pricing: { sectionTitle: 'Harga', plans: [{ name: 'Pro', description: 'Untuk profesional', price: 'Dari X $/bulan', features: ['Semua alat AI', 'Sokongan keutamaan'] }] },
+  pricing: { sectionTitle: 'Harga', plans: [{ name: 'Pro', description: 'Untuk profesional', price: 'Dari X RM/bulan', features: ['Semua alat AI', 'Sokongan keutamaan'] }] },
   faq: { sectionTitle: 'Soalan Lazim', items: [{ question: 'Apa itu LimaxAI?', answer: 'Platform penjanaan AI profesional untuk imej dan video.' }, { question: 'Bagaimana untuk bermula?', answer: 'Daftar dan pilih pelan untuk mula mencipta.' }] },
   cta: { title: 'Sedia untuk mencipta?', description: 'Sertai ribuan pencipta yang menggunakan LimaxAI.', buttonText: 'Mula mencipta sekarang' },
 });
@@ -236,6 +236,9 @@ const fr: ContentCopy = withEnContentFallback({
   blog: { title: 'Blog', subtitle: 'Découvrez les tutoriels d\'art IA, les meilleurs prompts et l\'inspiration créative.', noPosts: 'Aucun article', checkBackLater: 'Revenez plus tard pour des mises à jour dans cette langue.' },
   hero: { title: 'Plateforme professionnelle de génération IA', subtitle: 'Créez des vidéos et images avec des modèles de pointe.', description: 'Une plateforme pour Midjourney, Sora, Keling, Nano Banana et plus. Commencez en quelques minutes.' },
   features: { sectionTitle: 'Fonctionnalités', items: [{ name: 'Image IA', description: 'Générez des images de qualité avec les meilleurs modèles.' }, { name: 'Vidéo IA', description: 'Créez des vidéos avec des outils performants.' }] },
+  testimonials: { sectionTitle: 'Ce que disent les utilisateurs', items: [{ quote: 'LimaxAI rassemble tous mes outils IA préférés en un seul endroit.', author: 'Créateur', role: 'Designer' }] },
+  pricing: { sectionTitle: 'Tarifs', plans: [{ name: 'Pro', description: 'Pour les professionnels', price: 'À partir de X €/mois', features: ['Tous les outils IA', 'Support prioritaire'] }] },
+  faq: { sectionTitle: 'Questions fréquentes', items: [{ question: 'Qu\'est-ce que LimaxAI ?', answer: 'Une plateforme professionnelle de génération IA pour images et vidéos.' }, { question: 'Comment commencer ?', answer: 'Inscrivez-vous et choisissez un plan pour commencer à créer.' }] },
   cta: { title: 'Prêt à créer ?', description: 'Rejoignez des milliers de créateurs qui utilisent LimaxAI.', buttonText: 'Commencer à créer' },
 });
 
@@ -243,6 +246,9 @@ const ru: ContentCopy = withEnContentFallback({
   blog: { title: 'Блог', subtitle: 'Обучающие материалы по ИИ-арту, лучшие промпты и идеи для творчества.', noPosts: 'Записей не найдено', checkBackLater: 'Загляните позже для обновлений на этом языке.' },
   hero: { title: 'Профессиональная платформа генерации ИИ', subtitle: 'Создавайте видео и изображения с передовыми моделями.', description: 'Одна платформа для Midjourney, Sora, Keling, Nano Banana и других. Начните за минуты.' },
   features: { sectionTitle: 'Возможности', items: [{ name: 'ИИ-изображения', description: 'Генерируйте качественные изображения с ведущими моделями.' }, { name: 'ИИ-видео', description: 'Создавайте видео с современными инструментами.' }] },
+  testimonials: { sectionTitle: 'Что говорят пользователи', items: [{ quote: 'LimaxAI объединяет все мои любимые ИИ-инструменты в одном месте.', author: 'Автор', role: 'Дизайнер' }] },
+  pricing: { sectionTitle: 'Цены', plans: [{ name: 'Pro', description: 'Для профессионалов', price: 'От X $/месяц', features: ['Все ИИ-инструменты', 'Приоритетная поддержка'] }] },
+  faq: { sectionTitle: 'Частые вопросы', items: [{ question: 'Что такое LimaxAI?', answer: 'Профессиональная платформа генерации ИИ для изображений и видео.' }, { question: 'Как начать?', answer: 'Зарегистрируйтесь и выберите план, чтобы начать создавать.' }] },
   cta: { title: 'Готовы создавать?', description: 'Присоединяйтесь к тысячам авторов на LimaxAI.', buttonText: 'Начать создавать' },
 });
 
@@ -250,6 +256,9 @@ const hi: ContentCopy = withEnContentFallback({
   blog: { title: 'ब्लॉग', subtitle: 'AI कला ट्यूटोरियल, बेहतरीन प्रॉम्प्ट और रचनात्मक प्रेरणा खोजें।', noPosts: 'कोई पोस्ट नहीं मिला', checkBackLater: 'इस भाषा में अपडेट के लिए बाद में देखें।' },
   hero: { title: 'पेशेवर AI जनरेशन प्लेटफॉर्म', subtitle: 'अत्याधुनिक मॉडल के साथ शानदार वीडियो और इमेज बनाएं।', description: 'Midjourney, Sora, Keling, Nano Banana और अधिक के लिए एक प्लेटफॉर्म। मिनटों में शुरू करें।' },
   features: { sectionTitle: 'विशेषताएं', items: [{ name: 'AI इमेज', description: 'अग्रणी मॉडल के साथ उच्च गुणवत्ता की छवियां बनाएं।' }, { name: 'AI वीडियो', description: 'अत्याधुनिक टूल से वीडियो कंटेंट बनाएं।' }] },
+  testimonials: { sectionTitle: 'उपयोगकर्ताओं की राय', items: [{ quote: 'LimaxAI ने मेरे सभी पसंदीदा AI टूल्स को एक जगह ला दिया।', author: 'निर्माता', role: 'डिज़ाइनर' }] },
+  pricing: { sectionTitle: 'मूल्य निर्धारण', plans: [{ name: 'Pro', description: 'पेशेवरों के लिए', price: 'X ₹/माह से', features: ['सभी AI टूल्स', 'प्राथमिकता सहायता'] }] },
+  faq: { sectionTitle: 'सामान्य प्रश्न', items: [{ question: 'LimaxAI क्या है?', answer: 'छवियों और वीडियो के लिए एक पेशेवर AI जनरेशन प्लेटफॉर्म।' }, { question: 'कैसे शुरू करें?', answer: 'साइन अप करें और बनाना शुरू करने के लिए एक प्लान चुनें।' }] },
   cta: { title: 'बनाने के लिए तैयार?', description: 'हजारों क्रिएटर्स के साथ LimaxAI इस्तेमाल करें।', buttonText: 'अभी बनाना शुरू करें' },
 });
 
@@ -267,6 +276,9 @@ const de: ContentCopy = withEnContentFallback({
   blog: { title: 'Blog', subtitle: 'Tutorials für KI-Kunst, beste Prompts und kreative Inspiration.', noPosts: 'Keine Beiträge gefunden', checkBackLater: 'Schauen Sie später für Updates in dieser Sprache vorbei.' },
   hero: { title: 'Professionelle KI-Generierungsplattform', subtitle: 'Erstellen Sie Videos und Bilder mit modernsten Modellen.', description: 'Eine Plattform für Midjourney, Sora, Keling, Nano Banana und mehr. In Minuten starten.' },
   features: { sectionTitle: 'Funktionen', items: [{ name: 'KI-Bilder', description: 'Erzeugen Sie hochwertige Bilder mit führenden Modellen.' }, { name: 'KI-Video', description: 'Erstellen Sie Videoinhalte mit modernsten Tools.' }] },
+  testimonials: { sectionTitle: 'Was Nutzer sagen', items: [{ quote: 'LimaxAI vereint alle meine Lieblings-KI-Tools an einem Ort.', author: 'Ersteller', role: 'Designer' }] },
+  pricing: { sectionTitle: 'Preise', plans: [{ name: 'Pro', description: 'Für Profis', price: 'Ab X €/Monat', features: ['Alle KI-Tools', 'Prioritätssupport'] }] },
+  faq: { sectionTitle: 'Häufige Fragen', items: [{ question: 'Was ist LimaxAI?', answer: 'Eine professionelle KI-Generierungsplattform für Bilder und Videos.' }, { question: 'Wie starte ich?', answer: 'Melden Sie sich an und wählen Sie einen Plan, um loszulegen.' }] },
   cta: { title: 'Bereit zum Erstellen?', description: 'Tausende Kreative nutzen LimaxAI.', buttonText: 'Jetzt erstellen' },
 });
 
@@ -274,6 +286,9 @@ const ko: ContentCopy = withEnContentFallback({
   blog: { title: '블로그', subtitle: 'AI 아트 튜토리얼, 추천 프롬프트, 창작 영감을 만나보세요.', noPosts: '게시물이 없습니다', checkBackLater: '이 언어의 업데이트는 나중에 확인해 주세요.' },
   hero: { title: '전문 AI 생성 플랫폼', subtitle: '최신 모델로 동영상과 이미지를 제작하세요.', description: 'Midjourney, Sora, Keling, Nano Banana 등을 한 곳에서. 몇 분 만에 시작할 수 있습니다.' },
   features: { sectionTitle: '기능', items: [{ name: 'AI 이미지', description: '선도적인 모델로 고품질 이미지를 생성하세요.' }, { name: 'AI 비디오', description: '최신 도구로 동영상 콘텐츠를 만드세요.' }] },
+  testimonials: { sectionTitle: '사용자 후기', items: [{ quote: 'LimaxAI가 내가 좋아하는 AI 도구를 한 곳에 모았어요.', author: '크리에이터', role: '디자이너' }] },
+  pricing: { sectionTitle: '가격', plans: [{ name: 'Pro', description: '전문가를 위한 플랜', price: '월 X원~', features: ['모든 AI 도구', '우선 지원'] }] },
+  faq: { sectionTitle: '자주 묻는 질문', items: [{ question: 'LimaxAI란?', answer: '이미지와 영상을 위한 전문 AI 생성 플랫폼입니다.' }, { question: '어떻게 시작하나요?', answer: '가입하고 플랜을 선택하면 바로 시작할 수 있습니다.' }] },
   cta: { title: '창작을 시작할 준비가 되셨나요?', description: '수많은 크리에이터가 LimaxAI를 사용합니다.', buttonText: '지금 창작 시작하기' },
 });
 
@@ -281,6 +296,9 @@ const tr: ContentCopy = withEnContentFallback({
   blog: { title: 'Blog', subtitle: 'AI sanat eğitimleri, en iyi promptlar ve yaratıcı ilham keşfedin.', noPosts: 'Gönderi bulunamadı', checkBackLater: 'Bu dilde güncellemeler için daha sonra tekrar bakın.' },
   hero: { title: 'Profesyonel AI üretim platformu', subtitle: 'Son teknoloji modellerle video ve görsel oluşturun.', description: 'Midjourney, Sora, Keling, Nano Banana ve daha fazlası için tek platform. Dakikalar içinde başlayın.' },
   features: { sectionTitle: 'Özellikler', items: [{ name: 'AI Görsel', description: 'Lider modellerle yüksek kaliteli görseller üretin.' }, { name: 'AI Video', description: 'Son teknoloji araçlarla video içeriği oluşturun.' }] },
+  testimonials: { sectionTitle: 'Kullanıcı yorumları', items: [{ quote: 'LimaxAI, en sevdiğim AI araçlarını tek bir yerde bir araya getirdi.', author: 'İçerik Üreticisi', role: 'Tasarımcı' }] },
+  pricing: { sectionTitle: 'Fiyatlandırma', plans: [{ name: 'Pro', description: 'Profesyoneller için', price: 'X ₺/aydan başlayan', features: ['Tüm AI araçları', 'Öncelikli destek'] }] },
+  faq: { sectionTitle: 'Sıkça Sorulan Sorular', items: [{ question: 'LimaxAI nedir?', answer: 'Görsel ve video için profesyonel bir AI üretim platformudur.' }, { question: 'Nasıl başlarım?', answer: 'Kaydolun ve oluşturmaya başlamak için bir plan seçin.' }] },
   cta: { title: 'Oluşturmaya hazır mısınız?', description: 'Binlerce içerik üreticisi LimaxAI kullanıyor.', buttonText: 'Şimdi oluşturmaya başla' },
 });
 
@@ -288,63 +306,81 @@ const vi: ContentCopy = withEnContentFallback({
   blog: { title: 'Blog', subtitle: 'Khám phá hướng dẫn nghệ thuật AI, prompt hay và cảm hứng sáng tạo.', noPosts: 'Chưa có bài viết', checkBackLater: 'Quay lại sau để xem cập nhật bằng ngôn ngữ này.' },
   hero: { title: 'Nền tảng tạo nội dung AI chuyên nghiệp', subtitle: 'Tạo video và hình ảnh với các mô hình tiên tiến.', description: 'Một nền tảng cho Midjourney, Sora, Keling, Nano Banana và hơn thế. Bắt đầu trong vài phút.' },
   features: { sectionTitle: 'Tính năng', items: [{ name: 'Ảnh AI', description: 'Tạo ảnh chất lượng cao với các mô hình hàng đầu.' }, { name: 'Video AI', description: 'Tạo nội dung video bằng công cụ hiện đại.' }] },
-  cta: { title: 'Sẵn sàng tạo?', description: 'Hàng nghìn người sáng tạo đang dùng LimaxAI.', buttonText: 'Bắt đầu tạo ngay' },
+  testimonials: { sectionTitle: 'Ngườidùng nói gì', items: [{ quote: 'LimaxAI tập hợp tất cả công cụ AI yêu thích của tôi ở một nơi.', author: 'Ngườisáng tạo', role: 'Nhà thiết kế' }] },
+  pricing: { sectionTitle: 'Giá', plans: [{ name: 'Pro', description: 'Dành cho chuyên nghiệp', price: 'Từ X ₫/tháng', features: ['Tất cả công cụ AI', 'Hỗ trợ ưu tiên'] }] },
+  faq: { sectionTitle: 'Câu hỏi thường gặp', items: [{ question: 'LimaxAI là gì?', answer: 'Nền tảng tạo nội dung AI chuyên nghiệp cho hình ảnh và video.' }, { question: 'Bắt đầu như thế nào?', answer: 'Đăng ký và chọn gói để bắt đầu tạo nội dung.' }] },  cta: { title: 'Sẵn sàng tạo?', description: 'Hàng nghìn người sáng tạo đang dùng LimaxAI.', buttonText: 'Bắt đầu tạo ngay' },
 });
 
 const th: ContentCopy = withEnContentFallback({
   blog: { title: 'บล็อก', subtitle: 'ค้นพบบทช่วยสอนศิลปะ AI พรอมป์ที่ดีที่สุด และแรงบันดาลใจในการสร้างสรรค์.', noPosts: 'ไม่พบโพสต์', checkBackLater: 'ตรวจสอบอีกครั้งในภายหลังสำหรับการอัปเดตในภาษานี้.' },
   hero: { title: 'แพลตฟอร์มสร้างสรรค์ AI ระดับมืออาชีพ', subtitle: 'สร้างวิดีโอและภาพด้วยโมเดลล้ำสมัย.', description: 'หนึ่งแพลตฟอร์มสำหรับ Midjourney, Sora, Keling, Nano Banana และอื่นๆ เริ่มในไม่กี่นาที.' },
   features: { sectionTitle: 'ฟีเจอร์', items: [{ name: 'ภาพ AI', description: 'สร้างภาพคุณภาพสูงด้วยโมเดลชั้นนำ.' }, { name: 'วิดีโอ AI', description: 'สร้างเนื้อหาวิดีโอด้วยเครื่องมือล่าสุด.' }] },
-  cta: { title: 'พร้อมสร้างสรรค์หรือยัง?', description: 'ร่วมกับผู้สร้างหลายพันคนที่ใช้ LimaxAI.', buttonText: 'เริ่มสร้างเลย' },
+  testimonials: { sectionTitle: 'เสียงจากผู้ใช้', items: [{ quote: 'LimaxAI รวมเครื่องมือ AI ที่ฉันชื่นชอบไว้ในที่เดียว', author: 'ครีเอเตอร์', role: 'นักออกแบบ' }] },
+  pricing: { sectionTitle: 'ราคา', plans: [{ name: 'Pro', description: 'สำหรับมืออาชีพ', price: 'X บาท/เดือน ขึ้นไป', features: ['เครื่องมือ AI ทั้งหมด', 'การสนับสนุนแบบเร่งด่วน'] }] },
+  faq: { sectionTitle: 'คำถามที่พบบ่อย', items: [{ question: 'LimaxAI คืออะไร?', answer: 'แพลตฟอร์มสร้างสรรค์ AI ระดับมืออาชีพสำหรับภาพและวิดีโอ' }, { question: 'เริ่มต้นอย่างไร?', answer: 'ลงทะเบียนและเลือกแผนเพื่อเริ่มสร้างสรรค์' }] },  cta: { title: 'พร้อมสร้างสรรค์หรือยัง?', description: 'ร่วมกับผู้สร้างหลายพันคนที่ใช้ LimaxAI.', buttonText: 'เริ่มสร้างเลย' },
 });
 
 const it: ContentCopy = withEnContentFallback({
   blog: { title: 'Blog', subtitle: 'Scopri tutorial di arte AI, i migliori prompt e ispirazione creativa.', noPosts: 'Nessun articolo', checkBackLater: 'Torna più tardi per aggiornamenti in questa lingua.' },
   hero: { title: 'Piattaforma professionale di generazione AI', subtitle: 'Crea video e immagini con modelli all\'avanguardia.', description: 'Una piattaforma per Midjourney, Sora, Keling, Nano Banana e altro. Inizia in pochi minuti.' },
   features: { sectionTitle: 'Funzionalità', items: [{ name: 'Immagine AI', description: 'Genera immagini di alta qualità con modelli leader.' }, { name: 'Video AI', description: 'Crea contenuti video con strumenti all\'avanguardia.' }] },
-  cta: { title: 'Pronto a creare?', description: 'Unisciti a migliaia di creatori che usano LimaxAI.', buttonText: 'Inizia a creare ora' },
+  testimonials: { sectionTitle: "Cosa dicono gli utenti", items: [{ quote: "LimaxAI riunisce tutti i miei strumenti AI preferiti in un unico posto.", author: 'Creatore', role: 'Designer' }] },
+  pricing: { sectionTitle: 'Prezzi', plans: [{ name: 'Pro', description: 'Per professionisti', price: "Da X €/mese", features: ['Tutti gli strumenti AI', 'Supporto prioritario'] }] },
+  faq: { sectionTitle: 'Domande frequenti', items: [{ question: "Cos'è LimaxAI?", answer: "Una piattaforma professionale di generazione AI per immagini e video." }, { question: 'Come iniziare?', answer: 'Registrati e scegli un piano per iniziare a creare.' }] },  cta: { title: 'Pronto a creare?', description: 'Unisciti a migliaia di creatori che usano LimaxAI.', buttonText: 'Inizia a creare ora' },
 });
 
 const fa: ContentCopy = withEnContentFallback({
   blog: { title: 'وبلاگ', subtitle: 'آموزش هنر هوش مصنوعی، بهترین پرامپت‌ها و الهام خلاق را کشف کنید.', noPosts: 'پستی یافت نشد', checkBackLater: 'بعداً برای به‌روزرسانی به این زبان مراجعه کنید.' },
   hero: { title: 'پلتفرم حرفه‌ای تولید با هوش مصنوعی', subtitle: 'با مدل‌های پیشرفته ویدیو و تصویر بسازید.', description: 'یک پلتفرم برای Midjourney، Sora، Keling، Nano Banana و بیشتر. در چند دقیقه شروع کنید.' },
   features: { sectionTitle: 'امکانات', items: [{ name: 'تصویر AI', description: 'با مدل‌های پیشرو تصاویر با کیفیت تولید کنید.' }, { name: 'ویدیو AI', description: 'با ابزارهای پیشرفته محتوای ویدیویی بسازید.' }] },
-  cta: { title: 'آماده ساخت؟', description: 'به هزاران سازنده LimaxAI بپیوندید.', buttonText: 'همین حالا شروع کنید' },
+  testimonials: { sectionTitle: 'نظرات کاربران', items: [{ quote: 'LimaxAI همه ابزارهای هوش مصنوعی مورد علاقه‌ام را در یکجا جمع کرده است.', author: 'سازنده', role: 'طراح' }] },
+  pricing: { sectionTitle: 'قیمت‌گذاری', plans: [{ name: 'Pro', description: 'برای حرفه‌ای‌ها', price: 'از X تومان/ماه', features: ['همه ابزارهای هوش مصنوعی', 'پشتیبانی اولویت‌دار'] }] },
+  faq: { sectionTitle: 'سوالات متداول', items: [{ question: 'LimaxAI چیست؟', answer: 'یک پلتفرم حرفه‌ای تولید با هوش مصنوعی برای تصویر و ویدیو.' }, { question: 'چگونه شروع کنم؟', answer: 'ثبت‌نام کنید و یک طرح انتخاب کنید تا شروع به ساخت کنید.' }] },  cta: { title: 'آماده ساخت؟', description: 'به هزاران سازنده LimaxAI بپیوندید.', buttonText: 'همین حالا شروع کنید' },
 });
 
 const nl: ContentCopy = withEnContentFallback({
   blog: { title: 'Blog', subtitle: 'Ontdek AI-kunsttutorials, de beste prompts en creatieve inspiratie.', noPosts: 'Geen berichten gevonden', checkBackLater: 'Kom later terug voor updates in deze taal.' },
   hero: { title: 'Professioneel AI-generatieplatform', subtitle: 'Maak video\'s en afbeeldingen met geavanceerde modellen.', description: 'Eén platform voor Midjourney, Sora, Keling, Nano Banana en meer. Binnen minuten aan de slag.' },
   features: { sectionTitle: 'Functies', items: [{ name: 'AI-afbeelding', description: 'Genereer afbeeldingen van hoge kwaliteit met toonaangevende modellen.' }, { name: 'AI-video', description: 'Maak videocontent met geavanceerde tools.' }] },
-  cta: { title: 'Klaar om te maken?', description: 'Sluit je aan bij duizenden makers die LimaxAI gebruiken.', buttonText: 'Nu beginnen' },
+  testimonials: { sectionTitle: 'Wat gebruikers zeggen', items: [{ quote: 'LimaxAI brengt al mijn favoriete AI-tools samen op één plek.', author: 'Maker', role: 'Ontwerper' }] },
+  pricing: { sectionTitle: 'Prijzen', plans: [{ name: 'Pro', description: 'Voor professionals', price: 'Vanaf X €/maand', features: ['Alle AI-tools', 'Prioriteitssupport'] }] },
+  faq: { sectionTitle: 'Veelgestelde vragen', items: [{ question: 'Wat is LimaxAI?', answer: "Een professioneel AI-generatieplatform voor afbeeldingen en video's." }, { question: 'Hoe begin ik?', answer: 'Meld je aan en kies een plan om te beginnen.' }] },  cta: { title: 'Klaar om te maken?', description: 'Sluit je aan bij duizenden makers die LimaxAI gebruiken.', buttonText: 'Nu beginnen' },
 });
 
 const pl: ContentCopy = withEnContentFallback({
   blog: { title: 'Blog', subtitle: 'Odkryj tutoriale sztuki AI, najlepsze prompty i inspiracje twórcze.', noPosts: 'Brak postów', checkBackLater: 'Sprawdź później, czy są aktualizacje w tym języku.' },
   hero: { title: 'Profesjonalna platforma generowania AI', subtitle: 'Twórz wideo i obrazy z zaawansowanymi modelami.', description: 'Jedna platforma dla Midjourney, Sora, Keling, Nano Banana i innych. Zacznij w kilka minut.' },
   features: { sectionTitle: 'Funkcje', items: [{ name: 'Obraz AI', description: 'Generuj obrazy wysokiej jakości z czołowymi modelami.' }, { name: 'Wideo AI', description: 'Twórz treści wideo za pomocą nowoczesnych narzędzi.' }] },
-  cta: { title: 'Gotowy do tworzenia?', description: 'Dołącz do tysięcy twórców korzystających z LimaxAI.', buttonText: 'Zacznij tworzyć' },
+  testimonials: { sectionTitle: 'Co mówią użytkownicy', items: [{ quote: 'LimaxAI gromadzi wszystkie moje ulubione narzędzia AI w jednym miejscu.', author: 'Twórca', role: 'Projektant' }] },
+  pricing: { sectionTitle: 'Cennik', plans: [{ name: 'Pro', description: 'Dla profesjonalistów', price: 'Od X zł/mies.', features: ['Wszystkie narzędzia AI', 'Priorytetowe wsparcie'] }] },
+  faq: { sectionTitle: 'FAQ', items: [{ question: 'Co to jest LimaxAI?', answer: 'Profesjonalna platforma generowania AI dla obrazów i wideo.' }, { question: 'Jak zacząć?', answer: 'Zarejestruj się i wybierz plan, aby zacząć tworzyć.' }] },  cta: { title: 'Gotowy do tworzenia?', description: 'Dołącz do tysięcy twórców korzystających z LimaxAI.', buttonText: 'Zacznij tworzyć' },
 });
 
 const sv: ContentCopy = withEnContentFallback({
   blog: { title: 'Blogg', subtitle: 'Upptäck AI-konsttutorials, bästa prompts och kreativ inspiration.', noPosts: 'Inga inlägg hittades', checkBackLater: 'Kom tillbaka senare för uppdateringar på detta språk.' },
   hero: { title: 'Professionell AI-genereringsplattform', subtitle: 'Skapa video och bilder med toppmodeller.', description: 'En plattform för Midjourney, Sora, Keling, Nano Banana och mer. Kom igång på minuter.' },
   features: { sectionTitle: 'Funktioner', items: [{ name: 'AI-bild', description: 'Generera bilder av hög kvalitet med ledande modeller.' }, { name: 'AI-video', description: 'Skapa videoinnehåll med moderna verktyg.' }] },
-  cta: { title: 'Redo att skapa?', description: 'Gå med tusentals skapare som använder LimaxAI.', buttonText: 'Börja skapa nu' },
+  testimonials: { sectionTitle: 'Vad användare säger', items: [{ quote: 'LimaxAI samlar alla mina favoritverktyg för AI på ett ställe.', author: 'Skapare', role: 'Designer' }] },
+  pricing: { sectionTitle: 'Priser', plans: [{ name: 'Pro', description: 'För proffs', price: 'Från X kr/mån', features: ['Alla AI-verktyg', 'Prioriterad support'] }] },
+  faq: { sectionTitle: 'Vanliga frågor', items: [{ question: 'Vad är LimaxAI?', answer: 'En professionell AI-genereringsplattform för bilder och video.' }, { question: 'Hur kommer jag igång?', answer: 'Registrera dig och välj ett plan för att börja skapa.' }] },  cta: { title: 'Redo att skapa?', description: 'Gå med tusentals skapare som använder LimaxAI.', buttonText: 'Börja skapa nu' },
 });
 
 const uk: ContentCopy = withEnContentFallback({
   blog: { title: 'Блог', subtitle: 'Навчальні матеріали з AI-мистецтва, кращі промпти та ідеї для творчості.', noPosts: 'Записів не знайдено', checkBackLater: 'Перевірте пізніше оновлення цією мовою.' },
   hero: { title: 'Професійна платформа генерації AI', subtitle: 'Створюйте відео та зображення з передовими моделями.', description: 'Одна платформа для Midjourney, Sora, Keling, Nano Banana та інших. Почніть за хвилини.' },
   features: { sectionTitle: 'Можливості', items: [{ name: 'AI-зображення', description: 'Генеруйте якісні зображення з провідними моделями.' }, { name: 'AI-відео', description: 'Створюйте відеоконтент сучасними інструментами.' }] },
-  cta: { title: 'Готові створювати?', description: 'Приєднуйтесь до тисяч авторів на LimaxAI.', buttonText: 'Почати створювати' },
+  testimonials: { sectionTitle: 'Відгуки користувачів', items: [{ quote: 'LimaxAI об’єднує всі мої улюблені AI-інструменти в одному місці.', author: 'Творець', role: 'Дизайнер' }] },
+  pricing: { sectionTitle: 'Ціни', plans: [{ name: 'Pro', description: 'Для професіоналів', price: 'Від X ₴/міс', features: ['Всі AI-інструменти', 'Пріоритетна підтримка'] }] },
+  faq: { sectionTitle: 'Питання та відповіді', items: [{ question: 'Що таке LimaxAI?', answer: 'Професійна платформа генерації AI для зображень та відео.' }, { question: 'Як почати?', answer: 'Зареєструйтесь та оберіть тариф, щоб розпочати створення.' }] },  cta: { title: 'Готові створювати?', description: 'Приєднуйтесь до тисяч авторів на LimaxAI.', buttonText: 'Почати створювати' },
 });
 
 const ro: ContentCopy = withEnContentFallback({
   blog: { title: 'Blog', subtitle: 'Descoperiți tutoriale de artă AI, cele mai bune prompturi și inspirație creativă.', noPosts: 'Nicio postare', checkBackLater: 'Reveniți mai târziu pentru actualizări în acest limbaj.' },
   hero: { title: 'Platformă profesională de generare AI', subtitle: 'Creați videoclipuri și imagini cu modele de vârf.', description: 'O platformă pentru Midjourney, Sora, Keling, Nano Banana și altele. Începeți în câteva minute.' },
   features: { sectionTitle: 'Funcționalități', items: [{ name: 'Imagine AI', description: 'Generați imagini de înaltă calitate cu modele de top.' }, { name: 'Video AI', description: 'Creați conținut video cu instrumente moderne.' }] },
-  cta: { title: 'Gata să creați?', description: 'Alăturați-vă miilor de creatori care folosesc LimaxAI.', buttonText: 'Începeți acum' },
+  testimonials: { sectionTitle: 'Ce spun utilizatorii', items: [{ quote: 'LimaxAI adună toate instrumentele mele AI preferate într-un singur loc.', author: 'Creator', role: 'Designer' }] },
+  pricing: { sectionTitle: 'Prețuri', plans: [{ name: 'Pro', description: 'Pentru profesioniști', price: 'De la X lei/lună', features: ['Toate instrumentele AI', 'Suport prioritar'] }] },
+  faq: { sectionTitle: 'Întrebări frecvente', items: [{ question: 'Ce este LimaxAI?', answer: 'O platformă profesională de generare AI pentru imagini și videoclipuri.' }, { question: 'Cum încep?', answer: 'Înregistrați-vă și alegeți un plan pentru a începe să creați.' }] },  cta: { title: 'Gata să creați?', description: 'Alăturați-vă miilor de creatori care folosesc LimaxAI.', buttonText: 'Începeți acum' },
 });
 
 const contentByLocale: Record<Locale, ContentCopy> = {

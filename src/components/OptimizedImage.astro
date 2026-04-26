@@ -1,0 +1,90 @@
+---
+// src/components/OptimizedImage.astro
+// 优化的图片组件，支持懒加载、错误处理、占位符等
+
+interface OptimizedImageProps {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  loading?: 'lazy' | 'eager';
+  priority?: boolean;
+  placeholder?: string;
+  fallback?: string;
+}
+
+const {
+  src,
+  alt,
+  width = 800,
+  height = 450,
+  className = '',
+  loading = 'lazy',
+  priority = false,
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PC9zdmc+',
+  fallback = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIwLjM1ZW0iIGZpbGw9IiM2NjYiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0Ij5JbWFnZSBub3QgYXZhaWxhYmxlPC90ZXh0Pjwvc3ZnPg'
+} = Astro.props;
+
+// 检查是否为外部 URL
+const isExternal = src.startsWith('http');
+const finalSrc = src;
+
+// 生成图片属性
+const imgAttrs = {
+  src: finalSrc,
+  alt,
+  width,
+  height,
+  class: className,
+  loading,
+  decoding: loading === 'lazy' ? 'async' : 'sync' as 'async' | 'sync',
+  fetchpriority: priority ? 'high' as const : undefined,
+  'data-src': isExternal ? finalSrc : undefined,
+  onerror: `this.onerror=null; this.src='${fallback}';`,
+  onload: `this.classList.add('loaded');`,
+};
+---
+
+<style>
+  .optimized-image {
+    transition: opacity 0.3s ease;
+  }
+  .optimized-image:not(.loaded) {
+    opacity: 0.8;
+  }
+  .optimized-image.loaded {
+    opacity: 1;
+  }
+</style>
+
+<img 
+  {...imgAttrs}
+  class={`optimized-image ${className}`}
+  style={placeholder && `background-image: url('${placeholder}'); background-size: cover;`}
+/>
+
+<script is:inline>
+  // 图片观察器，用于懒加载
+  if ('IntersectionObserver' in window && document.querySelectorAll('img[loading="lazy"]').length > 0) {
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          const dataSrc = img.getAttribute('data-src');
+          if (dataSrc && img.src !== dataSrc) {
+            img.src = dataSrc;
+          }
+          imageObserver.unobserve(img);
+        }
+      });
+    }, {
+      rootMargin: '50px 0px',
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('img[loading="lazy"][data-src]').forEach((img) => {
+      imageObserver.observe(img);
+    });
+  }
+</script>

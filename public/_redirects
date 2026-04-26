@@ -1,0 +1,6 @@
+# 避免 www 和 blog 域名间的重定向问题
+# 如果访问 www.limaxai.com，重定向到 blog.limaxai.com (如果需要的话可以取消注释)
+# https://www.limaxai.com/*  https://blog.limaxai.com/:splat  301
+
+# 确保不带尾部斜杠的 URL 重定向到带尾部斜杠的版本 (与 astro.config 中的 trailingSlash: 'always' 保持一致)
+/*  /:splat/  301

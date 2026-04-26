@@ -24,7 +24,7 @@ const { currentLang, title, updatedAt, intro, sections } = Astro.props;
 <BaseLayout title={`${title} | LimaxAI`} currentLang={currentLang}>
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <h1 class="text-3xl font-bold text-gray-900 mb-3">{title}</h1>
-    <p class="text-sm text-gray-500 mb-6">更新日期 / Updated at: {updatedAt}</p>
+    <p class="text-sm text-gray-500 mb-6">Updated at: {updatedAt}</p>
     <div class="prose prose-gray text-gray-700 leading-relaxed">
       <p>{intro}</p>
       {sections.map((section: { heading: string; paragraphs: string[] }) => (

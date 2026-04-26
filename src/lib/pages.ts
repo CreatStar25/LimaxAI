@@ -630,15 +630,18 @@ const autoDebitAgreementByLocale: Record<string, AgreementContent> = {
 function getContent(map: Record<string, PageContent>, locale: string): PageContent {
   const content = map[locale];
   if (content) return content;
-  if (locale === 'en' && map.en) return map.en;
+  if (map.en) {
+    console.warn(`[pages] Missing localized content for locale: "${locale}", falling back to en.`);
+    return map.en;
+  }
   throw new Error(`[pages] Missing localized content for locale: ${locale}`);
 }
 
 function getAboutPageContent(locale: string): AboutPageContent {
   const content = aboutByLocale[locale];
   if (content) return content;
-  if (locale === 'en') return aboutEn;
-  throw new Error(`[pages] Missing about content for locale: ${locale}`);
+  console.warn(`[pages] Missing about content for locale: "${locale}", falling back to en.`);
+  return aboutEn;
 }
 
 export function getAboutContent(locale: string): AboutPageContent {
@@ -656,8 +659,8 @@ export function getTermsContent(locale: string): PageContent {
 export function getAutoDebitAgreementContent(locale: string): AgreementContent {
   const content = autoDebitAgreementByLocale[locale];
   if (content) return content;
-  if (locale === 'en') return autoDebitAgreementEn;
-  throw new Error(`[pages] Missing auto debit agreement content for locale: ${locale}`);
+  console.warn(`[pages] Missing auto debit agreement content for locale: "${locale}", falling back to en.`);
+  return autoDebitAgreementEn;
 }
 
 export function getAllLocales(): readonly string[] {
