@@ -2,5 +2,6 @@
 # 如果访问 www.limaxai.com，重定向到 blog.limaxai.com (如果需要的话可以取消注释)
 # https://www.limaxai.com/*  https://blog.limaxai.com/:splat  301
 
-# 确保不带尾部斜杠的 URL 重定向到带尾部斜杠的版本 (与 astro.config 中的 trailingSlash: 'always' 保持一致)
-/*  /:splat/  301
+# 注意：不要使用 `/* /:splat/ 301` 这种全量规则，
+# 在 Cloudflare Pages 中会把已带斜杠的路径继续重定向为双斜杠（如 /en/ -> /en//），导致循环跳转与白屏。
+# trailingSlash 统一由 Astro 路由输出保证。
