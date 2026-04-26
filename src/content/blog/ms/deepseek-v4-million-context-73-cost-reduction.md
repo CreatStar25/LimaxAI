@@ -75,7 +75,7 @@ Dalam tugas berkaitan keupayaan Agent, DeepSeek-V4-Pro menunjukkan prestasi stab
 
 Secara keseluruhan, DeepSeek-V4-Pro pada masa ini adalah "siling" model sumber terbuka.
 
-### Pengoptimuman Khas untuk Senario Agent
+## Pengoptimuman Khas untuk Senario Agent
 Generasi DeepSeek-V4 ini secara ketara mengukuhkan penyesuaian untuk senario Agent. Ia telah menjalankan pengoptimuman khas untuk rangka kerja Agent utama seperti Claude Code, OpenClaw, CodeBuddy, dan menunjukkan prestasi lebih stabil dalam tugas berbilang langkah seperti penjanaan kod, penjanaan dokumen.
 
 Dari sudut kedudukan praktikal, DeepSeek-V4-Pro telah digunakan sebagai model Pengaturcaraan Agentic dalam DeepSeek, memberi tumpuan kepada "menyelesaikan tugas". Untuk tugas mudah, V4-Flash sudah hampir dengan versi Pro, tetapi masih terdapat jurang ketara dalam tugas kompleks, pada dasarnya menyediakan dua "geganti kuasa pengiraan" untuk aplikasi Agent.

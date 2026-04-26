@@ -15,7 +15,7 @@ lang: "zh-tw"
 
 ## 教学插圖提示词框架
 
-### 框架：学科目标 + 知识点 + 年级 + 圖像风格 + 版式要求
+**框架：学科目标 + 知识点 + 年级 + 圖像风格 + 版式要求**
 
 ```text
 Educational illustration for [subject], explain [concept] for [grade], clear labels, classroom-friendly layout, high readability, modern flat style, balanced colors, print and slide ready, high resolution
@@ -27,7 +27,7 @@ Educational illustration for [subject], explain [concept] for [grade], clear lab
 2. **知识结构圖**：帮助学生构建框架
 3. **练习讲解圖**：降低题目理解门槛
 
-## 教学团队落地建议
+**教学团队落地建议**
 
 | 目标 | 建议动作 |
 |---|---|
@@ -35,7 +35,7 @@ Educational illustration for [subject], explain [concept] for [grade], clear lab
 | 统一视觉风格 | 固定配色、字体区与标签规范 |
 | 适配多場景 | 同时生成 PPT 版、讲义版、社媒版 |
 
-## 結語
+## CTA
 
 有了可复用提示词与模板，教学插圖可以从“临时找圖”变成“稳定产出流程”。
 

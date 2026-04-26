@@ -15,24 +15,24 @@ lang: "zh-cn"
 
 ## 内容自动化流程
 
-### 1. 输入基准图
+1. 输入基准图
 选择产品完整、光线均匀、信息清晰的商品图。
 
-### 2. 设定扩展方向
+2. 设定扩展方向
 - 场景扩展：居家 / 办公 / 户外
 - 人群扩展：母婴 / 学生 / 上班族
 - 卖点扩展：便携 / 舒适 / 高效
 
-### 3. 批量生成并归档
+3. 批量生成并归档
 按命名规则输出，直接进入设计协作与投放测试。
 
-## 提示词模板
+**提示词模板**
 
 ```text
 Product content automation, keep product identity consistent, generate multiple scenes and selling-point visuals from one source photo, e-commerce detail page ready, high clarity, conversion-oriented visual style
 ```
 
-## 团队协作建议
+**团队协作建议**
 
 | 角色 | 输出物 |
 |---|---|
@@ -40,7 +40,7 @@ Product content automation, keep product identity consistent, generate multiple 
 | 设计 | 版式规范与视觉统一 |
 | 投放 | 素材分组与数据回传 |
 
-## 结语
+## CTA
 
 把“素材制作”升级为“内容自动化”后，运营效率和素材利用率会显著提升。
 

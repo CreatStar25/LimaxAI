@@ -15,22 +15,22 @@ lang: "zh-tw"
 
 ## 角色型内容的提示词方法
 
-### 方法 1：先固定角色 DNA
+1. 方法 1：先固定角色 DNA
 包括发型、服装、配色、脸型、配件、气质关键词。
 
-### 方法 2：再切换动作与情绪
+2. 方法 2：再切换动作与情绪
 在保持角色不变前提下，批量生成“开心/惊讶/无语/打工”等場景。
 
-### 方法 3：最后适配发布渠道
+3. 方法 3：最后适配发布渠道
 输出 1:1、4:5、9:16 等比例，用于社媒与电商详情页互动区。
 
-## 提示词示例
+**提示词示例**
 
 ```text
 Cute collectible figurine style character, keep same character identity, consistent face and outfit, multiple expressions set, sticker-ready transparent background, clean lighting, high detail, social media friendly
 ```
 
-## 實作清单
+**實作清单**
 
 | 阶段 | 产出 |
 |---|---|
@@ -38,7 +38,7 @@ Cute collectible figurine style character, keep same character identity, consist
 | 表情扩展 | 表情圖 12-24 张 |
 | 場景扩展 | 节日/热点主题版本 |
 
-## 結語
+## CTA
 
 当你的角色内容形成“可复用模板”，内容生产会从灵感驱动升级到系统化产出。
 

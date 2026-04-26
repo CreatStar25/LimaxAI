@@ -63,7 +63,7 @@ Versionen deepseek-v4-pro är optimerad för komplexa resonemangsuppgifter och y
 ### Stöd för ultralång kontext
 Båda versionerna stödjer en ultralång kontext på 1 miljon token och maximal utmatningslängd på 384 tusen token, och kan hantera mycket stora textuppgifter som hela böcker, långa dokument, fullständig projektkod, vilket ger en stark grund för utveckling av komplexa AI-applikationer.
 
-### Snabbstartsguide
+## Snabbstartsguide
 Att börja använda DeepSeek V4 är mycket enkelt:
 1. Besök DeepSeeks officiella webbplats för att registrera ett konto
 2. Skaffa API-nyckeln
