@@ -16,7 +16,7 @@ const pathSuffix = rawPathSuffix === '/' ? '/' : (rawPathSuffix.endsWith('/') ? 
 
 // 根据当前路径判断哪个导航项为选中态（蓝色）
 const pathNorm = pathSuffix.replace(/\/$/, '') || '/';
-const isBlog = pathNorm === '/';
+const isBlog = pathNorm === '/' || pathNorm === '/blog';
 const isTutorial = pathNorm.startsWith('/tutorials');
 
 const navLinkClass = (active: boolean) =>
@@ -31,7 +31,7 @@ const navLinkClass = (active: boolean) =>
       
       {/* 1. Logo 区域 - 修改点2：去掉了图标，只保留文字 */}
       <div class="flex-shrink-0 flex items-center">
-        <a href={`/${currentLang}/`} class="flex items-center gap-2.5">
+        <a href={`/${currentLang}/blog/`} class="flex items-center gap-2.5">
           <img src="/logo.png" alt="LimaxAI Logo" class="h-8 w-auto object-contain" width="32" height="32" loading="eager" fetchpriority="high" />
           <span class="text-2xl font-bold text-gray-900">{t.navbar.logoText}</span>
         </a>
@@ -40,7 +40,7 @@ const navLinkClass = (active: boolean) =>
       {/* 2. 中间导航链接 - 修改点3：字体从 text-sm 改为 text-lg，增加点击区域 */}
       <nav class="hidden md:flex space-x-8">
         <a href="https://www.limaxai.com/" class="text-gray-500 hover:text-gray-900 px-4 py-2 text-base font-medium transition-colors">{t.navbar.home}</a>
-        <a href={`/${currentLang}/`} class={navLinkClass(isBlog)}>{t.navbar.blog}</a>
+        <a href={`/${currentLang}/blog/`} class={navLinkClass(isBlog)}>{t.navbar.blog}</a>
         <a href={`/${currentLang}/tutorials/`} class={navLinkClass(isTutorial)}>{t.navbar.tutorial}</a>
         <a href="https://api.limaxai.com/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-900 px-4 py-2 text-base font-medium transition-colors">{t.navbar.api}</a>
       </nav>

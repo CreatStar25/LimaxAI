@@ -7,59 +7,70 @@ const { currentLang = 'en' } = Astro.props;
 const currentYear = new Date().getFullYear();
 const t = getUi(currentLang).footer;
 
-const columns = [
+type FooterLink = {
+  labelKey: keyof typeof t.links;
+  href: string;
+  external?: boolean;
+};
+
+const columns: { titleKey: keyof typeof t.columns; links: FooterLink[] }[] = [
   {
-    titleKey: 'aiImage' as const,
+    titleKey: 'aiImage',
     links: [
-      { labelKey: 'midjourney' as const, href: 'https://midjourney.cfd' },
-      { labelKey: 'nanoBananaPro' as const, href: 'https://nanobanana-pro.vip' },
-      { labelKey: 'nanoBanana2' as const, href: 'https://nanobananapro.hk' },
-      { labelKey: 'nanoBanana3' as const, href: 'https://nanobanana3.top' },
+      { labelKey: 'gptImage', href: 'https://gpt-image2.cn', external: true },
+      { labelKey: 'gptImage2', href: 'https://gptimage2.hk', external: true },
+      { labelKey: 'midjourney', href: 'https://midjourney.cfd', external: true },
+      { labelKey: 'nanoBananaPro', href: 'https://nanobanana-pro.vip', external: true },
+      { labelKey: 'nanoBanana2', href: 'https://nanobananapro.hk', external: true },
+      { labelKey: 'nanoBanana3', href: 'https://nanobanana3.top', external: true },
     ],
   },
   {
-    titleKey: 'aiVideo' as const,
+    titleKey: 'aiVideo',
     links: [
-      { labelKey: 'seedance20' as const, href: 'https://seedance22.com' },
-      { labelKey: 'seedance15' as const, href: 'https://seedance2.hk' },
-      { labelKey: 'veo3' as const, href: 'https://veo3.hk' },
-      { labelKey: 'happyHorse1' as const, href: 'https://happyhorse.fans/' },
-      { labelKey: 'happyHorse2' as const, href: 'https://happy-horse.hk/' },
+      { labelKey: 'seedance20', href: 'https://seedance22.com', external: true },
+      { labelKey: 'seedance15', href: 'https://seedance2.hk', external: true },
+      { labelKey: 'veo3', href: 'https://veo3.hk', external: true },
+      { labelKey: 'veo4', href: 'https://veo4.hk', external: true },
+      { labelKey: 'happyHorse1', href: 'https://happyhorse.fans/', external: true },
+      { labelKey: 'happyHorse2', href: 'https://happy-horse.hk/', external: true },
     ],
   },
   {
-    titleKey: 'aiMusic' as const,
+    titleKey: 'aiMusic',
     links: [
-      { labelKey: 'suno' as const, href: 'https://sunoai.me/' },
-      { labelKey: 'sunoHK' as const, href: 'https://suno.hk/' },
-      { labelKey: 'udio' as const, href: 'https://udio.hk/' },
+      { labelKey: 'suno', href: 'https://sunoai.me/', external: true },
+      { labelKey: 'sunoHK', href: 'https://suno.hk/', external: true },
+      { labelKey: 'udio', href: 'https://udio.hk/', external: true },
     ],
   },
   {
-    titleKey: 'aiTools' as const,
+    titleKey: 'aiTools',
     links: [
-      { labelKey: 'limaxai' as const, href: 'https://www.limaxai.com/' },
-      { labelKey: 'deepseek4' as const, href: 'https://deepseek4.hk' },
-      { labelKey: 'notebooklm' as const, href: 'https://notebooklm.vip' },
-      { labelKey: 'openclaw' as const, href: 'https://openclawd.hk' },
-      { labelKey: 'gemini30' as const, href: 'https://gemini3.hk' },
-      { labelKey: 'geminiWatermarkErase' as const, href: 'https://geminiwatermarkerase.com/' },
+      { labelKey: 'limaxai', href: 'https://www.limaxai.com/', external: true },
+      { labelKey: 'deepseek4', href: 'https://deepseek4.hk', external: true },
+      { labelKey: 'notebooklm', href: 'https://notebooklm.vip', external: true },
+      { labelKey: 'openclaw', href: 'https://openclawd.hk', external: true },
+      { labelKey: 'gemini30', href: 'https://gemini3.hk', external: true },
+      { labelKey: 'watermarkErase', href: 'https://geminiwatermarkerase.com/', external: true },
+      { labelKey: 'prompts', href: 'https://prompts.skin/zh-cn', external: true },
     ],
   },
   {
-    titleKey: 'company' as const,
+    titleKey: 'company',
     links: [
-      { labelKey: 'blog' as const, href: `/${currentLang}/` },
-      { labelKey: 'about' as const, href: `/${currentLang}/about/` },
-      { labelKey: 'privacy' as const, href: `/${currentLang}/privacy/` },
-      { labelKey: 'terms' as const, href: `/${currentLang}/terms/` },
-      { labelKey: 'api' as const, href: 'https://api.limaxai.com/', external: true },
+      { labelKey: 'blog', href: `/${currentLang}/blog/` },
+      { labelKey: 'about', href: `/${currentLang}/about/` },
+      { labelKey: 'privacy', href: `/${currentLang}/privacy/` },
+      { labelKey: 'terms', href: `/${currentLang}/terms/` },
+      { labelKey: 'api', href: 'https://api.limaxai.com/', external: true },
     ],
   },
 ];
 
 const columnTitles: Record<keyof typeof t.columns, string> = t.columns;
 const linkLabels: Record<keyof typeof t.links, string> = t.links;
+const supportEmail = 'support@limaxai.com';
 ---
 
 <footer class="bg-gray-50 border-t border-gray-200 mt-auto">
@@ -67,12 +78,25 @@ const linkLabels: Record<keyof typeof t.links, string> = t.links;
     <div class="flex flex-col lg:flex-row lg:gap-12 gap-10">
       {/* 左侧：品牌区 - Logo、标题、简介 */}
       <div class="lg:max-w-sm flex-shrink-0">
-        <a href={`/${currentLang}/`} class="inline-flex items-center gap-2 mb-3">
-          <img src="https://img.limaxai.com/aiweb/limaxai.png" alt="LimaxAI Logo" class="h-8 w-8 object-contain" width="32" height="32" loading="lazy" decoding="async" />
+        <a href={`/${currentLang}/blog/`} class="inline-flex items-center gap-2.5 mb-3">
+          <img
+            src="/logo.png"
+            alt="LimaxAI Logo"
+            class="h-8 w-8 object-contain flex-shrink-0"
+            width="32"
+            height="32"
+            loading="lazy"
+            decoding="async"
+          />
           <span class="text-xl font-bold text-gray-900">{t.brand.title}</span>
         </a>
         <p class="text-gray-500 text-sm leading-relaxed">
           {t.brand.intro}
+        </p>
+        <p class="text-gray-500 text-sm mt-3">
+          <a href={`mailto:${supportEmail}`} class="hover:text-gray-900 transition-colors">
+            {t.brand.emailLabel}{supportEmail}
+          </a>
         </p>
       </div>
 
@@ -80,7 +104,7 @@ const linkLabels: Record<keyof typeof t.links, string> = t.links;
       <div class="flex-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-10">
         {columns.map((col) => (
           <div>
-            <h3 class="text-base font-bold text-gray-900 mb-4">
+            <h3 class="text-lg font-bold text-gray-900 mb-4">
               {columnTitles[col.titleKey]}
             </h3>
             <ul class="space-y-3">
