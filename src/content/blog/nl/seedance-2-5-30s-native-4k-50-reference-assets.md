@@ -15,7 +15,7 @@ Trefwoorden: chatgpt, GPT-5.6, gpt tutorial, seedance 2.5.
 Gepubliceerd: 23 juni 2026
 
 <div style="text-align: center; margin: 32px 0;">
-<a href="https://www.limaxai.com/nl/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">GPT gaan gebruiken</a>
+<a href="https://www.limaxai.com/nl/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Ga creëren</a>
 </div>
 
 ![Seedance 2.5 launch 30s one-take native 4K 50 referenties](https://img.limaxai.com/aiweb/limaxai-260623-1.png)
@@ -88,10 +88,10 @@ Voorbeeldoutput Seedance 2.5—ongeveer 30 seconden continue multishot-camerawer
 
 Gebruik je al **ChatGPT** (**GPT-5.4 / GPT-5.5**, **GPT-5.6** onderweg) voor copy en taakopsplitsing, neem dezelfde **gpt tutorial**-gewoontes mee naar videoprep.
 
-Klik de knop hieronder voor LimaxAI-chat (**gpt-5.4**; kies nieuwere modellen in de lijst) en oefen storyboard-prompts.
+Als je shotlist klaar is, klik op **Ga creëren** hieronder om Seedance-videogeneratie op LimaxAI te openen.
 
 <div style="text-align: center; margin: 28px 0;">
-<a href="https://www.limaxai.com/nl/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">GPT gaan gebruiken</a>
+<a href="https://www.limaxai.com/nl/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Ga creëren</a>
 </div>
 
 ## Samenvatting
@@ -104,10 +104,10 @@ Klik de knop hieronder voor LimaxAI-chat (**gpt-5.4**; kies nieuwere modellen in
 | Bewerking | Gelokaliseerde multishot-controles |
 | Audio | Lipsync + ambient SFX in één pass |
 | Rollout | Enterprise-piloten; breder begin juli 2026 |
-| Volgende stap | Shots in ChatGPT; GPT op LimaxAI proberen |
+| Volgende stap | Storyboard in ChatGPT; Seedance-creatie op LimaxAI |
 
 Seedance 2.5 duwt AI-video van „kort clip-speeltje” naar **bruikbare halve-minuut takes**. Een gedisciplineerde **GPT** pre-productieflow verslaat achter elk nieuw modelnaam aanrennen.
 
 <div style="text-align: center; margin: 40px 0;">
-<a href="https://www.limaxai.com/nl/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">GPT gaan gebruiken</a>
+<a href="https://www.limaxai.com/nl/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Ga creëren</a>
 </div>

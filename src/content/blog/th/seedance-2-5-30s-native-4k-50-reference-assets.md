@@ -15,7 +15,7 @@ author: "LimaxAI Team"
 เผยแพร่: 23 มิถุนายน 2026
 
 <div style="text-align: center; margin: 32px 0;">
-<a href="https://www.limaxai.com/th/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">เริ่มใช้ GPT</a>
+<a href="https://www.limaxai.com/th/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">ไปสร้างสรรค์</a>
 </div>
 
 ![เปิดตัว Seedance 2.5 30วิ one-take 4K native 50 อ้างอิง](https://img.limaxai.com/aiweb/limaxai-260623-1.png)
@@ -88,10 +88,10 @@ timeline ยาวขึ้นทำให้ Volcano Engine ออกแบบ 
 
 หากใช้ **ChatGPT** (**GPT-5.4 / GPT-5.5**, **GPT-5.6** กำลังมา) สำหรับ copy และแยกงาน ย้ายนิสัย **gpt tutorial** เดิมมา prep วิดีโอ
 
-คลิกปุ่มด้านล่างเปิดแชท LimaxAI (**gpt-5.4**; เลือกโมเดลใหม่ในรายการ) และฝึก prompt storyboard
+เมื่อ shot list พร้อมแล้ว คลิก **ไปสร้างสรรค์** ด้านล่างเพื่อเปิดหน้าสร้างวิดีโอ Seedance บน LimaxAI
 
 <div style="text-align: center; margin: 28px 0;">
-<a href="https://www.limaxai.com/th/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">เริ่มใช้ GPT</a>
+<a href="https://www.limaxai.com/th/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">ไปสร้างสรรค์</a>
 </div>
 
 ## สรุป
@@ -104,10 +104,10 @@ timeline ยาวขึ้นทำให้ Volcano Engine ออกแบบ 
 | การตัดต่อ | ควบคุม multishot เฉพาะจุด |
 | เสียง | Lip sync + SFX แวดล้อมใน pass เดียว |
 | Rollout | Pilot องค์กร; เปิดกว้างต้นก.ค. 2026 |
-| ขั้นถัดไป | ร่าง shot ใน ChatGPT; ลอง GPT บน LimaxAI |
+| ขั้นถัดไป | Storyboard ใน ChatGPT; สร้าง Seedance บน LimaxAI |
 
 Seedance 2.5 ผลักวิดีโอ AI จาก «ของเล่นคลิปสั้น» สู่ **take ครึ่งนาทีที่ใช้ได้จริง** flow pre-prod **GPT** ที่มีวินัยชนะการไล่ทุกชื่อโมเดลใหม่
 
 <div style="text-align: center; margin: 40px 0;">
-<a href="https://www.limaxai.com/th/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">เริ่มใช้ GPT</a>
+<a href="https://www.limaxai.com/th/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">ไปสร้างสรรค์</a>
 </div>

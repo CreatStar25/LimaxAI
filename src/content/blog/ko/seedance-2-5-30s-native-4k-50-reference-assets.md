@@ -15,7 +15,7 @@ author: "LimaxAI Team"
 게시일: 2026년 6월 23일
 
 <div style="text-align: center; margin: 32px 0;">
-<a href="https://www.limaxai.com/ko/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">GPT 사용 시작</a>
+<a href="https://www.limaxai.com/ko/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">창작하기</a>
 </div>
 
 ![Seedance 2.5 공개 30초 원테이크 네이티브 4K 50개 참조](https://img.limaxai.com/aiweb/limaxai-260623-1.png)
@@ -88,10 +88,10 @@ AI 영상을 만드는 사람이라면 공감할 겁니다: 작은 디테일을 
 
 평소 **ChatGPT**(**GPT-5.4 / GPT-5.5**, **GPT-5.6** 출시 예정)로 카피·요구사항을 나눈다면 같은 **gpt 튜토리얼** 습관을 영상 준비에 옮기세요.
 
-아래 버튼을 눌러 LimaxAI 채팅(**gpt-5.4**; 신규 모델은 목록에서 선택)을 열고 스토리보드 프롬프트를 연습하세요.
+샷 리스트가 준비되면 아래 「창작하기」 버튼을 눌러 LimaxAI의 Seedance 영상 생성 페이지에서 바로 시작하세요.
 
 <div style="text-align: center; margin: 28px 0;">
-<a href="https://www.limaxai.com/ko/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">GPT 사용 시작</a>
+<a href="https://www.limaxai.com/ko/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">창작하기</a>
 </div>
 
 ## 요약
@@ -104,10 +104,10 @@ AI 영상을 만드는 사람이라면 공감할 겁니다: 작은 디테일을 
 | 편집 | 국소 멀티샷 제어 |
 | 오디오 | 립싱크 + 환경음 동시 렌더 |
 | 출시 | 기업 파일럿; 7월 초 확대 |
-| 다음 단계 | ChatGPT로 샷 작성; LimaxAI에서 GPT 체험 |
+| 다음 단계 | ChatGPT 샷리스트；LimaxAI Seedance 창작 |
 
 Seedance 2.5는 AI 영상을 「짧은 클립 장난감」에서 **쓸 만한 30초 원테이크**로 밀어 올립니다. 규율 있는 **GPT** 전처리가 새 모델명을 쫓는 것보다 실용적입니다.
 
 <div style="text-align: center; margin: 40px 0;">
-<a href="https://www.limaxai.com/ko/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">GPT 사용 시작</a>
+<a href="https://www.limaxai.com/ko/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">창작하기</a>
 </div>

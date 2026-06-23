@@ -15,7 +15,7 @@ Cuvinte cheie: chatgpt, GPT-5.6, tutorial gpt, seedance 2.5.
 Publicat: 23 iunie 2026
 
 <div style="text-align: center; margin: 32px 0;">
-<a href="https://www.limaxai.com/ro/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Începe să folosești GPT</a>
+<a href="https://www.limaxai.com/ro/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Mergi la creare</a>
 </div>
 
 ![Lansare Seedance 2.5 30s one-take 4K nativ 50 referințe](https://img.limaxai.com/aiweb/limaxai-260623-1.png)
@@ -88,10 +88,10 @@ Output exemplu Seedance 2.5—circa 30 secunde de lucru cameră multishot contin
 
 Dacă folosești deja **ChatGPT** (**GPT-5.4 / GPT-5.5**, **GPT-5.6** pe drum) pentru copy și descompunere task-uri, transferă aceleași obiceiuri **tutorial gpt** în prep video.
 
-Apasă butonul de mai jos pentru chat LimaxAI (**gpt-5.4**; alege modele noi din listă) și exersează prompturi storyboard.
+Când storyboard-ul e gata, apasă **Mergi la creare** mai jos pentru a deschide generarea video Seedance pe LimaxAI.
 
 <div style="text-align: center; margin: 28px 0;">
-<a href="https://www.limaxai.com/ro/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Începe să folosești GPT</a>
+<a href="https://www.limaxai.com/ro/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Mergi la creare</a>
 </div>
 
 ## Rezumat
@@ -104,10 +104,10 @@ Apasă butonul de mai jos pentru chat LimaxAI (**gpt-5.4**; alege modele noi din
 | Editare | Controale multishot localizate |
 | Audio | Lip sync + SFX ambient într-un pass |
 | Rollout | Pilot enterprise; acces larg început iulie 2026 |
-| Pas următor | Schiță planuri în ChatGPT; încearcă GPT pe LimaxAI |
+| Pas următor | Storyboard în ChatGPT; creare Seedance pe LimaxAI |
 
 Seedance 2.5 împinge video AI de la „jucărie clip scurt” spre **take-uri utilizabile de jumătate de minut**. Un flux **GPT** de pre-producție disciplinat bate goana după fiecare nume de model nou.
 
 <div style="text-align: center; margin: 40px 0;">
-<a href="https://www.limaxai.com/ro/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Începe să folosești GPT</a>
+<a href="https://www.limaxai.com/ro/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Mergi la creare</a>
 </div>

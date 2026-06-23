@@ -15,7 +15,7 @@ Kata kunci: chatgpt, GPT-5.6, tutorial gpt, seedance 2.5.
 Diterbitkan: 23 Juni 2026
 
 <div style="text-align: center; margin: 32px 0;">
-<a href="https://www.limaxai.com/id/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Mulai Gunakan GPT</a>
+<a href="https://www.limaxai.com/id/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Mulai berkarya</a>
 </div>
 
 ![Peluncuran Seedance 2.5 30dtk one-take 4K native 50 referensi](https://img.limaxai.com/aiweb/limaxai-260623-1.png)
@@ -88,10 +88,10 @@ Contoh output Seedance 2.5—sekitar 30 detik kerja kamera multishot berkelanjut
 
 Jika sudah pakai **ChatGPT** (**GPT-5.4 / GPT-5.5**, **GPT-5.6** segera) untuk copy dan pemecahan tugas, bawa kebiasaan **tutorial gpt** yang sama ke prep video.
 
-Klik tombol di bawah untuk buka chat LimaxAI (**gpt-5.4**; pilih model baru di daftar) dan latih prompt storyboard.
+Setelah storyboard siap, klik **Mulai berkarya** di bawah untuk membuka pembuatan video Seedance di LimaxAI.
 
 <div style="text-align: center; margin: 28px 0;">
-<a href="https://www.limaxai.com/id/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Mulai Gunakan GPT</a>
+<a href="https://www.limaxai.com/id/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Mulai berkarya</a>
 </div>
 
 ## Ringkasan
@@ -104,10 +104,10 @@ Klik tombol di bawah untuk buka chat LimaxAI (**gpt-5.4**; pilih model baru di d
 | Editing | Kontrol multishot terlokalisasi |
 | Audio | Lip sync + SFX ambient dalam satu pass |
 | Rollout | Pilot enterprise; akses luas awal Juli 2026 |
-| Langkah berikutnya | Draft shot di ChatGPT; coba GPT di LimaxAI |
+| Langkah berikutnya | Storyboard di ChatGPT; buat Seedance di LimaxAI |
 
 Seedance 2.5 mendorong video AI dari «mainan klip pendek» menuju **take setengah menit yang bisa dipakai**. Alur pre-produksi **GPT** disiplin mengalahkan mengejar setiap nama model baru.
 
 <div style="text-align: center; margin: 40px 0;">
-<a href="https://www.limaxai.com/id/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Mulai Gunakan GPT</a>
+<a href="https://www.limaxai.com/id/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Mulai berkarya</a>
 </div>

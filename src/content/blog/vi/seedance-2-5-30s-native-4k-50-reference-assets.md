@@ -15,7 +15,7 @@ Từ khóa: chatgpt, GPT-5.6, hướng dẫn gpt, seedance 2.5.
 Xuất bản: 23 tháng 6 năm 2026
 
 <div style="text-align: center; margin: 32px 0;">
-<a href="https://www.limaxai.com/vi/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Bắt đầu dùng GPT</a>
+<a href="https://www.limaxai.com/vi/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Đi sáng tạo</a>
 </div>
 
 ![Ra mắt Seedance 2.5 30s one-take 4K native 50 tham chiếu](https://img.limaxai.com/aiweb/limaxai-260623-1.png)
@@ -88,10 +88,10 @@ Output mẫu Seedance 2.5—khoảng 30 giây máy quay multishot liên tục:
 
 Nếu đã dùng **ChatGPT** (**GPT-5.4 / GPT-5.5**, **GPT-5.6** sắp ra) cho copy và chia nhỏ task, chuyển thói quen **hướng dẫn gpt** sang prep video.
 
-Nhấn nút bên dưới mở chat LimaxAI (**gpt-5.4**; chọn model mới trong danh sách) và luyện prompt storyboard.
+Khi đã có shot list, nhấn **Đi sáng tạo** bên dưới để mở trang tạo video Seedance trên LimaxAI.
 
 <div style="text-align: center; margin: 28px 0;">
-<a href="https://www.limaxai.com/vi/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Bắt đầu dùng GPT</a>
+<a href="https://www.limaxai.com/vi/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Đi sáng tạo</a>
 </div>
 
 ## Tóm tắt
@@ -104,10 +104,10 @@ Nhấn nút bên dưới mở chat LimaxAI (**gpt-5.4**; chọn model mới tron
 | Chỉnh sửa | Điều khiển multishot cục bộ |
 | Âm thanh | Lip sync + SFX ambient một pass |
 | Triển khai | Pilot doanh nghiệp; rộng hơn đầu tháng 7/2026 |
-| Bước tiếp | Phác shot trong ChatGPT; thử GPT trên LimaxAI |
+| Bước tiếp | Storyboard ChatGPT; tạo Seedance trên LimaxAI |
 
 Seedance 2.5 đẩy video AI từ «đồ chơi clip ngắn» sang **take nửa phút dùng được**. Quy trình pre-prod **GPT** có kỷ luật hơn đuổi theo từng tên model mới.
 
 <div style="text-align: center; margin: 40px 0;">
-<a href="https://www.limaxai.com/vi/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Bắt đầu dùng GPT</a>
+<a href="https://www.limaxai.com/vi/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Đi sáng tạo</a>
 </div>

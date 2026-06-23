@@ -15,7 +15,7 @@ Anahtar kelimeler: chatgpt, GPT-5.6, gpt tutorial, seedance 2.5.
 Yayın tarihi: 23 Haziran 2026
 
 <div style="text-align: center; margin: 32px 0;">
-<a href="https://www.limaxai.com/tr/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">GPT'yi Kullanmaya Başla</a>
+<a href="https://www.limaxai.com/tr/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Oluşturmaya git</a>
 </div>
 
 ![Seedance 2.5 lansman 30sn one-take native 4K 50 referans](https://img.limaxai.com/aiweb/limaxai-260623-1.png)
@@ -88,10 +88,10 @@ Seedance 2.5 örnek çıktı—yaklaşık 30 saniye sürekli multishot kamera ç
 
 Zaten **ChatGPT** (**GPT-5.4 / GPT-5.5**, **GPT-5.6** yolda) ile copy ve görev ayrıştırması yapıyorsanız aynı **gpt tutorial** alışkanlıklarını video hazırlığına taşıyın.
 
-LimaxAI sohbetini (**gpt-5.4**; listeden yeni modelleri seçin) açmak için aşağıdaki düğmeye tıklayın ve storyboard promptları pratik yapın.
+Shot listeniz hazır olduğunda, LimaxAI'da Seedance video üretimini açmak için aşağıdaki **Oluşturmaya git** düğmesine tıklayın.
 
 <div style="text-align: center; margin: 28px 0;">
-<a href="https://www.limaxai.com/tr/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">GPT'yi Kullanmaya Başla</a>
+<a href="https://www.limaxai.com/tr/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Oluşturmaya git</a>
 </div>
 
 ## Özet
@@ -104,10 +104,10 @@ LimaxAI sohbetini (**gpt-5.4**; listeden yeni modelleri seçin) açmak için aş
 | Düzenleme | Yerelleştirilmiş multishot kontrolleri |
 | Ses | Dudak senkronu + ortam SFX tek geçişte |
 | Yayın | Kurumsal pilotlar; Temmuz başı geniş erişim |
-| Sonraki adım | ChatGPT'de plan taslakla; LimaxAI'de GPT dene |
+| Sonraki adım | ChatGPT storyboard; LimaxAI'da Seedance üretimi |
 
 Seedance 2.5 AI videoyu «kısa klip oyuncağı»ndan **kullanılabilir yarım dakikalık take'lere** taşır. Disiplinli **GPT** ön prodüksiyon akışı her yeni model adını kovalamaktan iyidir.
 
 <div style="text-align: center; margin: 40px 0;">
-<a href="https://www.limaxai.com/tr/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">GPT'yi Kullanmaya Başla</a>
+<a href="https://www.limaxai.com/tr/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Oluşturmaya git</a>
 </div>

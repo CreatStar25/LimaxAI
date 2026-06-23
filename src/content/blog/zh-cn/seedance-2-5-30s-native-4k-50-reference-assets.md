@@ -15,7 +15,7 @@ author: "LimaxAI Team"
 发布日期：2026年6月23日
 
 <div style="text-align: center; margin: 32px 0;">
-<a href="https://www.limaxai.com/zh-cn/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">开始使用GPT</a>
+<a href="https://www.limaxai.com/zh-cn/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">去创作</a>
 </div>
 
 ![Seedance 2.5发布 30秒一镜到底 原生4K 50个参考素材](https://img.limaxai.com/aiweb/limaxai-260623-1.png)
@@ -90,10 +90,10 @@ author: "LimaxAI Team"
 
 如果你平时也用 GPT 写文案、拆需求，可以把同一套习惯迁移过来：先 **gpt教程** 式地把任务拆清，再交给 Seedance 执行。
 
-想先在浏览器里练分镜提示词，可以点下方按钮进入 LimaxAI 聊天页（当前入口 **gpt-5.4**，后续可在模型列表切换新版本）。
+分镜和提示词准备好后，点击下方「去创作」按钮，进入 LimaxAI 的 Seedance 视频生成页开始创作。
 
 <div style="text-align: center; margin: 28px 0;">
-<a href="https://www.limaxai.com/zh-cn/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">开始使用GPT</a>
+<a href="https://www.limaxai.com/zh-cn/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">去创作</a>
 </div>
 
 ## 小结
@@ -106,10 +106,10 @@ author: "LimaxAI Team"
 | 编辑 | 多镜头局部控制 |
 | 音画 | 对嘴 + 环境音同次渲染 |
 | 开放节奏 | 企业试点中；7 月初更广开放 |
-| 搭配工具 | ChatGPT 写分镜；LimaxAI 体验 GPT |
+| 搭配工具 | ChatGPT 写分镜；LimaxAI Seedance 创作 |
 
 Seedance 2.5 把 AI 视频从「短片段玩具」往 **能用的半分钟成片** 推了一步。配上规范的 **GPT** 前期流程，少重抽几次，往往比追新模型名更划算。
 
 <div style="text-align: center; margin: 40px 0;">
-<a href="https://www.limaxai.com/zh-cn/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">开始使用GPT</a>
+<a href="https://www.limaxai.com/zh-cn/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">去创作</a>
 </div>

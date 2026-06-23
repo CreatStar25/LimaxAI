@@ -15,7 +15,7 @@ Słowa kluczowe: chatgpt, GPT-5.6, gpt tutorial, seedance 2.5.
 Opublikowano: 23 czerwca 2026
 
 <div style="text-align: center; margin: 32px 0;">
-<a href="https://www.limaxai.com/pl/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Zacznij używać GPT</a>
+<a href="https://www.limaxai.com/pl/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Przejdź do tworzenia</a>
 </div>
 
 ![Premiera Seedance 2.5 30s one-take natywne 4K 50 referencji](https://img.limaxai.com/aiweb/limaxai-260623-1.png)
@@ -88,10 +88,10 @@ Przykładowy output Seedance 2.5—około 30 sekund ciągłej pracy kamery multi
 
 Jeśli używasz **ChatGPT** (**GPT-5.4 / GPT-5.5**, **GPT-5.6** w drodze) do copy i dekompozycji zadań, przenieś te same nawyki **gpt tutorial** do prep wideo.
 
-Kliknij przycisk poniżej, aby otworzyć czat LimaxAI (**gpt-5.4**; nowsze modele na liście) i ćwicz prompty storyboard.
+Gdy lista ujęć jest gotowa, kliknij **Przejdź do tworzenia** poniżej, aby otworzyć generowanie wideo Seedance w LimaxAI.
 
 <div style="text-align: center; margin: 28px 0;">
-<a href="https://www.limaxai.com/pl/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Zacznij używać GPT</a>
+<a href="https://www.limaxai.com/pl/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Przejdź do tworzenia</a>
 </div>
 
 ## Podsumowanie
@@ -104,10 +104,10 @@ Kliknij przycisk poniżej, aby otworzyć czat LimaxAI (**gpt-5.4**; nowsze model
 | Edycja | Lokalna kontrola multishot |
 | Audio | Lip sync + ambient SFX w jednym przebiegu |
 | Rollout | Piloty enterprise; szerszy dostęp początek lipca 2026 |
-| Następny krok | Szkic planów w ChatGPT; GPT na LimaxAI |
+| Następny krok | Storyboard w ChatGPT; tworzenie Seedance w LimaxAI |
 
 Seedance 2.5 przesuwa wideo AI od „zabawki krótkich klipów” do **użytecznych 30-sekundowych ujęć**. Dyscyplinowany **GPT** pre-production bije gonienie każdej nowej nazwy modelu.
 
 <div style="text-align: center; margin: 40px 0;">
-<a href="https://www.limaxai.com/pl/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Zacznij używać GPT</a>
+<a href="https://www.limaxai.com/pl/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Przejdź do tworzenia</a>
 </div>

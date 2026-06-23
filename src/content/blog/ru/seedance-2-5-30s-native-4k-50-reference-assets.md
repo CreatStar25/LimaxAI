@@ -15,7 +15,7 @@ author: "LimaxAI Team"
 Опубликовано: 23 июня 2026
 
 <div style="text-align: center; margin: 32px 0;">
-<a href="https://www.limaxai.com/ru/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Начать использовать GPT</a>
+<a href="https://www.limaxai.com/ru/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Перейти к созданию</a>
 </div>
 
 ![Запуск Seedance 2.5 30с одним дублем нативный 4K 50 референсов](https://img.limaxai.com/aiweb/limaxai-260623-1.png)
@@ -88,10 +88,10 @@ Volcano Engine также обновила **базу Seedance 2.0** до нат
 
 Если вы уже используете **ChatGPT** (**GPT-5.4 / GPT-5.5**, **GPT-5.6** на подходе) для копирайта и декомпозиции задач, перенесите те же привычки **gpt tutorial** в подготовку видео.
 
-Нажмите кнопку ниже, чтобы открыть чат LimaxAI (**gpt-5.4**; новые модели — в списке) и потренировать storyboard-промпты.
+Когда раскадровка готова, нажмите **Перейти к созданию** ниже — откроется генерация видео Seedance на LimaxAI.
 
 <div style="text-align: center; margin: 28px 0;">
-<a href="https://www.limaxai.com/ru/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Начать использовать GPT</a>
+<a href="https://www.limaxai.com/ru/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Перейти к созданию</a>
 </div>
 
 ## Итог
@@ -104,10 +104,10 @@ Volcano Engine также обновила **базу Seedance 2.0** до нат
 | Монтаж | Локализованный multishot-контроль |
 | Аудио | Lip sync + ambient SFX за один проход |
 | Rollout | Корпоративные пилоты; шире — начало июля 2026 |
-| Следующий шаг | Черновик планов в ChatGPT; GPT на LimaxAI |
+| Следующий шаг | Раскадровка в ChatGPT; создание Seedance на LimaxAI |
 
 Seedance 2.5 сдвигает AI-видео от «игрушки для коротких клипов» к **рабочим полуминутным дублям**. Дисциплинированный **GPT**-pre-production полезнее погони за каждым новым именем модели.
 
 <div style="text-align: center; margin: 40px 0;">
-<a href="https://www.limaxai.com/ru/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Начать использовать GPT</a>
+<a href="https://www.limaxai.com/ru/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">Перейти к созданию</a>
 </div>

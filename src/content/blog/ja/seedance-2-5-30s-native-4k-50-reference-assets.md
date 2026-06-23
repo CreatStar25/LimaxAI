@@ -15,7 +15,7 @@ author: "LimaxAI Team"
 公開日：2026年6月23日
 
 <div style="text-align: center; margin: 32px 0;">
-<a href="https://www.limaxai.com/ja/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">GPTを使い始める</a>
+<a href="https://www.limaxai.com/ja/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">創作へ</a>
 </div>
 
 ![Seedance 2.5 30秒ワンテイク ネイティブ4K 50参照](https://img.limaxai.com/aiweb/limaxai-260623-1.png)
@@ -90,10 +90,10 @@ Seedance 2.5のサンプル出力—約30秒の連続マルチショット：
 
 普段GPTで文案や要件分解をしているなら、同じ **gptチュートリアル** 習慣を動画準備に移せます。
 
-下のボタンからLimaxAIチャット（**gpt-5.4**）を開き、絵コンテ用プロンプトを練習してください。
+絵コンテとプロンプトの準備ができたら、下の「創作へ」ボタンから LimaxAI の Seedance 動画生成ページへ進んでください。
 
 <div style="text-align: center; margin: 28px 0;">
-<a href="https://www.limaxai.com/ja/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">GPTを使い始める</a>
+<a href="https://www.limaxai.com/ja/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">創作へ</a>
 </div>
 
 ## まとめ
@@ -106,10 +106,10 @@ Seedance 2.5のサンプル出力—約30秒の連続マルチショット：
 | 編集 | マルチショット局部制御 |
 | 音画 | リップシンク+環境音同次 |
 | 公開 | 企業試用中；7月初旬拡大 |
-| 次の一手 | ChatGPTで絵コンテ；LimaxAIでGPT |
+| 次の一手 | ChatGPTで絵コンテ；LimaxAI Seedance創作 |
 
 Seedance 2.5はAI動画を「短尺おもちゃ」から **使える30秒の完成度** へ押し上げます。規律ある **GPT** 前工程が、新モデル名を追いかけるより実用的です。
 
 <div style="text-align: center; margin: 40px 0;">
-<a href="https://www.limaxai.com/ja/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">GPTを使い始める</a>
+<a href="https://www.limaxai.com/ja/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">創作へ</a>
 </div>

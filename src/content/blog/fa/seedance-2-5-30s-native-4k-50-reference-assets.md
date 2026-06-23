@@ -15,7 +15,7 @@ author: "LimaxAI Team"
 منتشر شده: ۲۳ ژوئن ۲۰۲۶
 
 <div style="text-align: center; margin: 32px 0;">
-<a href="https://www.limaxai.com/fa/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">شروع استفاده از GPT</a>
+<a href="https://www.limaxai.com/fa/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">برو به خلق</a>
 </div>
 
 ![رونمایی Seedance 2.5 30ث one-take 4K بومی 50 مرجع](https://img.limaxai.com/aiweb/limaxai-260623-1.png)
@@ -88,10 +88,10 @@ timelineهای طولانی‌تر Volcano Engine را به بازطراحی **�
 
 اگر از **ChatGPT** (**GPT-5.4 / GPT-5.5**، **GPT-5.6** در راه) برای copy و تفکیک وظایف استفاده می‌کنید، همان عادات **gpt tutorial** را به prep ویدیو منتقل کنید.
 
-دکمه زیر را بزنید تا چت LimaxAI (**gpt-5.4**؛ مدل‌های جدید را از فهرست انتخاب کنید) باز شود و promptهای storyboard تمرین کنید.
+وقتی storyboard آماده شد، روی **برو به خلق** در پایین کلیک کنید تا تولید ویدیوی Seedance در LimaxAI باز شود.
 
 <div style="text-align: center; margin: 28px 0;">
-<a href="https://www.limaxai.com/fa/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">شروع استفاده از GPT</a>
+<a href="https://www.limaxai.com/fa/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">برو به خلق</a>
 </div>
 
 ## خلاصه
@@ -104,10 +104,10 @@ timelineهای طولانی‌تر Volcano Engine را به بازطراحی **�
 | ویرایش | کنترل multishot محلی |
 | صدا | Lip sync + SFX محیطی در یک pass |
 | رول‌اوت | پایلوت سازمانی؛ گسترش اوایل ژوئیه ۲۰۲۶ |
-| گام بعد | پیش‌نویس shot در ChatGPT؛ GPT در LimaxAI |
+| گام بعد | storyboard در ChatGPT؛ خلق Seedance در LimaxAI |
 
 Seedance 2.5 ویدیوی AI را از «اسباب‌بازی کلیپ کوتاه» به **take نیم‌دقیقه‌ای قابل‌استفاده** می‌برد. جریان pre-production **GPT** منضبط از تعقیب هر نام مدل جدید بهتر است.
 
 <div style="text-align: center; margin: 40px 0;">
-<a href="https://www.limaxai.com/fa/chat?model=gpt-5.4" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">شروع استفاده از GPT</a>
+<a href="https://www.limaxai.com/fa/generate/video-tools/seedance/" style="display: inline-block; background: linear-gradient(135deg, #10a37f 0%, #1a7f64 50%, #667eea 100%); color: white; padding: 16px 48px; border-radius: 8px; font-size: 20px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(16, 163, 127, 0.45);">برو به خلق</a>
 </div>
