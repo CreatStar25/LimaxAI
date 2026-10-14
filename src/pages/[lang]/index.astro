@@ -1,13 +1,27 @@
 ---
-// 语言首页重定向至 /{lang}/blog/
+// 语言首页 /{lang}/：直接渲染博客列表（与 /{lang}/blog/ 同内容，canonical 指向后者）
+// 历史上这里是 meta-refresh 跳转页，外链打到 /{lang}/ 会先白屏一帧再跳转，体验差，已改为直出。
+import { getCollection } from 'astro:content';
+import BlogIndex from '../../components/BlogIndex.astro';
 import { getAllLocales } from '../../lib/pages';
 
 export async function getStaticPaths() {
-  return getAllLocales().map((lang) => ({
-    params: { lang },
-  }));
+  const allPosts = await getCollection('blog');
+
+  return getAllLocales().map((lang) => {
+    const posts = allPosts
+      .filter((post) => post.data.lang === lang)
+      .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+    return {
+      params: { lang },
+      props: { posts, currentLang: lang },
+    };
+  });
 }
 
-const { lang } = Astro.params;
-return Astro.redirect(`/${lang}/blog/`, 301);
+const { posts, currentLang } = Astro.props;
+const siteBase = (Astro.site?.href ?? 'https://blog.limaxai.com').replace(/\/$/, '');
 ---
+
+<BlogIndex posts={posts} currentLang={currentLang} canonical={`${siteBase}/${currentLang}/blog/`} />
