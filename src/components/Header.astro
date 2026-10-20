@@ -6,13 +6,24 @@ interface Props {
   currentLang?: string;
   /** 当前路径去掉语言前缀后的部分，如 /tutorials/midjourney-red-alert/；用于语言切换时保持同一页面 */
   pathSuffix?: string;
+  /** 文章页仅传入实际存在的翻译，避免语言菜单链接到不存在的页面。 */
+  alternateUrls?: Record<string, string>;
 }
-const { currentLang = 'en', pathSuffix: rawPathSuffix = '/' } = Astro.props;
+const { currentLang = 'en', pathSuffix: rawPathSuffix = '/', alternateUrls = {} } = Astro.props;
 const t = getUi(currentLang);
 const currentLangLabel = LOCALE_LABELS[currentLang] ?? 'English';
 
 // 确保 pathSuffix 以 / 结尾，避免语言切换器产生无尾斜杠 URL
+const mainSiteHome = `https://www.limaxai.com/${currentLang}/`;
+const mainSiteCreate = `https://www.limaxai.com/${currentLang}/generate/image-tools/mjpro/`;
 const pathSuffix = rawPathSuffix === '/' ? '/' : (rawPathSuffix.endsWith('/') ? rawPathSuffix : rawPathSuffix + '/');
+const hasExplicitAlternates = Object.keys(alternateUrls).length > 0;
+const languageOptions = hasExplicitAlternates
+  ? LOCALES.filter((code) => Boolean(alternateUrls[code]))
+  : LOCALES;
+const languageHref = (code: string) => hasExplicitAlternates
+  ? alternateUrls[code]
+  : `/${code}${pathSuffix}`;
 
 // 根据当前路径判断哪个导航项为选中态（蓝色）
 const pathNorm = pathSuffix.replace(/\/$/, '') || '/';
@@ -39,7 +50,7 @@ const navLinkClass = (active: boolean) =>
 
       {/* 2. 中间导航链接 - 修改点3：字体从 text-sm 改为 text-lg，增加点击区域 */}
       <nav class="hidden md:flex space-x-8">
-        <a href="https://www.limaxai.com/" class="text-gray-500 hover:text-gray-900 px-4 py-2 text-base font-medium transition-colors">{t.navbar.home}</a>
+        <a href={mainSiteHome} class="text-gray-500 hover:text-gray-900 px-4 py-2 text-base font-medium transition-colors">{t.navbar.home}</a>
         <a href={`/${currentLang}/blog/`} class={navLinkClass(isBlog)}>{t.navbar.blog}</a>
         <a href={`/${currentLang}/tutorials/`} class={navLinkClass(isTutorial)}>{t.navbar.tutorial}</a>
         <a
@@ -72,9 +83,9 @@ const navLinkClass = (active: boolean) =>
         {/* 下拉菜单：3列布局 */}
         <div id="lang-dropdown" class="hidden absolute right-0 mt-2 w-[600px] rounded-xl shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-right transform transition-all duration-200">
             <div class="p-4 grid grid-cols-1 md:grid-cols-3 gap-2">
-                {LOCALES.map((code) => (
+                {languageOptions.map((code) => (
                     <a
-                        href={`/${code}${pathSuffix}`}
+                        href={languageHref(code)}
                         class={`block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors ${currentLang === code ? 'bg-blue-50 text-blue-700 font-semibold' : ''}`}
                     >
                         {LOCALE_LABELS[code]}
@@ -84,7 +95,7 @@ const navLinkClass = (active: boolean) =>
         </div>
         </div>
         <a
-          href="https://www.limaxai.com/generate/image-tools/mjpro"
+          href={mainSiteCreate}
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"

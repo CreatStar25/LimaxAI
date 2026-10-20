@@ -1,6 +1,6 @@
 ---
 title: "Create Custom Figurines and Emojis with Nano Banana: Practical Workflows and Prompt Recipes"
-description: "Nano Banana 2 tutorial, prompt strategies, product workflow, and practical use cases for e-commerce teams. Learn repeatable methods to improve content output and conversion-focused visuals."
+description: "Design custom figurines and expressive emoji sets with Nano Banana using reusable prompt recipes, style controls, and practical image-generation workflows."
 tags: ["nanobanana2 tutorial", "nanobanana prompts", "e-commerce operations", "AI image generation", "LimaxAI"]
 pubDate: "2026-03-23"
 heroImage: "https://img.limaxai.com/aiweb/limaxai-blog-5.png"
@@ -25,5 +25,5 @@ Cute collectible figurine style character, keep same character identity, consist
 ## CTA
 
 <div style="margin-top:24px;margin-bottom:8px;">
-  <a href="https://www.limaxai.com/" style="display:inline-block;background:linear-gradient(135deg,#14b8a6,#3b82f6);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">Use on LimaxAI</a>
+  <a href="https://www.limaxai.com/en/generate/image-tools/nano/?model=nano-banana-2" style="display:inline-block;background:linear-gradient(135deg,#14b8a6,#3b82f6);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">Use on LimaxAI</a>
 </div>

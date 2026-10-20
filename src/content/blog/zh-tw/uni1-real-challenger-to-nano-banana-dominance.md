@@ -1,6 +1,6 @@
 ---
 title: "Luma AI的Uni-1或成谷歌Nano Banana圖像主导地位的真正挑戰者"
-description: "围绕Uni-1模型与Uni-1教程的改写实测，覆盖模型特性、使用技巧、提示词结构与业务场景。"
+description: "比較 Uni-1 與 Nano Banana 的模型能力、實際生成品質和適用場景，評估 Uni-1 是否具備真正的競爭力。"
 tags: ["Uni-1模型", "Uni-1教程", "Luma AI", "AI 生图"]
 pubDate: "2026-03-24"
 heroImage: "https://img.limaxai.com/aiweb/limaxai-blog-Uni1-8.png"

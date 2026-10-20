@@ -47,5 +47,5 @@ Genera al menos 3 variantes por mensaje cambiando composición, texto y tono.
 ## CTA
 
 <div style="margin-top:24px;margin-bottom:8px;">
-  <a href="https://www.limaxai.com/" style="display:inline-block;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">Usar en LimaxAI</a>
+  <a href="https://www.limaxai.com/es/generate/image-tools/nano/?model=nano-banana-2" style="display:inline-block;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">Usar en LimaxAI</a>
 </div>

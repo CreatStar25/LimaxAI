@@ -33,6 +33,7 @@ export async function getStaticPaths() {
 
 const { currentLang, slug, article, list, labels } = Astro.props;
 const siteBase = (Astro.site?.href ?? 'https://blog.limaxai.com').replace(/\/$/, '');
+const tutorialSeoDescription = `${article.title}. ${article.intro}`;
 const backToBlogByLocale: Record<string, string> = {
   en: 'Blog',
   'zh-cn': '博客',
@@ -62,10 +63,10 @@ const backToBlogByLocale: Record<string, string> = {
 const backToBlog = backToBlogByLocale[currentLang] ?? backToBlogByLocale.en;
 ---
 
-<BaseLayout title={`${article.title} | LimaxAI`} description={article.intro} canonical={`${siteBase}/${currentLang}/tutorials/${slug}/`} currentLang={currentLang}>
+<BaseLayout title={`${article.title} | LimaxAI`} description={tutorialSeoDescription} canonical={`${siteBase}/${currentLang}/tutorials/${slug}/`} currentLang={currentLang}>
   <div class="bg-white border-b border-gray-100 py-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <a href={`/${currentLang}/`} class="text-sm text-gray-500 hover:text-blue-600 transition-colors">← {backToBlog}</a>
+      <a href={`/${currentLang}/blog/`} class="text-sm text-gray-500 hover:text-blue-600 transition-colors">← {backToBlog}</a>
     </div>
   </div>
   <TutorialLayout currentLang={currentLang} slug={slug} article={article} list={list} labels={labels} />

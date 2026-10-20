@@ -47,5 +47,5 @@ Sekurang-kurangnya 3 varian setiap mesej dengan menukar komposisi, teks dan nada
 ## CTA
 
 <div style="margin-top:24px;margin-bottom:8px;">
-  <a href="https://www.limaxai.com/" style="display:inline-block;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">Guna di LimaxAI</a>
+  <a href="https://www.limaxai.com/ms/generate/image-tools/nano/?model=nano-banana-2" style="display:inline-block;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">Guna di LimaxAI</a>
 </div>

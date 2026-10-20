@@ -6,6 +6,7 @@ const blogCollection = defineCollection({
     title: z.string(),
     description: z.string(),
     pubDate: z.coerce.date(),
+    updatedDate: z.coerce.date().optional(),
     author: z.string().default('LimaxAI Team'),
     // 支持旧文 image（本地或 URL）或新文 heroImage（URL），至少有一个即可展示
     image: z.union([image(), z.string().url()]).optional(),

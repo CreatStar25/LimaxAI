@@ -70,7 +70,7 @@ lang: "hi"
 अनुमान लगाना बंद करें। निर्माण शुरू करें।
 
 <div style="text-align: center; margin-top: 50px; margin-bottom: 50px;">
-  <a href="https://www.limaxai.com/" style="background-color: #2563EB; color: white; padding: 18px 36px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 1.25rem; box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4); transition: transform 0.2s ease-in-out;">
+  <a href="https://www.limaxai.com/hi/generate/image-tools/nano/?model=nano-banana-2" style="background-color: #2563EB; color: white; padding: 18px 36px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 1.25rem; box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4); transition: transform 0.2s ease-in-out;">
     ✨ अभी नैनो बनाना कला बनाएं
   </a>
   <p style="margin-top: 15px; color: #64748b; font-size: 0.95rem;">वायरल 3डी कला बनाने वाले हजारों रचनाकारों से जुड़ें।</p>

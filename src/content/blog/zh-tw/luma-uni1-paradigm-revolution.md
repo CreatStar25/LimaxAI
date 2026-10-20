@@ -1,6 +1,6 @@
 ---
 title: "Luma AI发布Uni-1：图像生成领域的范式革命，打破谷歌OpenAI双雄垄断"
-description: "围绕Uni-1模型与Uni-1教程的实测拆解，覆盖功能特性、使用技巧、提示词结构与商业场景。"
+description: "解析 Luma AI Uni-1 的模型能力、圖像生成方法與產業定位，了解它如何挑戰 Google 與 OpenAI 的主流模型。"
 tags: ["Uni-1模型", "Uni-1教程", "Luma AI", "AI 生图"]
 pubDate: "2026-03-24"
 heroImage: "https://img.limaxai.com/aiweb/limaxai-blog-Uni1-1.png"

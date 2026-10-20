@@ -79,5 +79,5 @@ E-commerce product highlight image, kids posture corrector in clean desk study s
 如果你正在做电商运营，Nano Banana 2 不是“会画图”的工具，而是一个可以直接提升素材产能和投放效率的内容引擎。先建立你的提示词模板库，再做稳定迭代，转化会更可控。
 
 <div style="margin-top:24px;margin-bottom:8px;">
-  <a href="https://www.limaxai.com/" style="display:inline-block;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">在LimaxAI上使用</a>
+  <a href="https://www.limaxai.com/zh-cn/generate/image-tools/nano/?model=nano-banana-2" style="display:inline-block;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">在LimaxAI上使用</a>
 </div>

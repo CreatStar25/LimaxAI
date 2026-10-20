@@ -47,5 +47,5 @@ Kompozisyon, metin ve tonu değiştirerek mesaj başına en az 3 varyant üretin
 ## CTA
 
 <div style="margin-top:24px;margin-bottom:8px;">
-  <a href="https://www.limaxai.com/" style="display:inline-block;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">LimaxAI’da kullan</a>
+  <a href="https://www.limaxai.com/tr/generate/image-tools/nano/?model=nano-banana-2" style="display:inline-block;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">LimaxAI’da kullan</a>
 </div>

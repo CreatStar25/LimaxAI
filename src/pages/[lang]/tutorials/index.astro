@@ -83,12 +83,13 @@ const tutorialSeoTitleByLocale: Record<string, string> = {
   ro: 'Tutoriale LimaxAI | Ghiduri de utilizare și instrucțiuni practice pentru instrumente AI',
 };
 const tutorialSeoTitle = tutorialSeoTitleByLocale[currentLang] ?? tutorialSeoTitleByLocale.en;
+const tutorialSeoDescription = `${tutorialSeoTitle}. ${article.intro}`;
 ---
 
-<BaseLayout title={tutorialSeoTitle} description={article.intro} canonical={`${siteBase}/${currentLang}/tutorials/`} currentLang={currentLang}>
+<BaseLayout title={tutorialSeoTitle} description={tutorialSeoDescription} canonical={`${siteBase}/${currentLang}/tutorials/`} currentLang={currentLang}>
   <div class="bg-white border-b border-gray-100 py-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <a href={`/${currentLang}/`} class="text-sm text-gray-500 hover:text-blue-600 transition-colors">← {backToBlog}</a>
+      <a href={`/${currentLang}/blog/`} class="text-sm text-gray-500 hover:text-blue-600 transition-colors">← {backToBlog}</a>
     </div>
   </div>
   <TutorialLayout currentLang={currentLang} slug={slug} article={article} list={list} labels={labels} />

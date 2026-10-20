@@ -1,6 +1,6 @@
 ---
 title: "Nano Banana Content Automation Suite: Expand Product Showcases and Detail Pages from One Photo"
-description: "Nano Banana 2 tutorial, prompt strategies, product workflow, and practical use cases for e-commerce teams. Learn repeatable methods to improve content output and conversion-focused visuals."
+description: "Build a Nano Banana content workflow that expands one product photo into showcase images, detail-page assets, and consistent campaign visuals at scale."
 tags: ["nanobanana2 tutorial", "nanobanana prompts", "e-commerce operations", "AI image generation", "LimaxAI"]
 pubDate: "2026-03-23"
 heroImage: "https://img.limaxai.com/aiweb/limaxai-blog-4.png"
@@ -25,5 +25,5 @@ Product content automation, keep product identity consistent, generate multiple 
 ## CTA
 
 <div style="margin-top:24px;margin-bottom:8px;">
-  <a href="https://www.limaxai.com/" style="display:inline-block;background:linear-gradient(135deg,#6366f1,#ec4899);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">Use on LimaxAI</a>
+  <a href="https://www.limaxai.com/en/generate/image-tools/nano/?model=nano-banana-2" style="display:inline-block;background:linear-gradient(135deg,#6366f1,#ec4899);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">Use on LimaxAI</a>
 </div>

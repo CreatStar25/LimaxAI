@@ -45,5 +45,5 @@ Product content automation, keep product identity consistent, generate multiple 
 把“素材制作”升级为“内容自动化”后，運營效率和素材利用率会显著提升。
 
 <div style="margin-top:24px;margin-bottom:8px;">
-  <a href="https://www.limaxai.com/" style="display:inline-block;background:linear-gradient(135deg,#6366f1,#ec4899);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">在LimaxAI上使用</a>
+  <a href="https://www.limaxai.com/zh-tw/generate/image-tools/nano/?model=nano-banana-2" style="display:inline-block;background:linear-gradient(135deg,#6366f1,#ec4899);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">在LimaxAI上使用</a>
 </div>

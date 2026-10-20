@@ -25,5 +25,5 @@ Product content automation, keep product identity consistent, generate multiple 
 ## CTA
 
 <div style="margin-top:24px;margin-bottom:8px;">
-  <a href="https://www.limaxai.com/" style="display:inline-block;background:linear-gradient(135deg,#6366f1,#ec4899);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">LimaxAI에서 사용</a>
+  <a href="https://www.limaxai.com/ko/generate/image-tools/nano/?model=nano-banana-2" style="display:inline-block;background:linear-gradient(135deg,#6366f1,#ec4899);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">LimaxAI에서 사용</a>
 </div>

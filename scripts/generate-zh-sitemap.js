@@ -34,6 +34,16 @@ function extractLocFromXml(xml) {
   return locs;
 }
 
+function extractEntriesFromXml(xml) {
+  return [...xml.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((match) => {
+    const block = match[1];
+    return {
+      loc: block.match(/<loc>([^<]+)<\/loc>/)?.[1]?.trim(),
+      lastmod: block.match(/<lastmod>([^<]+)<\/lastmod>/)?.[1]?.trim(),
+    };
+  }).filter((entry) => entry.loc);
+}
+
 function main() {
   if (!existsSync(DIST_DIR)) {
     console.error('[generate-zh-sitemap] 错误：构建目录不存在，请先执行 astro build。');
@@ -46,28 +56,31 @@ function main() {
 
   const indexXml = readFileSync(SITEMAP_INDEX, 'utf8');
   const indexLocs = extractLocFromXml(indexXml);
-  const allUrls = new Set();
+  const allEntries = new Map();
 
   for (const loc of indexLocs) {
     const fileName = loc.replace(/^https?:\/\/[^/]+\//, '').replace(/\/$/, '');
     const localPath = join(DIST_DIR, fileName);
     if (!existsSync(localPath)) continue;
     const xml = readFileSync(localPath, 'utf8');
-    const urls = extractLocFromXml(xml);
-    urls.forEach((u) => allUrls.add(u));
+    const entries = extractEntriesFromXml(xml);
+    entries.forEach((entry) => allEntries.set(entry.loc, entry.lastmod));
   }
 
-  const zhUrls = [...allUrls].filter((url) => url.includes(ZH_PATH_SEGMENT));
+  const zhEntries = [...allEntries].filter(([url]) => url.includes(ZH_PATH_SEGMENT));
   const urlset = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     `<urlset xmlns="${NS}">`,
-    ...zhUrls.map((u) => `  <url><loc>${escapeXml(u)}</loc></url>`),
+    ...zhEntries.map(([url, lastmod]) => {
+      const lastmodXml = lastmod ? `<lastmod>${escapeXml(lastmod)}</lastmod>` : '';
+      return `  <url><loc>${escapeXml(url)}</loc>${lastmodXml}</url>`;
+    }),
     '</urlset>',
   ].join('\n');
 
   const outPath = join(DIST_DIR, OUTPUT_FILE);
   writeFileSync(outPath, urlset, 'utf8');
-  console.log(`[generate-zh-sitemap] 已生成 ${OUTPUT_FILE}，共 ${zhUrls.length} 条中文 URL。`);
+  console.log(`[generate-zh-sitemap] 已生成 ${OUTPUT_FILE}，共 ${zhEntries.length} 条中文 URL。`);
 }
 
 function escapeXml(s) {

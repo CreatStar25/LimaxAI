@@ -23,6 +23,8 @@ export async function getStaticPaths() {
     articlesBySlug.get(baseSlug).push({ lang, slug, entry });
   }
 
+  const siteBase = (Astro.site?.href || 'https://blog.limaxai.com').replace(/\/$/, '');
+
   return blogEntries.map(entry => {
     const [lang, ...slugParts] = entry.slug.split('/');
     const slug = slugParts.join('/');
@@ -33,9 +35,7 @@ export async function getStaticPaths() {
     const relatedArticles = articlesBySlug.get(baseSlug) || [];
     
     for (const related of relatedArticles) {
-      if (related.lang !== lang) {
-        alternateUrls[related.lang] = `${Astro.site?.href || 'https://blog.limaxai.com'}/${related.lang}/${baseSlug}/`;
-      }
+      alternateUrls[related.lang] = `${siteBase}/${related.lang}/${baseSlug}/`;
     }
 
     return {
@@ -65,6 +65,20 @@ const siteBase = (Astro.site?.href ?? 'https://blog.limaxai.com').replace(/\/$/,
 const canonical = `${siteBase}/${entry.data.lang}/${postSlug}/`;
 const image = entry.data.heroImage ?? (typeof entry.data.image === 'string' ? entry.data.image : '');
 const readMinutes = Math.max(1, Math.ceil(entry.body.length / 800));
+const mainSiteHome = `https://www.limaxai.com/${entry.data.lang}/`;
+const publishedTime = entry.data.pubDate.toISOString();
+const modifiedTime = (entry.data.updatedDate ?? entry.data.pubDate).toISOString();
+const isLimaxAuthor = ['LimaxAI Team', 'Equipe LimaxAI'].includes(entry.data.author);
+const structuredAuthor = isLimaxAuthor
+  ? {
+      "@type": "Organization",
+      "@id": "https://www.limaxai.com/#organization",
+      "name": "LimaxAI"
+    }
+  : {
+      "@type": "Organization",
+      "name": entry.data.author
+    };
 ---
 
 <BaseLayout
@@ -74,6 +88,11 @@ const readMinutes = Math.max(1, Math.ceil(entry.body.length / 800));
   canonical={canonical}
   currentLang={entry.data.lang}
   alternateUrls={alternateUrls}
+  ogType="article"
+  publishedTime={publishedTime}
+  modifiedTime={modifiedTime}
+  articleSection={entry.data.tags[0]}
+  articleTags={entry.data.tags}
 >
   <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
@@ -81,7 +100,7 @@ const readMinutes = Math.max(1, Math.ceil(entry.body.length / 800));
     <nav class="flex items-center text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
       <ol class="inline-flex items-center space-x-1 md:space-x-2">
         <li class="inline-flex items-center">
-          <a href="https://www.limaxai.com" class="inline-flex items-center hover:text-blue-600 transition-colors">
+          <a href={mainSiteHome} class="inline-flex items-center hover:text-blue-600 transition-colors">
             <svg class="w-3 h-3 mr-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
               <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
             </svg>
@@ -93,7 +112,7 @@ const readMinutes = Math.max(1, Math.ceil(entry.body.length / 800));
             <svg class="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
             </svg>
-            <a href={`/${entry.data.lang}/`} class="ml-1 hover:text-blue-600 transition-colors">{t.navbar.blog}</a>
+            <a href={`/${entry.data.lang}/blog/`} class="ml-1 hover:text-blue-600 transition-colors">{t.navbar.blog}</a>
           </div>
         </li>
         <li>
@@ -118,13 +137,13 @@ const readMinutes = Math.max(1, Math.ceil(entry.body.length / 800));
             "@type": "ListItem",
             "position": 1,
             "name": t.navbar.home,
-            "item": "https://www.limaxai.com"
+            "item": mainSiteHome
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": t.navbar.blog,
-            "item": `${siteBase}/${entry.data.lang}/`
+            "item": `${siteBase}/${entry.data.lang}/blog/`
           },
           {
             "@type": "ListItem",
@@ -164,36 +183,37 @@ const readMinutes = Math.max(1, Math.ceil(entry.body.length / 800));
 
     {/* 文章结构化数据 */}
     <SchemaData 
-      type="Article" 
+      type="BlogPosting"
       currentLang={entry.data.lang}
       data={{
         "headline": entry.data.title,
         "description": entry.data.description,
         "image": image,
-        "author": {
-          "@type": "Organization",
-          "name": entry.data.author,
-          "url": "https://www.limaxai.com"
-        },
+        "thumbnailUrl": image,
+        "author": structuredAuthor,
         "publisher": {
           "@type": "Organization",
-          "name": "LimaxAI",
+          "@id": "https://www.limaxai.com/#organization",
           "logo": {
             "@type": "ImageObject",
             "url": `${siteBase}/logo.png`,
-            "width": 512,
-            "height": 512
+            "width": 1000,
+            "height": 1000
           }
         },
-        "datePublished": entry.data.pubDate.toISOString(),
-        "dateModified": entry.data.pubDate.toISOString(),
+        "datePublished": publishedTime,
+        "dateModified": modifiedTime,
         "mainEntityOfPage": {
           "@type": "WebPage",
           "@id": canonical
         },
         "wordCount": entry.body.length,
         "timeRequired": `PT${readMinutes}M`,
-        "articleSection": entry.data.tags[0] || t.meta.articleSection
+        "articleSection": entry.data.tags[0] || t.meta.articleSection,
+        "keywords": entry.data.tags.join(', '),
+        "isPartOf": {
+          "@id": `${siteBase}/#website`
+        }
       }} 
     />
 

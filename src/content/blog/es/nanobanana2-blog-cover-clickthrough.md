@@ -35,5 +35,5 @@ High CTR blog cover, clean composition, strong focal point, bold readable title 
 ## CTA
 
 <div style="margin-top:24px;margin-bottom:8px;">
-  <a href="https://www.limaxai.com/" style="display:inline-block;background:linear-gradient(135deg,#f59e0b,#ef4444);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">Usar en LimaxAI</a>
+  <a href="https://www.limaxai.com/es/generate/image-tools/nano/?model=nano-banana-2" style="display:inline-block;background:linear-gradient(135deg,#f59e0b,#ef4444);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">Usar en LimaxAI</a>
 </div>

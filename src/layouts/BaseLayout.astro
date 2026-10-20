@@ -6,6 +6,7 @@ import SchemaData from '../components/SchemaData.astro';
 import PerformanceMonitor from '../components/PerformanceMonitor.astro';
 import SeoChecklist from '../components/SeoChecklist.astro';
 import { LOCALES } from '../i18n/ui';
+import { remoteImageDimensions } from '../utils/image-dimensions.js';
 
 const {
   title,
@@ -15,6 +16,12 @@ const {
   canonical = Astro.url.href,
   baiduSiteVerification = false,
   alternateUrls = {},
+  ogType = 'website',
+  publishedTime,
+  modifiedTime,
+  articleSection,
+  articleTags = [],
+  robots = 'max-image-preview:large, max-snippet:-1, max-video-preview:-1',
 } = Astro.props;
 
 // 请将此处替换为您主站的 GA4 衡量 ID
@@ -25,12 +32,13 @@ const contentLanguageMap: Record<string, string> = {
   'zh-cn': 'zh-CN',
   'zh-tw': 'zh-TW',
   'en': 'en-US',
-  'es': 'es-ES', 'ar': 'ar', 'pt': 'pt-BR', 'id': 'id', 'ms': 'ms', 'fr': 'fr-FR',
-  'ru': 'ru', 'hi': 'hi', 'ja': 'ja', 'de': 'de-DE', 'ko': 'ko-KR', 'tr': 'tr',
-  'vi': 'vi', 'th': 'th', 'it': 'it-IT', 'fa': 'fa', 'nl': 'nl-NL', 'pl': 'pl',
-  'sv': 'sv', 'uk': 'uk', 'ro': 'ro',
+  'es': 'es-ES', 'ar': 'ar-SA', 'pt': 'pt-BR', 'id': 'id-ID', 'ms': 'ms-MY', 'fr': 'fr-FR',
+  'ru': 'ru-RU', 'hi': 'hi-IN', 'ja': 'ja-JP', 'de': 'de-DE', 'ko': 'ko-KR', 'tr': 'tr-TR',
+  'vi': 'vi-VN', 'th': 'th-TH', 'it': 'it-IT', 'fa': 'fa-IR', 'nl': 'nl-NL', 'pl': 'pl-PL',
+  'sv': 'sv-SE', 'uk': 'uk-UA', 'ro': 'ro-RO',
 };
 const contentLanguage = contentLanguageMap[currentLang] ?? 'en-US';
+const openGraphLocale = contentLanguage.replace('-', '_');
 
 // 国际引擎：hreflang + x-default（Google/Bing），x-default 指向英文
 // 强制使用 blog.limaxai.com 作为主要域名，避免 www 和 blog 域名混淆
@@ -39,17 +47,30 @@ const pathname = Astro.url.pathname;
 const pathWithoutLang = pathname.replace(/^\/[^/]+/, '') || '/';
 // 非根路径统一带尾部斜杠，与站内链接（如 /about/、/tutorials/）一致，避免语言切换跳错
 const pathSuffix = pathWithoutLang === '/' ? '/' : (pathWithoutLang.endsWith('/') ? pathWithoutLang : pathWithoutLang + '/');
+const canonicalPathname = (() => {
+  try {
+    return new URL(canonical, baseUrl).pathname;
+  } catch {
+    return pathname;
+  }
+})();
+const canonicalPathWithoutLang = canonicalPathname.replace(/^\/[^/]+/, '') || '/';
+const hreflangPathSuffix = canonicalPathWithoutLang === '/'
+  ? '/'
+  : (canonicalPathWithoutLang.endsWith('/') ? canonicalPathWithoutLang : canonicalPathWithoutLang + '/');
 
-// 智能生成 hreflang 链接
+const hasExplicitAlternates = Object.keys(alternateUrls).length > 0;
+const alternateLocales = hasExplicitAlternates
+  ? LOCALES.filter((locale) => Boolean(alternateUrls[locale]))
+  : LOCALES;
+
+// Articles pass an explicit map so only real translations are declared.
+// Shared pages omit the map and use the standard locale-parallel path.
 const getHreflangHref = (locale: string) => {
-  // 对于当前页面，生成对应语言的版本
-  // 首先检查是否有特定的语言对应逻辑（通过 props 传入）
-  if (alternateUrls && alternateUrls[locale]) {
+  if (hasExplicitAlternates) {
     return alternateUrls[locale];
   }
-  
-  // 否则使用标准路径格式
-  return `${baseUrl}/${locale}${pathSuffix}`;
+  return `${baseUrl}/${locale}${hreflangPathSuffix}`;
 };
 
 const metaDescription = description || String(title || 'LimaxAI');
@@ -90,9 +111,13 @@ const getCanonicalUrl = () => {
 };
 
 const canonicalUrl = getCanonicalUrl();
+const xDefaultHref = hasExplicitAlternates
+  ? (alternateUrls.en || alternateUrls[currentLang] || canonicalUrl)
+  : getHreflangHref('en');
 const absoluteImage = image
   ? (String(image).startsWith('http') ? String(image) : `${baseUrl}${String(image).startsWith('/') ? '' : '/'}${String(image)}`)
   : `${baseUrl}/favicon.svg`;
+const openGraphImageDimensions = remoteImageDimensions[absoluteImage] || { width: 1200, height: 630 };
 ---
 
 <html lang={currentLang}>
@@ -102,9 +127,6 @@ const absoluteImage = image
     
     {/* SEO 验证标签 */}
     {baiduSiteVerification && <meta name="baidu-site-verification" content="codeva-NNhQvugjuQ" />}
-    <meta name="google-site-verification" content="your-google-verification-code" />
-    <meta name="msvalidate.01" content="your-bing-verification-code" />
-    <meta name="yandex-verification" content="your-yandex-verification-code" />
     
     {/* 内容语言和生成器 */}
     <meta http-equiv="content-language" content={contentLanguage} />
@@ -118,6 +140,7 @@ const absoluteImage = image
 
     <title>{title}</title>
     <meta name="description" content={metaDescription} />
+    <meta name="robots" content={robots} />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
@@ -125,16 +148,23 @@ const absoluteImage = image
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content="LimaxAI" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={metaDescription} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={absoluteImage} />
     <meta property="og:image:alt" content={title} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content={contentLanguage} />
+    <meta property="og:image:width" content={String(openGraphImageDimensions.width)} />
+    <meta property="og:image:height" content={String(openGraphImageDimensions.height)} />
+    <meta property="og:locale" content={openGraphLocale} />
+    {alternateLocales.filter((locale) => locale !== currentLang).map((locale) => (
+      <meta property="og:locale:alternate" content={(contentLanguageMap[locale] ?? locale).replace('-', '_')} />
+    ))}
+    {ogType === 'article' && publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {ogType === 'article' && modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+    {ogType === 'article' && articleSection && <meta property="article:section" content={articleSection} />}
+    {ogType === 'article' && articleTags.map((tag) => <meta property="article:tag" content={tag} />)}
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@LimaxAI" />
@@ -145,13 +175,13 @@ const absoluteImage = image
     <meta name="twitter:image:alt" content={title} />
 
     {/* 国际引擎：hreflang，x-default 指向英文 */}
-    {LOCALES.map((locale) => {
+    {alternateLocales.map((locale) => {
       const href = getHreflangHref(locale);
       // 标准化 hreflang 值（例如 zh-cn 需要保持原样，但需要确保格式正确）
       const hreflangValue = locale.toLowerCase().replace('_', '-');
       return <link rel="alternate" hreflang={hreflangValue} href={href} />;
     })}
-    <link rel="alternate" hreflang="x-default" href={getHreflangHref('en')} />
+    <link rel="alternate" hreflang="x-default" href={xDefaultHref} />
 
     {/* ================= 结构化数据 (JSON-LD) 开始 ================= */}
     {/* 网站级 Schema */}
@@ -160,13 +190,12 @@ const absoluteImage = image
       currentLang={currentLang}
       data={{
         "name": "LimaxAI Blog",
+        "@id": `${baseUrl}/#website`,
         "url": baseUrl,
-        "description": "Professional AI generation platform blog with tutorials and news",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": `${baseUrl}/search?q={search_term_string}`,
-          "query-input": "required name=search_term_string"
-        }
+        "publisher": {
+          "@id": "https://www.limaxai.com/#organization"
+        },
+        "description": "Professional AI generation platform blog with tutorials and news"
       }} 
     />
 
@@ -176,13 +205,14 @@ const absoluteImage = image
       currentLang={currentLang}
       data={{
         "name": "LimaxAI",
+        "@id": "https://www.limaxai.com/#organization",
         "url": "https://www.limaxai.com",
-        "logo": `${baseUrl}/logo.png`,
-        "sameAs": [
-          "https://twitter.com/LimaxAI",
-          "https://github.com/LimaxAI",
-          "https://www.linkedin.com/company/limaxai"
-        ]
+        "logo": {
+          "@type": "ImageObject",
+          "url": `${baseUrl}/logo.png`,
+          "width": 1000,
+          "height": 1000
+        }
       }} 
     />
     {/* ================= 结构化数据 (JSON-LD) 结束 ================= */}
@@ -202,11 +232,10 @@ const absoluteImage = image
 
     {/* ================= Google Analytics 4 开始 ================= */}
     <script
-      type="text/partytown"
       async
       src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
     ></script>
-    <script type="text/partytown" define:vars={{ GA_MEASUREMENT_ID }}>
+    <script define:vars={{ GA_MEASUREMENT_ID }}>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -219,7 +248,7 @@ const absoluteImage = image
   <body class="flex flex-col min-h-screen bg-gray-50 text-gray-900">
 
     {/* 导航栏：传入当前语言与路径后缀，以便语言切换时保持同一页面 */}
-    <Header currentLang={currentLang} pathSuffix={pathSuffix} />
+    <Header currentLang={currentLang} pathSuffix={hreflangPathSuffix} alternateUrls={alternateUrls} />
 
     {/* 主要内容区域 - slot 会被外部传入的内容替换 */}
     <main class="flex-grow">

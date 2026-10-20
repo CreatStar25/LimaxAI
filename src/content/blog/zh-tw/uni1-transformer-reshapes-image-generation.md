@@ -1,6 +1,6 @@
 ---
 title: "Luma AI 的 Uni-1 如何用Transformer 重塑圖像生成？"
-description: "围绕Uni-1模型与Uni-1教程的改写实测，覆盖模型特性、使用技巧、提示词结构与业务场景。"
+description: "拆解 Luma AI Uni-1 如何運用 Transformer 重塑圖像生成，說明模型架構、提示詞理解與視覺品質上的改進。"
 tags: ["Uni-1模型", "Uni-1教程", "Luma AI", "AI 生图"]
 pubDate: "2026-03-24"
 heroImage: "https://img.limaxai.com/aiweb/limaxai-blog-Uni1-6.png"

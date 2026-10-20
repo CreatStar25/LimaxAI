@@ -1,6 +1,6 @@
 ---
 title: "Luma AI發布Uni-1：自回歸架构重塑圖像生成"
-description: "围绕Uni-1模型与Uni-1教程的改写实测，覆盖模型特性、使用技巧、提示词结构与业务场景。"
+description: "解析 Luma AI Uni-1 的自回歸架構與生成流程，了解它在細節一致性、構圖控制和複雜提示詞上的表現。"
 tags: ["Uni-1模型", "Uni-1教程", "Luma AI", "AI 生图"]
 pubDate: "2026-03-24"
 heroImage: "https://img.limaxai.com/aiweb/limaxai-blog-Uni1-9.png"

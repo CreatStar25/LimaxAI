@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 const { currentLang, title, body } = Astro.props;
 ---
 
-<BaseLayout title={`${title} | LimaxAI`} currentLang={currentLang}>
+<BaseLayout title={`${title} | LimaxAI`} currentLang={currentLang} robots="noindex, follow">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <h1 class="text-3xl font-bold text-gray-900 mb-6">{title}</h1>
     <div class="prose prose-gray text-gray-600 leading-relaxed">

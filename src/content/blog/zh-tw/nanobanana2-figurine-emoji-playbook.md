@@ -43,5 +43,5 @@ Cute collectible figurine style character, keep same character identity, consist
 当你的角色内容形成“可复用模板”，内容生产会从灵感驱动升级到系统化产出。
 
 <div style="margin-top:24px;margin-bottom:8px;">
-  <a href="https://www.limaxai.com/" style="display:inline-block;background:linear-gradient(135deg,#14b8a6,#3b82f6);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">在LimaxAI上使用</a>
+  <a href="https://www.limaxai.com/zh-tw/generate/image-tools/nano/?model=nano-banana-2" style="display:inline-block;background:linear-gradient(135deg,#14b8a6,#3b82f6);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">在LimaxAI上使用</a>
 </div>

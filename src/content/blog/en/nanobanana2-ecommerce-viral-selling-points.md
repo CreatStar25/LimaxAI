@@ -1,6 +1,6 @@
 ---
 title: "Nano Banana 2 for E-commerce: Generate High-Converting Product Selling-Point Visuals in Minutes"
-description: "Nano Banana 2 tutorial, prompt strategies, product workflow, and practical use cases for e-commerce teams. Learn repeatable methods to improve content output and conversion-focused visuals."
+description: "Turn product features into high-converting e-commerce selling-point visuals with Nano Banana 2, including repeatable prompts and a practical production workflow."
 tags: ["nanobanana2 tutorial", "nanobanana prompts", "e-commerce operations", "AI image generation", "LimaxAI"]
 pubDate: "2026-03-23"
 heroImage: "https://img.limaxai.com/aiweb/limaxai-blog-1.png"
@@ -47,5 +47,5 @@ Produce at least 3 variants for each selling point by changing composition, text
 ## CTA
 
 <div style="margin-top:24px;margin-bottom:8px;">
-  <a href="https://www.limaxai.com/" style="display:inline-block;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">Use on LimaxAI</a>
+  <a href="https://www.limaxai.com/en/generate/image-tools/nano/?model=nano-banana-2" style="display:inline-block;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">Use on LimaxAI</a>
 </div>

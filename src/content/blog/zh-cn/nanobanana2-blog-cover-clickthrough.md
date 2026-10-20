@@ -45,5 +45,5 @@ High CTR blog cover, clean composition, strong focal point, bold readable title 
 把封面生产流程模板化后，你的内容团队可以在同样时间产出更多高点击入口素材。
 
 <div style="margin-top:24px;margin-bottom:8px;">
-  <a href="https://www.limaxai.com/" style="display:inline-block;background:linear-gradient(135deg,#f59e0b,#ef4444);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">在LimaxAI上使用</a>
+  <a href="https://www.limaxai.com/zh-cn/generate/image-tools/nano/?model=nano-banana-2" style="display:inline-block;background:linear-gradient(135deg,#f59e0b,#ef4444);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">在LimaxAI上使用</a>
 </div>

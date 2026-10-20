@@ -1,6 +1,6 @@
 ---
 title: "UNI-1对战nanobanana，华人团队在这个领域赢麻了"
-description: "围绕Uni-1模型与Uni-1教程的实测拆解，覆盖功能特性、使用技巧、提示词结构与商业场景。"
+description: "從模型能力與實際生成結果分析 UNI-1 對戰 Nano Banana 的表現，聚焦華人團隊在圖像生成領域的技術突破。"
 tags: ["Uni-1模型", "Uni-1教程", "Luma AI", "AI 生图"]
 pubDate: "2026-03-24"
 heroImage: "https://img.limaxai.com/aiweb/limaxai-blog-Uni1-4.png"

@@ -1,6 +1,6 @@
 ---
 title: "終於出现能和Nanobanana抗衡的生圖模型了！"
-description: "围绕Uni-1模型与Uni-1教程的改写实测，覆盖模型特性、使用技巧、提示词结构与业务场景。"
+description: "透過提示詞與生成案例測試這款可與 Nano Banana 抗衡的新模型，檢視人物、構圖、文字理解和風格控制能力。"
 tags: ["Uni-1模型", "Uni-1教程", "Luma AI", "AI 生图"]
 pubDate: "2026-03-24"
 heroImage: "https://img.limaxai.com/aiweb/limaxai-blog-Uni1-10.png"

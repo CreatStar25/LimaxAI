@@ -1,6 +1,6 @@
 ---
 title: "黑马圖像模型被Nano Banana技術負責人点赞"
-description: "围绕Uni-1模型与Uni-1教程的改写实测，覆盖模型特性、使用技巧、提示词结构与业务场景。"
+description: "分析獲 Nano Banana 技術負責人肯定的黑馬圖像模型，整理其核心能力、生成效果與值得關注的應用方向。"
 tags: ["Uni-1模型", "Uni-1教程", "Luma AI", "AI 生图"]
 pubDate: "2026-03-24"
 heroImage: "https://img.limaxai.com/aiweb/limaxai-blog-Uni1-7.png"

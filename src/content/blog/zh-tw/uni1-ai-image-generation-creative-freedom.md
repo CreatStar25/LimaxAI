@@ -1,6 +1,6 @@
 ---
 title: "Uni-1来了！AI图像生成革命，视觉创作自由"
-description: "围绕Uni-1模型与Uni-1教程的实测拆解，覆盖功能特性、使用技巧、提示词结构与商业场景。"
+description: "介紹 Uni-1 的圖像生成能力、創作流程與提示詞技巧，探索它如何提升風格控制、視覺表達和商業設計效率。"
 tags: ["Uni-1模型", "Uni-1教程", "Luma AI", "AI 生图"]
 pubDate: "2026-03-24"
 heroImage: "https://img.limaxai.com/aiweb/limaxai-blog-Uni1-3.png"

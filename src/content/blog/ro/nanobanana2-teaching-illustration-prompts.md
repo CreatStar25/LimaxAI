@@ -27,5 +27,5 @@ Educational illustration for [subject], explain [concept] for [grade], clear lab
 ## CTA
 
 <div style="margin-top:24px;margin-bottom:8px;">
-  <a href="https://www.limaxai.com/" style="display:inline-block;background:linear-gradient(135deg,#10b981,#0ea5e9);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">Folosește pe LimaxAI</a>
+  <a href="https://www.limaxai.com/ro/generate/image-tools/nano/?model=nano-banana-2" style="display:inline-block;background:linear-gradient(135deg,#10b981,#0ea5e9);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">Folosește pe LimaxAI</a>
 </div>

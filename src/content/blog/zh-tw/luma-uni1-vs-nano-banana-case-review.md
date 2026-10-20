@@ -1,6 +1,6 @@
 ---
 title: "Luma发布uni-1模型，Nano Banana迎来新的挑战者？附真实案例测评"
-description: "围绕Uni-1模型与Uni-1教程的实测拆解，覆盖功能特性、使用技巧、提示词结构与商业场景。"
+description: "以真實生成案例比較 Luma Uni-1 與 Nano Banana 的畫面品質、提示詞理解和風格穩定性，協助選擇合適模型。"
 tags: ["Uni-1模型", "Uni-1教程", "Luma AI", "AI 生图"]
 pubDate: "2026-03-24"
 heroImage: "https://img.limaxai.com/aiweb/limaxai-blog-Uni1-2.png"

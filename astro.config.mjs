@@ -3,6 +3,14 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import rehypeExternalLinks from 'rehype-external-links';
+import { isMainSiteUrl, remarkLocalizeMainSiteLinks } from './src/utils/main-site-links.js';
+import { rehypeRemoteImageDimensions } from './src/utils/image-dimensions.js';
+
+const blogLocales = [
+  'en', 'zh-cn', 'zh-tw', 'es', 'ar', 'pt', 'id', 'ms', 'fr', 'ru',
+  'hi', 'ja', 'de', 'ko', 'tr', 'vi', 'th', 'it', 'fa', 'nl', 'pl',
+  'sv', 'uk', 'ro'
+];
 
 export default defineConfig({
   site: 'https://blog.limaxai.com',
@@ -12,7 +20,6 @@ export default defineConfig({
     sitemap({
       changefreq: 'weekly',
       priority: 0.7,
-      lastmod: new Date(),
       // 自定义序列化器，确保所有 URL 都有正确的格式
       serialize(item) {
         // 确保 URL 以斜杠结尾（与 trailingSlash: 'always' 一致）
@@ -26,7 +33,6 @@ export default defineConfig({
           url,
           changefreq: item.changefreq || 'weekly',
           priority: item.priority || 0.7,
-          lastmod: item.lastmod || new Date().toISOString().split('T')[0],
         };
       },
       // 过滤不需要的页面
@@ -43,26 +49,42 @@ export default defineConfig({
           '/wp-login.php',
         ];
         
+        const { pathname } = new URL(page);
+        const segments = pathname.split('/').filter(Boolean);
+        if (pathname === '/tutorials/' || pathname === '/app/image/privacy/') {
+          return false;
+        }
+        // Legal/support pages stay available to visitors but are not search landing pages.
+        // They declare noindex in HTML and therefore must not be submitted in sitemaps.
+        if (/\/(privacy|terms|auto-debit-agreement)\/$/.test(pathname)) {
+          return false;
+        }
+        // /{lang}/ renders the same list as /{lang}/blog/ and canonicalizes there.
+        // Keep the useful alias for visitors, but submit only the canonical URL.
+        if (segments.length === 1 && blogLocales.includes(segments[0])) {
+          return false;
+        }
+
         return !excludePatterns.some(pattern => page.includes(pattern));
       },
     })
   ],
   markdown: {
+    remarkPlugins: [remarkLocalizeMainSiteLinks],
     rehypePlugins: [
+      rehypeRemoteImageDimensions,
       [rehypeExternalLinks, {
         target: '_blank',
-        rel: ['noopener', 'noreferrer', 'nofollow'],
+        rel: (element) => isMainSiteUrl(element.properties.href)
+          ? ['noopener', 'noreferrer']
+          : ['noopener', 'noreferrer', 'nofollow'],
         protocols: ['http', 'https', 'mailto', 'tel']
       }]
     ]
   },
   i18n: {
     defaultLocale: 'en',
-    locales: [
-      'en', 'zh-cn', 'zh-tw', 'es', 'ar', 'pt', 'id', 'ms', 'fr', 'ru', 
-      'hi', 'ja', 'de', 'ko', 'tr', 'vi', 'th', 'it', 'fa', 'nl', 'pl', 
-      'sv', 'uk', 'ro'
-    ],
+    locales: blogLocales,
     routing: {
       prefixDefaultLocale: true, // 强制默认语言也显示 /en/ 路径，方便管理
       redirectToDefaultLocale: false // 我们自己处理重定向逻辑

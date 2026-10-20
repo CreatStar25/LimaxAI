@@ -70,7 +70,7 @@ AI에게 어떤 렌더링 엔진을 모방해야 하는지 알려주세요.
 추측은 그만두고, 창작을 시작하세요.
 
 <div style="text-align: center; margin-top: 50px; margin-bottom: 50px;">
-  <a href="https://www.limaxai.com/" style="background-color: #2563EB; color: white; padding: 18px 36px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 1.25rem; box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4); transition: transform 0.2s ease-in-out;">
+  <a href="https://www.limaxai.com/ko/generate/image-tools/nano/?model=nano-banana-2" style="background-color: #2563EB; color: white; padding: 18px 36px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 1.25rem; box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4); transition: transform 0.2s ease-in-out;">
     ✨ 지금 나노 바나나 아트 생성하기
   </a>
   <p style="margin-top: 15px; color: #64748b; font-size: 0.95rem;">바이럴 3D 아트를 만드는 수천 명의 크리에이터와 함께하세요.</p>

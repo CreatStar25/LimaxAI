@@ -1,6 +1,6 @@
 ---
 title: "Nano Banana 2 for Teaching Illustrations: One-Click Classroom Visuals with Detailed Prompts"
-description: "Nano Banana 2 tutorial, prompt strategies, product workflow, and practical use cases for e-commerce teams. Learn repeatable methods to improve content output and conversion-focused visuals."
+description: "Generate classroom-ready teaching illustrations with Nano Banana 2 using detailed prompt templates for concepts, diagrams, stories, and lesson materials."
 tags: ["nanobanana2 tutorial", "nanobanana prompts", "e-commerce operations", "AI image generation", "LimaxAI"]
 pubDate: "2026-03-23"
 heroImage: "https://img.limaxai.com/aiweb/limaxai-blog-3.png"
@@ -27,5 +27,5 @@ Educational illustration for [subject], explain [concept] for [grade], clear lab
 ## CTA
 
 <div style="margin-top:24px;margin-bottom:8px;">
-  <a href="https://www.limaxai.com/" style="display:inline-block;background:linear-gradient(135deg,#10b981,#0ea5e9);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">Use on LimaxAI</a>
+  <a href="https://www.limaxai.com/en/generate/image-tools/nano/?model=nano-banana-2" style="display:inline-block;background:linear-gradient(135deg,#10b981,#0ea5e9);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;">Use on LimaxAI</a>
 </div>
