@@ -1,6 +1,30 @@
 // Intrinsic dimensions measured from the public source files on img.limaxai.com.
 // Keep this map deterministic so production builds never depend on remote metadata requests.
 export const remoteImageDimensions = {
+  "https://img.limaxai.com/aiweb/kimi-k31-pro-261024-palace-3fa4a012b2.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "https://img.limaxai.com/aiweb/kimi-k31-pro-261024-airport-08a5f05059.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "https://img.limaxai.com/aiweb/kimi-k31-pro-261024-turbofan-4c35ce6679.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "https://img.limaxai.com/aiweb/kimi-k31-pro-261024-coding-7c1d6bc23b.webp": {
+    "width": 1600,
+    "height": 365
+  },
+  "https://img.limaxai.com/aiweb/kimi-k31-pro-261024-finance-a306627d42.webp": {
+    "width": 1280,
+    "height": 374
+  },
+  "https://img.limaxai.com/aiweb/kimi-k31-pro-261024-cad-80b29c58db.webp": {
+    "width": 1280,
+    "height": 316
+  },
   "https://img.limaxai.com/aiweb/chatgpt-260522-1.png": {
     "width": 2608,
     "height": 1384
