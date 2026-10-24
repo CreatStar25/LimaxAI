@@ -9,7 +9,9 @@ heroImage: "https://img.limaxai.com/aiweb/kimi-k31-pro-261024-palace-3fa4a012b2.
 lang: "zh-cn"
 ---
 
-**[👉 打开聊天，体验 Kimi K3.1 Pro](https://www.limaxai.com/zh-cn/chat/?model=kimi-k3.1-pro)**
+<div class="not-prose my-8 flex justify-center">
+  <a href="https://www.limaxai.com/zh-cn/chat/?model=kimi-k3.1-pro" class="inline-flex min-h-12 max-w-full items-center justify-center rounded-lg bg-gradient-to-br from-indigo-600 to-purple-700 px-8 py-4 text-center text-lg font-bold leading-relaxed text-white no-underline shadow-lg shadow-indigo-600/20 transition-shadow hover:shadow-xl hover:shadow-indigo-600/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600">打开聊天，体验 Kimi K3.1 Pro</a>
+</div>
 
 ![Kimi K3.1 Pro 官方天宫场景视频截图，展示云海、月亮、长廊和角色](https://img.limaxai.com/aiweb/kimi-k31-pro-261024-palace-3fa4a012b2.webp)
 
@@ -75,7 +77,9 @@ K3.1 Pro 是 K3.1 系列推出的首个模型。官方把它称为迄今能力�
 
 比较实用的办法，是从自己正在处理的任务里选一份小样本。同样的代码、同样的限制、同样的验收方式，分别看回答有没有定位问题，有没有说明改动范围，有没有留下能复查的测试步骤。排行榜能帮你缩小候选，具体项目还得自己验。
 
-**[用同一份任务试试 Kimi K3.1 Pro，聊天页已预选模型](https://www.limaxai.com/zh-cn/chat/?model=kimi-k3.1-pro)**
+<div class="not-prose my-8 flex justify-center">
+  <a href="https://www.limaxai.com/zh-cn/chat/?model=kimi-k3.1-pro" class="inline-flex min-h-12 max-w-full items-center justify-center rounded-lg bg-gradient-to-br from-indigo-600 to-purple-700 px-8 py-4 text-center text-lg font-bold leading-relaxed text-white no-underline shadow-lg shadow-indigo-600/20 transition-shadow hover:shadow-xl hover:shadow-indigo-600/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600">用同一份任务试试 Kimi K3.1 Pro，聊天页已预选模型</a>
+</div>
 
 ## 天宫、机场和涡扇结构，三个官方案例值得拆开看
 
@@ -119,7 +123,9 @@ K3.1 Pro 是 K3.1 系列推出的首个模型。官方把它称为迄今能力�
 
 Kimi 在无工具条件下接近 Opus，在带工具条件下仍落后于 Opus 和 Astra。这个差异很有用，它提醒我们，软件、脚本接口和执行环境本身也是结果的一部分。
 
-**[把你的建模需求整理成脚本任务，交给 Kimi K3.1 Pro 讨论](https://www.limaxai.com/zh-cn/chat/?model=kimi-k3.1-pro)**
+<div class="not-prose my-8 flex justify-center">
+  <a href="https://www.limaxai.com/zh-cn/chat/?model=kimi-k3.1-pro" class="inline-flex min-h-12 max-w-full items-center justify-center rounded-lg bg-gradient-to-br from-indigo-600 to-purple-700 px-8 py-4 text-center text-lg font-bold leading-relaxed text-white no-underline shadow-lg shadow-indigo-600/20 transition-shadow hover:shadow-xl hover:shadow-indigo-600/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600">把你的建模需求整理成脚本任务，交给 Kimi K3.1 Pro 讨论</a>
+</div>
 
 ## 财报问答得分领先，研究工作仍然要留下证据
 
@@ -181,7 +187,9 @@ Kimi 官方 API 的最新单价和缓存计费说明，以[官方定价页](http
 
 如果只是想先判断模型是否适合自己的工作，浏览器聊天入口会省掉申请 API Key 和写请求代码这一步。带一段能公开分享的代码或文字材料来试，看看它的解释是不是具体，建议是不是能执行，就足够开始比较了。
 
-**[进入 Kimi K3.1 Pro 聊天，当前每次 2 点](https://www.limaxai.com/zh-cn/chat/?model=kimi-k3.1-pro)**
+<div class="not-prose my-8 flex justify-center">
+  <a href="https://www.limaxai.com/zh-cn/chat/?model=kimi-k3.1-pro" class="inline-flex min-h-12 max-w-full items-center justify-center rounded-lg bg-gradient-to-br from-indigo-600 to-purple-700 px-8 py-4 text-center text-lg font-bold leading-relaxed text-white no-underline shadow-lg shadow-indigo-600/20 transition-shadow hover:shadow-xl hover:shadow-indigo-600/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600">进入 Kimi K3.1 Pro 聊天，当前每次 2 点</a>
+</div>
 
 ## 程序员、3D 创作者和研究人员，可以从小任务开始
 
@@ -251,4 +259,6 @@ Kimi 官方 API 的最新单价和缓存计费说明，以[官方定价页](http
 
 看完这些分数和案例，我觉得最值得带走的，是一套更具体的使用办法。先挑一项能验收的任务，再看 Kimi 能不能把需求、实现和证据接起来。天宫很漂亮，真正留在你工作里的，还是那些能继续修改、能检查结果的东西。
 
-**[👉 现在体验 Kimi K3.1 Pro，打开后自动选中模型](https://www.limaxai.com/zh-cn/chat/?model=kimi-k3.1-pro)**
+<div class="not-prose my-8 flex justify-center">
+  <a href="https://www.limaxai.com/zh-cn/chat/?model=kimi-k3.1-pro" class="inline-flex min-h-12 max-w-full items-center justify-center rounded-lg bg-gradient-to-br from-indigo-600 to-purple-700 px-8 py-4 text-center text-lg font-bold leading-relaxed text-white no-underline shadow-lg shadow-indigo-600/20 transition-shadow hover:shadow-xl hover:shadow-indigo-600/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600">现在体验 Kimi K3.1 Pro，打开后自动选中模型</a>
+</div>
